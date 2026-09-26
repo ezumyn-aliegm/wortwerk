@@ -32,6 +32,7 @@ export default function WordForge({ word, memory, draft, onDraft, onAdvance, Act
   const Advance = Action || 'button';
   return (
     <section className="word-forge" aria-label="Spelling forge">
+      <div className="forge-reference">
       <header>
         <p className="forge-kicker">Spelling forge · build it once</p>
         <h2 lang="de">{word.german}</h2>
@@ -39,6 +40,8 @@ export default function WordForge({ word, memory, draft, onDraft, onAdvance, Act
       </header>
       <p className="forge-memory">{memory?.scene || 'Picture this word on a block. Notice each letter as you build it.'}</p>
       {memory?.watch && <p className="forge-watch">{memory.watch}</p>}
+      </div>
+      <div className="forge-workspace">
       <p className="forge-instruction">Click the blocks in spelling order, or type the full word below.</p>
       <div className="forge-tiles" aria-label="Spelling blocks">
         {shuffledTiles(tiles).map(tile => (
@@ -52,7 +55,7 @@ export default function WordForge({ word, memory, draft, onDraft, onAdvance, Act
         onChange={e => update(e.target.value)} autoComplete="off" autoCorrect="off"
         autoCapitalize="none" spellCheck={false} aria-describedby={`${inputId}-hint`} />
       <div className="forge-tools">
-        {['ä', 'ö', 'ü', 'ß', 'Ä', 'Ö', 'Ü'].map(char => (
+        {['ä', 'ö', 'ü', 'ß'].map(char => (
           <button type="button" key={char} onClick={() => insert(char)} aria-label={`Insert ${char}`}>{char}</button>
         ))}
         <button type="button" disabled={!value} onClick={() => update(undoDraft(tiles, value))}>Undo</button>
@@ -64,6 +67,7 @@ export default function WordForge({ word, memory, draft, onDraft, onAdvance, Act
       <Advance disabled={!ready} onClick={() => { if (ready) onAdvance(); }}>
         Hide it — try from memory
       </Advance>
+      </div>
     </section>
   );
 }

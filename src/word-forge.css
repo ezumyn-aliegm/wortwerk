@@ -1,6 +1,8 @@
 .game-shell .lesson-panel:has(.word-forge) { background: #193b2d; border-color: #52704c; }
 .game-shell .lesson-panel:has(.word-forge) .eyebrow { color: #c7ec76; }
-.word-forge { max-width: 820px; margin: 0 auto; font-size: 20px; line-height: 1.4; color: #f1f5f9; }
+.word-forge { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px; max-width: 820px; margin: 0 auto; font-size: 20px; line-height: 1.4; color: #f1f5f9; }
+.forge-reference, .forge-workspace { min-width: 0; }
+.forge-workspace > .primary { width: 100%; font-size: 20px; }
 .word-forge p { margin: 8px 0; }
 .word-forge .forge-kicker { font-size: 16px; color: #b8d9be; }
 .word-forge h2 { font-size: clamp(30px, 5vw, 46px); line-height: 1.15; margin: 6px 0; overflow-wrap: anywhere; }
@@ -17,4 +19,4 @@
 .word-forge input { box-sizing: border-box; width: 100%; min-height: 52px; border: 2px solid #78978a; border-radius: 8px; padding: 8px 12px; background: #14241d; color: #fff; font: inherit; font-size: 26px; }
 .word-forge .forge-tools button { padding: 6px 12px; }
 .word-forge .forge-hint { min-height: 28px; font-size: 18px; color: #f1dbac; }
-@media (max-width: 600px) { .word-forge { font-size: 18px; } .word-forge .forge-memory { font-size: 17px; } }
+@media (max-width: 600px) { .word-forge { grid-template-columns: 1fr; font-size: 18px; } .word-forge .forge-memory { font-size: 17px; } }
