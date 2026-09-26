@@ -14,7 +14,7 @@ WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY server.mjs ./
 COPY server ./server
-COPY src/engine.js src/data.js ./src/
+COPY src/engine.js src/tutor.js src/data.js src/memory.js src/library.js src/activity.js src/game.js ./src/
 RUN mkdir -p /data && chown node:node /data
 USER node
 EXPOSE 4173

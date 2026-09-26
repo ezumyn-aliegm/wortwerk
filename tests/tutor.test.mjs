@@ -24,6 +24,7 @@ import {
 import { loadProgress, saveProgress, parseBackup } from "../src/storage.js";
 import { visitWordbank, delayedReviewAt } from "../src/engine.js";
 import { setTeachingStep, startCorrection } from "../src/engine.js";
+import { completeLesson, seedTaught } from "./teaching-fixtures.mjs";
 
 const BASE = new Date("2026-09-26T10:00:00").getTime();
 test("extra practice before cold recall still permits hints and adaptive retries", () => {
@@ -86,6 +87,10 @@ function completeSession(
       "Every session must finish, even for a struggling student",
     );
     const q = state.active.queue[0];
+    if (q.type === "teach") {
+      state = completeLesson({ setTeachingStep, advance }, state, at + turns * 1000);
+      continue;
+    }
     if (q.type !== "teach" && !state.active.feedback)
       state = answerQuestion(state, answer(q), at + turns * 1000);
     if (correctionNeeded(state))
@@ -95,7 +100,7 @@ function completeSession(
   return state;
 }
 function onlyQuestion(id, type, extra = {}) {
-  const s = startSession(freshState(), BASE);
+  const s = startSession(seedTaught(freshState()), BASE);
   s.active.queue = [{ wordId: id, type, variant: 0, retry: 0, ...extra }];
   return s;
 }
@@ -147,7 +152,7 @@ test("spelling grading preserves umlauts, ß, capital nouns, articles, spaces, a
 });
 test("reading a word and copying a correction never award mastery", () => {
   let s = startSession(freshState(), BASE);
-  s = advance(s, BASE); // teach
+  s = completeLesson({ setTeachingStep, advance }, s, BASE);
   assert.equal(s.words.traurig.seen, true);
   assert.equal(mastery(s, "traurig").percent, 0);
   s = onlyQuestion("muede", "spelling");
@@ -169,7 +174,7 @@ test("a hint awards no mastery and schedules another unaided retrieval", () => {
 });
 test("wrong answers are repeated after other words, with explanations and bounded retry counts", () => {
   let s = startSession(freshState(), BASE);
-  s = advance(s, BASE);
+  s = completeLesson({ setTeachingStep, advance }, s, BASE);
   s = answerQuestion(s, "wrong", BASE);
   assert.equal(s.active.feedback.correct, false);
   assert.ok(s.active.feedback.message.includes("sad"));
@@ -214,7 +219,7 @@ test("two spaced successes are required; immediate repeated answers cannot infla
   assert.equal(s.words.traurig.delayed, false);
 });
 test("exam covers all 27 words twice, disables hints, and reveals grades only after finishing", () => {
-  let s = freshState();
+  let s = seedTaught(freshState());
   s.phase = 6;
   s = startSession(s, BASE);
   assert.equal(s.active.queue.length, 54);

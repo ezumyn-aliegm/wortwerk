@@ -1,4 +1,5 @@
-import { freshState, validateState } from "./engine.js";
+import { freshState } from "./engine.js";
+import { validateSave as validateState } from "./library.js";
 
 export const SHARED_KEY = "wortwerk.shared.v1";
 const equal = (a, b) => JSON.stringify(a) === JSON.stringify(b);

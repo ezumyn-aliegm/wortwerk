@@ -1,7 +1,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import { closeSync, existsSync, fsyncSync, mkdirSync, openSync, readFileSync, realpathSync, renameSync, unlinkSync, writeFileSync } from "node:fs";
 import { resolve, sep } from "node:path";
-import { validateState } from "../src/engine.js";
+import { validateSave as validateState } from "../src/library.js";
 
 export function validState(value) {
   try { return validateState(value) === true; } catch { return false; }
@@ -70,6 +70,9 @@ export function createProgressStore(directory, distDir) {
         return { status: identical ? 200 : 409, envelope: envelope(record) };
       }
       if (record.revision !== revision) return { status: 409, envelope: envelope(record) };
+      // An old open tab must never replace a migrated multi-wave library.
+      if (record.state?.version === 2 && state.version !== 2)
+        return { status: 409, envelope: envelope(record) };
       if (revision === Number.MAX_SAFE_INTEGER) throw unavailable();
       const next = { revision: revision + 1, state, updatedAt: new Date().toISOString(),
         lastMutation: { id: mutationId, revision, hash } };

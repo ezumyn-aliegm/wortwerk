@@ -9,19 +9,15 @@ import {
   AlertCircle,
   CarFront,
 } from "lucide-react";
+import { useTutor } from "./TutorContext.jsx";
+import Outpost, { MissionHUD } from "./Outpost.jsx";
 import {
-  freshState,
-  startSession,
-  answerQuestion,
-  advance,
-  setDraft,
-  setCorrection,
-  useHint,
-  visitWordbank,
-  setTeachingStep,
-  startCorrection,
-  STORAGE_KEY,
-} from "./engine.js";
+  freshGame,
+  gameStatus,
+  selectBuild,
+  constructBuild,
+  checkpointGame,
+} from "./game.js";
 import { loadProgress, saveProgress, parseBackup } from "./storage.js";
 import {
   Home,
@@ -46,7 +42,32 @@ function download(text, name) {
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
-export default function App({ initialState, onStateChange }) {
+export default function App({
+  initialState,
+  onStateChange,
+  onStudyAction,
+  onStudyEnabled,
+  onLibrary,
+  onParent,
+  wave,
+  onExportLibrary,
+}) {
+  const {
+    WORDS,
+    freshState,
+    startSession,
+    answerQuestion,
+    advance,
+    setDraft,
+    setCorrection,
+    useHint,
+    visitWordbank,
+    setTeachingStep,
+    startCorrection,
+    acknowledgeTeaching,
+    dueAt,
+    STORAGE_KEY,
+  } = useTutor();
   const [carMode, setCarMode] = useState(() => {
     try {
       return localStorage.getItem("wortwerk.carView") !== "false";
@@ -83,6 +104,7 @@ export default function App({ initialState, onStateChange }) {
     [paused, setPaused] = useState(false),
     [conflict, setConflict] = useState(false);
   const [notice, setNotice] = useState("");
+  const [outpostOpen, setOutpostOpen] = useState(false);
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 15000);
     return () => clearInterval(interval);
@@ -90,6 +112,10 @@ export default function App({ initialState, onStateChange }) {
   useEffect(() => {
     if (blocked || conflict) return;
     onStateChange?.(state);
+    if (initialState) {
+      setSaved(true);
+      return;
+    }
     let success = false;
     try {
       success = saveProgress(localStorage, state);
@@ -103,6 +129,7 @@ export default function App({ initialState, onStateChange }) {
       );
   }, [state, blocked, conflict, onStateChange]);
   useEffect(() => {
+    if (initialState) return;
     const listener = (e) => {
       if (e.key === STORAGE_KEY) setConflict(true);
     };
@@ -116,7 +143,11 @@ export default function App({ initialState, onStateChange }) {
   }, [notice]);
   function update(fn) {
     if (!blocked && !conflict) {
-      setState((prev) => fn(prev));
+      const nextState = fn(state);
+      if (nextState !== state) {
+        setState(nextState);
+        onStudyAction?.(state, nextState);
+      }
       setNow(Date.now());
     }
   }
@@ -130,6 +161,10 @@ export default function App({ initialState, onStateChange }) {
     window.scrollTo({ top: 0, behavior: "instant" });
   }
   function exportData() {
+    if (onExportLibrary) {
+      onExportLibrary();
+      return;
+    }
     let raw = JSON.stringify(state, null, 2);
     if (blocked) {
       try {
@@ -192,6 +227,44 @@ export default function App({ initialState, onStateChange }) {
   const inExam = state.active?.kind === "exam";
   const wordbankLocked =
     inExam || (state.active?.phase === 4 && state.active?.kind === "course");
+  const checkpoint =
+    !wordbankLocked &&
+    !state.active?.feedback &&
+    gameStatus(state.game || freshGame()).readyCheckpoint;
+  const showOutpost =
+    !blocked && !conflict && !paused && (outpostOpen || checkpoint);
+  function changeGame(fn) {
+    if (!blocked && !conflict)
+      setState((s) => ({ ...s, game: fn(s.game || freshGame()) }));
+  }
+  function returnToMission() {
+    update((s) => {
+      const nextState = { ...s, game: checkpointGame(s.game || freshGame()) };
+      return !s.active && dueAt(s) <= Date.now()
+        ? startSession(nextState, Date.now(), "course")
+        : nextState;
+    });
+    setOutpostOpen(false);
+  }
+  useEffect(() => {
+    onStudyEnabled?.(
+      !!state.active &&
+        !paused &&
+        !modal &&
+        !blocked &&
+        !conflict &&
+        !showOutpost,
+    );
+    return () => onStudyEnabled?.(false);
+  }, [
+    !!state.active,
+    paused,
+    modal,
+    blocked,
+    conflict,
+    showOutpost,
+    onStudyEnabled,
+  ]);
   return (
     <div className={carMode ? "car-mode" : "standard-mode"}>
       <a href="#main" className="skip-link">
@@ -202,10 +275,24 @@ export default function App({ initialState, onStateChange }) {
           <span className="brand-mark">W</span>
           <div>
             <strong>Wortwerk</strong>
-            <span>Your 2-day German tutor</span>
+            <span>{wave?.title || "Your German tutor"}</span>
           </div>
         </div>
         <div className="header-actions">
+          <button className="nav-button" data-navigation onClick={onLibrary}>
+            Waves
+          </button>
+          <button
+            className="nav-button"
+            data-navigation
+            disabled={wordbankLocked}
+            onClick={() => {
+              update((s) => visitWordbank(s));
+              onParent?.();
+            }}
+          >
+            Parent dashboard
+          </button>
           <button
             className="nav-button car-toggle"
             aria-label="Toggle car view"
@@ -276,9 +363,21 @@ export default function App({ initialState, onStateChange }) {
           {notice}
         </div>
       )}
-      <main id="main" className="workspace">
+      <main
+        id="main"
+        className={`workspace ${showOutpost ? "outpost-workspace" : ""}`}
+      >
         <div className="main-column">
-          <SessionHeader state={state} />
+          {!showOutpost && (
+            <>
+              <MissionHUD
+                game={state.game}
+                locked={wordbankLocked}
+                onOpen={() => setOutpostOpen(true)}
+              />
+              <SessionHeader state={state} />
+            </>
+          )}
           {blocked || conflict ? (
             <section className="paused-panel">
               <Monitor size={34} />
@@ -308,6 +407,15 @@ export default function App({ initialState, onStateChange }) {
                 </button>
               )}
             </section>
+          ) : showOutpost ? (
+            <Outpost
+              game={state.game}
+              checkpoint={checkpoint}
+              active={!!state.active}
+              onSelect={(id) => changeGame((g) => selectBuild(g, id))}
+              onBuild={(id) => changeGame((g) => constructBuild(g, id))}
+              onContinue={returnToMission}
+            />
           ) : state.active ? (
             <Tutor
               state={state}
@@ -318,6 +426,7 @@ export default function App({ initialState, onStateChange }) {
               onCorrection={(value) => update((s) => setCorrection(s, value))}
               carMode={carMode}
               onTeachStep={(step) => update((s) => setTeachingStep(s, step))}
+              onLearnPrerequisite={() => update((s) => acknowledgeTeaching(s))}
               onCorrecting={() => update((s) => startCorrection(s))}
             />
           ) : (
@@ -334,7 +443,7 @@ export default function App({ initialState, onStateChange }) {
       <footer>
         <span>
           <Check size={14} />
-          27 words · No account needed
+          {WORDS.length} words · No account needed
         </span>
         <button className="text-button" onClick={() => setModal("help")}>
           How this works <HelpCircle size={15} />
@@ -353,8 +462,8 @@ export default function App({ initialState, onStateChange }) {
             <Progress
               state={state}
               onExport={exportData}
-              onImport={importData}
-              onReset={reset}
+              onImport={onExportLibrary ? undefined : importData}
+              onReset={onExportLibrary ? undefined : reset}
               damaged={blocked}
             />
           ) : (

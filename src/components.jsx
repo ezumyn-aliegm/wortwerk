@@ -15,20 +15,10 @@ import {
   Moon,
   PencilLine,
 } from "lucide-react";
-import { WORDS, BY_ID, SKILL_LABELS, requiredSkills } from "./data.js";
-import { MEMORY } from "./memory.js";
+import { SKILL_LABELS, requiredSkills } from "./data.js";
+import { useTutor } from "./TutorContext.jsx";
+
 import { CarLesson, CarFeedback } from "./CarLearning.jsx";
-import {
-  phaseInfo,
-  summary,
-  mastery,
-  describe,
-  correctionNeeded,
-  correctionReady,
-  dueAt,
-  dayTwoAt,
-  delayedReviewAt,
-} from "./engine.js";
 
 export function Primary({ children, ...props }) {
   return (
@@ -106,6 +96,20 @@ export function Speech({
   );
 }
 export function Chunks({ word }) {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+  } = useTutor();
   return (
     <div className="chunks" aria-label={`Spelling chunks for ${word.german}`}>
       <span className="chunk-prefix">
@@ -128,6 +132,20 @@ export function Chunks({ word }) {
   );
 }
 export function MemoryCard({ word, compact = false }) {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+  } = useTutor();
   const trick = MEMORY[word.id];
   return (
     <div className={`memory-box ${compact ? "compact" : ""}`}>
@@ -172,12 +190,26 @@ export function CharacterKeys({ inputRef, value, onChange }) {
   );
 }
 export function Route({ state, now }) {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+  } = useTutor();
   const stats = summary(state),
     phase = state.active?.phase ?? state.phase;
   const routes = [
     {
       title: "Meet & remember",
-      sub: "3 short sessions · all 27 words",
+      sub: `3 learning groups · ${WORDS.length} words`,
       min: 0,
       max: 2,
       day: 1,
@@ -190,7 +222,7 @@ export function Route({ state, now }) {
       day: 1,
     },
     {
-      title: "Remember overnight",
+      title: "Check your recall",
       sub: "A fresh start from memory",
       min: 4,
       max: 4,
@@ -219,7 +251,7 @@ export function Route({ state, now }) {
           <React.Fragment key={r.title}>
             {(i === 0 || i === 2) && (
               <li className="day-label">
-                Day {r.day}
+                {r.day === 1 ? "LEARN" : "RECALL & REHEARSE"}
                 {r.day === 2 && state.phase < 4 ? <Moon size={13} /> : null}
               </li>
             )}
@@ -246,14 +278,14 @@ export function Route({ state, now }) {
           <span>Words introduced</span>
           <strong>
             {stats.introduced}
-            <em> / 27</em>
+            <em> / {WORDS.length}</em>
           </strong>
         </div>
         <div className="mini-stat">
           <span>Remembered after a gap</span>
           <strong>
             {stats.ready}
-            <em> / 27</em>
+            <em> / {WORDS.length}</em>
           </strong>
         </div>
         <div
@@ -283,6 +315,20 @@ export function Route({ state, now }) {
   );
 }
 export function SessionHeader({ state }) {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+  } = useTutor();
   const active = state.active,
     info = phaseInfo(state);
   const done = active?.completed || 0,
@@ -291,7 +337,7 @@ export function SessionHeader({ state }) {
     <div className="session-header">
       <div>
         <span className="eyebrow">
-          DAY {info.day} ·{" "}
+          STUDY ·{" "}
           {active?.kind === "extra"
             ? "EXTRA PRACTICE"
             : active?.kind === "exam"
@@ -332,12 +378,32 @@ export function Tutor({
   carMode,
   onTeachStep,
   onCorrecting,
+  onLearnPrerequisite,
 }) {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+    missingTeaching,
+    teachingPages,
+  } = useTutor();
   const active = state.active,
     q = active.queue[0],
     word = BY_ID[q.wordId],
     spec = describe(q),
     feedback = active.feedback;
+  const prerequisite = missingTeaching(state);
+  const lessonPage =
+    q.type === "teach" ? teachingPages(word)[active.teachingStep || 0] : null;
   const inputRef = useRef(null),
     correctionRef = useRef(null),
     headingRef = useRef(null);
@@ -347,6 +413,7 @@ export function Tutor({
     function chooseWithKeyboard(event) {
       if (
         !carMode ||
+        prerequisite ||
         q.type !== "meaning" ||
         feedback ||
         event.altKey ||
@@ -368,20 +435,89 @@ export function Tutor({
     }
     document.addEventListener("keydown", chooseWithKeyboard);
     return () => document.removeEventListener("keydown", chooseWithKeyboard);
-  }, [carMode, q, feedback, onAnswer]);
+  }, [carMode, q, feedback, onAnswer, prerequisite]);
   useEffect(() => {
     if (q.type !== "teach" && q.type !== "meaning" && !feedback)
       inputRef.current?.focus({ preventScroll: true });
     else if (correctionNeeded(state))
       correctionRef.current?.focus({ preventScroll: true });
     else headingRef.current?.focus({ preventScroll: true });
-  }, [active.completed, active.teachingStep, !!feedback]);
+  }, [
+    active.completed,
+    active.teachingStep,
+    !!feedback,
+    prerequisite?.topic,
+    prerequisite?.wordId,
+  ]);
+  if (prerequisite) {
+    const lessonWord = BY_ID[prerequisite.wordId];
+    const memory = MEMORY[lessonWord.id];
+    return (
+      <section className="tutor">
+        <h1 ref={headingRef} tabIndex={-1}>
+          Let’s learn this first.
+        </h1>
+        <p className="lead">
+          I won’t test a form before teaching it. Your question and typed answer
+          are safely waiting.
+        </p>
+        <div className="lesson-panel teaching">
+          <div className="panel-top">
+            <span className="eyebrow">
+              {prerequisite.label} · {lessonWord.german}
+            </span>
+            <Speech text={prerequisite.answer} />
+          </div>
+          <div className="car-learning-grid">
+            <div className="car-sentence">
+              {prerequisite.kind === "form" && <p>{prerequisite.prompt}</p>}
+              <strong lang="de">{prerequisite.answer}</strong>
+              <p>
+                {prerequisite.translation ||
+                  (["picture", "spelling"].includes(prerequisite.kind)
+                    ? lessonWord.english
+                    : "")}
+              </p>
+              {prerequisite.kind === "spelling" && <Chunks word={lessonWord} />}
+            </div>
+            <div className="car-memory-side">
+              <h3>
+                {prerequisite.kind === "picture"
+                  ? "Make a memory picture"
+                  : "Notice the exact answer"}
+              </h3>
+              <p>
+                {prerequisite.kind === "picture"
+                  ? memory.scene
+                  : prerequisite.kind === "spelling"
+                    ? memory.watch
+                    : prerequisite.explanation}
+              </p>
+              <p className="car-coach-note">
+                Say it once, then look away and recall it. This first try will
+                be supported practice, not proof that you knew it without help.
+              </p>
+            </div>
+          </div>
+          {(exam || cold) && (
+            <p className="input-note">
+              This check needs preparation first. Its result will be labeled
+              supported practice; a later check can measure independent recall.
+            </p>
+          )}
+          <Primary onClick={onLearnPrerequisite}>
+            I’ve studied it — continue
+          </Primary>
+        </div>
+      </section>
+    );
+  }
   const labels = {
     teach: "One word. One small win.",
     meaning: "Start with the meaning.",
-    spelling: "Find it in your memory.",
-    usage: "Put it in a sentence.",
-    form: "Make the pieces fit.",
+    spelling: "Craft the word from memory.",
+    usage: "Complete the message.",
+    form: "Craft the right form.",
   };
   const tutorText =
     q.type === "teach"
@@ -404,7 +540,7 @@ export function Tutor({
   return (
     <section className="tutor">
       <h1 ref={headingRef} tabIndex={-1}>
-        {exam ? "Show what you remember." : labels[q.type]}
+        {exam ? "Your expedition challenge." : labels[q.type]}
       </h1>
       <p className="lead">
         {q.type === "teach"
@@ -439,11 +575,7 @@ export function Tutor({
             (feedback && !exam)) && (
             <div className="lesson-audio">
               <Speech
-                text={
-                  q.type === "teach"
-                    ? `${word.german}. ${word.example}`
-                    : word.german
-                }
+                text={q.type === "teach" ? lessonPage.answer : word.german}
                 caption={carMode ? "German" : undefined}
               />
               {carMode && q.type === "teach" && (
@@ -453,7 +585,7 @@ export function Tutor({
                       ? MEMORY[word.id].scene
                       : active.teachingStep === 1
                         ? MEMORY[word.id].watch
-                        : word.tip
+                        : lessonPage.explanation
                   }
                   lang="en-US"
                   label="Hear the memory tip in English"
@@ -464,30 +596,14 @@ export function Tutor({
           )}
         </div>
         {q.type === "teach" ? (
-          carMode ? (
-            <CarLesson
-              word={word}
-              step={active.teachingStep || 0}
-              onStep={onTeachStep}
-              onAdvance={onAdvance}
-              Action={Primary}
-              Chunks={Chunks}
-            />
-          ) : (
-            <>
-              <div className="word-display">
-                <h2 lang="de">{word.german}</h2>
-                <p>{word.english}</p>
-                <span className="word-kind">{word.kind}</span>
-              </div>
-              <div className="example">
-                <strong lang="de">{word.example}</strong>
-                <span>{word.translation}</span>
-              </div>
-              <MemoryCard word={word} />
-              <Primary onClick={onAdvance}>Ready — test me</Primary>
-            </>
-          )
+          <CarLesson
+            word={word}
+            step={active.teachingStep || 0}
+            onStep={onTeachStep}
+            onAdvance={onAdvance}
+            Action={Primary}
+            Chunks={Chunks}
+          />
         ) : (
           <>
             <div
@@ -635,7 +751,15 @@ export function Tutor({
                     </div>
                   )}
                   <p>{feedback.message}</p>
-                  {!feedback.correct && <MemoryCard word={word} compact />}
+                  {!feedback.correct &&
+                    (q.type === "form" || q.type === "usage" ? (
+                      <div className="hint">
+                        <strong>Rule to remember</strong>
+                        <p>{spec.explanation}</p>
+                      </div>
+                    ) : (
+                      <MemoryCard word={word} compact />
+                    ))}
                   {correctionNeeded(state) && (
                     <form
                       className="correction"
@@ -645,7 +769,7 @@ export function Tutor({
                       }}
                     >
                       <label htmlFor="correction">
-                        Look carefully. Type the correct spelling once.
+                        Look carefully. Type the correct answer once.
                       </label>
                       <input
                         id="correction"
@@ -691,6 +815,12 @@ export function Tutor({
                   )}
                 </div>
               ))}
+            {feedback && !exam && feedback.reward > 0 && (
+              <p className="reward-note" role="status">
+                +{feedback.reward} blocks for your outpost. Remembered, not
+                copied.
+              </p>
+            )}
           </>
         )}
       </div>
@@ -713,6 +843,20 @@ function formatDue(time, now) {
   });
 }
 export function Home({ state, now, onStart, onProgress }) {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+  } = useTutor();
   const started = !!state.startedAt,
     stats = summary(state),
     last = state.sessions.at(-1),
@@ -723,7 +867,7 @@ export function Home({ state, now, onStart, onProgress }) {
   const laterRecall = state.phase >= 7 && now < delayedReviewAt(state);
   const waiting = overnight || laterRecall;
   const exam = last?.kind === "exam",
-    ready = state.phase >= 7 && stats.ready === 27;
+    ready = state.phase >= 7 && stats.ready === WORDS.length;
   const title = !started
     ? "Your words.\nMade to stick."
     : ready
@@ -740,11 +884,11 @@ export function Home({ state, now, onStart, onProgress }) {
       <h1>{title}</h1>
       <p className="lead">
         {!started
-          ? "27 German words. Two days. A tutor that figures out what you need next."
+          ? `${WORDS.length} German words. A tutor that figures out what you need next.`
           : overnight
-            ? "You’ve met every word. Tomorrow, we’ll see what stayed with you."
+            ? "You’ve met every word. After a break, we’ll see what stayed with you."
             : ready
-              ? "All 27 words have repeated skill evidence and recall after a gap."
+              ? "Every word has repeated skill evidence and recall after a gap."
               : "I’ve saved your work and chosen your next step."}
       </p>
       {!started ? (
@@ -813,13 +957,19 @@ export function Home({ state, now, onStart, onProgress }) {
                     ? `${last.score}% · ${last.score >= 90 ? "Strong rehearsal." : "More practice will help."} This score is separate from word mastery.`
                     : `${stats.introduced} words introduced · ${stats.ready} remembered after a gap`}
                 </p>
+                {last.preparationAdded && (
+                  <p>
+                    Supported practice: missing lessons were taught before this
+                    check. Try a later rehearsal for an independent score.
+                  </p>
+                )}
               </div>
             </div>
           )}
           <div className="next-panel">
             <span className="eyebrow">
               {overnight
-                ? "YOUR NEXT SESSION · DAY 2"
+                ? "YOUR NEXT RECALL SESSION"
                 : laterRecall
                   ? "YOUR NEXT MEMORY CHECK"
                   : pause
@@ -848,7 +998,7 @@ export function Home({ state, now, onStart, onProgress }) {
               <>
                 <p className="break-note">
                   {overnight
-                    ? "Come back at the time above. The next session checks recall after at least 8 hours and a change of day. Get some sleep; close this tab whenever you like."
+                    ? "Come back at the time above. Close this tab and take a break. Near a deadline, the tutor may bring this check forward; delayed mastery still requires 8 hours."
                     : "You can close the app. More practice is optional, but reviewing a word restarts its 8-hour recall gap."}
                 </p>
                 <Primary onClick={() => onStart("extra")}>
@@ -886,29 +1036,31 @@ export function Home({ state, now, onStart, onProgress }) {
                   ? "Review the corrections. Your next session will focus on these weak spots."
                   : "I’ll automatically give these words more practice."}
               </p>
-              {last.mistakes.slice(0, exam ? 54 : 5).map((a, i) => (
-                <details key={i}>
-                  <summary>
-                    <span lang="de">{BY_ID[a.wordId].german}</span>
-                    <span>
-                      {SKILL_LABELS[a.type]} <ChevronRight size={15} />
-                    </span>
-                  </summary>
-                  <div className="review-answer">
-                    <p>{describe(a).title}</p>
-                    <p>
-                      Your answer:{" "}
-                      <strong>{a.input || "Not remembered"}</strong>
-                      {a.assisted ? " (with a hint)" : ""}
-                    </p>
-                    <p>
-                      Correct: <strong lang="de">{a.expected}</strong>
-                    </p>
-                    <p>{a.message}</p>
-                    <MemoryCard word={BY_ID[a.wordId]} compact />
-                  </div>
-                </details>
-              ))}
+              {last.mistakes
+                .slice(0, exam ? WORDS.length * 2 : 5)
+                .map((a, i) => (
+                  <details key={i}>
+                    <summary>
+                      <span lang="de">{BY_ID[a.wordId].german}</span>
+                      <span>
+                        {SKILL_LABELS[a.type]} <ChevronRight size={15} />
+                      </span>
+                    </summary>
+                    <div className="review-answer">
+                      <p>{describe(a).title}</p>
+                      <p>
+                        Your answer:{" "}
+                        <strong>{a.input || "Not remembered"}</strong>
+                        {a.assisted ? " (with a hint)" : ""}
+                      </p>
+                      <p>
+                        Correct: <strong lang="de">{a.expected}</strong>
+                      </p>
+                      <p>{a.message}</p>
+                      <MemoryCard word={BY_ID[a.wordId]} compact />
+                    </div>
+                  </details>
+                ))}
             </div>
           )}
           <button className="text-button secondary-action" onClick={onProgress}>
@@ -950,6 +1102,20 @@ export function Modal({ title, children, onClose }) {
   );
 }
 export function Progress({ state, onExport, onImport, onReset, damaged }) {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+  } = useTutor();
   const [selected, setSelected] = useState(null),
     [filter, setFilter] = useState("all");
   const stats = summary(state),
@@ -957,8 +1123,8 @@ export function Progress({ state, onExport, onImport, onReset, damaged }) {
   return (
     <>
       <p className="lead small">
-        {stats.ready} of 27 words remembered. Reading a card or copying an
-        answer never earns mastery.
+        {stats.ready} of {WORDS.length} words remembered. Reading a card or
+        copying an answer never earns mastery.
       </p>
       <div className="progress-legend">
         <span>○ Not introduced</span>
@@ -967,7 +1133,7 @@ export function Progress({ state, onExport, onImport, onReset, damaged }) {
       </div>
       <div className="filter-row" role="group" aria-label="Filter words">
         {[
-          ["all", "All 27"],
+          ["all", `All ${WORDS.length}`],
           ["weak", "Needs practice"],
           ["ready", "Remembered"],
         ].map(([id, label]) => (
@@ -1063,10 +1229,12 @@ export function Progress({ state, onExport, onImport, onReset, damaged }) {
             <Download size={16} />
             {damaged ? "Download saved data" : "Download backup"}
           </button>
-          <button onClick={() => fileRef.current.click()}>
-            <Upload size={16} />
-            Restore backup
-          </button>
+          {onImport && (
+            <button onClick={() => fileRef.current.click()}>
+              <Upload size={16} />
+              Restore backup
+            </button>
+          )}
           <input
             hidden
             type="file"
@@ -1077,16 +1245,32 @@ export function Progress({ state, onExport, onImport, onReset, damaged }) {
               e.target.value = "";
             }}
           />
-          <button className="danger-link" onClick={onReset}>
-            <RotateCcw size={16} />
-            Reset progress
-          </button>
+          {onReset && (
+            <button className="danger-link" onClick={onReset}>
+              <RotateCcw size={16} />
+              Reset progress
+            </button>
+          )}
         </div>
       </section>
     </>
   );
 }
 export function Help() {
+  const {
+    WORDS,
+    BY_ID,
+    MEMORY,
+    phaseInfo,
+    summary,
+    mastery,
+    describe,
+    correctionNeeded,
+    correctionReady,
+    dueAt,
+    dayTwoAt,
+    delayedReviewAt,
+  } = useTutor();
   return (
     <div className="help-copy">
       <p>
@@ -1098,10 +1282,11 @@ export function Help() {
       <p>
         Car view starts on: large type, a wide lesson area, large buttons, no
         animation, and one teaching idea per screen. Use the Car view button to
-        switch to the compact layout. Picture it, Spell it, and Use it lead into
-        the same adaptive practice. The German button reads the word aloud; Hear
-        tip reads the memory aid in English. In multiple choice, the number keys
-        1–4 also select an answer. Press Enter to check a typed answer.
+        switch to the compact layout. Picture it, Spell it, Use it, and Word
+        forms lead into the same adaptive practice. The German button reads the
+        word aloud; Hear tip reads the memory aid in English. In multiple
+        choice, the number keys 1–4 also select an answer. Press Enter to check
+        a typed answer.
       </p>
       <h3>Picture → chunk → cover → write → check</h3>
       <p>
@@ -1118,6 +1303,23 @@ export function Help() {
         minutes of targeted practice, then a 20–25 minute rehearsal. These are
         estimates; extra practice adapts to you. Take short breaks between
         sessions.
+      </p>
+      <h3>Learn it before a challenge</h3>
+      <p>
+        Every tested sentence and word form gets an explicit worked lesson,
+        including plurals, articles, reflexive pronouns, and split verbs. If an
+        older saved session has no record of a lesson, I teach it before
+        grading. That first supported try does not earn mastery. Wrong typed
+        answers need an exact practice correction.
+      </p>
+      <h3>Your outpost</h3>
+      <p>
+        Six answers make a short mission, then you can build or take a break.
+        Independent recall earns blocks for your island. You choose your next
+        blueprint; mistakes never remove buildings or blocks. Copying and hints
+        are learning tools, not block rewards. Your outpost and learning
+        progress save together. A completed outpost does not mean every word is
+        mastered.
       </p>
       <h3>Honest mastery</h3>
       <p>
@@ -1138,10 +1340,11 @@ export function Help() {
       </p>
       <h3>Final rehearsal</h3>
       <p>
-        There are 54 questions: all 27 words in English → German, followed by
-        one sentence or word-form question for every word. No hints or instant
-        grading. You’ll get a score and explanations at the end. This is
-        practice based on the vocabulary list, not a copy of the teacher’s test.
+        There are {WORDS.length * 2} questions: all {WORDS.length} words in
+        English → German, followed by one sentence or word-form question for
+        every word. No hints or instant grading. You’ll get a score and
+        explanations at the end. This is practice based on the vocabulary list,
+        not a copy of the teacher’s test.
       </p>
       <h3>What happens when you close the app?</h3>
       <p>
@@ -1160,7 +1363,7 @@ export function Help() {
       </p>
       <h3>Lesson source</h3>
       <p>
-        The 27 words follow the extraction supplied in the conversation,
+        The original wave follows the extraction supplied in the conversation,
         including its article for Fahrradtrial. The original photos were not
         rechecked. All examples and memory stories were written for this app.
         Grammar was cross-checked with{" "}

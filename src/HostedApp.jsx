@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import App from "./App.jsx";
+import LibraryApp from "./LibraryApp.jsx";
+import { saveCounts } from "./library.js";
+import { serializeBackup, uploadBody } from "./library-state.js";
 import {
   SHARED_KEY,
   readLocal,
@@ -33,7 +35,7 @@ function backup(value, name = "wortwerk-device-backup.json") {
   const link = document.createElement("a");
   link.href = URL.createObjectURL(
     new Blob(
-      [typeof value === "string" ? value : JSON.stringify(value, null, 2)],
+      [typeof value === "string" ? value : serializeBackup(value)],
       { type: "application/json" },
     ),
   );
@@ -55,6 +57,7 @@ function Panel({ title, children }) {
 
 export default function HostedApp() {
   const [mode, setMode] = useState("loading");
+  const [lastSyncedAt, setLastSyncedAt] = useState(null);
   const [view, setView] = useState(null);
   const [status, setStatus] = useState("Checking saved session…");
   const [error, setError] = useState("");
@@ -64,20 +67,23 @@ export default function HostedApp() {
   const [offline, setOffline] = useState("Preparing offline lesson…");
   const [storageError, setStorageError] = useState(false);
   const local = useRef(null),
+    storageFailed = useRef(false),
     busy = useRef(false),
     conflictRef = useRef(false),
     tabRef = useRef(false),
     authNeeded = useRef(false);
-  const persist = useCallback((next, remount = false) => {
+  const persist = useCallback((next, replaceView = false) => {
     local.current = next;
     try {
       localStorage.setItem(SHARED_KEY, JSON.stringify(next));
+      storageFailed.current = false;
       setStorageError(false);
     } catch {
+      storageFailed.current = true;
       setStorageError(true);
     }
-    if (remount)
-      setView((v) => ({ state: next.state, key: (v?.key || 0) + 1 }));
+    if (replaceView) setView({ state: next.state });
+    return !storageFailed.current;
   }, []);
   const showConflict = useCallback((remote) => {
     validateRemote(remote);
@@ -109,33 +115,41 @@ export default function HostedApp() {
           persist(result.local, true);
       }
       if (local.current.dirty) {
-        persist(prepareUpload(local.current, crypto.randomUUID()));
+        const prepared = prepareUpload(local.current, crypto.randomUUID());
+        const body = uploadBody(prepared.pending);
+        persist(prepared);
         const remote = await request("/api/progress", {
           method: "PUT",
-          body: JSON.stringify(local.current.pending),
+          body,
         });
         if (tabRef.current) return;
         persist(acknowledge(local.current, remote));
       }
       setStatus(
-        local.current.dirty
-          ? "Saved here · sync pending"
-          : "Synced across devices",
+        storageFailed.current
+          ? "Device copy not saved · keep this tab open"
+          : local.current.dirty
+            ? "Saved here · sync pending"
+            : "Synced across devices",
       );
       setError("");
+      setLastSyncedAt(Date.now());
     } catch (e) {
       if (tabRef.current) return;
-      if (e.status === 409) showConflict(e.data.current || e.data);
+      if (e.code === "SAVE_TOO_LARGE") {
+        setStatus(storageFailed.current ? "Device copy not saved · keep this tab open" : "Saved here · too large to sync");
+        setError(e.message);
+      } else if (e.status === 409) showConflict(e.data.current || e.data);
       else if (e.status === 401) {
         authNeeded.current = true;
         setStatus("Sign in to sync");
         setMode("login");
       } else if (e.status) {
-        setStatus("Saved here · server needs attention");
+        setStatus(storageFailed.current ? "Device copy not saved · keep this tab open" : "Saved here · server needs attention");
         setError(
-          "The server could not accept this save. Your device copy is safe. Try again or download a backup.",
+          "The server could not accept this save. Keep this tab open and download a backup before leaving.",
         );
-      } else setStatus("Saved here · offline / waiting to sync");
+      } else setStatus(storageFailed.current ? "Device copy not saved · keep this tab open" : "Saved here · offline / waiting to sync");
     } finally {
       busy.current = false;
     }
@@ -143,8 +157,12 @@ export default function HostedApp() {
   const loadShared = useCallback(async () => {
     let raw;
     try {
-      raw = localStorage.getItem(SHARED_KEY);
-      if (raw) local.current = readLocal(raw);
+      // Reauthentication must retain newer in-memory work if a device write
+      // failed. Read storage only when this page has no session loaded yet.
+      if (!local.current) {
+        raw = localStorage.getItem(SHARED_KEY);
+        if (raw) local.current = readLocal(raw);
+      }
     } catch {
       setError(
         "This browser’s saved session is unreadable. Download it before recovering the server copy.",
@@ -153,7 +171,7 @@ export default function HostedApp() {
       return;
     }
     if (local.current) {
-      setView({ state: local.current.state, key: 1 });
+      setView({ state: local.current.state });
       setMode("shared");
       await synchronize();
       return;
@@ -163,6 +181,7 @@ export default function HostedApp() {
       persist(fromRemote(remote), true);
       setMode("shared");
       setStatus("Synced across devices");
+      setLastSyncedAt(Date.now());
     } catch (e) {
       if (e.status === 401) {
         authNeeded.current = true;
@@ -261,8 +280,11 @@ export default function HostedApp() {
     (state) => {
       if (!local.current || conflictRef.current || tabRef.current) return;
       const next = editLocal(local.current, state);
-      if (next === local.current) return;
-      persist(next);
+      if (next === local.current && !storageFailed.current) return;
+      if (!persist(next)) {
+        setStatus("Device copy not saved · keep this tab open");
+        throw new Error("Browser storage is unavailable.");
+      }
       setStatus("Saved here · sync pending");
     },
     [persist],
@@ -325,7 +347,7 @@ export default function HostedApp() {
     );
     void synchronize();
   }
-  if (mode === "local") return <App />;
+  if (mode === "local") return <LibraryApp />;
   if (mode === "loading")
     return (
       <Panel title="Opening your tutor…">
@@ -353,9 +375,11 @@ export default function HostedApp() {
         {local.current && (
           <button
             className="secondary"
-              onClick={() => {
-                setView((v) => ({state: local.current.state, key: (v?.key || 0) + 1}));
-                setMode("shared");
+            onClick={() => {
+              setView({
+                state: local.current.state,
+              });
+              setMode("shared");
               setStatus("Saved here · sign in needed to sync");
             }}
           >
@@ -411,17 +435,15 @@ export default function HostedApp() {
           <div>
             <strong>This device</strong>
             <p>
-              {local.current.state.totalSteps} answers ·{" "}
-              {local.current.state.active?.completed || 0} steps in the current
-              session
+              {saveCounts(local.current.state).answers} answers ·{" "}
+              {saveCounts(local.current.state).steps} steps in saved session
             </p>
           </div>
           <div>
             <strong>Server session</strong>
             <p>
-              {conflict.state?.totalSteps || 0} answers ·{" "}
-              {conflict.state?.active?.completed || 0} steps in the current
-              session
+              {saveCounts(conflict.state).answers} answers ·{" "}
+              {saveCounts(conflict.state).steps} steps in saved session
             </p>
           </div>
         </div>
@@ -462,10 +484,10 @@ export default function HostedApp() {
         </p>
       )}
       {view && (
-        <App
-          key={view.key}
+        <LibraryApp
           initialState={view.state}
           onStateChange={onChange}
+          lastSyncedAt={lastSyncedAt}
         />
       )}
     </>

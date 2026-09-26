@@ -9,6 +9,7 @@ import { createHmac } from "node:crypto";
 import { spawn } from "node:child_process";
 import { createServer } from "../server.mjs";
 import { freshState, startSession } from "../src/engine.js";
+import { migrateLibrary } from "../src/library.js";
 
 const origin = "https://wortwerk.home";
 const password = "family-test-password";
@@ -129,6 +130,23 @@ test("revision conflicts, idempotent retry, previous backup, and restart persist
   assert.deepEqual((await readdir(f.dataDir)).sort(), ["progress.json", "progress.previous.json"]);
   const results = await Promise.all([put(f, cookie, payload(2, "race-a")), put(f, cookie, payload(2, "race-b"))]);
   assert.deepEqual(results.map((r) => r.status).sort(), [200, 409]);
+});
+
+test("migration preserves the active session and an old tab cannot downgrade the server", async (t) => {
+  const f = await fixture(t), cookie = await f.cookie();
+  const legacy = startSession(freshState(), Date.now());
+  legacy.active.draft = 'unfinished answer'; legacy.active.teachingStep = 2;
+  await put(f, cookie, payload(0, 'legacy', legacy));
+  const migrated = migrateLibrary(legacy);
+  assert.equal((await put(f, cookie, payload(1, 'migration', migrated))).status, 200);
+  await f.stop(); await f.start();
+  const read = await f.request('/api/progress', {cookie});
+  assert.deepEqual(read.data.state.waves[0].progress, legacy);
+  const outdated = await put(f, cookie, payload(2, 'old-browser', legacy));
+  assert.equal(outdated.status, 409);
+  assert.deepEqual(outdated.data.state, migrated);
+  const previous = JSON.parse(await readFile(join(f.dataDir, 'progress.previous.json'), 'utf8'));
+  assert.deepEqual(previous.state, legacy);
 });
 
 test("corruption fails closed while health remains secret-free; no auto-restore or overwrite", async (t) => {
