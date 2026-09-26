@@ -138,8 +138,21 @@ export function selectBuild(game, buildId) {
   return { ...game, selected: buildId };
 }
 
-export function constructBuild(game, buildId = game?.selected) {
+export function buildRequirement(buildId, learning) {
+  if (!learning || buildId === "cabin") return null;
+  const { introduced, ready, total } = learning;
+  if (!Number.isInteger(total) || total < 1 || !Number.isInteger(introduced) || !Number.isInteger(ready))
+    return "Keep learning to unlock this build.";
+  if (buildId === "portal") return ready >= total ? null
+    : `Remember all ${total} words after a break (${ready}/${total}).`;
+  const target = buildId === "lookout" ? Math.ceil(total / 3)
+    : buildId === "greenhouse" ? Math.ceil(total * 2 / 3) : total;
+  return introduced >= target ? null : `Discover ${target} words (${introduced}/${target}).`;
+}
+
+export function constructBuild(game, buildId = game?.selected, learning) {
   if (!validShape(game) || !building(buildId) || game.built.includes(buildId)
+    || buildRequirement(buildId, learning)
     || budget(game).availableBlocks < building(buildId).cost) return game;
   const built = [...game.built, buildId];
   const selected = built.includes(game.selected)

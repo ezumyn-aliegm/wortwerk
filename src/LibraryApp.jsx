@@ -491,11 +491,11 @@ export default function LibraryApp({
       ) : (
         <main className="wave-shell">
           <section className="wave-hero">
-            <span className="eyebrow">ONE STEP AT A TIME</span>
-            <h1>Your next small win.</h1>
+            <span className="eyebrow">YOUR WORDCRAFT EXPEDITION</span>
+            <h1>Learn words. Build your world.</h1>
             <p>
-              I’ll choose the next lesson around your deadlines and the words
-              that need practice.
+              Build a word, try it from memory, and earn blocks for your island.
+              Six answers make a mission. I’ll choose what you practice next.
             </p>
             <div className="wave-recommendation">
               <div>
@@ -506,10 +506,10 @@ export default function LibraryApp({
                 <p>Due {formatDeadline(recommendation.dueAt)} · Miami time</p>
                 <p>{plan.message}</p>
                 {plan.tight && (
-                  <p className="wave-caution">
+                  <details className="wave-caution"><summary>Parent scheduling note</summary>
                     There’s a lot left for the time available. Focus on weak
                     spellings; readiness is not guaranteed.
-                  </p>
+                  </details>
                 )}
               </div>
               <button
@@ -518,7 +518,7 @@ export default function LibraryApp({
               >
                 {recommendation.progress.active
                   ? "Resume my lesson"
-                  : "Continue studying"}{" "}
+                  : "Start my mission"}{" "}
                 <span aria-hidden="true">→</span>
               </button>
             </div>

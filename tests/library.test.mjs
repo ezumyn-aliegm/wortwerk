@@ -35,7 +35,9 @@ const sample = () => ({
   words: migrateLibrary().waves[0].words.slice(0, 4),
 });
 test("migration preserves the exact current session and never mutates the original", () => {
-  let legacy = setTeachingStep(startSession(freshState(), now), 1);
+  let legacy = startSession(freshState(), now);
+  delete legacy.active.queue[0].intro;
+  legacy = setTeachingStep(legacy, 1);
   legacy = setTeachingStep(legacy, 2);
   for (const word of Object.values(legacy.words)) delete word.taught;
   const untouched = structuredClone(legacy),
@@ -45,7 +47,7 @@ test("migration preserves the exact current session and never mutates the origin
   assert.equal(migrated.waves[0].dueAt, Date.parse("2026-09-28T13:00:00Z"));
   assert.ok(validateLibrary(migrated));
   assert.equal(migrateLibrary(migrated), migrated);
-  legacy = setDraft(completeLesson({ setTeachingStep, advance }, legacy, now), "half-finished");
+  legacy = setDraft(completeLesson({ setTeachingStep, advance, setDraft }, legacy, now), "half-finished");
   assert.notEqual(legacy.active.queue[0].type, "teach");
   assert.equal(
     migrateLibrary(legacy).waves[0].progress.active.draft,
@@ -147,7 +149,7 @@ test("v2 sync persists all waves, offline draft and stable pending operation ID"
   let local = fromRemote({ revision: 4, state: freshState() });
   const library = migrateLibrary(local.state, now);
   library.waves[0].progress = setDraft(
-    completeLesson({ setTeachingStep, advance }, startSession(freshState(), now), now),
+    completeLesson({ setTeachingStep, advance, setDraft }, startSession(freshState(), now), now),
     "draft",
   );
   assert.notEqual(library.waves[0].progress.active.queue[0].type, "teach");

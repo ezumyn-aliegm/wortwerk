@@ -2,12 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { Check, Lightbulb, PencilLine } from "lucide-react";
 import { useTutor } from "./TutorContext.jsx";
 
-export function CarLesson({ word, step, onStep, onAdvance, Action, Chunks }) {
+export function CarLesson({ word, question, step, onStep, onAdvance, Action, Chunks }) {
   const { MEMORY, teachingPages } = useTutor();
   const memory = MEMORY[word.id];
-  const pages = teachingPages(word),
+  const pages = teachingPages(word, question),
     page = pages[step];
-  const stage = step < 2 ? step : page.kind === "form" ? 3 : 2;
+  const picture = page.kind === "picture", spelling = page.kind === "spelling";
+  const stage = picture ? 0 : spelling ? 1 : page.kind === "form" ? 3 : 2;
   return (
     <>
       <div className="lesson-stages" aria-label="Teaching steps">
@@ -31,7 +32,7 @@ export function CarLesson({ word, step, onStep, onAdvance, Action, Chunks }) {
       </p>
       <div className="car-learning-grid">
         <div className="car-word-side">
-          {step < 2 ? (
+          {picture || spelling ? (
             <>
               <div
                 className={`word-display ${word.german.length > 15 ? "long-word" : ""}`}
@@ -40,7 +41,7 @@ export function CarLesson({ word, step, onStep, onAdvance, Action, Chunks }) {
                 <p>{word.english}</p>
                 <span className="word-kind">{word.kind}</span>
               </div>
-              {step === 1 && <Chunks word={word} />}
+              {spelling && <Chunks word={word} />}
             </>
           ) : (
             <div className="car-sentence">
@@ -52,25 +53,25 @@ export function CarLesson({ word, step, onStep, onAdvance, Action, Chunks }) {
         </div>
         <div className="car-memory-side">
           <h3>
-            {step === 0
+            {picture
               ? "Make a picture in your mind"
-              : step === 1
+              : spelling
                 ? "Say the chunks. Check the letters."
                 : page.kind === "form"
                   ? "Learn this form before you try it"
                   : "Notice how the word works"}
           </h3>
           <p>
-            {step === 0
+            {picture
               ? memory.scene
-              : step === 1
+              : spelling
                 ? memory.watch
                 : page.explanation}
           </p>
           <span className="car-coach-note">
-            {step === 0
+            {picture
               ? "Take a moment to imagine it. A silly picture is easier to remember."
-              : step === 1
+              : spelling
                 ? "Look away. Say the letters aloud once. You’ll type it from memory soon."
                 : page.kind === "form"
                   ? "Notice exactly what changes. Say the complete answer, then look away and try to recall it."
@@ -81,9 +82,9 @@ export function CarLesson({ word, step, onStep, onAdvance, Action, Chunks }) {
       <Action
         onClick={step < pages.length - 1 ? () => onStep(step + 1) : onAdvance}
       >
-        {step === 0
+        {step === pages.length - 1 ? "Ready — test me" : picture
           ? "Now break down the spelling"
-          : step === 1
+          : spelling
             ? "See it in a sentence"
             : step < pages.length - 1
               ? `Next: ${pages[step + 1].label}`

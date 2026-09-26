@@ -135,6 +135,7 @@ test("revision conflicts, idempotent retry, previous backup, and restart persist
 test("migration preserves the active session and an old tab cannot downgrade the server", async (t) => {
   const f = await fixture(t), cookie = await f.cookie();
   const legacy = startSession(freshState(), Date.now());
+  delete legacy.active.queue[0].intro;
   legacy.active.draft = 'unfinished answer'; legacy.active.teachingStep = 2;
   await put(f, cookie, payload(0, 'legacy', legacy));
   const migrated = migrateLibrary(legacy);

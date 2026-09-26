@@ -23,7 +23,7 @@ import {
 } from "../src/engine.js";
 import { loadProgress, saveProgress, parseBackup } from "../src/storage.js";
 import { visitWordbank, delayedReviewAt } from "../src/engine.js";
-import { setTeachingStep, startCorrection } from "../src/engine.js";
+import { setTeachingStep, startCorrection, missingTeaching, acknowledgeTeaching } from "../src/engine.js";
 import { completeLesson, seedTaught } from "./teaching-fixtures.mjs";
 
 const BASE = new Date("2026-09-26T10:00:00").getTime();
@@ -38,6 +38,7 @@ test("extra practice before cold recall still permits hints and adaptive retries
 });
 test("car teaching and correction screens resume exactly without awarding mastery", () => {
   let state = startSession(freshState(), BASE);
+  delete state.active.queue[0].intro; // Exercise a saved legacy multi-page lesson.
   state = setTeachingStep(state, 1);
   assert.equal(parseBackup(JSON.stringify(state)).active.teachingStep, 1);
   assert.equal(mastery(state, "traurig").percent, 0);
@@ -88,9 +89,10 @@ function completeSession(
     );
     const q = state.active.queue[0];
     if (q.type === "teach") {
-      state = completeLesson({ setTeachingStep, advance }, state, at + turns * 1000);
+      state = completeLesson({ setTeachingStep, advance, setDraft }, state, at + turns * 1000);
       continue;
     }
+    if (missingTeaching(state)) state = acknowledgeTeaching(state, at + turns * 1000);
     if (q.type !== "teach" && !state.active.feedback)
       state = answerQuestion(state, answer(q), at + turns * 1000);
     if (correctionNeeded(state))
@@ -152,7 +154,7 @@ test("spelling grading preserves umlauts, ß, capital nouns, articles, spaces, a
 });
 test("reading a word and copying a correction never award mastery", () => {
   let s = startSession(freshState(), BASE);
-  s = completeLesson({ setTeachingStep, advance }, s, BASE);
+  s = completeLesson({ setTeachingStep, advance, setDraft }, s, BASE);
   assert.equal(s.words.traurig.seen, true);
   assert.equal(mastery(s, "traurig").percent, 0);
   s = onlyQuestion("muede", "spelling");
@@ -174,7 +176,7 @@ test("a hint awards no mastery and schedules another unaided retrieval", () => {
 });
 test("wrong answers are repeated after other words, with explanations and bounded retry counts", () => {
   let s = startSession(freshState(), BASE);
-  s = completeLesson({ setTeachingStep, advance }, s, BASE);
+  s = completeLesson({ setTeachingStep, advance, setDraft }, s, BASE);
   s = answerQuestion(s, "wrong", BASE);
   assert.equal(s.active.feedback.correct, false);
   assert.ok(s.active.feedback.message.includes("sad"));

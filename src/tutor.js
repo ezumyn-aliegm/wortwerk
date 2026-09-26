@@ -7,7 +7,14 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
   const STORAGE_KEY = "wortwerk.progress.v1";
   const HOUR = 3_600_000;
   const TYPES = ["teach", "meaning", "spelling", "usage", "form"];
-  function teachingPages(word) {
+  function teachingPages(word, question = {}) {
+    if (question.focus) return teachingPages(word).filter((page) => page.tags.includes(question.focus));
+    if (question.intro) return [{
+      kind: "discovery",
+      label: "Word forge",
+      tags: ["meaning", "spelling"],
+      answer: word.german,
+    }];
     return [
       {
         kind: "picture",
@@ -355,10 +362,12 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       const queue = [];
       for (let i = 0; i < ids.length; i += 3) {
         const batch = ids.slice(i, i + 3);
-        batch.forEach((id) =>
-          queue.push(question(id, "teach"), question(id, "meaning")),
-        );
-        for (const type of ["spelling", "usage", "form"])
+        batch.forEach((id) => queue.push(
+          question(id, "teach", 0, { intro: true }),
+          question(id, "meaning"),
+          question(id, "spelling"),
+        ));
+        for (const type of ["usage", "form"])
           batch.forEach((id) => {
             if (type !== "form" || BY_ID[id].forms.length)
               queue.push(question(id, type));
@@ -380,6 +389,19 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       return shuffle(WORDS, "overnight").map((w) =>
         question(w.id, "spelling", 1),
       );
+    if (state.phase === 5) {
+      // Practice every remaining variant before the final rehearsal, one short
+      // explanation at a time. Group by variant to space the same word apart.
+      const missing = WORDS.filter((w) => state.words[w.id].seen).flatMap((w) =>
+        ["usage", "form"].flatMap((type) =>
+          (type === "usage" ? w.usages : w.forms).map((_, variant) => question(w.id, type, variant)),
+        ),
+      ).filter((q) => !(state.words[q.wordId].taught || []).includes(questionTopic(q)))
+        .sort((a, b) => a.variant - b.variant || a.type.localeCompare(b.type));
+      const repair = repairQueue(state, now);
+      return [...missing, ...repair.filter((q) => !missing.some((m) =>
+        m.wordId === q.wordId && questionTopic(m) === questionTopic(q)))];
+    }
     return repairQueue(state, now);
   }
   function startSession(original, now = Date.now(), kind = "course") {
@@ -560,14 +582,14 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       !Number.isInteger(teachingStep) ||
       teachingStep < 0 ||
       teachingStep >=
-        teachingPages(BY_ID[original.active.queue[0].wordId]).length ||
+        teachingPages(BY_ID[original.active.queue[0].wordId], original.active.queue[0]).length ||
       teachingStep > (original.active.teachingStep || 0) + 1
     )
       return original;
     const state = structuredClone(original),
       p = state.words[state.active.queue[0].wordId];
     if (teachingStep > (state.active.teachingStep || 0)) {
-      const page = teachingPages(BY_ID[state.active.queue[0].wordId])[
+      const page = teachingPages(BY_ID[state.active.queue[0].wordId], state.active.queue[0])[
         state.active.teachingStep || 0
       ];
       p.taught = [...new Set([...(p.taught || []), ...page.tags])];
@@ -697,7 +719,12 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
         active.queue.splice(
           position,
           0,
-          question(q.wordId, "teach", q.variant, { revisit: true }),
+          question(q.wordId, "teach", q.variant, {
+            revisit: true,
+            ...(["meaning", "spelling"].includes(q.type)
+              ? { intro: true }
+              : { focus: questionTopic(q) }),
+          }),
         );
       active.queue.splice(
         Math.min(active.queue.length, position + (q.retry >= 1 ? 4 : 0)),
@@ -710,10 +737,12 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
   function advance(original, now = Date.now()) {
     if (!original.active) return original;
     const current = original.active.queue[0];
+    if (current.intro && normalize(original.active.draft) !== normalize(BY_ID[current.wordId].german))
+      return original;
     if (
       current.type === "teach" &&
       (original.active.teachingStep || 0) !==
-        teachingPages(BY_ID[current.wordId]).length - 1
+        teachingPages(BY_ID[current.wordId], current).length - 1
     )
       return original;
     if (current.type !== "teach" && !original.active.feedback) return original;
@@ -722,7 +751,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       active = state.active,
       p = state.words[current.wordId];
     if (current.type === "teach") {
-      const page = teachingPages(BY_ID[current.wordId])[active.teachingStep];
+      const page = teachingPages(BY_ID[current.wordId], current)[active.teachingStep];
       p.taught = [...new Set([...(p.taught || []), ...page.tags])];
       p.seen = true;
       p.introducedAt ||= now;
@@ -897,6 +926,9 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
             q &&
             BY_ID[q.wordId] &&
             TYPES.includes(q.type) &&
+            (q.intro === undefined || (q.intro === true && q.type === "teach")) &&
+            (q.focus === undefined || (q.type === "teach" && !q.intro &&
+              typeof q.focus === "string" && teachingPages(BY_ID[q.wordId]).some((page) => page.tags.includes(q.focus)))) &&
             (q.type !== "form" || BY_ID[q.wordId].forms.length) &&
             Number.isInteger(q.variant) &&
             q.variant >= 0 &&
@@ -915,7 +947,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
         return false;
       if (
         a.queue[0].type === "teach" &&
-        (a.teachingStep || 0) >= teachingPages(BY_ID[a.queue[0].wordId]).length
+        (a.teachingStep || 0) >= teachingPages(BY_ID[a.queue[0].wordId], a.queue[0]).length
       )
         return false;
       if (

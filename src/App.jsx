@@ -66,6 +66,7 @@ export default function App({
     startCorrection,
     acknowledgeTeaching,
     dueAt,
+    summary,
     STORAGE_KEY,
   } = useTutor();
   const [carMode, setCarMode] = useState(() => {
@@ -105,6 +106,7 @@ export default function App({
     [conflict, setConflict] = useState(false);
   const [notice, setNotice] = useState("");
   const [outpostOpen, setOutpostOpen] = useState(false);
+  const learning = { ...summary(state), total: WORDS.length };
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 15000);
     return () => clearInterval(interval);
@@ -369,9 +371,10 @@ export default function App({
       >
         {!showOutpost && <MissionHUD
           game={state.game}
+          learning={learning}
           locked={wordbankLocked || blocked || conflict || paused}
           onOpen={() => setOutpostOpen(true)}
-          onBuild={(id) => changeGame((g) => constructBuild(g, id))}
+          onBuild={(id) => changeGame((g) => constructBuild(g, id, learning))}
         />}
         <div className="main-column">
           {!showOutpost && (
@@ -411,10 +414,11 @@ export default function App({
           ) : showOutpost ? (
             <Outpost
               game={state.game}
+              learning={learning}
               checkpoint={checkpoint}
               active={!!state.active}
               onSelect={(id) => changeGame((g) => selectBuild(g, id))}
-              onBuild={(id) => changeGame((g) => constructBuild(g, id))}
+              onBuild={(id) => changeGame((g) => constructBuild(g, id, learning))}
               onContinue={returnToMission}
             />
           ) : state.active ? (

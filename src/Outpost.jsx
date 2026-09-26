@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ArrowLeft, Blocks, Hammer, Check, Map } from "lucide-react";
-import { BUILDINGS, freshGame, gameStatus } from "./game.js";
+import { BUILDINGS, freshGame, gameStatus, buildRequirement } from "./game.js";
 import island from "./assets/outpost-island.png";
 import buildings from "./assets/outpost-buildings.png";
 import "./outpost.css";
@@ -19,10 +19,11 @@ export function BuildingSprite({ id, className = "" }) {
   );
 }
 
-export function MissionHUD({ game, locked, onOpen, onBuild }) {
+export function MissionHUD({ game, locked, onOpen, onBuild, learning }) {
   game ||= freshGame();
   const status = gameStatus(game);
   const selected = status.selectedBuild;
+  const requirement = buildRequirement(selected.id, learning);
   return (
     <aside className="mission-hud" aria-label="Outpost mission">
       <div className="mission-world outpost-world" role="img" aria-label={`Your island: ${game.built.length} of ${BUILDINGS.length} buildings complete`}>
@@ -36,7 +37,7 @@ export function MissionHUD({ game, locked, onOpen, onBuild }) {
           <BuildingSprite id={selected.id} />
           <div><span className="quest-label">{status.allBuilt ? "Outpost complete" : "Your building quest"}</span>
             <h2>{status.allBuilt ? "A world you built." : selected.label}</h2>
-            <span>{status.allBuilt ? "Keep your German skills growing." : `${status.nextNeeded} more blocks to build`}</span>
+            <span>{status.allBuilt ? "Keep your German skills growing." : requirement || `${status.nextNeeded} more blocks to build`}</span>
           </div>
         </div>
         <div className="mission-supplies">
@@ -68,7 +69,7 @@ export function MissionHUD({ game, locked, onOpen, onBuild }) {
           <span>Rewards wait until after the check. No hints or timers.</span>
         )}
       </div>
-      {status.canBuild && !locked && <button className="build-action" onClick={() => onBuild(selected.id)}><Hammer />Build {selected.label.toLowerCase()}</button>}
+      {status.canBuild && !locked && !requirement && <button className="build-action" onClick={() => onBuild(selected.id)}><Hammer />Build {selected.label.toLowerCase()}</button>}
       <button onClick={onOpen} className="outpost-link"><Map size={23} /><span>Explore & choose builds</span></button>
       <p className="mission-tip">Recall earns blocks. Spelling earns more. Mistakes never cost blocks.</p>
       </div>
@@ -83,6 +84,7 @@ export default function Outpost({
   onContinue,
   checkpoint,
   active,
+  learning,
 }) {
   game ||= freshGame();
   const status = gameStatus(game);
@@ -90,7 +92,8 @@ export default function Outpost({
     BUILDINGS.find((b) => b.id === game.selected) || BUILDINGS[0];
   const built = game.built.includes(selected.id);
   const [announcement, setAnnouncement] = useState("");
-  const canBuild = !built && status.availableBlocks >= selected.cost;
+  const requirement = buildRequirement(selected.id, learning);
+  const canBuild = !built && !requirement && status.availableBlocks >= selected.cost;
   return (
     <section className="outpost-screen" aria-label="Your outpost">
       <div className="outpost-main">
@@ -165,7 +168,7 @@ export default function Outpost({
               ? "Built — yours to keep"
               : canBuild
                 ? `Build ${selected.label.toLowerCase()}`
-                : `Gather ${selected.cost - status.availableBlocks} more blocks`}
+                : requirement || `Gather ${selected.cost - status.availableBlocks} more blocks`}
           </button>
           <button className="mission-return" onClick={onContinue}>
             <ArrowLeft />
@@ -210,7 +213,7 @@ export default function Outpost({
             <span>
               <strong>{b.label}</strong>
               <small>
-                {game.built.includes(b.id) ? "Built ✓" : `${b.cost} blocks`}
+                {game.built.includes(b.id) ? "Built ✓" : buildRequirement(b.id, learning) || `${b.cost} blocks`}
               </small>
             </span>
           </button>

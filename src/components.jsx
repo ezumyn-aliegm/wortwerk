@@ -19,6 +19,7 @@ import { SKILL_LABELS, requiredSkills } from "./data.js";
 import { useTutor } from "./TutorContext.jsx";
 
 import { CarLesson, CarFeedback } from "./CarLearning.jsx";
+import WordForge from "./WordForge.jsx";
 
 export function Primary({ children, ...props }) {
   return (
@@ -403,7 +404,7 @@ export function Tutor({
     feedback = active.feedback;
   const prerequisite = missingTeaching(state);
   const lessonPage =
-    q.type === "teach" ? teachingPages(word)[active.teachingStep || 0] : null;
+    q.type === "teach" ? teachingPages(word, q)[active.teachingStep || 0] : null;
   const inputRef = useRef(null),
     correctionRef = useRef(null),
     headingRef = useRef(null);
@@ -455,7 +456,7 @@ export function Tutor({
     return (
       <section className="tutor">
         <h1 ref={headingRef} tabIndex={-1}>
-          Let’s learn this first.
+          {exam || cold ? "Let’s learn this first." : "Unlock the next challenge."}
         </h1>
         <p className="lead">
           I won’t test a form before teaching it. Your question and typed answer
@@ -493,10 +494,8 @@ export function Tutor({
                     ? memory.watch
                     : prerequisite.explanation}
               </p>
-              <p className="car-coach-note">
-                Say it once, then look away and recall it. This first try will
-                be supported practice, not proof that you knew it without help.
-              </p>
+              <p className="car-coach-note">Say it once. Next, the answer disappears and you try it.
+                This is a practice round; I’ll check your memory again later.</p>
             </div>
           </div>
           {(exam || cold) && (
@@ -506,15 +505,15 @@ export function Tutor({
             </p>
           )}
           <Primary onClick={onLearnPrerequisite}>
-            I’ve studied it — continue
+            Hide it — let me try
           </Primary>
         </div>
       </section>
     );
   }
   const labels = {
-    teach: "One word. One small win.",
-    meaning: "Start with the meaning.",
+    teach: q.intro ? "Build it. Then remember it." : "One word. One small win.",
+    meaning: "Decode the word.",
     spelling: "Craft the word from memory.",
     usage: "Complete the message.",
     form: "Craft the right form.",
@@ -523,7 +522,9 @@ export function Tutor({
     q.type === "teach"
       ? q.revisit
         ? "Let’s take another look. Make the picture in your mind, then say the spelling chunks aloud."
-        : `First, meet ${word.german}. Read it, picture it, then spell it aloud.`
+        : q.intro
+          ? "Build the word from its pieces. Then use your memory to earn blocks."
+          : `First, meet ${word.german}. Read it, picture it, then spell it aloud.`
       : exam
         ? "Take your best shot. Your answers will be checked together at the end."
         : cold
@@ -585,7 +586,7 @@ export function Tutor({
                       ? MEMORY[word.id].scene
                       : active.teachingStep === 1
                         ? MEMORY[word.id].watch
-                        : lessonPage.explanation
+                        : lessonPage.explanation || MEMORY[word.id].watch
                   }
                   lang="en-US"
                   label="Hear the memory tip in English"
@@ -595,9 +596,13 @@ export function Tutor({
             </div>
           )}
         </div>
-        {q.type === "teach" ? (
+        {q.type === "teach" && q.intro ? (
+          <WordForge word={word} memory={MEMORY[word.id]} draft={active.draft}
+            onDraft={onDraft} onAdvance={onAdvance} Action={Primary} />
+        ) : q.type === "teach" ? (
           <CarLesson
             word={word}
+            question={q}
             step={active.teachingStep || 0}
             onStep={onTeachStep}
             onAdvance={onAdvance}
@@ -950,14 +955,15 @@ export function Home({ state, now, onStart, onProgress }) {
                   {exam ? "FINAL REHEARSAL RESULTS" : "LAST SESSION"}
                 </span>
                 <h2>
-                  {last.correct} of {last.count} answers correct without hints
+                  {exam ? `${last.correct} of ${last.count} answers correct without hints`
+                    : `${stats.introduced} words discovered. Your world is growing.`}
                 </h2>
                 <p>
                   {exam
                     ? `${last.score}% · ${last.score >= 90 ? "Strong rehearsal." : "More practice will help."} This score is separate from word mastery.`
-                    : `${stats.introduced} words introduced · ${stats.ready} remembered after a gap`}
+                    : `${last.correct} answers from memory · ${last.count - last.correct} practice tries · ${stats.ready} words remembered after a gap`}
                 </p>
-                {last.preparationAdded && (
+                {last.preparationAdded && (exam || last.phase === 4) && (
                   <p>
                     Supported practice: missing lessons were taught before this
                     check. Try a later rehearsal for an independent score.
