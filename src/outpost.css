@@ -1,3 +1,213 @@
+.game-shell {
+  background: #eff3e8;
+}
+.game-shell .topbar {
+  background: #183c30;
+  color: #fff;
+  border-bottom: 5px solid #83ad4d;
+}
+.game-shell .topbar .nav-button,
+.game-shell .topbar .brand div > span,
+.game-shell .topbar .save-status {
+  color: #eff8e7;
+}
+.game-shell .topbar .car-toggle[aria-pressed="true"] {
+  background: #365946;
+}
+.game-shell .brand-mark {
+  background: #c7ec76;
+  color: #183c30;
+  border-radius: 3px;
+  box-shadow: 4px 4px 0 #0d261d;
+}
+.game-shell .workspace.mission-workspace {
+  display: grid;
+  grid-template-columns: minmax(285px, 0.85fr) minmax(0, 2fr);
+  gap: 28px;
+  max-width: 1540px;
+  padding: 24px 32px;
+  align-items: start;
+}
+.mission-workspace > .route {
+  grid-column: 2;
+}
+.game-shell .mission-workspace > .main-column {
+  background: #fffef8;
+  border: 2px solid #ced8c4;
+  border-top: 6px solid #8eaf5b;
+  padding: 24px;
+  box-shadow: 0 5px 0 #dce5d0;
+}
+.game-shell .mission-hud {
+  display: block;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  border: 2px solid #345d43;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #183c30;
+  color: #f6ffe9;
+  box-shadow: 0 5px 0 #102d23;
+}
+.game-shell .mission-world {
+  min-height: 0;
+  aspect-ratio: 1.1;
+}
+.mission-world .outpost-island {
+  position: absolute;
+  inset: 0;
+}
+.mission-world-label {
+  position: absolute;
+  inset: 0 0 auto;
+  background: #183c30eb;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  z-index: 6;
+}
+.mission-world-label span {
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.mission-inventory {
+  padding: 18px;
+}
+.mission-goal {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.mission-goal .building-sprite {
+  width: 58px;
+}
+.quest-label {
+  color: #c7ec76;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+.mission-goal h2 {
+  font: 800 26px/1.1 Inter, system-ui, sans-serif;
+  margin: 6px 0 8px;
+  color: #fff;
+}
+.mission-goal div > span:last-child {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.mission-supplies {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.mission-supplies > span {
+  font-size: 14px;
+}
+.game-shell .mission-hud .block-balance {
+  font-size: 23px;
+  color: #d7f7a1;
+  margin: 0;
+}
+.build-meter {
+  display: block;
+  appearance: none;
+  width: 100%;
+  height: 12px;
+  border: 1px solid #71905c;
+  border-radius: 0;
+  background: #102d23;
+  margin: 12px 0 18px;
+}
+.build-meter::-webkit-progress-bar { background: #102d23; }
+.build-meter::-webkit-progress-value { background: #c7ec76; }
+.build-meter::-moz-progress-bar { background: #c7ec76; }
+.game-shell .mission-hud .mission-progress {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 14px 0;
+}
+.game-shell .mission-hud .mission-progress strong {
+  display: block;
+  flex-basis: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.game-shell .mission-hud .mission-pips i {
+  background: #365946;
+  border-color: #8aab78;
+}
+.game-shell .mission-hud .mission-pips i.filled {
+  background: #c7ec76;
+}
+.game-shell .mission-hud .outpost-link {
+  width: 100%;
+  justify-content: center;
+  white-space: normal;
+  background: #c7ec76;
+  padding: 12px;
+  min-height: 52px;
+  border: 2px solid #9cbd64;
+  font-size: 17px;
+  box-shadow: 0 3px 0 #0d261d;
+}
+.game-shell .mission-hud .build-action {
+  background: #fff;
+  color: #183c30;
+  margin-bottom: 14px;
+}
+.mission-tip {
+  color: #d3e4c7;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 14px 0 0;
+}
+.game-shell .lesson-panel,
+.game-shell .primary,
+.game-shell .choice {
+  border-radius: 4px;
+}
+.game-shell .primary {
+  box-shadow: 0 4px 0 #102d23;
+}
+@media (max-width: 1099px) {
+  .game-shell .workspace.mission-workspace {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  .game-shell .mission-hud {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.9fr) minmax(0, 1fr);
+  }
+  .game-shell .mission-world {
+    aspect-ratio: auto;
+  }
+  .mission-inventory { padding: 16px; }
+  .mission-goal { margin-bottom: 8px; }
+  .mission-goal .building-sprite { width: 42px; }
+  .mission-goal h2 { font-size: 24px; }
+  .mission-tip { display: none; }
+  .mission-workspace > .route { grid-column: 1; }
+}
+@media (max-width: 580px) {
+  .game-shell .workspace.mission-workspace { padding: 12px; }
+  .game-shell .mission-hud { grid-template-columns: minmax(0, 1fr); }
+  .game-shell .mission-world { aspect-ratio: 1.9; }
+  .game-shell .mission-workspace > .main-column { padding: 16px; }
+}
+
 .outpost-screen {
   --forest: #183c30;
   --lime: #c7ec76;

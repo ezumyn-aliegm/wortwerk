@@ -266,7 +266,7 @@ export default function App({
     onStudyEnabled,
   ]);
   return (
-    <div className={carMode ? "car-mode" : "standard-mode"}>
+    <div className={`game-shell ${carMode ? "car-mode" : "standard-mode"}`}>
       <a href="#main" className="skip-link">
         Skip to lesson
       </a>
@@ -365,16 +365,17 @@ export default function App({
       )}
       <main
         id="main"
-        className={`workspace ${showOutpost ? "outpost-workspace" : ""}`}
+        className={`workspace ${showOutpost ? "outpost-workspace" : "mission-workspace"}`}
       >
+        {!showOutpost && <MissionHUD
+          game={state.game}
+          locked={wordbankLocked || blocked || conflict || paused}
+          onOpen={() => setOutpostOpen(true)}
+          onBuild={(id) => changeGame((g) => constructBuild(g, id))}
+        />}
         <div className="main-column">
           {!showOutpost && (
             <>
-              <MissionHUD
-                game={state.game}
-                locked={wordbankLocked}
-                onOpen={() => setOutpostOpen(true)}
-              />
               <SessionHeader state={state} />
             </>
           )}

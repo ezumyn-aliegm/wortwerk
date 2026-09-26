@@ -19,17 +19,34 @@ export function BuildingSprite({ id, className = "" }) {
   );
 }
 
-export function MissionHUD({ game, locked, onOpen }) {
-  const status = gameStatus(game || freshGame());
+export function MissionHUD({ game, locked, onOpen, onBuild }) {
+  game ||= freshGame();
+  const status = gameStatus(game);
+  const selected = status.selectedBuild;
   return (
-    <div className="mission-hud">
-      <button onClick={onOpen} className="outpost-link">
-        <Map size={23} />
-        <span>My outpost</span>
-      </button>
+    <aside className="mission-hud" aria-label="Outpost mission">
+      <div className="mission-world outpost-world" role="img" aria-label={`Your island: ${game.built.length} of ${BUILDINGS.length} buildings complete`}>
+        <img className="outpost-island" src={island} alt="" />
+        {game.built.map((id) => <BuildingSprite key={id} id={id} className={`world-building plot-${id}`} />)}
+        {!status.allBuilt && <BuildingSprite id={selected.id} className={`world-building blueprint-ghost plot-${selected.id}`} />}
+        <div className="mission-world-label">WORDCRAFT EXPEDITION <span>{game.built.length}/{BUILDINGS.length} built</span></div>
+      </div>
+      <div className="mission-inventory">
+        <div className="mission-goal">
+          <BuildingSprite id={selected.id} />
+          <div><span className="quest-label">{status.allBuilt ? "Outpost complete" : "Your building quest"}</span>
+            <h2>{status.allBuilt ? "A world you built." : selected.label}</h2>
+            <span>{status.allBuilt ? "Keep your German skills growing." : `${status.nextNeeded} more blocks to build`}</span>
+          </div>
+        </div>
+        <div className="mission-supplies">
+          <strong className="block-balance"><Blocks size={25} />{status.availableBlocks} blocks</strong>
+          {!status.allBuilt && <span>{selected.cost} needed</span>}
+        </div>
+        {!status.allBuilt && <progress className="build-meter" aria-label={`Blocks for ${selected.label}`} value={Math.min(status.availableBlocks, selected.cost)} max={selected.cost} />}
       <div className="mission-progress">
         <strong>
-          {locked ? "Expedition challenge" : "Your next building break"}
+          {locked ? "Expedition challenge" : "Six answers. Then a building break."}
         </strong>
         {!locked && (
           <>
@@ -51,11 +68,11 @@ export function MissionHUD({ game, locked, onOpen }) {
           <span>Rewards wait until after the check. No hints or timers.</span>
         )}
       </div>
-      <strong className="block-balance">
-        <Blocks size={22} />
-        {status.availableBlocks} blocks
-      </strong>
-    </div>
+      {status.canBuild && !locked && <button className="build-action" onClick={() => onBuild(selected.id)}><Hammer />Build {selected.label.toLowerCase()}</button>}
+      <button onClick={onOpen} className="outpost-link"><Map size={23} /><span>Explore & choose builds</span></button>
+      <p className="mission-tip">Recall earns blocks. Spelling earns more. Mistakes never cost blocks.</p>
+      </div>
+    </aside>
   );
 }
 
