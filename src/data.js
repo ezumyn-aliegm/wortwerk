@@ -1,0 +1,556 @@
+// The 27 entries and lesson-specific senses come from the supplied conversation.
+// Sentences, memory cues, and exercises are original teaching material.
+const item = (
+  id,
+  german,
+  english,
+  kind,
+  example,
+  translation,
+  tip,
+  usages,
+  forms = [],
+) => ({ id, german, english, kind, example, translation, tip, usages, forms });
+export const WORDS = [
+  item(
+    "brief",
+    "der Brief",
+    "letter",
+    "noun",
+    "Ich schreibe einen Brief.",
+    "I am writing a letter.",
+    "Learn der Brief as one piece. Nouns start with a capital letter. Plural: die Briefe.",
+    [
+      ["Ich schreibe einen ___.", "I am writing a letter.", "Brief"],
+      ["Der ___ ist für dich.", "The letter is for you.", "Brief"],
+    ],
+    [
+      [
+        "Write the plural of der Brief, including die.",
+        "die Briefe",
+        "Add -e: Brief → Briefe. All plural nouns use die.",
+      ],
+      [
+        "Complete: ___ Brief (the letter).",
+        "der",
+        "Brief is masculine: der Brief.",
+      ],
+    ],
+  ),
+  item(
+    "fuehlen",
+    "sich fühlen",
+    "to feel",
+    "reflexive verb",
+    "Ich fühle mich gut.",
+    "I feel good.",
+    "The ü matters. Change sich with the person: ich fühle mich, du fühlst dich, wir fühlen uns.",
+    [
+      ["Ich ___ mich gut.", "I feel good.", "fühle"],
+      ["Wir ___ uns müde.", "We feel tired.", "fühlen"],
+    ],
+    [
+      [
+        "Complete: Ich fühle ___ gut.",
+        "mich",
+        "With ich, use mich: Ich fühle mich gut.",
+      ],
+      [
+        "Complete: Du fühlst ___ müde.",
+        "dich",
+        "With du, use dich: Du fühlst dich müde.",
+      ],
+    ],
+  ),
+  item(
+    "aergern",
+    "sich ärgern",
+    "to get annoyed",
+    "reflexive verb",
+    "Ich ärgere mich über den Lärm.",
+    "I am annoyed about the noise.",
+    "ärgern starts with ä. Learn the whole phrase: sich ärgern. Ich ärgere mich means I get annoyed.",
+    [
+      [
+        "Ich ___ mich über den Lärm.",
+        "I am annoyed about the noise.",
+        "ärgere",
+      ],
+      [
+        "Wir ___ uns über den Regen.",
+        "We are annoyed about the rain.",
+        "ärgern",
+      ],
+    ],
+    [
+      [
+        "Complete: Ich ärgere ___ über den Lärm.",
+        "mich",
+        "Ich pairs with mich. The extra e in ärgere belongs to the ich form.",
+      ],
+      [
+        "Complete: Wir ärgern ___ über den Regen.",
+        "uns",
+        "Wir pairs with uns: Wir ärgern uns.",
+      ],
+    ],
+  ),
+  item(
+    "traurig",
+    "traurig",
+    "sad",
+    "adjective",
+    "Ich bin traurig.",
+    "I am sad.",
+    "Picture a sad face. Say trau-rig in two parts. It ends in -ig, not -ich.",
+    [
+      ["Ich bin ___.", "I am sad.", "traurig"],
+      ["Mein Freund ist ___.", "My friend is sad.", "traurig"],
+    ],
+  ),
+  item(
+    "job",
+    "der Job",
+    "job",
+    "noun",
+    "Mein Vater hat einen Job.",
+    "My father has a job.",
+    "Same word as English, but German adds a capital J and der. Plural: die Jobs.",
+    [
+      ["Mein Vater hat einen ___.", "My father has a job.", "Job"],
+      ["Der ___ ist interessant.", "The job is interesting.", "Job"],
+    ],
+    [
+      [
+        "Write the plural of der Job, including die.",
+        "die Jobs",
+        "Add -s: Job → Jobs.",
+      ],
+      ["Complete: ___ Job (the job).", "der", "Job is masculine: der Job."],
+    ],
+  ),
+  item(
+    "mitkommen",
+    "mitkommen",
+    "to come along",
+    "separable verb",
+    "Ich komme mit.",
+    "I am coming along.",
+    "mit + kommen = come along. In a simple statement, mit moves to the end: Ich komme mit.",
+    [
+      ["Ich komme heute ___.", "I am coming along today.", "mit"],
+      ["Du ___ heute mit.", "You are coming along today.", "kommst"],
+    ],
+    [
+      [
+        "Fill both blanks, in order: Ich ___ heute ___. (come along)",
+        "komme mit",
+        "Conjugate kommen → komme. Put mit at the end: Ich komme heute mit.",
+      ],
+      [
+        "Fill both blanks, in order: Wir ___ heute ___. (come along)",
+        "kommen mit",
+        "With wir, use kommen. The prefix mit goes at the end.",
+      ],
+    ],
+  ),
+  item(
+    "umziehen",
+    "umziehen",
+    "to move (home)",
+    "separable verb",
+    "Wir ziehen nach Berlin um.",
+    "We are moving to Berlin.",
+    "Here umziehen means move home. Split it: ziehen … um. Keep ie together in ziehen.",
+    [
+      ["Wir ziehen nach Berlin ___.", "We are moving to Berlin.", "um"],
+      ["Ich ___ morgen um.", "I am moving tomorrow.", "ziehe"],
+    ],
+    [
+      [
+        "Fill both blanks, in order: Wir ___ morgen ___. (move home)",
+        "ziehen um",
+        "Wir ziehen morgen um. The prefix um goes at the end.",
+      ],
+      [
+        "Fill both blanks, in order: Ich ___ heute ___. (move home)",
+        "ziehe um",
+        "Ich needs ziehe. Keep um at the end.",
+      ],
+    ],
+  ),
+  item(
+    "weit-weg",
+    "weit weg",
+    "far away",
+    "expression",
+    "Meine Freundin wohnt weit weg.",
+    "My friend lives far away.",
+    "Two words: weit means far, weg means away. Remember the space.",
+    [
+      ["Meine Freundin wohnt ___.", "My friend lives far away.", "weit weg"],
+      ["Berlin ist ___.", "Berlin is far away.", "weit weg"],
+    ],
+  ),
+  item(
+    "fast",
+    "fast",
+    "almost",
+    "adverb",
+    "Ich bin fast fertig.",
+    "I am almost finished.",
+    "False friend! German fast means almost. English fast would usually be schnell.",
+    [
+      ["Ich bin ___ fertig.", "I am almost finished.", "fast"],
+      ["Es ist ___ acht Uhr.", "It is almost eight o’clock.", "fast"],
+    ],
+  ),
+  item(
+    "treffen",
+    "sich treffen",
+    "to meet (each other)",
+    "reflexive verb",
+    "Wir treffen uns im Park.",
+    "We are meeting in the park.",
+    "Double f: treffen. For meeting each other, use uns with wir and euch with ihr.",
+    [
+      ["Wir ___ uns im Park.", "We are meeting in the park.", "treffen"],
+      ["Ich ___ mich mit Ben.", "I am meeting Ben.", "treffe"],
+    ],
+    [
+      [
+        "Complete: Wir treffen ___ im Park.",
+        "uns",
+        "Wir treffen uns means we meet each other.",
+      ],
+      [
+        "Complete: Ihr trefft ___ im Park.",
+        "euch",
+        "With ihr, use euch: Ihr trefft euch.",
+      ],
+    ],
+  ),
+  item(
+    "beide",
+    "beide",
+    "both",
+    "pronoun",
+    "Wir sind beide müde.",
+    "We are both tired.",
+    "beide means exactly two. Keep ei in that order: b-e-i-d-e.",
+    [
+      ["Wir sind ___ müde.", "We are both tired.", "beide"],
+      [
+        "Die zwei Freunde kommen ___.",
+        "The two friends are both coming.",
+        "beide",
+      ],
+    ],
+  ),
+  item(
+    "fahrradtrial",
+    "der Fahrradtrial",
+    "bike trial",
+    "noun",
+    "Der Fahrradtrial ist schwer.",
+    "The bike trial is difficult.",
+    "A bike trial is riding over obstacles. Build the spelling: Fahr + rad + trial. The two r letters meet in Fahrrad. Plural: die Fahrradtrials.",
+    [
+      ["Der ___ ist schwer.", "The bike trial is difficult.", "Fahrradtrial"],
+      [
+        "Ich finde den ___ spannend.",
+        "I find the bike trial exciting.",
+        "Fahrradtrial",
+      ],
+    ],
+    [
+      [
+        "Write the plural of der Fahrradtrial, including die.",
+        "die Fahrradtrials",
+        "In this lesson, use der Fahrradtrial and die Fahrradtrials.",
+      ],
+      [
+        "Complete: ___ Fahrradtrial (the bike trial).",
+        "der",
+        "Learn the article supplied in your lesson: der Fahrradtrial.",
+      ],
+    ],
+  ),
+  item(
+    "hochfahren",
+    "hochfahren",
+    "to go up (by vehicle)",
+    "separable verb",
+    "Ich fahre den Berg hoch.",
+    "I am riding up the mountain.",
+    "hoch means up; fahren means go by vehicle or ride. In a statement, split fahren … hoch.",
+    [
+      ["Ich fahre den Berg ___.", "I am riding up the mountain.", "hoch"],
+      ["Wir ___ den Berg hoch.", "We are riding up the mountain.", "fahren"],
+    ],
+    [
+      [
+        "Fill both blanks, in order: Ich ___ den Berg ___. (ride up)",
+        "fahre hoch",
+        "Ich fahre den Berg hoch. The prefix hoch goes at the end.",
+      ],
+      [
+        "Fill both blanks, in order: Er ___ den Berg ___. (rides up)",
+        "fährt hoch",
+        "Er uses fährt, with ä. The prefix hoch goes at the end.",
+      ],
+    ],
+  ),
+  item(
+    "hoffentlich",
+    "hoffentlich",
+    "hopefully",
+    "adverb",
+    "Hoffentlich kommt sie mit.",
+    "Hopefully she will come along.",
+    "Split it: hoffen + tlich. There are two f letters and a t before lich.",
+    [
+      ["Sie kommt ___ mit.", "She will hopefully come along.", "hoffentlich"],
+      [
+        "Wir treffen uns ___ morgen.",
+        "We will hopefully meet tomorrow.",
+        "hoffentlich",
+      ],
+    ],
+  ),
+  item(
+    "treppe",
+    "die Treppe",
+    "stairs / staircase",
+    "noun",
+    "Die Treppe ist hoch.",
+    "The staircase is high.",
+    "Learn die Treppe. Double p, and a capital T. Plural: die Treppen.",
+    [
+      ["Die ___ ist hoch.", "The staircase is high.", "Treppe"],
+      ["Ich gehe die ___ hoch.", "I am going up the stairs.", "Treppe"],
+    ],
+    [
+      [
+        "Write the plural of die Treppe, including die.",
+        "die Treppen",
+        "Add -n: Treppe → Treppen.",
+      ],
+      [
+        "Complete: ___ Treppe (the staircase).",
+        "die",
+        "Treppe is feminine: die Treppe.",
+      ],
+    ],
+  ),
+  item(
+    "stark",
+    "stark",
+    "strong",
+    "adjective",
+    "Mein Bruder ist stark.",
+    "My brother is strong.",
+    "Picture someone lifting something heavy: stark = strong. Finish with rk.",
+    [
+      ["Mein Bruder ist ___.", "My brother is strong.", "stark"],
+      ["Wir sind ___.", "We are strong.", "stark"],
+    ],
+  ),
+  item(
+    "streiten",
+    "streiten",
+    "to argue",
+    "verb",
+    "Wir streiten oft.",
+    "We argue often.",
+    "Keep ei in streiten. The lesson uses streiten; wir streiten means we argue.",
+    [
+      ["Wir ___ oft.", "We argue often.", "streiten"],
+      ["Die Freunde ___ nicht.", "The friends do not argue.", "streiten"],
+    ],
+    [
+      [
+        "Complete: Ich ___ nicht. (argue)",
+        "streite",
+        "For ich, drop -n from streiten: ich streite.",
+      ],
+      [
+        "Complete: Er ___ oft. (argues)",
+        "streitet",
+        "The er form is streitet. The extra e makes the ending pronounceable.",
+      ],
+    ],
+  ),
+  item(
+    "muede",
+    "müde",
+    "tired",
+    "adjective",
+    "Ich bin müde.",
+    "I am tired.",
+    "The two dots matter: müde, not mude. Think of feeling tired after a long school day.",
+    [
+      ["Ich bin ___.", "I am tired.", "müde"],
+      ["Nach der Schule sind wir ___.", "After school we are tired.", "müde"],
+    ],
+  ),
+  item(
+    "schlecht",
+    "schlecht",
+    "bad",
+    "adjective",
+    "Das Wetter ist schlecht.",
+    "The weather is bad.",
+    "Build it: sch + lecht. Watch the ch before the final t.",
+    [
+      ["Das Wetter ist ___.", "The weather is bad.", "schlecht"],
+      ["Der Film ist ___.", "The movie is bad.", "schlecht"],
+    ],
+  ),
+  item(
+    "verliebt",
+    "verliebt",
+    "in love",
+    "adjective",
+    "Ich bin verliebt.",
+    "I am in love.",
+    "ver + liebt. Keep ie, then bt. With sein: Ich bin verliebt.",
+    [
+      ["Ich bin ___.", "I am in love.", "verliebt"],
+      ["Sie ist ___.", "She is in love.", "verliebt"],
+    ],
+  ),
+  item(
+    "bestimmt",
+    "bestimmt",
+    "definitely",
+    "adverb",
+    "Er kommt bestimmt mit.",
+    "He is definitely coming along.",
+    "In this lesson, bestimmt means definitely. Double m: be-stimmt.",
+    [
+      ["Er kommt ___ mit.", "He is definitely coming along.", "bestimmt"],
+      ["Das ist ___ richtig.", "That is definitely right.", "bestimmt"],
+    ],
+  ),
+  item(
+    "gluecklich",
+    "glücklich",
+    "happy",
+    "adjective",
+    "Ich bin glücklich.",
+    "I am happy.",
+    "Build Glück + lich. Keep ü and ck. glücklich is happy; traurig is sad.",
+    [
+      ["Ich bin ___.", "I am happy.", "glücklich"],
+      ["Meine Freunde sind ___.", "My friends are happy.", "glücklich"],
+    ],
+  ),
+  item(
+    "sensibel",
+    "sensibel",
+    "sensitive",
+    "adjective",
+    "Mein Freund ist sensibel.",
+    "My friend is sensitive.",
+    "Another false friend: sensibel means sensitive, not sensible. It ends in -bel.",
+    [
+      ["Mein Freund ist ___.", "My friend is sensitive.", "sensibel"],
+      ["Sie ist sehr ___.", "She is very sensitive.", "sensibel"],
+    ],
+  ),
+  item(
+    "fleissig",
+    "fleißig",
+    "hard-working",
+    "adjective",
+    "Sie ist fleißig.",
+    "She is hard-working.",
+    "Keep ei and ß: fl-ei-ß-ig. Use the ß key below the answer box.",
+    [
+      ["Sie ist ___.", "She is hard-working.", "fleißig"],
+      ["Wir sind ___.", "We are hard-working.", "fleißig"],
+    ],
+  ),
+  item(
+    "zuhoeren",
+    "zuhören",
+    "to listen",
+    "separable verb",
+    "Ich höre dir zu.",
+    "I am listening to you.",
+    "zu + hören. The ö matters. In a statement: Ich höre dir zu. Listening to someone uses dative, here dir.",
+    [
+      ["Ich höre dir ___.", "I am listening to you.", "zu"],
+      ["Wir ___ der Lehrerin zu.", "We are listening to the teacher.", "hören"],
+    ],
+    [
+      [
+        "Fill both blanks, in order: Ich ___ dir ___. (listen)",
+        "höre zu",
+        "Ich höre dir zu. Keep ö in höre and put zu at the end.",
+      ],
+      [
+        "Fill both blanks, in order: Wir ___ dir ___. (listen)",
+        "hören zu",
+        "Wir hören dir zu. The prefix zu goes at the end.",
+      ],
+    ],
+  ),
+  item(
+    "einige",
+    "einige",
+    "some / several",
+    "determiner",
+    "Einige Freunde kommen mit.",
+    "Some friends are coming along.",
+    "einige means some or several. It does not mean exactly two; that is beide.",
+    [
+      ["Wir haben ___ Bücher.", "We have several books.", "einige"],
+      ["Ich schreibe ___ Briefe.", "I am writing some letters.", "einige"],
+    ],
+  ),
+  item(
+    "interessieren",
+    "sich interessieren",
+    "to be interested",
+    "reflexive verb",
+    "Ich interessiere mich für Musik.",
+    "I am interested in music.",
+    "One r, double s: inter-ess-ieren. Use sich interessieren für, with mich for ich.",
+    [
+      ["Ich ___ mich für Musik.", "I am interested in music.", "interessiere"],
+      [
+        "Wir ___ uns für Sport.",
+        "We are interested in sports.",
+        "interessieren",
+      ],
+    ],
+    [
+      [
+        "Complete: Ich interessiere ___ für Musik.",
+        "mich",
+        "Ich pairs with mich. Für means in in this expression.",
+      ],
+      [
+        "Complete: Wir interessieren ___ für Sport.",
+        "uns",
+        "Wir pairs with uns: Wir interessieren uns für Sport.",
+      ],
+    ],
+  ),
+];
+
+export const BY_ID = Object.fromEntries(WORDS.map((word) => [word.id, word]));
+export const SKILL_LABELS = {
+  meaning: "Meaning",
+  spelling: "Spelling & recall",
+  usage: "Sentence use",
+  form: "Word forms",
+};
+export const requiredSkills = (word) => [
+  "meaning",
+  "spelling",
+  "usage",
+  ...(word.forms.length ? ["form"] : []),
+];

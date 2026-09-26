@@ -1,0 +1,10 @@
+.git
+node_modules
+dist
+.env*
+data
+*.log
+*-backup*.json
+*-progress*.json
+Current-progress.json
+compose.local.yml

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Wortwerk</title>
+  <path fill="#285447" d="M0 0h512v512H0z"/>
+  <path fill="none" stroke="#f6f3eb" stroke-width="25" stroke-linejoin="round" stroke-linecap="round" d="m153 147 47 139 56-117 56 117 47-139"/>
+  <text x="256" y="361" text-anchor="middle" fill="#f6f3eb" font-family="system-ui, sans-serif" font-size="52" font-weight="700">Wortwerk</text>
+</svg>
