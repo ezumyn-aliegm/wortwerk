@@ -9,6 +9,7 @@ import App from "./App.jsx";
 import ParentDashboard from "./ParentDashboard.jsx";
 import { TutorContext } from "./TutorContext.jsx";
 import { createTutor } from "./tutor.js";
+import { memoryForWord, wordForStudy } from "./memory.js";
 import { STORAGE_KEY } from "./engine.js";
 import { recordActivity } from "./activity.js";
 import { activeSeconds, timeSegments } from "./study-clock.js";
@@ -130,9 +131,9 @@ export default function LibraryApp({
     () =>
       selected
         ? {
-            ...createTutor(selected.words, { deadlineAt: selected.dueAt }),
+            ...createTutor(selected.words.map(w => wordForStudy(w, selected.id)), { deadlineAt: selected.dueAt }),
             MEMORY: Object.fromEntries(
-              selected.words.map((w) => [w.id, w.memory]),
+              selected.words.map((w) => [w.id, memoryForWord(w, selected.id)]),
             ),
           }
         : null,

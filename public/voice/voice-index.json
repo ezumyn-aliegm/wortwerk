@@ -1,0 +1,2573 @@
+{
+  "clips": {
+    "de_bd528940821204a39eb0343f": {
+      "file": "de_bd528940821204a39eb0343f.mp3",
+      "text": "der Brief",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "35f3f5edf9d5c061953e05fcddadbb76dd3049986aebab677fd96e8e9c6e6c41",
+      "bytes": 17280
+    },
+    "de_da8a3a4d3a7f45b1050d3f6d": {
+      "file": "de_da8a3a4d3a7f45b1050d3f6d.mp3",
+      "text": "der Brief. Ich schreibe einen Brief.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "59e1dff39eb4f072f8782932b5ae5213bb424cc02f20ba0efa0ccb5fe5b7281b",
+      "bytes": 43008
+    },
+    "de_70a754c4ff488423dfba9706": {
+      "file": "de_70a754c4ff488423dfba9706.mp3",
+      "text": "Ich schreibe einen Brief.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1de941aa911c6b6735656f302efad2a34551c3efdafaa79acc9ce8a450f7949c",
+      "bytes": 24960
+    },
+    "en_2fbdb9e7380d345a36f733fb": {
+      "file": "en_2fbdb9e7380d345a36f733fb.mp3",
+      "text": "Learn der Brief as one piece. Nouns start with a capital letter. Plural: die Briefe.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "6d0a52e344cfce90994eec415c223b4fbe757d03d4cb8f26ec31eea0a71a4bf3",
+      "bytes": 112128
+    },
+    "de_23f18f32b7afaf22ac227179": {
+      "file": "de_23f18f32b7afaf22ac227179.mp3",
+      "text": "Der Brief ist für dich.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1e7533091abd215c0af9dd3e301646933eb8df3a1ab22b30ea13de60f586e0a7",
+      "bytes": 23808
+    },
+    "de_23c260f9b6947da44875fb6e": {
+      "file": "de_23c260f9b6947da44875fb6e.mp3",
+      "text": "die Briefe",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "c46bf5f7a679d682614d72dde1b19cfb594011a8a43e26d791dc99c1aa451464",
+      "bytes": 16128
+    },
+    "en_829e5b9aac23ffd35c842a3b": {
+      "file": "en_829e5b9aac23ffd35c842a3b.mp3",
+      "text": "Add -e: Brief → Briefe. All plural nouns use die.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "299018a2393a9a902b0d08005e372459ed58d2eaf23b70c9a3ce6cac9a43f414",
+      "bytes": 91776
+    },
+    "de_fe50edade7f0ab1a9c59bb44": {
+      "file": "de_fe50edade7f0ab1a9c59bb44.mp3",
+      "text": "der",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "d24bb09e1b2d82c9b0bc9f23eceaa31c26a015e94b1436620e835834cac4d714",
+      "bytes": 11136
+    },
+    "en_5825498d719fee6742ae8a81": {
+      "file": "en_5825498d719fee6742ae8a81.mp3",
+      "text": "Brief is masculine: der Brief.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "48f638241792943861746af83e784034eb1eef256dc7cb16664736847b0833f5",
+      "bytes": 43008
+    },
+    "en_ea8de47176461c1fc651cfe0": {
+      "file": "en_ea8de47176461c1fc651cfe0.mp3",
+      "text": "Picture a letter wearing a big capital B. On its envelope is a tiny label: der. Open the envelope and find the letters i then e inside.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b96a18e1c5f4ab09e09c775ef6616a7fecdd2b4444ef5fb9197e51160d556523",
+      "bytes": 181248
+    },
+    "en_e5049f93e7e0ff4305104c57": {
+      "file": "en_e5049f93e7e0ff4305104c57.mp3",
+      "text": "ie, not ei. Capital B. Say the article with it: der Brief.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "df380e97d9e95278fd419a3cf7ee2ee8b256040d87c67e55c604eb86bbb9984c",
+      "bytes": 92928
+    },
+    "de_c2c567ae95a88d0fa7c92d96": {
+      "file": "de_c2c567ae95a88d0fa7c92d96.mp3",
+      "text": "sich fühlen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "38a9cb3ffced6c2b30530f14a8938b60e4bf258b54d4a929e2623b74dcfe00a1",
+      "bytes": 18816
+    },
+    "de_f4e20efd18c03c1d42562539": {
+      "file": "de_f4e20efd18c03c1d42562539.mp3",
+      "text": "sich fühlen. Ich fühle mich gut.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b62bb33bc89eebe43783536ad5b0064cdc8f83cbd6da09fc25cc70d3afb5f2a9",
+      "bytes": 49536
+    },
+    "de_f6008bde22eb41eedecf20fb": {
+      "file": "de_f6008bde22eb41eedecf20fb.mp3",
+      "text": "Ich fühle mich gut.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "bf94bfe6341dc7e3a5db6393bd3284f030441b7fc9feab1f2aef95cd1e598615",
+      "bytes": 22656
+    },
+    "en_cc508c0b8bd8624792891a4c": {
+      "file": "en_cc508c0b8bd8624792891a4c.mp3",
+      "text": "The ü matters. Change sich with the person: ich fühle mich, du fühlst dich, wir fühlen uns.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9905471a8908c32c64da9eb68dfc06c4ebbbcc120e5f94f3a29c2b8cc7760269",
+      "bytes": 119808
+    },
+    "de_0f6834be0af1647d733626c4": {
+      "file": "de_0f6834be0af1647d733626c4.mp3",
+      "text": "Wir fühlen uns müde.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "472e543b79287af29712f956ae5a21dfdbaa3dbfc4a90b8b56c15f881aa6206e",
+      "bytes": 27648
+    },
+    "de_bd6fb3c4006bfc58c2639e19": {
+      "file": "de_bd6fb3c4006bfc58c2639e19.mp3",
+      "text": "mich",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9e7ce2fe2c5338b1a96b020045a8810300ff794e95a0b5e06e4ed0d248107aaa",
+      "bytes": 11136
+    },
+    "en_db5b5cd42b44eabb35d4cc27": {
+      "file": "en_db5b5cd42b44eabb35d4cc27.mp3",
+      "text": "With ich, use mich: Ich fühle mich gut.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "147cb8927d21f1050a9da0c3ea3c8982886fb60fc153e83dd42bd771110628ae",
+      "bytes": 61056
+    },
+    "de_214296b8256350d5755b80f3": {
+      "file": "de_214296b8256350d5755b80f3.mp3",
+      "text": "dich",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6dc58f4a22d1008e50abfbab825b1f9fc91fe1731cbe0bfc5dd81894646d76cd",
+      "bytes": 8448
+    },
+    "en_b22c20d24dad9a2d4b613596": {
+      "file": "en_b22c20d24dad9a2d4b613596.mp3",
+      "text": "With du, use dich: Du fühlst dich müde.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "78879fb3c5d6498492724a6a9f2b108473c16b24f1852f7f2a22820c8d325d73",
+      "bytes": 66048
+    },
+    "en_aa883cc448fb1735031dece6": {
+      "file": "en_aa883cc448fb1735031dece6.mp3",
+      "text": "Picture a feelings thermometer. The two dots over ü are its two eyes, checking how you feel. Point at yourself when you say mich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "ec57952ca3d94ba679012339b4dbf7676fafafdcaa6eee65f1e31ba0e1423bc8",
+      "bytes": 146688
+    },
+    "en_22a72c026210bcc7b8832eb4": {
+      "file": "en_22a72c026210bcc7b8832eb4.mp3",
+      "text": "ü has two dots; a silent h follows it. Keep sich with the infinitive.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f7917faf4709a066a7521fa4a47984d7566654c963195a88607e51f134aa0274",
+      "bytes": 89088
+    },
+    "de_ac9ae46f98d7f78a42ea4700": {
+      "file": "de_ac9ae46f98d7f78a42ea4700.mp3",
+      "text": "sich ärgern",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1cb05e9268c597a8f80d563e71c5307fe880ec357f36f12a9026fb883bed5b9f",
+      "bytes": 17280
+    },
+    "de_dec382f029af28fa29beb8cd": {
+      "file": "de_dec382f029af28fa29beb8cd.mp3",
+      "text": "sich ärgern. Ich ärgere mich über den Lärm.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5459170436288b329d4bce1d182ae297959b6974517520f76513d505c8e7dc2c",
+      "bytes": 49536
+    },
+    "de_57b88e658b54927c240c7b5c": {
+      "file": "de_57b88e658b54927c240c7b5c.mp3",
+      "text": "Ich ärgere mich über den Lärm.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "11c3acc6b03f1a2a61e61ad636e1fd126ddab4bec0c102661dd85579165e47ab",
+      "bytes": 30336
+    },
+    "en_f372c2ae782dd75c56a07c7d": {
+      "file": "en_f372c2ae782dd75c56a07c7d.mp3",
+      "text": "ärgern starts with ä. Learn the whole phrase: sich ärgern. Ich ärgere mich means I get annoyed.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d87debf3a93604047366a45bed5bf7cdf390c64eeffc38a2918633b9b8e14a0b",
+      "bytes": 124800
+    },
+    "de_4a43d41917db032b9a722ea9": {
+      "file": "de_4a43d41917db032b9a722ea9.mp3",
+      "text": "Wir ärgern uns über den Regen.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "67fdd1e5739ed33708b11b5a6b280e6ab05921d2004009b110b581bf500400dd",
+      "bytes": 31488
+    },
+    "en_9fe90c7781ee413d0fb0aea8": {
+      "file": "en_9fe90c7781ee413d0fb0aea8.mp3",
+      "text": "Ich pairs with mich. The extra e in ärgere belongs to the ich form.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "93a64a3afd6273d28f70b238a24dfb9d4acccbf9eaadd33fc2e030b35d74189d",
+      "bytes": 85248
+    },
+    "de_652375cf18318d14a681aec7": {
+      "file": "de_652375cf18318d14a681aec7.mp3",
+      "text": "uns",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "970efe52089b533ce223e20bc45bafec3aeb77821f534800f39aeba670fb0d7f",
+      "bytes": 12288
+    },
+    "en_16102671a4db964a66bd7463": {
+      "file": "en_16102671a4db964a66bd7463.mp3",
+      "text": "Wir pairs with uns: Wir ärgern uns.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b4e7dc0163c752236934fc561e2558646067e0a960fde13bb2aa443cecd9bf21",
+      "bytes": 53376
+    },
+    "en_613ce0465d0193146bba2b85": {
+      "file": "en_613ce0465d0193146bba2b85.mp3",
+      "text": "Imagine the two dots over ä turning into annoyed eyebrows. A noisy alarm makes you point at yourself: Ich ärgere mich!",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e501a54befa34265d6f9c095ede6bc301e12e4b1a4432633e1e52e28b95f8921",
+      "bytes": 139008
+    },
+    "en_cbee67b8a832b8fbe8309fed": {
+      "file": "en_cbee67b8a832b8fbe8309fed.mp3",
+      "text": "Start with ä, then r-g-ern. In ich ärgere, the ending changes to -e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2d4f17e7a009eeee955bb633764ab9278b3e44b281a81ded58ee6760466ec8f2",
+      "bytes": 108288
+    },
+    "de_3e90122d42c97d8f1cf52464": {
+      "file": "de_3e90122d42c97d8f1cf52464.mp3",
+      "text": "traurig",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5f113a41c47a496d9591e99cc28d26fa629048155ce4a60fc51ba53e8933d101",
+      "bytes": 14976
+    },
+    "de_ed8df60b66242a6fc27887f0": {
+      "file": "de_ed8df60b66242a6fc27887f0.mp3",
+      "text": "traurig. Ich bin traurig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "e6091c28f500c656e13cc18bebe5731b0ba7330708083cd0a11f45e3d99f893c",
+      "bytes": 36480
+    },
+    "de_60f3430f6986f9f95b36ae94": {
+      "file": "de_60f3430f6986f9f95b36ae94.mp3",
+      "text": "Ich bin traurig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "3976990432abb2ea08924cbe4ff10e4efe5e5b11be220d5f7538f12fce8a2023",
+      "bytes": 21120
+    },
+    "en_a9f033c308e30575c30c3366": {
+      "file": "en_a9f033c308e30575c30c3366.mp3",
+      "text": "Picture a sad face. Say trau-rig in two parts. It ends in -ig, not -ich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "319d21ba44bb2cd9f23fd73788d06bc5c7bf2c704437978fb3dfb6795c6b4439",
+      "bytes": 118656
+    },
+    "de_d4e4f39ecc664ee3889018da": {
+      "file": "de_d4e4f39ecc664ee3889018da.mp3",
+      "text": "Mein Freund ist traurig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "c9848832e7156d02fb346af06fc5dabbd4ee67b9c1df21f6437ce5c444a7e0e4",
+      "bytes": 26496
+    },
+    "en_e5aad1188e3efdc9bfab4091": {
+      "file": "en_e5aad1188e3efdc9bfab4091.mp3",
+      "text": "Picture a sad face on a rainy window. Draw a tiny tear next to traurig. Pair it with the opposite: glücklich, happy.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e22bf3747ca916f9754f856e1a321165edfd2899aa2fee8db49d873044f51da4",
+      "bytes": 145536
+    },
+    "en_61af535e5b7d8f254232f7da": {
+      "file": "en_61af535e5b7d8f254232f7da.mp3",
+      "text": "Two chunks: trau + rig. Keep au together and end with g, not ch.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9e0900f46f95b4f3c6ff47792ac0c7b6ce6940162d9b485a460177b274d81df1",
+      "bytes": 103296
+    },
+    "de_3e48c781c39a1e2d394fc340": {
+      "file": "de_3e48c781c39a1e2d394fc340.mp3",
+      "text": "der Job",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1893d9dfbc9eda12b77a6f208fb27afa344a0a2c9840c9d797de14593e754f91",
+      "bytes": 13440
+    },
+    "de_b0fd7459f0bed40c8386ca12": {
+      "file": "de_b0fd7459f0bed40c8386ca12.mp3",
+      "text": "der Job. Mein Vater hat einen Job.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "e652574b33bedcefc0a86fc3cdfffe29853d20d4705df9a73a074b7f5df8a46e",
+      "bytes": 44160
+    },
+    "de_f4e42aca14d9154d747c638e": {
+      "file": "de_f4e42aca14d9154d747c638e.mp3",
+      "text": "Mein Vater hat einen Job.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "89f8d09c4a3cbc2d18df3b2b4f13e621347d4e5bd8011eb0f7d13c0ac705d00d",
+      "bytes": 27648
+    },
+    "en_5f5281b0e904cfea87ae18c0": {
+      "file": "en_5f5281b0e904cfea87ae18c0.mp3",
+      "text": "Same word as English, but German adds a capital J and der. Plural: die Jobs.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "74a486074b62ddcf50b719d91b06be3768080c1a88455d7dc1fcf385ea024296",
+      "bytes": 104448
+    },
+    "de_0ecef9a4cef906f61b635eb3": {
+      "file": "de_0ecef9a4cef906f61b635eb3.mp3",
+      "text": "Der Job ist interessant.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "54e96345b27c8321b67a490945900af29314d1b60f22ec4d87d0819a793d9dad",
+      "bytes": 26496
+    },
+    "de_4cf6798b6bf5464f0f91ab84": {
+      "file": "de_4cf6798b6bf5464f0f91ab84.mp3",
+      "text": "die Jobs",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "3ba6effafb3a52a2a5a0c5adf18e69502ae12389523adb95dd30e23581bcfe74",
+      "bytes": 16128
+    },
+    "en_0f34a2b38276abe06d15734b": {
+      "file": "en_0f34a2b38276abe06d15734b.mp3",
+      "text": "Add -s: Job → Jobs.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0d0698f35d8a4829b8bc938d2aa135bf36f934d04bd00e0f7e46df0081af94e5",
+      "bytes": 44160
+    },
+    "en_7c1076383ec0afe91e2b9697": {
+      "file": "en_7c1076383ec0afe91e2b9697.mp3",
+      "text": "Job is masculine: der Job.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c8dde6ab12b52f2d97a02333595d353ca697cb4d89946e4380978a258bb106eb",
+      "bytes": 38016
+    },
+    "en_93da6cd3be08889da1a0a89d": {
+      "file": "en_93da6cd3be08889da1a0a89d.mp3",
+      "text": "Imagine a job badge with a giant J. The badge belongs to DER boss. The word already looks familiar from English.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d77855cfd60a1b5f3af56413353c7e300da9c01dd2892431267ce7d900f4c9c6",
+      "bytes": 139008
+    },
+    "en_bb18e7c6bdea9217c8b7ec57": {
+      "file": "en_bb18e7c6bdea9217c8b7ec57.mp3",
+      "text": "Capital J, article der. Add s for the plural: Jobs.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2df004e590a97174bc17069be9467258ce9f0586e9d766545734dd5ace134fbb",
+      "bytes": 78720
+    },
+    "de_05e9c62092e4e55f1196abe3": {
+      "file": "de_05e9c62092e4e55f1196abe3.mp3",
+      "text": "mitkommen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9ff783adeb125a185cb95c58b4d9e24bff716a0e58c548f9f3711afd352d8b36",
+      "bytes": 17280
+    },
+    "de_dc77b62a5e7a81131e88f1b0": {
+      "file": "de_dc77b62a5e7a81131e88f1b0.mp3",
+      "text": "mitkommen. Ich komme mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2839a26b4000d484b10b1de59c972b5f0b0d617cd0fd07493263472868b85fa8",
+      "bytes": 31488
+    },
+    "de_ec4f32e4514355867180d75d": {
+      "file": "de_ec4f32e4514355867180d75d.mp3",
+      "text": "Ich komme mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a757945aa5ff71a7f22b49c357f30c5807976394da11e8f1b9187590e71ff07b",
+      "bytes": 18816
+    },
+    "en_83173cb3d69a921d43224195": {
+      "file": "en_83173cb3d69a921d43224195.mp3",
+      "text": "mit + kommen = come along. In a simple statement, mit moves to the end: Ich komme mit.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "36c8c5fcb5da06a151aee9c930cb2a4936fd12135e980edaad1a2bc36d4f74ff",
+      "bytes": 128640
+    },
+    "de_2eafb0ceda2b11141878a4d1": {
+      "file": "de_2eafb0ceda2b11141878a4d1.mp3",
+      "text": "Ich komme heute mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "fbbb0139686060ac09e5fd6d16ada6a241d4ac51b1423a6b1ed09b945dbe2fb3",
+      "bytes": 23808
+    },
+    "de_48174557d910b73263996f3f": {
+      "file": "de_48174557d910b73263996f3f.mp3",
+      "text": "Du kommst heute mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "80d098dcd46296ae5986bd986a28b0ffbe6470a631d37acc088826927b369ba9",
+      "bytes": 21120
+    },
+    "de_145a7a395a4a5792c7156953": {
+      "file": "de_145a7a395a4a5792c7156953.mp3",
+      "text": "komme mit",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2e5649ca670bafcee9e30ccb5c96942ee4f5ddffa7446ac3e5b2aa1365718499",
+      "bytes": 16128
+    },
+    "en_242d6b13bf0a90fbc7d81594": {
+      "file": "en_242d6b13bf0a90fbc7d81594.mp3",
+      "text": "Conjugate kommen → komme. Put mit at the end: Ich komme heute mit.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b0939b2788d334d8388983a087251589025089ca62f37ae2447d4356a57cf1b4",
+      "bytes": 99456
+    },
+    "de_c0e7f74383407df0700c5c76": {
+      "file": "de_c0e7f74383407df0700c5c76.mp3",
+      "text": "kommen mit",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a59ed38875f6a5789773fae6d1c8e7d4e7237075dd01003a82ec026965692a4b",
+      "bytes": 16128
+    },
+    "en_66db0f19055be07237d18df1": {
+      "file": "en_66db0f19055be07237d18df1.mp3",
+      "text": "With wir, use kommen. The prefix mit goes at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d9e4e06e8fe22b5e052bcb90cb11c7b33c8011e98b012c9b3354693ef63efdbc",
+      "bytes": 69888
+    },
+    "en_de455aae2ac0b62174334249": {
+      "file": "en_de455aae2ac0b62174334249.mp3",
+      "text": "Your friend says “Come along!” Two m letters walk side by side. In a sentence, mit runs ahead to wait at the very end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0234fad7ab68b3ab30c7dc99a8977450a2b4d87d87a8213b18de75a718098393",
+      "bytes": 139008
+    },
+    "en_95eac26fd170d726591b4ae7": {
+      "file": "en_95eac26fd170d726591b4ae7.mp3",
+      "text": "Two m letters in kommen. Join mitkommen in the infinitive; split komme … mit in a statement.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1b99b1ac63b3c79c903ff01c4da8825e95c5de74f70b8eff3feb7d9978608700",
+      "bytes": 120960
+    },
+    "de_fe58680dccec055f058a89b0": {
+      "file": "de_fe58680dccec055f058a89b0.mp3",
+      "text": "umziehen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "46be902a6b557fd8a16835e127a10728857f578cede7e50e3ad0fa76811a1df0",
+      "bytes": 17280
+    },
+    "de_197790b9c224bd0e4453ef3b": {
+      "file": "de_197790b9c224bd0e4453ef3b.mp3",
+      "text": "umziehen. Wir ziehen nach Berlin um.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "99eaf71bd71ede890fe7c5af6a37bbbdb7bd46fc8161e491f029c4a3134df0dc",
+      "bytes": 39168
+    },
+    "de_b1857575df544b0278bf94ce": {
+      "file": "de_b1857575df544b0278bf94ce.mp3",
+      "text": "Wir ziehen nach Berlin um.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5f9a214c58efaa6d1e3b29b71a127baa0b54711e3649946e0cabd07e17c2f2db",
+      "bytes": 27648
+    },
+    "en_e5052ae0f31e08371934801f": {
+      "file": "en_e5052ae0f31e08371934801f.mp3",
+      "text": "Here umziehen means move home. Split it: ziehen … um. Keep ie together in ziehen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8c46348350889957ba645c33bf55d931124d168b4178d746052ca8c44668ba20",
+      "bytes": 131328
+    },
+    "de_187d82be4ce14545be5d8431": {
+      "file": "de_187d82be4ce14545be5d8431.mp3",
+      "text": "Ich ziehe morgen um.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "815f9bb91947db9659343982bc8350a01210fb202461db1faafac37b0c200763",
+      "bytes": 23808
+    },
+    "de_9d9e627baacc9b83a37f3d76": {
+      "file": "de_9d9e627baacc9b83a37f3d76.mp3",
+      "text": "ziehen um",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9f7bdbbeb2837d9a6699d842264566146635f6950dd82707de70edc27355816c",
+      "bytes": 16128
+    },
+    "en_95775e58b06ad75b255d5717": {
+      "file": "en_95775e58b06ad75b255d5717.mp3",
+      "text": "Wir ziehen morgen um. The prefix um goes at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d197622d2a867943576bb3d2007c6ed108c0dd5d7563e5499c1e735cc600371d",
+      "bytes": 68736
+    },
+    "de_3a70a08e0af2fa11e02b946d": {
+      "file": "de_3a70a08e0af2fa11e02b946d.mp3",
+      "text": "ziehe um",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "ce421694b664ccc8d505ab3f9d578e53d265ba9c8a8bbc0e7012e956885acde5",
+      "bytes": 14976
+    },
+    "en_cd0c9a6bbb7bc1afb48a79cc": {
+      "file": "en_cd0c9a6bbb7bc1afb48a79cc.mp3",
+      "text": "Ich needs ziehe. Keep um at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5e64452075cfd81398c97045e897fb887c1ba8bfee881b13bcacd366023736fa",
+      "bytes": 45696
+    },
+    "en_85d9c5411c76d7835a04eca0": {
+      "file": "en_85d9c5411c76d7835a04eca0.mp3",
+      "text": "Imagine a moving box marked um. Inside, i and e stand in order next to a tall h. The box moves to the end: Wir ziehen um.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e87ad654a9d4b6f4820bac9e2e4c58f6d2a0d4073394c5cdf76c856dc91f3760",
+      "bytes": 180096
+    },
+    "en_be1846f3b7f9186d9d1751d3": {
+      "file": "en_be1846f3b7f9186d9d1751d3.mp3",
+      "text": "ie, then h. Infinitive umziehen is one word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0942dcce960dce50c39a47331d32e471a32161698bfb3fc3f5cc850ac609578f",
+      "bytes": 73728
+    },
+    "de_11ca9e666c3d11a519893f2d": {
+      "file": "de_11ca9e666c3d11a519893f2d.mp3",
+      "text": "weit weg",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "dd2289039b55bbc98a0a9631b1715309176120e1fe531a2d998ce86eb1283700",
+      "bytes": 16128
+    },
+    "de_2b29a0de256663af639d1066": {
+      "file": "de_2b29a0de256663af639d1066.mp3",
+      "text": "weit weg. Meine Freundin wohnt weit weg.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2c8d9f6e0d101c4faa6201d333931e442a2909a3fc79cd70bcc2ac6d0fb5f09b",
+      "bytes": 41856
+    },
+    "de_25bdb124950c92fb85df7795": {
+      "file": "de_25bdb124950c92fb85df7795.mp3",
+      "text": "Meine Freundin wohnt weit weg.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5734511a49a86753f8070ea1e6cc9442bc465fa5fffd2f8f36c9c434089749c1",
+      "bytes": 31488
+    },
+    "en_2e148f118fd800b1a3285d22": {
+      "file": "en_2e148f118fd800b1a3285d22.mp3",
+      "text": "Two words: weit means far, weg means away. Remember the space.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "ba3c67043e71e03f95e52e5092a7eb61d7fb27cc9c2b8412dfd06f4698b7419c",
+      "bytes": 87936
+    },
+    "de_ba860681ee8530e259ef590e": {
+      "file": "de_ba860681ee8530e259ef590e.mp3",
+      "text": "Berlin ist weit weg.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "03e9506b9ad1dcc5714da3944af338b22996f4255a95ffc9bff235675fdd6600",
+      "bytes": 23808
+    },
+    "en_c3db9b98950c7304049fdaea": {
+      "file": "en_c3db9b98950c7304049fdaea.mp3",
+      "text": "Imagine two signposts far apart: WEIT on one, WEG on the other. The big gap reminds you to put a space between the words.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "10f03965323b56ba0c82b942a0d568d2cbf031f738e73aaa1416e48200f7c778",
+      "bytes": 154368
+    },
+    "en_a81a3b7df5d3685ab3168507": {
+      "file": "en_a81a3b7df5d3685ab3168507.mp3",
+      "text": "Two words, both starting with w. First word has ei; second ends in g.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2e59adce77a039a1b436cc82fb75d649036198b5e33ea3f5de9aa295b2cd8a81",
+      "bytes": 105984
+    },
+    "de_f9f722db218c72fab45a41a4": {
+      "file": "de_f9f722db218c72fab45a41a4.mp3",
+      "text": "fast",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "68d312425197bc297fed45a131bd4d6afc8efb914104588f29e61594263ae755",
+      "bytes": 13440
+    },
+    "de_ffb018592e922eb2cc57d80f": {
+      "file": "de_ffb018592e922eb2cc57d80f.mp3",
+      "text": "fast. Ich bin fast fertig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6e5dabfa7a31d5340898c3d7ef80ed31c3520afa3b68cad29d575540b53c4e74",
+      "bytes": 34176
+    },
+    "de_671b87520b378e4985888594": {
+      "file": "de_671b87520b378e4985888594.mp3",
+      "text": "Ich bin fast fertig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "83357560da895aec3ebbbe132dc909c3959de55c1dde604be11415133b519419",
+      "bytes": 24960
+    },
+    "en_0fd768416e634cc2772408f2": {
+      "file": "en_0fd768416e634cc2772408f2.mp3",
+      "text": "False friend! German fast means almost. English fast would usually be schnell.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d26a494d368f5dd5ddf7b579934a60bea0cc0774787bc83c6c5339421626892b",
+      "bytes": 100608
+    },
+    "de_26c22b1ba912af327a02fe70": {
+      "file": "de_26c22b1ba912af327a02fe70.mp3",
+      "text": "Es ist fast acht Uhr.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b3dce78c1e608feac53be7f6b304b2689c76418c628dd9f7d3b0f19c93de9850",
+      "bytes": 24960
+    },
+    "en_7ac7a15764c0db939cfda9d4": {
+      "file": "en_7ac7a15764c0db939cfda9d4.mp3",
+      "text": "Imagine a race runner ALMOST at the finish. Freeze the picture just before the line. German fast means almost, even though English fast makes you think of speed.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d3dec441d7c01d280da1c6aac2e0984fb579187edb1215dcb0c9c226d7f09d2b",
+      "bytes": 186240
+    },
+    "en_aa3e761e13c80c1b97b28168": {
+      "file": "en_aa3e761e13c80c1b97b28168.mp3",
+      "text": "f-a-s-t. The spelling is familiar; the meaning is the trap.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "10f9f348dc11b98efaf722cfca39cf1a10bb4ed6f7369c316c4183edcdeb1893",
+      "bytes": 87936
+    },
+    "de_29fd7ade06a3dfe97bd84144": {
+      "file": "de_29fd7ade06a3dfe97bd84144.mp3",
+      "text": "sich treffen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9c52fe7ef61f302eec0359dcdd982b783551161914da1bbbcbdc69baceeca078",
+      "bytes": 16128
+    },
+    "de_da3983e47c9eaf4042d5273e": {
+      "file": "de_da3983e47c9eaf4042d5273e.mp3",
+      "text": "sich treffen. Wir treffen uns im Park.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "7119fe58fae4a11b1dfff220101ccf711b700241a7fbcb595c6d6dfbb1d42b59",
+      "bytes": 43008
+    },
+    "de_4a59dc81322ea8bc75c419f7": {
+      "file": "de_4a59dc81322ea8bc75c419f7.mp3",
+      "text": "Wir treffen uns im Park.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5087d80e0ca00475ffbf361063ba282eec11855d7f5d3b9f8df2035644e2b108",
+      "bytes": 28800
+    },
+    "en_7a678c757545211ae0626cea": {
+      "file": "en_7a678c757545211ae0626cea.mp3",
+      "text": "Double f: treffen. For meeting each other, use uns with wir and euch with ihr.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "45bab06f960fde66553ebd78a644f5d4d1f647bc4d78f56b07314114f49924a0",
+      "bytes": 108288
+    },
+    "de_5704b3ee99ce81a56cc9270a": {
+      "file": "de_5704b3ee99ce81a56cc9270a.mp3",
+      "text": "Ich treffe mich mit Ben.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "ac61ae94125a696e470fecb47b90bafef2e59eefbd28fb4c2d649e1741982deb",
+      "bytes": 23808
+    },
+    "en_811b2244b25c1a7c23c600fc": {
+      "file": "en_811b2244b25c1a7c23c600fc.mp3",
+      "text": "Wir treffen uns means we meet each other.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1883abf05effbaa444da44bcfaccb835cd9096a0f22ed67811f2efe3379c4d7b",
+      "bytes": 45696
+    },
+    "de_4b4418de59270acdca42a554": {
+      "file": "de_4b4418de59270acdca42a554.mp3",
+      "text": "euch",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "d355bef0e5caf31abe755b2ea3f6cb2e3573eef260f4198e489f370aeeabe105",
+      "bytes": 13440
+    },
+    "en_559940086f1b3ec5213dfb89": {
+      "file": "en_559940086f1b3ec5213dfb89.mp3",
+      "text": "With ihr, use euch: Ihr trefft euch.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a224c6887fb3611d9735d0755bc0e5563af8809b339f0e8daea018a1e55b65be",
+      "bytes": 59520
+    },
+    "en_cc91423143bd428750a33db0": {
+      "file": "en_cc91423143bd428750a33db0.mp3",
+      "text": "Picture the two f letters as two friends meeting in a park. They stand together in the middle of treffen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f0dc3934e4ae4da7035563bf1211472e977417e0cb92360c621777868a9d5861",
+      "bytes": 107136
+    },
+    "en_9d4862dd75d4c7f358bf1a5b": {
+      "file": "en_9d4862dd75d4c7f358bf1a5b.mp3",
+      "text": "Double f. Include sich in the vocabulary form; wir treffen uns in a sentence.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "62a2cf6e63cbd994c1a802bb50aee09358c3b92bd7b15db60ca6da36b5e2fa3c",
+      "bytes": 96768
+    },
+    "de_eca79a9277b4e66b76e854c3": {
+      "file": "de_eca79a9277b4e66b76e854c3.mp3",
+      "text": "beide",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b7c3c24d92dddd2a61290c76d34f23da156bf8631d12a66b1d4c6355b6667b08",
+      "bytes": 12288
+    },
+    "de_c8afd194af5168fd5344c250": {
+      "file": "de_c8afd194af5168fd5344c250.mp3",
+      "text": "beide. Wir sind beide müde.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "39ade89eb85989367b67af43ca37c4c884224b7222d15d6711373681d93aabe6",
+      "bytes": 35328
+    },
+    "de_85ddd5f3e0000de1c22030ad": {
+      "file": "de_85ddd5f3e0000de1c22030ad.mp3",
+      "text": "Wir sind beide müde.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a7bdfb29f760e68962be05961178aefbdf4618932a79bc3ae114fe33000903e7",
+      "bytes": 24960
+    },
+    "en_60dc98d2506f451b95168cd3": {
+      "file": "en_60dc98d2506f451b95168cd3.mp3",
+      "text": "beide means exactly two. Keep ei in that order: b-e-i-d-e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "31b52928a2bd56639bab0d12beb507a25d00138c426f76f1a6b05b08f0b70ed1",
+      "bytes": 104448
+    },
+    "de_fd9e1f85c7187c203f98f6ef": {
+      "file": "de_fd9e1f85c7187c203f98f6ef.mp3",
+      "text": "Die zwei Freunde kommen beide.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "583148db74ec621bf26b1f6590426caf7f37894d2aeaeb5cda6b47ea3e79d123",
+      "bytes": 30336
+    },
+    "en_66bc3f262124579073735f6e": {
+      "file": "en_66bc3f262124579073735f6e.mp3",
+      "text": "Hold up exactly two fingers. Both fingers stand over ei in beide. Both means two, not just some.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "50bcfe9b444eb4569ae3a99badc65b1becd09617b7582fb7c3f4be2de9c20a28",
+      "bytes": 137856
+    },
+    "en_dbd05c82a767b15c2ccdfe35": {
+      "file": "en_dbd05c82a767b15c2ccdfe35.mp3",
+      "text": "ei, not ie. End with de.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "83b3f211180d3ed06cb71110ea9554af94f06e1d77ee6bd79620cff2deeab8c7",
+      "bytes": 50688
+    },
+    "de_663dbeff2c8340dc78b0af3e": {
+      "file": "de_663dbeff2c8340dc78b0af3e.mp3",
+      "text": "der Fahrradtrial",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "11bd97d069245f6c19ab9d1a214f01d607eab1bdc5fa5223dd32c9b1d5922efc",
+      "bytes": 26496
+    },
+    "de_d627ea0b6b2075ee813c9b6c": {
+      "file": "de_d627ea0b6b2075ee813c9b6c.mp3",
+      "text": "der Fahrradtrial. Der Fahrradtrial ist schwer.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "4c3a9d22f8c5f0e5d5acd395481ba772af4967b6c4e87208b369e681a9f863db",
+      "bytes": 59904
+    },
+    "de_086144ee7495b1768a022802": {
+      "file": "de_086144ee7495b1768a022802.mp3",
+      "text": "Der Fahrradtrial ist schwer.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1730f928d2ab148d334f31005c992affd5e40ef91f871311d4c05c557433814e",
+      "bytes": 31488
+    },
+    "en_ea54235c5f95860d35e5e13a": {
+      "file": "en_ea54235c5f95860d35e5e13a.mp3",
+      "text": "A bike trial is riding over obstacles. Build the spelling: Fahr + rad + trial. The two r letters meet in Fahrrad. Plural: die Fahrradtrials.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "51810187ed215740d03dd9d520e5424b7ce94b9dce49d6324925e4c021187312",
+      "bytes": 188928
+    },
+    "de_e778030664f5eb0e0f533fb3": {
+      "file": "de_e778030664f5eb0e0f533fb3.mp3",
+      "text": "Ich finde den Fahrradtrial spannend.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "95b308ef98c05028aa9a7c2db6ad428fc5e01fba82c6d74fb5a0c0ddac6bd524",
+      "bytes": 39168
+    },
+    "de_877e9c5f50f71f3fe0b7d7bf": {
+      "file": "de_877e9c5f50f71f3fe0b7d7bf.mp3",
+      "text": "die Fahrradtrials",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9818fcf9f147de9b7e9892654944980318fb268e31145937dc8c4674aea1bbf6",
+      "bytes": 27648
+    },
+    "en_4aef472f6382548c17d390ef": {
+      "file": "en_4aef472f6382548c17d390ef.mp3",
+      "text": "In this lesson, use der Fahrradtrial and die Fahrradtrials.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "98dd4b070fbbe9a9dcb351f6089c4189b31d7b36907454e64e63ecd46d377146",
+      "bytes": 91776
+    },
+    "en_09ada898319285a1e956cf7f": {
+      "file": "en_09ada898319285a1e956cf7f.mp3",
+      "text": "Learn the article supplied in your lesson: der Fahrradtrial.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "93be5f08413b2762fd0115813f5e5d781acaf6dc9579d34004b08496e683ead3",
+      "bytes": 67584
+    },
+    "en_672e248dbde3ddd10b499f03": {
+      "file": "en_672e248dbde3ddd10b499f03.mp3",
+      "text": "Imagine a bike balancing over three blocks labeled Fahr, rad, trial. The r at the end of Fahr bumps into the r at the start of rad: rr.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "35e3ee87862c751749617a6d36cbca0e7ed03110c2ac46989c09a902c92720bc",
+      "bytes": 188928
+    },
+    "en_798ddb9521123b6905e21b60": {
+      "file": "en_798ddb9521123b6905e21b60.mp3",
+      "text": "Capital F, two r letters at the join. Learn der Fahrradtrial. Finish trial, not trail.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cd754fe1a3e3158f6f29260ee9397778a7ac7f5d955f3ed461e23f232ab7549a",
+      "bytes": 126336
+    },
+    "de_20ef9b210e7c3e97aabdc894": {
+      "file": "de_20ef9b210e7c3e97aabdc894.mp3",
+      "text": "hochfahren",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "e31e7bc64c8ce2a8fca7fc65985187e12be2fb9cf04b120cf298bae7bc85b184",
+      "bytes": 18816
+    },
+    "de_8a2f5ada66e109ca5fa4b4c4": {
+      "file": "de_8a2f5ada66e109ca5fa4b4c4.mp3",
+      "text": "hochfahren. Ich fahre den Berg hoch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "d1283ce3cd8c6f3bf3710f891b8eab6539b8d723c3e626bccaf609277ee6cb8b",
+      "bytes": 45696
+    },
+    "de_9c995b03259b050257622043": {
+      "file": "de_9c995b03259b050257622043.mp3",
+      "text": "Ich fahre den Berg hoch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "75bcb2e3003cc28245129e0a2d83499c7e0d34c6a0d38f08ebfbe5231e72b841",
+      "bytes": 27648
+    },
+    "en_307861a694b41e122694d24d": {
+      "file": "en_307861a694b41e122694d24d.mp3",
+      "text": "hoch means up; fahren means go by vehicle or ride. In a statement, split fahren … hoch.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d7846ddf267a9fadb67d25aaad51589228b7a44d18fe95c53ce6776517f1c26b",
+      "bytes": 120960
+    },
+    "de_ea99c57511c5d563feeda2a3": {
+      "file": "de_ea99c57511c5d563feeda2a3.mp3",
+      "text": "Wir fahren den Berg hoch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "19609cb5bc68f705e921b828f7b8b87a89c57de1c1e9ff425c53b26726363fbf",
+      "bytes": 27648
+    },
+    "de_b2ce2744de1716c6209d2220": {
+      "file": "de_b2ce2744de1716c6209d2220.mp3",
+      "text": "fahre hoch",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "56ddd3d220cc323f4e60683d56194f98db15ae9dfcb31d580ba7c8f1f5a5fc23",
+      "bytes": 17280
+    },
+    "en_473c3cbd7d310e14505a60fd": {
+      "file": "en_473c3cbd7d310e14505a60fd.mp3",
+      "text": "Ich fahre den Berg hoch. The prefix hoch goes at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c6116f8c9eefe9e0b09bd3c212fa4ed35fb720695adb133537180db6ef5eff8d",
+      "bytes": 64896
+    },
+    "de_a7718f377ac2f48371f01369": {
+      "file": "de_a7718f377ac2f48371f01369.mp3",
+      "text": "fährt hoch",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "c015c4576b94a729e6b526e3ec029329ce182248f3d222128194432d2a6c85cf",
+      "bytes": 16128
+    },
+    "en_332636908196bec31b70a1d7": {
+      "file": "en_332636908196bec31b70a1d7.mp3",
+      "text": "Er uses fährt, with ä. The prefix hoch goes at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c49fdd91d19fad40575806ad65ebee2cb53e01fd9dd1a1935345a03200734974",
+      "bytes": 80256
+    },
+    "en_f0afe33919ad75e540f5e3a1": {
+      "file": "en_f0afe33919ad75e540f5e3a1.mp3",
+      "text": "Imagine a bike going hoch (up) a hill. At the summit, hoch is waiting at the end of the sentence: Ich fahre den Berg hoch.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0506ce42e3206f8e3d7a712a2023f77794767f8a783b56c561a44361fadd1f0f",
+      "bytes": 144000
+    },
+    "en_677910a906d56d5f98e247cf": {
+      "file": "en_677910a906d56d5f98e247cf.mp3",
+      "text": "hoch ends in ch; fahren contains h after a. Er fährt adds ä.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c4cc8b44d323332bc32c0aa4107e61ed4d97f5ebf39a4522b24dba9aebf622a3",
+      "bytes": 115968
+    },
+    "de_227ee7d1374ed0c02ced3eaf": {
+      "file": "de_227ee7d1374ed0c02ced3eaf.mp3",
+      "text": "hoffentlich",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "ce922441e3c1ba98b1b15d44c77f8c2e0777b2e89f77218faeffd8edfe0f67a0",
+      "bytes": 16128
+    },
+    "de_dd1408fa695cc95f3088c876": {
+      "file": "de_dd1408fa695cc95f3088c876.mp3",
+      "text": "hoffentlich. Hoffentlich kommt sie mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "866dfde14448e82920ddd25356695b428a9dd57682ec5b7c239ce7cac5042ce3",
+      "bytes": 40320
+    },
+    "de_aec1cd72918b67a77e6056ef": {
+      "file": "de_aec1cd72918b67a77e6056ef.mp3",
+      "text": "Hoffentlich kommt sie mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "c0cfd0e787c91d21fcdbed3ff195d953f64148469c0c2af6e460caa6c2877a11",
+      "bytes": 26496
+    },
+    "en_6559cc4b0ccc0b527390fd1f": {
+      "file": "en_6559cc4b0ccc0b527390fd1f.mp3",
+      "text": "Split it: hoffen + tlich. There are two f letters and a t before lich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "249ee5a9fb4b019f64592c6d6c044be9f5bae568eac9e7cbf92853b4b7b1d282",
+      "bytes": 91776
+    },
+    "de_353296a3781fd89915e6db66": {
+      "file": "de_353296a3781fd89915e6db66.mp3",
+      "text": "Sie kommt hoffentlich mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "46682cb120e801a382c09b80c5c9e52bbe3246c174f88ebfcebbae5c9cd26ccf",
+      "bytes": 24960
+    },
+    "de_ac51a8e13879807d2fe76094": {
+      "file": "de_ac51a8e13879807d2fe76094.mp3",
+      "text": "Wir treffen uns hoffentlich morgen.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a0e1c2b96f8ff6590c9e5e4d8944dae71dff022207dd6b5bd44f3383c8fb2489",
+      "bytes": 31488
+    },
+    "en_c375de5c0ce6f8449c5d6153": {
+      "file": "en_c375de5c0ce6f8449c5d6153.mp3",
+      "text": "Imagine two fingers crossed for hope: ff. Beside them stands a tiny T-shaped sign pointing to lich. Hopefully your wish comes true.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "82d3a6a55da97d8766fca832969191386f592a4268308b6eb21f50abeed2b221",
+      "bytes": 163200
+    },
+    "en_0b11d3153e91947bc4c2a787": {
+      "file": "en_0b11d3153e91947bc4c2a787.mp3",
+      "text": "Double f AND the t: hoffen + t + lich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "ffedc68524e4bb7a0f473fb69aa9f99b08740ff2d450e728550a8c48eb914df3",
+      "bytes": 72576
+    },
+    "de_36449adb896b907f669706c1": {
+      "file": "de_36449adb896b907f669706c1.mp3",
+      "text": "die Treppe",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1a311893a8c8e842384c03bea7ed27962081b08bab76ef5674d1a75120fd3a3e",
+      "bytes": 16128
+    },
+    "de_41c9605861e3c7a6777e449d": {
+      "file": "de_41c9605861e3c7a6777e449d.mp3",
+      "text": "die Treppe. Die Treppe ist hoch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "caa32663b93a0b37cb91723287c0ea575055c2fd20e2a108455495a323798131",
+      "bytes": 39168
+    },
+    "de_95d6928cf0aa4883ae21629b": {
+      "file": "de_95d6928cf0aa4883ae21629b.mp3",
+      "text": "Die Treppe ist hoch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "d8e090af1f1d5802ec865b68e9f885dc531f5a4381976c92bfda516688642d8e",
+      "bytes": 22656
+    },
+    "en_a5042676f4d693c0cdaef91a": {
+      "file": "en_a5042676f4d693c0cdaef91a.mp3",
+      "text": "Learn die Treppe. Double p, and a capital T. Plural: die Treppen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "fc43c2c8aa508ebaf99499fbe6d385d3b33959ee4d2dd66cbcf22e4bcf0ba07b",
+      "bytes": 95616
+    },
+    "de_c0235a8e32edac82470a8aae": {
+      "file": "de_c0235a8e32edac82470a8aae.mp3",
+      "text": "Ich gehe die Treppe hoch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "4810b9ab7041d4e8d490d0595083471caa374eb4361d2104b3004e086d165348",
+      "bytes": 26496
+    },
+    "de_dd21cd48eff7d7cadb7518ea": {
+      "file": "de_dd21cd48eff7d7cadb7518ea.mp3",
+      "text": "die Treppen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "f9478efdcd9baf6a6e600de5524ef5c539ab73554243f1c2ce18c04f45aea3be",
+      "bytes": 16128
+    },
+    "en_84602d1309bee2d72461068b": {
+      "file": "en_84602d1309bee2d72461068b.mp3",
+      "text": "Add -n: Treppe → Treppen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b00658af9c90d45435c2a4fbb87a94f9b80e286606673127cc7bd311835f05b7",
+      "bytes": 61056
+    },
+    "de_32e646db5d3d982c7fc48124": {
+      "file": "de_32e646db5d3d982c7fc48124.mp3",
+      "text": "die",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "87044b4f0509a7c813f62a7e4c7b238997ebb5f5dd60b73579ac187a5414d186",
+      "bytes": 8448
+    },
+    "en_d9f3a04e2912bd012bac3d25": {
+      "file": "en_d9f3a04e2912bd012bac3d25.mp3",
+      "text": "Treppe is feminine: die Treppe.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "71171bf9545814979bd3a124965162759dc4be701da74d0cb6c72ae4dbaff443",
+      "bytes": 43008
+    },
+    "en_7d473b02d5da5c0d8dbef071": {
+      "file": "en_7d473b02d5da5c0d8dbef071.mp3",
+      "text": "Imagine the two p letters as two steps in a staircase. A sign at the bottom says die; a capital T stands at the top.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3896c0cba0a7091649987fb81ba1505181a8ac837ca17fcf4e772bb24890d7fd",
+      "bytes": 137856
+    },
+    "en_706f691bfee47f46b0fdbc23": {
+      "file": "en_706f691bfee47f46b0fdbc23.mp3",
+      "text": "Capital T and double p. Plural adds n: Treppen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8735179364e34424b777cfb41cec1f63be06d2a4dc075793fa9cefd9f70f112b",
+      "bytes": 85248
+    },
+    "de_c2823ed6e93a30877df08656": {
+      "file": "de_c2823ed6e93a30877df08656.mp3",
+      "text": "stark",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a4d6a5e3450fc8264d4483567cb00470ab5889f715afe5018bfbf3016c01991e",
+      "bytes": 14976
+    },
+    "de_6ab739b01c8f6fc5ff3094e3": {
+      "file": "de_6ab739b01c8f6fc5ff3094e3.mp3",
+      "text": "stark. Mein Bruder ist stark.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "806ac77951ba26242dbd4bb2409711ea3468361ca0c71f4cfe52e947d8a3d25f",
+      "bytes": 41472
+    },
+    "de_084726d89990a21224aacfd2": {
+      "file": "de_084726d89990a21224aacfd2.mp3",
+      "text": "Mein Bruder ist stark.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "20d3ea147378c77166cfb1cdcc474e3bbb16f5d62beac256df5221010e0c2ba0",
+      "bytes": 27648
+    },
+    "en_6aae151adcd476b9ef041c07": {
+      "file": "en_6aae151adcd476b9ef041c07.mp3",
+      "text": "Picture someone lifting something heavy: stark = strong. Finish with rk.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c5499c34f54b7ae44eb3e8597c4e7fb6e2a7ac56d487de8797464b745b649524",
+      "bytes": 91776
+    },
+    "de_d17aeb8833bb84560254bfcd": {
+      "file": "de_d17aeb8833bb84560254bfcd.mp3",
+      "text": "Wir sind stark.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "36c4f5717471787d5a4bf539adcc17154785a4d18927a9851dd7bec530edaabd",
+      "bytes": 19968
+    },
+    "en_ee198cd1a5130ff7db7829ff": {
+      "file": "en_ee198cd1a5130ff7db7829ff.mp3",
+      "text": "Picture a strong person lifting the letters r and k like two heavy weights. The word ends with both weights: rk.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8d6f4a00fb45b76096356be763ed9c6c6e1e9d4944783a40d380d3d8847a9155",
+      "bytes": 142848
+    },
+    "en_49ed9f59fa58cbcb2073b95a": {
+      "file": "en_49ed9f59fa58cbcb2073b95a.mp3",
+      "text": "st at the start, rk at the end. No extra vowel between r and k.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "eaafdbdb3cb160cbfa6be02764e2408e33cad18afdf72d2c3ca2b5f5434b8f47",
+      "bytes": 96768
+    },
+    "de_a2ced6f4dd428513685da043": {
+      "file": "de_a2ced6f4dd428513685da043.mp3",
+      "text": "streiten",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "0ba9f1e42e3c2a6ce7646f449cd634b71a08b3ba062464301c8accdf6551c2f1",
+      "bytes": 16128
+    },
+    "de_c3be3f4611bcefcb8808bf79": {
+      "file": "de_c3be3f4611bcefcb8808bf79.mp3",
+      "text": "streiten. Wir streiten oft.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "3dae4465aed6fdb77badfb81f17ffea01696090d8dd96dbeecea2726dde1e14f",
+      "bytes": 36480
+    },
+    "de_543eb8e48222c825e682a7e3": {
+      "file": "de_543eb8e48222c825e682a7e3.mp3",
+      "text": "Wir streiten oft.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9d52d8d7a5a62cc6ef08f437cd1ec7b6ccdb378c278515ae644087e1de64800d",
+      "bytes": 21120
+    },
+    "en_a3c09f6f53140c3290a94e78": {
+      "file": "en_a3c09f6f53140c3290a94e78.mp3",
+      "text": "Keep ei in streiten. The lesson uses streiten; wir streiten means we argue.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "701d90fd1131b53f68d5f0f0bae947b2c70860dcd6659f41f02f45a89f5fb67a",
+      "bytes": 103296
+    },
+    "de_9a0dd50df895627ef4977376": {
+      "file": "de_9a0dd50df895627ef4977376.mp3",
+      "text": "Die Freunde streiten nicht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "0e1f30bee97b1be73f3dfa439c42aa60ffd7e3482f4c3c57b0925bc83960c846",
+      "bytes": 30336
+    },
+    "de_e92c8794e948ef8c453ebb96": {
+      "file": "de_e92c8794e948ef8c453ebb96.mp3",
+      "text": "streite",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "42316375db1202396d06cf3dae0ed833cd6033c7c45a85a982055bd0a8351ef4",
+      "bytes": 14976
+    },
+    "en_06e174c52d96571698987a1a": {
+      "file": "en_06e174c52d96571698987a1a.mp3",
+      "text": "For ich, drop -n from streiten: ich streite.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b27bbb034df87314764e247f006d8c7c68608362c53997bf30e1c4e48c040d5d",
+      "bytes": 64896
+    },
+    "de_ab442c283f1a5837dc6e6694": {
+      "file": "de_ab442c283f1a5837dc6e6694.mp3",
+      "text": "streitet",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "f69b66360302339fb6dea16bd2be8932edcf0e6edf175c2f0b319c7f1b6f5f2c",
+      "bytes": 18816
+    },
+    "en_d3db38430e9a00b82ff47644": {
+      "file": "en_d3db38430e9a00b82ff47644.mp3",
+      "text": "The er form is streitet. The extra e makes the ending pronounceable.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "934cce709138a2f48e863703ecb520e367dae6622cc73be442bf17ebbe3fb1a2",
+      "bytes": 90624
+    },
+    "en_4ecadbb11186c9a43a6ef196": {
+      "file": "en_4ecadbb11186c9a43a6ef196.mp3",
+      "text": "Imagine two friends arguing over who goes first: e or i. Settle it: e goes before i in streiten.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5a436e9e0dbb73f174394760ef5d44eb3e590c2bafab9b1450060e70aadf4435",
+      "bytes": 136704
+    },
+    "en_ba57fe5c87d19a05a15e98d1": {
+      "file": "en_ba57fe5c87d19a05a15e98d1.mp3",
+      "text": "Start str; use ei, not ie. The ending is -ten.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cc5aaa867f3f3ae3800859632a33e55697fe3650930edfc6f5d18ba1f62a8a14",
+      "bytes": 90240
+    },
+    "de_3e54f774d6826d6ca73804c7": {
+      "file": "de_3e54f774d6826d6ca73804c7.mp3",
+      "text": "müde",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "576ff1fef9809f8d9decac0ff8c17f3446c823f3853853b340db761ab212b3e4",
+      "bytes": 13440
+    },
+    "de_7cd1195e5a19ee990b4abe6c": {
+      "file": "de_7cd1195e5a19ee990b4abe6c.mp3",
+      "text": "müde. Ich bin müde.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "8572165bf833c1531f593faa92e5c0e4a45f9b3a9f2ed98bc77441bfee981251",
+      "bytes": 31488
+    },
+    "de_1ca87be4d37fcb79766ae2a3": {
+      "file": "de_1ca87be4d37fcb79766ae2a3.mp3",
+      "text": "Ich bin müde.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5efb4dcb513e6b08f7c459d9671e26ffab38f72c390a366dd4e48c204c45ff1b",
+      "bytes": 18816
+    },
+    "en_79b9336b6b5d827f58dbfea4": {
+      "file": "en_79b9336b6b5d827f58dbfea4.mp3",
+      "text": "The two dots matter: müde, not mude. Think of feeling tired after a long school day.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "ac366c9c7fa243bd367ac3b081e5290724c9cd6f2f588cbab6a41835ab6f22e8",
+      "bytes": 108288
+    },
+    "de_756ae781803ae9fe81d1f59c": {
+      "file": "de_756ae781803ae9fe81d1f59c.mp3",
+      "text": "Nach der Schule sind wir müde.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "aa7b728d6aa4ea404f629912b81e6a6ca4c821ae377373e06890b602f2be7cf4",
+      "bytes": 31488
+    },
+    "en_707e4b63e111dee06de40389": {
+      "file": "en_707e4b63e111dee06de40389.mp3",
+      "text": "Picture a tired face. The two dots over ü are sleepy eyes. Put the eyes back before you let the word go to bed.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b0dfcf57dce5ba37ea4dcbd29fdeb002344800c542f54356238ee3c1969a1dc4",
+      "bytes": 132480
+    },
+    "en_5ecb3d50859040c02ea703a5": {
+      "file": "en_5ecb3d50859040c02ea703a5.mp3",
+      "text": "Four letters: m-ü-d-e. The umlaut is part of the letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b342fd30ef1c344acbccf670eb3f9e791ef57a70219de2e398e2e358d0adcebf",
+      "bytes": 81408
+    },
+    "de_e3c9f2ab5aeab26328e43ce7": {
+      "file": "de_e3c9f2ab5aeab26328e43ce7.mp3",
+      "text": "schlecht",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "f010bce5b4dca4ea1fdebc0559e1bbd3fe2139a04005432183e6e2a2f5563d5c",
+      "bytes": 12288
+    },
+    "de_9383aeb01ba151c3510bf77a": {
+      "file": "de_9383aeb01ba151c3510bf77a.mp3",
+      "text": "schlecht. Das Wetter ist schlecht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "7c099f7b35a4e8db6cfea20ae32a5db2c372512e686254120cca548277131270",
+      "bytes": 36480
+    },
+    "de_da03bfe709c1134d580e9225": {
+      "file": "de_da03bfe709c1134d580e9225.mp3",
+      "text": "Das Wetter ist schlecht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "597254a9ddd9203be95ac1663cb54a57d4c6ec6bbefdd8350aa7d657f1ca2bbd",
+      "bytes": 24960
+    },
+    "en_4a7bbe4d0f8d7010bab50b57": {
+      "file": "en_4a7bbe4d0f8d7010bab50b57.mp3",
+      "text": "Build it: sch + lecht. Watch the ch before the final t.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e74bad84f0bc304d72f9038c81d09e9ac1e4fa596cbd37f780ed1c525d928e7e",
+      "bytes": 91776
+    },
+    "de_f34572dd16cbd5d4bca530b1": {
+      "file": "de_f34572dd16cbd5d4bca530b1.mp3",
+      "text": "Der Film ist schlecht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b3ab0e0af83d04917103468f1c7d988db4f4f6b130adc8917076fa1b9dab61d1",
+      "bytes": 23808
+    },
+    "en_bea5b214c3d1d4feea780b39": {
+      "file": "en_bea5b214c3d1d4feea780b39.mp3",
+      "text": "Imagine a BAD weather report. Rain falls on a sign split into four pieces: sch / le / ch / t. Rebuild it before the storm arrives.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e6e73c36c6b2f63119dec4d1ab4712dd65bd1f9b39e324de349f0f3cb7ba1683",
+      "bytes": 159360
+    },
+    "en_c872615aba12bfa1ab48ecda": {
+      "file": "en_c872615aba12bfa1ab48ecda.mp3",
+      "text": "There is ch inside sch at the start, and another ch before the last t.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "92c7efdf2f4b6705836f4f9c38cf8423e8c2657e33a06a3387ecbb5b014cbe5a",
+      "bytes": 94080
+    },
+    "de_ef94bc1021898e03230148f9": {
+      "file": "de_ef94bc1021898e03230148f9.mp3",
+      "text": "verliebt",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6b31111013701843970ce231ee017b69adbd8cb9f64a14f3902259eff3c7a9cc",
+      "bytes": 14976
+    },
+    "de_027cffc72f7e44db485c0462": {
+      "file": "de_027cffc72f7e44db485c0462.mp3",
+      "text": "verliebt. Ich bin verliebt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6680b4e90e4be69424d9dbdbf2f00e6bf133cc036c13a79a9c2903ec75a25c1b",
+      "bytes": 31488
+    },
+    "de_a671606f67adeee0b1aaf484": {
+      "file": "de_a671606f67adeee0b1aaf484.mp3",
+      "text": "Ich bin verliebt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "fc5e443616c404f09ef32dd89d4bbccfb24db7c7655856ea44ea1ba3c7e65c93",
+      "bytes": 21120
+    },
+    "en_814b1cc98ca811baea955bbe": {
+      "file": "en_814b1cc98ca811baea955bbe.mp3",
+      "text": "ver + liebt. Keep ie, then bt. With sein: Ich bin verliebt.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d8338ae60a7ea4a948b6ccc8947b7b366e488821d647e89b55743cb9e9879383",
+      "bytes": 102912
+    },
+    "de_371742648fbc33afd08fe922": {
+      "file": "de_371742648fbc33afd08fe922.mp3",
+      "text": "Sie ist verliebt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "0dd0493f5fa39d51e66dd719dce7f266550064025354db9a794c5e2e93ab4d58",
+      "bytes": 21120
+    },
+    "en_f7fbdaecb8db00f66e93c01d": {
+      "file": "en_f7fbdaecb8db00f66e93c01d.mp3",
+      "text": "Picture a love note folded around ie. A little b and t seal the end of the note together.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "23050ab86073a28d640602b85747be88e5f0891aab1cf0ab80965652eabe5cc2",
+      "bytes": 97920
+    },
+    "en_64a56fc98e156715af0ef831": {
+      "file": "en_64a56fc98e156715af0ef831.mp3",
+      "text": "ie, not ei. Finish with bt, not pt.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a38f328e0a92bacda241f61f25f326b5cac12c904701b6311299c32e8af1e6e7",
+      "bytes": 77568
+    },
+    "de_7c125fdee15b0fbdaf5bc5b7": {
+      "file": "de_7c125fdee15b0fbdaf5bc5b7.mp3",
+      "text": "bestimmt",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "f0c50229afb022187d370796a71fbf2fc81b65eb529917340b688b94af728814",
+      "bytes": 17280
+    },
+    "de_14056a6967e9574eb6db952c": {
+      "file": "de_14056a6967e9574eb6db952c.mp3",
+      "text": "bestimmt. Er kommt bestimmt mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "4056eef4a7f2fdfe431fcd2a0760cc23f07ba5d30846a9375d02d871d02a1ef3",
+      "bytes": 36480
+    },
+    "de_b6f8bf1949f0e4efe6a9f137": {
+      "file": "de_b6f8bf1949f0e4efe6a9f137.mp3",
+      "text": "Er kommt bestimmt mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1932268e7bf485e1dbb7e10fed9c80b3c723dcd606b6211182b1c8398e920d46",
+      "bytes": 24960
+    },
+    "en_9dce62aa19ebe506f9487d77": {
+      "file": "en_9dce62aa19ebe506f9487d77.mp3",
+      "text": "In this lesson, bestimmt means definitely. Double m: be-stimmt.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9d940808aefed35dc281ff298a076f3eb202827738a82e07f5f8b05068a15c63",
+      "bytes": 92928
+    },
+    "de_c6930495e2d10d550e22d324": {
+      "file": "de_c6930495e2d10d550e22d324.mp3",
+      "text": "Das ist bestimmt richtig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "571dee50d6ed3f004d82007762f95f0bc1d6a30e2671dba0475e52a4f073fa90",
+      "bytes": 30336
+    },
+    "en_9698f2f3054b045cb33556f2": {
+      "file": "en_9698f2f3054b045cb33556f2.mp3",
+      "text": "Imagine a big DEFINITELY stamp. Two m-shaped stamp handles press down together, with a final t as the stamp’s handle.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3a18e08be0d20b46b5793e223314fa55b3b4e3dece47d95c49878d1a3a2fe6d8",
+      "bytes": 146688
+    },
+    "en_28e8e90e35360d7a14f42758": {
+      "file": "en_28e8e90e35360d7a14f42758.mp3",
+      "text": "Double m, then t. The whole ending is -immt.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8812be6e5008d1c1a290aed238c8e42bb0d1a909e09fadadf9cb93d371b81c11",
+      "bytes": 67200
+    },
+    "de_039c11c9ee3ca101c4017255": {
+      "file": "de_039c11c9ee3ca101c4017255.mp3",
+      "text": "glücklich",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "44baf0f5e17b133fe0c9b588829746a9b8af21cb8740745e48de8311cdeb863c",
+      "bytes": 16128
+    },
+    "de_7b0b6f5e6fc326b9bf7a776f": {
+      "file": "de_7b0b6f5e6fc326b9bf7a776f.mp3",
+      "text": "glücklich. Ich bin glücklich.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "8ad806335860b39eed5cabdf7fd4eb4f1f76c13eec8d22771c83d25523af434d",
+      "bytes": 35328
+    },
+    "de_dd80f93d15aec7d2d4eef83d": {
+      "file": "de_dd80f93d15aec7d2d4eef83d.mp3",
+      "text": "Ich bin glücklich.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "aec9aa2b313493de594b1208d848b07c043344fc003464a690b4ab7c87af6fbc",
+      "bytes": 22656
+    },
+    "en_da87c084f00bfb732d499df0": {
+      "file": "en_da87c084f00bfb732d499df0.mp3",
+      "text": "Build Glück + lich. Keep ü and ck. glücklich is happy; traurig is sad.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "041a582a6688ac05cd4b690d3bbac7090f1e9d9916e0b9f4c597b5e23efce0b3",
+      "bytes": 114816
+    },
+    "de_aaa29741dce348cdc28a1292": {
+      "file": "de_aaa29741dce348cdc28a1292.mp3",
+      "text": "Meine Freunde sind glücklich.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "8ce5b36c27571f4c13da7552d6261e93efb1ca8e4abb613a3e4301cd74591d14",
+      "bytes": 30336
+    },
+    "en_abec2d81df07ec9c3acc69a4": {
+      "file": "en_abec2d81df07ec9c3acc69a4.mp3",
+      "text": "Glück means luck or happiness. Imagine finding a lucky coin and smiling: glücklich. The two dots over ü are your happy eyes.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "942c00c6a5bcabcfa7b710e1c264bd30860f9dbadd2a1dbf26950569b9207e8f",
+      "bytes": 147840
+    },
+    "en_dbb860011ec256b35fe5dbf5": {
+      "file": "en_dbb860011ec256b35fe5dbf5.mp3",
+      "text": "ü + ck, then lich. There is no extra k after lich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0c8ebee54c6b24ab753c3910f4e5d87ab4408b1ef5c6dfebbf3c484065f4d4f2",
+      "bytes": 95616
+    },
+    "de_6ad4fd5f4aa9cdcebcba98ae": {
+      "file": "de_6ad4fd5f4aa9cdcebcba98ae.mp3",
+      "text": "sensibel",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6d1ad6353d11484fe99b4bc537f31225ce9df6d6021d80086e3096f9790202da",
+      "bytes": 17280
+    },
+    "de_a926354e67fb2e5ca6258e85": {
+      "file": "de_a926354e67fb2e5ca6258e85.mp3",
+      "text": "sensibel. Mein Freund ist sensibel.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a2e3af8774f77c72681569fcb66b7d325c9ed58cfa4e0fb50f972d1ddf19d376",
+      "bytes": 43008
+    },
+    "de_fcc47c986f0a6d1c638d7f53": {
+      "file": "de_fcc47c986f0a6d1c638d7f53.mp3",
+      "text": "Mein Freund ist sensibel.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "f5d5a018bee3c095efc518ef6a574ec0dd9e6490dec6ffb3ed0cb0acc1055858",
+      "bytes": 27648
+    },
+    "en_3b3588ca6a8d78bff85d610e": {
+      "file": "en_3b3588ca6a8d78bff85d610e.mp3",
+      "text": "Another false friend: sensibel means sensitive, not sensible. It ends in -bel.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "6db0f8caa87d5e184fdf4f014e7dc0def47fd825e44590d05307992844dd49ba",
+      "bytes": 108288
+    },
+    "de_a3c1651453340b73cb5c3596": {
+      "file": "de_a3c1651453340b73cb5c3596.mp3",
+      "text": "Sie ist sehr sensibel.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "ace340c97263a1d840f9a2637f3afdd71953dd1b9f0d54e58834cd1f4e5f5755",
+      "bytes": 27648
+    },
+    "en_04fb2d79196db41dcd26c231": {
+      "file": "en_04fb2d79196db41dcd26c231.mp3",
+      "text": "Picture a sensitive person noticing a tiny sound from a bell. Let that bell remind you of the ending -bel, with only one l.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "31c5acc79691c4588b0b584a4678b2f7aa3d0153aa4187895e895e4c4a7c1f22",
+      "bytes": 151680
+    },
+    "en_525cd5c44b548ec236667897": {
+      "file": "en_525cd5c44b548ec236667897.mp3",
+      "text": "sen-si-bel, not the English word sensible. Meaning: sensitive.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "bc19a5fa938e982d7bc937b9858513f47256300a3e0ff8db8de2aa1002b70ad3",
+      "bytes": 80256
+    },
+    "de_56856af97845dff2c750e6b5": {
+      "file": "de_56856af97845dff2c750e6b5.mp3",
+      "text": "fleißig",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6bd4c6954e7d9ecec2497b302ed607355b84e8cef7bbb75acd23844da325d8fa",
+      "bytes": 16128
+    },
+    "de_cfc09847768269a1f3e992ec": {
+      "file": "de_cfc09847768269a1f3e992ec.mp3",
+      "text": "fleißig. Sie ist fleißig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6bd6de7589188d29c11f37e9e2b4bd19c34373d5ca7ad73946ad0c9cd8850188",
+      "bytes": 36480
+    },
+    "de_2ea16951487bde5ef8e364b3": {
+      "file": "de_2ea16951487bde5ef8e364b3.mp3",
+      "text": "Sie ist fleißig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "360e2825509bf4226596f061feb47ccd736a09069eccaa733b2d548675eb9fa1",
+      "bytes": 19968
+    },
+    "en_45b62b1f83fee9474491e699": {
+      "file": "en_45b62b1f83fee9474491e699.mp3",
+      "text": "Keep ei and ß: fl-ei-ß-ig. Use the ß key below the answer box.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c11e9b2c3aeb3f7ea66310835c239c19375e16d97cc892200f94041260a58bdc",
+      "bytes": 139008
+    },
+    "de_eb845b4c2f7f88caccd8a0c0": {
+      "file": "de_eb845b4c2f7f88caccd8a0c0.mp3",
+      "text": "Wir sind fleißig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "10c42ed49d6134a22ad0a3c56aa70e69b2e8d2e55bf1b8bc8c8fb3d3ab9acb0f",
+      "bytes": 22656
+    },
+    "en_0f7f41b18a1c7b06193004d9": {
+      "file": "en_0f7f41b18a1c7b06193004d9.mp3",
+      "text": "Imagine a hard-working student carefully writing ei and then a big ß on a checklist. Every detail gets checked.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1328853102b96a18ff528e71f515b89874420eef51b792c2233eb61985fe1e9e",
+      "bytes": 153216
+    },
+    "en_8e1656c33540a6f71af03348": {
+      "file": "en_8e1656c33540a6f71af03348.mp3",
+      "text": "ei, then ß, then ig. For this German lesson use ß, even though Swiss spelling uses ss.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e08ac91b1351973bda7d6bbd670912ff1f0f90223bd482ba6f04282ceeb9ae39",
+      "bytes": 147840
+    },
+    "de_2698d9d594c7ef32b9d5b9fa": {
+      "file": "de_2698d9d594c7ef32b9d5b9fa.mp3",
+      "text": "zuhören",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2a0e1638a20d67b7abf58c7d967849207dd4f66534344664f1424c962a9fba42",
+      "bytes": 16128
+    },
+    "de_ff98c28a910cd72616edb1e3": {
+      "file": "de_ff98c28a910cd72616edb1e3.mp3",
+      "text": "zuhören. Ich höre dir zu.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "c53a5d21766e6d92bb2177d8ebb81b308e64c99f9eed9a05217ee0beadbd0b42",
+      "bytes": 34176
+    },
+    "de_5d84f45537912435512d5b76": {
+      "file": "de_5d84f45537912435512d5b76.mp3",
+      "text": "Ich höre dir zu.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "033327650a825f42610b5d0187f0feb63ee295bf755cf665b223671404620442",
+      "bytes": 19968
+    },
+    "en_2efddd4746a38b5d523093d1": {
+      "file": "en_2efddd4746a38b5d523093d1.mp3",
+      "text": "zu + hören. The ö matters. In a statement: Ich höre dir zu. Listening to someone uses dative, here dir.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c887ed4e60579da1cc95023830eb2ab9a074c87959bf87ac59379dff138446b5",
+      "bytes": 147840
+    },
+    "de_18266ed8715499edcbe4253e": {
+      "file": "de_18266ed8715499edcbe4253e.mp3",
+      "text": "Wir hören der Lehrerin zu.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "828a73276d1c75c0676728c0c7c3ea76bd2218d0955afd0dabb9a3db6e4f275f",
+      "bytes": 28800
+    },
+    "de_8a995da4e869175f74e00166": {
+      "file": "de_8a995da4e869175f74e00166.mp3",
+      "text": "höre zu",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "828498a5b345c9a289f92a26935ab0a3cbaac8d74c299c1c8f8ccb8090eb628f",
+      "bytes": 17280
+    },
+    "en_f5ed62f6e127055577230e2e": {
+      "file": "en_f5ed62f6e127055577230e2e.mp3",
+      "text": "Ich höre dir zu. Keep ö in höre and put zu at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "572c8557463b0121b04fd1bc85931314b6b12aaa1a5db3649aae3ac88c2d3ed1",
+      "bytes": 82560
+    },
+    "de_b5794d8d7bde65e001f73e3c": {
+      "file": "de_b5794d8d7bde65e001f73e3c.mp3",
+      "text": "hören zu",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "fc8ef60c16e99d3c08afe867f95dc394f3cb61f238f8d15ee8c969d24540f736",
+      "bytes": 17280
+    },
+    "en_4e1710677d516fc3ba8b6f68": {
+      "file": "en_4e1710677d516fc3ba8b6f68.mp3",
+      "text": "Wir hören dir zu. The prefix zu goes at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7c2bba9db69a6faf932e9cec5e4fd6f1959eb6b8ace40ad6ae09919d2e89f0ea",
+      "bytes": 66048
+    },
+    "en_4ee19975465efe2631036998": {
+      "file": "en_4ee19975465efe2631036998.mp3",
+      "text": "Imagine the dots over ö as two ears listening. The word zu walks to the end while those ears listen: Ich höre dir zu.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d35a5dac26bd11395414b225b769c656041a44df37fb560f0e7838c894c883ec",
+      "bytes": 155520
+    },
+    "en_4f8b691af7122b07949781b1": {
+      "file": "en_4f8b691af7122b07949781b1.mp3",
+      "text": "ö, not o. Join zuhören in the infinitive; split höre … zu in a statement.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "415799cbd2e3bf5875d20854c1efe8179560b6ffb82c0bf96c8dbc4339eb1475",
+      "bytes": 115968
+    },
+    "de_8b176f7d2e8496d6663edb1d": {
+      "file": "de_8b176f7d2e8496d6663edb1d.mp3",
+      "text": "einige",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5c17ae8e62388904f79c52f6c8de115335287fb9a5a9fcedfb2cc7bbcc247509",
+      "bytes": 18816
+    },
+    "de_6911f22abce8a01ecb013cd1": {
+      "file": "de_6911f22abce8a01ecb013cd1.mp3",
+      "text": "einige. Einige Freunde kommen mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "e76e7ef124842dabb50abab35dfce24fba585164abaa1d5677a0b32c084f21e2",
+      "bytes": 44160
+    },
+    "de_c493f9a9727e63b00f27ba8c": {
+      "file": "de_c493f9a9727e63b00f27ba8c.mp3",
+      "text": "Einige Freunde kommen mit.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2356a669b8848d6c818a51376b3d3e6753760f4a14c867d0467fa3ca714bcb2e",
+      "bytes": 24960
+    },
+    "en_914f37a9770f2214ff46aea5": {
+      "file": "en_914f37a9770f2214ff46aea5.mp3",
+      "text": "einige means some or several. It does not mean exactly two; that is beide.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "09b1945d5d88e4abd8657287e896d5c12b2e21cc4a2b26431747c8efde056249",
+      "bytes": 104448
+    },
+    "de_9a02d616176f93f6aab351ac": {
+      "file": "de_9a02d616176f93f6aab351ac.mp3",
+      "text": "Wir haben einige Bücher.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "c6821b21b298c24315605be6239ee54b2d75031ef6f342589f748f2a73cfa4b4",
+      "bytes": 27648
+    },
+    "de_8cacd45ad88a167da98ba904": {
+      "file": "de_8cacd45ad88a167da98ba904.mp3",
+      "text": "Ich schreibe einige Briefe.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "449c4658891d7015cc04f7461e98d7aa77cc1e3ac17507ba2fcb430296725f03",
+      "bytes": 28800
+    },
+    "en_303894113a10fee1317f5624": {
+      "file": "en_303894113a10fee1317f5624.mp3",
+      "text": "Imagine a basket with some apples. Label three parts of the basket ei / ni / ge. There are several apples, not exactly two.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7a9f85448cbd6af625920fcee61274ecf9c65fda9737ac83b9eca1b8a8131ca2",
+      "bytes": 158208
+    },
+    "en_dbb7cdfa288b56105e37621d": {
+      "file": "en_dbb7cdfa288b56105e37621d.mp3",
+      "text": "Start ei, not ie. Three chunks: ei-ni-ge.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c2f4e7c8521b97c28e122e476918ab70e8bc289ef23598f4f4b2f5f79d51f1a4",
+      "bytes": 90240
+    },
+    "de_dc7fb52a2aeaf74a80a080cf": {
+      "file": "de_dc7fb52a2aeaf74a80a080cf.mp3",
+      "text": "sich interessieren",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "bbc3875983780ffce8dfb316959c019016f43d57887a2b75d44f49fcbdf21347",
+      "bytes": 23808
+    },
+    "de_7bd90e032f0bf41b15378552": {
+      "file": "de_7bd90e032f0bf41b15378552.mp3",
+      "text": "sich interessieren. Ich interessiere mich für Musik.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "82d3313ed51c94975d0f1479c87bd58c13cc074d33a19a7d49382d7552cd4065",
+      "bytes": 55680
+    },
+    "de_b6d0b4a5f61e19b1e39ec216": {
+      "file": "de_b6d0b4a5f61e19b1e39ec216.mp3",
+      "text": "Ich interessiere mich für Musik.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "03b7661f17af76b3615b17856f1ee0a434f5158112a615353c58be6c2d9a8574",
+      "bytes": 31488
+    },
+    "en_efec752148908332d993ecf5": {
+      "file": "en_efec752148908332d993ecf5.mp3",
+      "text": "One r, double s: inter-ess-ieren. Use sich interessieren für, with mich for ich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "63ced9783b67337cd06ab647cbd60aa614cdc1949772621fc7cc960e44919d3b",
+      "bytes": 127488
+    },
+    "de_dc36f8b0cb43595b676645ec": {
+      "file": "de_dc36f8b0cb43595b676645ec.mp3",
+      "text": "Wir interessieren uns für Sport.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "644c5d9d290e26ac0f035030255631cc29af9839dcf26fa49115c18b5f56fc14",
+      "bytes": 31488
+    },
+    "en_2f92489fc0cf3b4c2b2b6b3a": {
+      "file": "en_2f92489fc0cf3b4c2b2b6b3a.mp3",
+      "text": "Ich pairs with mich. Für means in in this expression.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "53601ff1b1f10b376e1d02feb1b2965115ac7b17aae09634ed6c532a5a0a504f",
+      "bytes": 67200
+    },
+    "en_14dd62f0d0e2aa363d2c8c7c": {
+      "file": "en_14dd62f0d0e2aa363d2c8c7c.mp3",
+      "text": "Wir pairs with uns: Wir interessieren uns für Sport.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b2da43b3a9f3e18d7d062f839672125faef0b5ce4c4228c60b5f68ac7d005f39",
+      "bytes": 61056
+    },
+    "en_dba6b9ed7bec749fd109f6f3": {
+      "file": "en_dba6b9ed7bec749fd109f6f3.mp3",
+      "text": "Imagine an interesting museum. One r guards the entrance in inter; two s letters are the exhibits in ess. Follow the signs: inter / ess / ier / en.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "79dd79bc230597c040ba828a49b2f5523ca37318e2f8ece4f17b3c740515ad22",
+      "bytes": 188928
+    },
+    "en_675056b0de10c179f5f058c8": {
+      "file": "en_675056b0de10c179f5f058c8.mp3",
+      "text": "inter has one r. ess has two s letters. Keep ie in -ieren. Include sich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c9251b2fa582fb351bb615e35dda3a9d080bad1fc716998b8d60a7e6688aa19c",
+      "bytes": 118272
+    },
+    "en_62edb760f20ad9acf4c5878d": {
+      "file": "en_62edb760f20ad9acf4c5878d.mp3",
+      "text": "A brief message can go in a letter. English brief and German Brief share the same letters, but der Brief means the letter itself.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cb620469bb51d333394d497745c32ace69936bbad4db6c1523ad141a99261027",
+      "bytes": 141696
+    },
+    "en_3b8d7d12331ce0447228e46e": {
+      "file": "en_3b8d7d12331ce0447228e46e.mp3",
+      "text": "Learn der Brief together. Capital B; ie, not ei. More than one: die Briefe.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1477b77600125e6467fe2790580348aa518a114937ef7b39d2af958093a13346",
+      "bytes": 120960
+    },
+    "en_1f4b31f7f952ce971e96916e": {
+      "file": "en_1f4b31f7f952ce971e96916e.mp3",
+      "text": "Before a match, check how you feel: Ich fühle mich gut — I feel good. The feeling is about you, so keep the ‘myself’ part: mich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "46b1c7b873b1e71007674f711fadb022b100fc730ac3940993980ffd93b33943",
+      "bytes": 149376
+    },
+    "en_f43382fc27fd9df4021ab937": {
+      "file": "en_f43382fc27fd9df4021ab937.mp3",
+      "text": "sich fühlen: ü, then h. Keep sich when learning the verb; use mich with ich.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "359ce05025a1b592f883f6f5ef73103b205ba0b767cba496667b65768815b990",
+      "bytes": 107136
+    },
+    "en_4bc75cddb9f07649cdf61bbe": {
+      "file": "en_4bc75cddb9f07649cdf61bbe.mp3",
+      "text": "Someone's loud video interrupts your homework. Ich ärgere mich über den Lärm. Ärger means annoyance or trouble; here you are getting annoyed by the noise.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1cf2e83f27e9997df6392705e75a8210d25169dfafa2eaffe05de02e3e144692",
+      "bytes": 165888
+    },
+    "en_7f6622af7c8494cb9b93f204": {
+      "file": "en_7f6622af7c8494cb9b93f204.mp3",
+      "text": "Write sich ärgern: initial ä, then rgern. Ich uses ärgere mich; wir uses ärgern uns.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "353999a74e8699fea43b8c9cffc67d055f0df1ee1d761b6bd4519a2a86268e23",
+      "bytes": 136320
+    },
+    "en_580e74dc647d499e80f5df87": {
+      "file": "en_580e74dc647d499e80f5df87.mp3",
+      "text": "Your friend moves away: traurig means sad. It’s a feeling, not tiredness. Learn the word in two short spelling blocks: trau + rig.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0761d5940c024b915c1c5b745eeb4e13a275e0f6a22358f97dd4e07dee538565",
+      "bytes": 165888
+    },
+    "en_c22dec91342595e0dc8aa10b": {
+      "file": "en_c22dec91342595e0dc8aa10b.mp3",
+      "text": "Keep au together. End with rig: the final written letter is g, even if it sounds different.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b5815f8c5cbd9dcdff1f7ea3292ff0e5ef4fb294a00125397e1170a03f247a7f",
+      "bytes": 109440
+    },
+    "en_e9b380403ac03010e0f1d268": {
+      "file": "en_e9b380403ac03010e0f1d268.mp3",
+      "text": "Easy transfer: a job is der Job. You already know the English spelling; the new information is the German article and capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c13200cbe1f258bb99aac82fcabb3abcb875e7ac8f0730c9201e57489312c9f1",
+      "bytes": 134016
+    },
+    "en_e2e1e660e9c4f42c2de9dc8e": {
+      "file": "en_e2e1e660e9c4f42c2de9dc8e.mp3",
+      "text": "der Job: capital J. Plural die Jobs adds s, just like English.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b22fbced03f981215d4fbd3a6cab0e65e2c5a2eb7137cbd35ec571cc7693a7ed",
+      "bytes": 103296
+    },
+    "en_90fddfc3b6db0da34f948f30": {
+      "file": "en_90fddfc3b6db0da34f948f30.mp3",
+      "text": "Friends head to the park and invite you along. Mit means with; kommen means come. Ich komme mit. Picture joining their group at the door.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f39d74021d923940baa5b6ff511061a56352392181e446dcb7cd9d89ee9bb5d1",
+      "bytes": 160896
+    },
+    "en_d9b92d8bfdcb649841a765ae": {
+      "file": "en_d9b92d8bfdcb649841a765ae.mp3",
+      "text": "Write mitkommen as one infinitive, with double m in kommen. In Ich komme mit, mit moves to the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5b58819d2342a59a38cc0a806781d0d2c107e36f6e45d8870e811e6a67dca25a",
+      "bytes": 135168
+    },
+    "en_24ea22b66315d3f36d3c6f08": {
+      "file": "en_24ea22b66315d3f36d3c6f08.mp3",
+      "text": "Think moving house, not walking across the room: Wir ziehen um — We’re moving. Keep the moving verb as one word when naming it: umziehen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "baf7358a71bbe09089d30bfc15c65d0b671b37ce7764f2c8d3b76b42738d4017",
+      "bytes": 162048
+    },
+    "en_ecee23dd5b43c295e179c6fb": {
+      "file": "en_ecee23dd5b43c295e179c6fb.mp3",
+      "text": "um + ziehen. In ziehen, write ie followed by h. In Wir ziehen um, um goes last.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a1ccdb3807ac50ab7e407606750c90980e5ec6708d8e64f13bd777fb02dd593f",
+      "bytes": 126336
+    },
+    "en_d27e0916341b3b0c2dd49d2a": {
+      "file": "en_d27e0916341b3b0c2dd49d2a.mp3",
+      "text": "Your base is far away on the map: weit weg. Two separate words, two w starts. The space is part of the answer.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "193ef63869ac35b95cd432156eea1c3ebf41d0dfd16ecaead7328bb4ef733418",
+      "bytes": 142848
+    },
+    "en_f203ef8c4c3b6405837b2b8d": {
+      "file": "en_f203ef8c4c3b6405837b2b8d.mp3",
+      "text": "weit has ei; weg ends in g. Keep a space between them.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "eac11b7c0ff687b5d8d85cbc82fcff29a2fa2ff346fd8c23b44412c4f00deba5",
+      "bytes": 78720
+    },
+    "en_4b8aaef1d81350f8ba6d971d": {
+      "file": "en_4b8aaef1d81350f8ba6d971d.mp3",
+      "text": "Your download is at 99%: fast fertig — almost finished. German fast means almost, not speedy. Think nearly done, not going quickly.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f1bcf5fa32c6753421228dc29a946dcde6d0c3864407fb68b1c635959ada25d6",
+      "bytes": 172416
+    },
+    "en_ed647c6d0d889502dab15e48": {
+      "file": "en_ed647c6d0d889502dab15e48.mp3",
+      "text": "Same letters as English fast; different meaning. Write f-a-s-t, with no extra letters.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "418021815fb66f0417e3ed067372013453c8de351cc49558355c6d26f5b3430c",
+      "bytes": 119808
+    },
+    "en_7577fe1b60edcd7058f5dcf6": {
+      "file": "en_7577fe1b60edcd7058f5dcf6.mp3",
+      "text": "Meet your friend at spawn: Wir treffen uns — We meet up. The two f letters make a simple pair to remember: two friends meeting.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "076574ff77d20d66684bff09e8d7edaf9e33e3ab60061d7ee2a65863c641623f",
+      "bytes": 147840
+    },
+    "en_c66ae92ee6244fa79d587827": {
+      "file": "en_c66ae92ee6244fa79d587827.mp3",
+      "text": "sich treffen: double f, one t at the start. Learn sich too; wir takes uns.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cd7257b096bd7c908093756dd330061a907587be7ff0df58e9134b00c5cc0555",
+      "bytes": 104448
+    },
+    "en_70a9ae7eb7502ccb0d954278": {
+      "file": "en_70a9ae7eb7502ccb0d954278.mp3",
+      "text": "Two players, and both are ready: beide. Both means exactly two; don’t mix it up with einige, which means some or several.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a7125ed6dc27a9f2f04aa9e1ed17d9332e096a839f737a87c8662af750a51893",
+      "bytes": 144000
+    },
+    "en_47d6fdb53a992818dc0472d4": {
+      "file": "en_47d6fdb53a992818dc0472d4.mp3",
+      "text": "b + ei + de. The vowel pair is ei, not ie; finish with e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "4ae7dfde1bf3ff8633d6d71879735da93ead04a416167dc7fb0a2c3010e752ae",
+      "bytes": 114816
+    },
+    "en_88e910f898ccc2b3fc06c749": {
+      "file": "en_88e910f898ccc2b3fc06c749.mp3",
+      "text": "Bike trials means balancing a bike over obstacles, not riding a trail. Build the name from Fahr + rad + trial; the r letters meet at the join.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "95b2dd8aea528f89cf59ae1f0efae945526edfc8f3eda4198f95faf2c9e23143",
+      "bytes": 167040
+    },
+    "en_63d410f7c851f711ccdab866": {
+      "file": "en_63d410f7c851f711ccdab866.mp3",
+      "text": "Your class sheet uses der Fahrradtrial. Keep capital F, the rr join, and trial with i before a.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "fb3c24e7d452bc26dbe30f63a7b4f774420eca31415ea7db3e1b3738ec883915",
+      "bytes": 130176
+    },
+    "en_978c4cbb887c5677d9e9c9bf": {
+      "file": "en_978c4cbb887c5677d9e9c9bf.mp3",
+      "text": "Ride up a hill: hoch means up, fahren means travel by vehicle. Together: hochfahren. In Ich fahre hoch, the up part moves to the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8a7e1c04dc7a706681bbce1b3441c76a90689f0e10719a43e4f1257ed7f5cd7a",
+      "bytes": 178560
+    },
+    "en_7934cbe7789327efb2c3e761": {
+      "file": "en_7934cbe7789327efb2c3e761.mp3",
+      "text": "hoch + fahren. Keep ch in hoch and the h after a in fahren.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c22ca0433956bb3548f552ee7eb1f582f081a9b5fa8aa0badeb3578d1c6fb4cb",
+      "bytes": 92928
+    },
+    "en_957543a62a739ac7aad28da6": {
+      "file": "en_957543a62a739ac7aad28da6.mp3",
+      "text": "Before opening a chest: Hoffentlich! — Hopefully! Link it to hoffen, meaning to hope. For spelling, build hoffen + t + lich; don’t lose that linking t.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7b95757768555e53d76748fed26f0a9b4d160a11955e37d58da41df8074bf3ca",
+      "bytes": 190080
+    },
+    "en_6265833a3ab8858ca0e5f1b6": {
+      "file": "en_6265833a3ab8858ca0e5f1b6.mp3",
+      "text": "Double f, then the t before lich. End with ch, not ck.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "80a5e4fccf24a2f66f5b3acafbf88c55e6f3f5a9033c0bb1917d9d4af7b0244e",
+      "bytes": 87936
+    },
+    "en_0335770c22527444bdb56777": {
+      "file": "en_0335770c22527444bdb56777.mp3",
+      "text": "At school, you take the staircase to the next floor: Ich gehe die Treppe hoch. Picture the actual steps you use each day.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "38075fafcc75d72cb698cbf5c6deb81ca50c38f8867eba28c22fe92f2c541fed",
+      "bytes": 131328
+    },
+    "en_8d0eaf9a099ca0d8668bb4ad": {
+      "file": "en_8d0eaf9a099ca0d8668bb4ad.mp3",
+      "text": "Write die Treppe with capital T, double p, and final e. Plural: die Treppen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9cb4947d06fa40b3f919b50c81d9c39492f954dc8091807b529ddffb9c806cd1",
+      "bytes": 108288
+    },
+    "en_9135e671e649b7a3c6b92b44": {
+      "file": "en_9135e671e649b7a3c6b92b44.mp3",
+      "text": "Tony Stark has a strong suit. Use Stark as a name hook for stark — strong. The German adjective stays lowercase; this is a memory link, not a translation rule.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cf5e1c93617b953bf78c1cc08a7b13e03d16fccc0e24ab554abf83ce7e03e9b8",
+      "bytes": 178944
+    },
+    "en_408476e350f2bcf15098508b": {
+      "file": "en_408476e350f2bcf15098508b.mp3",
+      "text": "st + ark. Finish rk, with no vowel between r and k. Lowercase s.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "558a36538f7db3d349231029722f6c6e37d18645672a49c34c1f99ba6ff617a4",
+      "bytes": 110976
+    },
+    "en_dfe0493300d4f556a6331246": {
+      "file": "en_dfe0493300d4f556a6331246.mp3",
+      "text": "Two teammates argue about the plan: Sie streiten — They argue. This is the argument itself; sich ärgern is feeling annoyed.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "4f7a338ddd1652926052835fcffe016d9d78c3c6bc6c24888c2919faf5f34097",
+      "bytes": 140160
+    },
+    "en_14560d225638387d079b7d20": {
+      "file": "en_14560d225638387d079b7d20.mp3",
+      "text": "str + ei + ten. Three consonants at the start; ei, not ie.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "6b2a2a40a3815de1082517449363325a6d58bf9b5778ef099ebd1d6906d365ae",
+      "bytes": 114816
+    },
+    "en_ee2d6f958eab9b6c2d32d3e5": {
+      "file": "en_ee2d6f958eab9b6c2d32d3e5.mp3",
+      "text": "After a late gaming session: Ich bin müde — I’m tired. Keep it separate from traurig: you need sleep, not cheering up.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a0a74cd7f8dd559f6cb6668bc17e179bc5ce47f4826958ea545be5c487e0b7ac",
+      "bytes": 139008
+    },
+    "en_b4273e44c45a237657394564": {
+      "file": "en_b4273e44c45a237657394564.mp3",
+      "text": "m + ü + de. The two dots belong to ü; plain u is a different letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cd58d3359d91644752917e56ffe69423c29726323de9cb0f75b350cf5155d8e9",
+      "bytes": 114816
+    },
+    "en_32df8483549cc86d623fdfd4": {
+      "file": "en_32df8483549cc86d623fdfd4.mp3",
+      "text": "A bad connection makes the game lag: schlecht means bad. Build its spelling in four blocks: sch / le / ch / t.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "38e8dbc28f356ac1d40ff8972b9a00cafcc529ffd1798fa9cb029d9943c2e7eb",
+      "bytes": 193920
+    },
+    "en_a521e4ccc7266bbac350ff94": {
+      "file": "en_a521e4ccc7266bbac350ff94.mp3",
+      "text": "Start sch. There is another ch before the final t; don’t drop that second h.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f93cfcbf606a01770225b3de2672cd7864dcf1aa164f3818d4c5ed7287fe1176",
+      "bytes": 94464
+    },
+    "en_19505a7d53651e7d51e95259": {
+      "file": "en_19505a7d53651e7d51e95259.mp3",
+      "text": "Liebe means love; verliebt means in love. The shared lieb gives you the meaning and the tricky ie spelling in one useful link.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a6501aee8b2e89bc981d752853e82a50d199cb318f2c1bfdddad5c09cb4093b6",
+      "bytes": 146688
+    },
+    "en_1841e6707b8ef2751d36c8ed": {
+      "file": "en_1841e6707b8ef2751d36c8ed.mp3",
+      "text": "ver + lieb + t. Keep ie together; finish bt, not pt.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e5466c24ce8e76b8d854a1d27acb17a4de55430fecaf31535155bfb3dadd7858",
+      "bytes": 109824
+    },
+    "en_3ffed8b1178fb4282d7f2c35": {
+      "file": "en_3ffed8b1178fb4282d7f2c35.mp3",
+      "text": "‘Will you join us?’ ‘Definitely!’ That confident answer is bestimmt in this lesson. It’s a yes with confidence, not just a hopeful maybe.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "abc4a49797c9e19843ee5c9a30268d2322acfbeeba60a8eae0f9c0da82432781",
+      "bytes": 151680
+    },
+    "en_d2ef26deb03922ffe35859e3": {
+      "file": "en_d2ef26deb03922ffe35859e3.mp3",
+      "text": "be + stimmt. Double m followed by t; don’t shorten the ending to one m.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "91b0eeaf5c3d59764aa21fdff5b71d6f8de98806426dc5522c30a04bce99f862",
+      "bytes": 97920
+    },
+    "en_ea21a543d866fd9332511c66": {
+      "file": "en_ea21a543d866fd9332511c66.mp3",
+      "text": "Glück means luck or happiness. Finding diamonds can make you glücklich — happy. The useful spelling link is Glück + lich, with a lowercase start for the adjective.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "be62dc58ec6b85e9ccd90f7bbb8aa0cdedad399dda05d69989f11ea0caa7bab5",
+      "bytes": 190080
+    },
+    "en_70f83d8bd9691d50c8abea44": {
+      "file": "en_70f83d8bd9691d50c8abea44.mp3",
+      "text": "glücklich: lowercase g, ü, ck, then lich. The ending is ch, not ck.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2d9552f7e8a1d31362c08723f38b1fed98428ff18ec00825bdf5803144fb2f1c",
+      "bytes": 120960
+    },
+    "en_c8ddd4a8a798d213177e77ab": {
+      "file": "en_c8ddd4a8a798d213177e77ab.mp3",
+      "text": "A friend notices when someone's joke hurts another person. Mein Freund ist sensibel. The shared sensi in sensitive and sensibel anchors the meaning: sensitive.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c3f8759d163d0ee6edd073ec535e3324ada44ef509a112b1f52afc419db85509",
+      "bytes": 170880
+    },
+    "en_e253175f93b7d011eae01dd3": {
+      "file": "en_e253175f93b7d011eae01dd3.mp3",
+      "text": "Write sensibel with ending bel, not ble. It means sensitive, not the English sensible.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "01b59b374e815a71b6e31bd44864cd08960b7bfbe2151c216ca1d415869e5912",
+      "bytes": 107136
+    },
+    "en_cb49a2dfa275d85b5c761c61": {
+      "file": "en_cb49a2dfa275d85b5c761c61.mp3",
+      "text": "A classmate steadily researches, writes, and improves a project. Sie ist fleißig. Fleiß means diligence; the adjective describes the person putting in that work.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "316316e9bd6e3e9040776707dbd9ad28b7dafbc92b5728e8b1eb75d11ecd06d3",
+      "bytes": 178560
+    },
+    "en_749d002b32e2db22957967c3": {
+      "file": "en_749d002b32e2db22957967c3.mp3",
+      "text": "Write fleißig with ei, ß, and final ig. Keep the lesson's ß spelling.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "608220880e06727b530fe0e0828d1a5e988b892fd7da0c01c5082c5e1c5e8611",
+      "bytes": 117120
+    },
+    "en_e8a4073d366b7dac650e70ac": {
+      "file": "en_e8a4073d366b7dac650e70ac.mp3",
+      "text": "A friend explains something important, and you put your phone down. Ich höre dir zu. Hören means hear; the added zu marks listening attentively to someone.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "38bf9af7778ad98032a536128f3d444ee137a2d1459ec900b310978781860128",
+      "bytes": 173568
+    },
+    "en_e30fdef305a148407d98a049": {
+      "file": "en_e30fdef305a148407d98a049.mp3",
+      "text": "Write zuhören with ö. In Ich höre dir zu, zu goes last; dir is the dative form for you.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a5585ccb5e192fcd9738d2f5960c8cfaec6b9a1337167c4f703e273619a714b6",
+      "bytes": 139008
+    },
+    "en_ac0d82ce19e6529f47257db3": {
+      "file": "en_ac0d82ce19e6529f47257db3.mp3",
+      "text": "You have some blocks left, not necessarily two: einige. Contrast beide, meaning both of two. Spell it in three small blocks: ei + ni + ge.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "81ad2ab8b98b3eaf5414c9a49f8fb5d78c52be2f2dbf1b51a362ad9439d1e413",
+      "bytes": 219648
+    },
+    "en_02cf4e2ab8398a5bf70e5486": {
+      "file": "en_02cf4e2ab8398a5bf70e5486.mp3",
+      "text": "Start ei, not ie. Keep the middle i: ei-ni-ge ends in e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "336b95d81b463eb540c7b5be96b7f68fcbb2cb1758fea6325d8ac3feecc9ef25",
+      "bytes": 127488
+    },
+    "en_805d37344b8144f40b120033": {
+      "file": "en_805d37344b8144f40b120033.mp3",
+      "text": "Think of an interest you actually have: games, music, or sports. sich interessieren means to be interested. Use four spelling blocks: inter / ess / ier / en.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "759824109a306d19d0d52e3e3b0f3f37f7c104876983b9368401a8b62e1b036f",
+      "bytes": 204288
+    },
+    "en_7eadba3452ee433916d62742": {
+      "file": "en_7eadba3452ee433916d62742.mp3",
+      "text": "One r in inter; double s in ess; ie in ier. Include sich when naming the verb.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3353777aa2cd7ff468d880f113cd3bbe6c23e0909b7c7eb46289218ca4cb1fd2",
+      "bytes": 132480
+    },
+    "en_e4968ddd7880eeb6588850fa": {
+      "file": "en_e4968ddd7880eeb6588850fa.mp3",
+      "text": "Learn der Brief → die Briefe. In Ich schreibe einen Brief, einen means a: Brief receives the action, so masculine ein changes to einen. Brief keeps its capital B. Its long ee sound is written ie.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a3b9230df2bf7af2367fd1fa427453cd3b30ee4a5f431b6d32257db922ed02bf",
+      "bytes": 268416
+    },
+    "en_8eeeab6b3c069631e842c0bf": {
+      "file": "en_8eeeab6b3c069631e842c0bf.mp3",
+      "text": "One letter: der Brief. Several letters: die Briefe. Add -e. Use die for the plural in this naming exercise; articles can change in other sentence roles.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "044d7fa64501bacd3ec5fd7245b94cbcc82b3488ac98983b0755d20210b725e9",
+      "bytes": 195456
+    },
+    "en_189d9aaf4a8dcdb7f8d73352": {
+      "file": "en_189d9aaf4a8dcdb7f8d73352.mp3",
+      "text": "English says I feel good. German says Ich fühle mich gut: it needs mich here, although English does not say myself. Match ich → mich, du → dich, wir → uns. For ü, try saying ee with rounded lips, then listen and copy the German sound. Keep the h after ü.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f70914d73fe4faecb41e3d2f1bda87202d99fd46a01e82bbed9004e0cb4ae882",
+      "bytes": 342528
+    },
+    "en_62bc4f8b7d136a846af9cb19": {
+      "file": "en_62bc4f8b7d136a846af9cb19.mp3",
+      "text": "Before a match: Ich fühle mich gut — I feel good. German needs mich here, even though English does not say myself. Learn the whole phrase together.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "90e66fd46f1ca208ef977de8ac754a4d8e24ee3881415d44724c0d02bd549b36",
+      "bytes": 176256
+    },
+    "en_63c343c316acb6a0ed718873": {
+      "file": "en_63c343c316acb6a0ed718873.mp3",
+      "text": "Learn sich ärgern über …: to get annoyed about something. Ich ärgere mich means I get annoyed; wir ärgern uns means we get annoyed. English leaves out myself/ourselves here, but German needs mich/uns. Start ärgern with ä.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8232d6b10d357649dc46eb40f785644f38dcc3be369d8b27a2fa58feb6f250f7",
+      "bytes": 284928
+    },
+    "en_63b3ea06f714139e8f27692d": {
+      "file": "en_63b3ea06f714139e8f27692d.mp3",
+      "text": "Ich bin traurig means I am sad. Spell trau + rig. The au sounds like ow in cow. Listen to the German ending: even when it sounds like ich, write ig. Traurig is sad; müde is tired.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b425ed47ef7b018dce7ec49eccc2c70e929e54be1ae7aafb143043ae59782504",
+      "bytes": 253056
+    },
+    "en_ba539019711eed305d035941": {
+      "file": "en_ba539019711eed305d035941.mp3",
+      "text": "Learn der Job → die Jobs: the plural adds s. German nouns need a capital. In Mein Vater hat einen Job, einen means a; masculine ein changes to einen for the thing someone has.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "22b354b564cf8af312871c95743c8d59027d97c8e6ae75e2ab58c2ddd575c530",
+      "bytes": 235008
+    },
+    "en_24a0d958f90d61cdeccc27dc": {
+      "file": "en_24a0d958f90d61cdeccc27dc.mp3",
+      "text": "mitkommen means come along. Learn Ich komme mit — I am coming along. Change the verb for the person: du kommst, wir kommen. In these simple statements, keep mit at the end. The dictionary form mitkommen is one word, with double m.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a98192cea4eadeca05e3752679f193ab17a20c62830580d5f350201b6f4736de",
+      "bytes": 282240
+    },
+    "en_ae2f549557e5385391fe49fd": {
+      "file": "en_ae2f549557e5385391fe49fd.mp3",
+      "text": "Here umziehen means move home, not walk across a room. Ich ziehe um — I am moving. Wir ziehen um — We are moving. In these statements um goes last. In ziehen, ie makes a long ee sound and is followed by a silent h.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "93042612608a58ebeddea86409afc4437482a6b74cf28f40cadec9755a15d136",
+      "bytes": 278400
+    },
+    "en_b639497fab9198671ab97aca": {
+      "file": "en_b639497fab9198671ab97aca.mp3",
+      "text": "weit means far; weg means away. Keep two words: weit weg. In weit, ei sounds like English eye. Hear the final sound in weg, but remember the written ending is g.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "208a58bc77de8438122b6cd77fb11947a992a1cdd67dfb1596dabf10cc05d59e",
+      "bytes": 213120
+    },
+    "en_e344dada46f36568854edf4b": {
+      "file": "en_e344dada46f36568854edf4b.mp3",
+      "text": "beide means both of two: Wir sind beide müde — We are both tired. In beide, ei sounds like English eye. Contrast einige: some or several, without specifying exactly two.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9c58afdde98963ea63a7a9b3ba94f4662f295ddbd4659abed215c7a15ee8230e",
+      "bytes": 231168
+    },
+    "en_dfd87f1f0aa4be93f65f97a9": {
+      "file": "en_dfd87f1f0aa4be93f65f97a9.mp3",
+      "text": "Bike trials involves balancing and riding over obstacles, not following a trail. Build Fahr + rad + trial; the r letters meet. Your class sheet uses der Fahrradtrial → die Fahrradtrials. The sporting word Trial is normally das Trial; ask your teacher about this article difference. These exercises follow the sheet.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8063152314e770a097974628a5552565af9fcc3d34d2db8fad43aa1cebc3ef15",
+      "bytes": 347520
+    },
+    "en_5c97dbae5f4843e82e17b82d": {
+      "file": "en_5c97dbae5f4843e82e17b82d.mp3",
+      "text": "hochfahren means ride or drive up. Compare Ich fahre hoch — I ride up; Er fährt hoch — He rides up. With er, a changes to ä; wir keeps fahren. In these simple statements hoch goes at the end. Keep the silent h in fahren.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "151ed6591baa57a2250903f1160405ec1e10b52c6c6e6dcc7e7b40c8241aa365",
+      "bytes": 306816
+    },
+    "en_62f2c5c7ff359035ce94c1c9": {
+      "file": "en_62f2c5c7ff359035ce94c1c9.mp3",
+      "text": "Compare ich fahre and er fährt: with er, a changes to ä and the ending is t. Er fährt den Berg hoch — He rides up the mountain. Put hoch at the end.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8b72fd35206804a1c221d0ce3a94c84f90a564bd542c0ef309eda3721ff6bb2a",
+      "bytes": 216960
+    },
+    "en_3231361d3a3e30b2a8179d30": {
+      "file": "en_3231361d3a3e30b2a8179d30.mp3",
+      "text": "die Treppe means one staircase. English often calls this the stairs, but German Treppe is singular. Multiple staircases: die Treppen. Keep capital T and double p. Ich gehe die Treppe hoch means I am going up the stairs.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3b3dbd4b3fca38cd338a6a8157d0aa063339004963ef8bfd5f51ab08187b5f25",
+      "bytes": 273408
+    },
+    "en_525d1564dcbcce0790cecc86": {
+      "file": "en_525d1564dcbcce0790cecc86.mp3",
+      "text": "One staircase: die Treppe. Several staircases: die Treppen. Add n. English the stairs can describe just one German Treppe.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "59d6943323c15f305aeb67bd0f86af24937ce68c3e072dc569f60aebc303aff4",
+      "bytes": 176256
+    },
+    "en_a4b8ad8c17080a69837e00dc": {
+      "file": "en_a4b8ad8c17080a69837e00dc.mp3",
+      "text": "die Treppe is one staircase, often called the stairs in English. Several staircases: die Treppen. Keep capital T, double p, and final e in Treppe.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "709cbddc62fa99bdc6093f0d552d04b5825ddbdc3ce09b77bbb92a2c1338a955",
+      "bytes": 186240
+    },
+    "en_8f9b0a7c2b6a5c92b9e25317": {
+      "file": "en_8f9b0a7c2b6a5c92b9e25317.mp3",
+      "text": "streiten means argue: wir streiten — we argue. Use ich streite, but er streitet: the extra e before t helps you say the ending. The ei sounds like English eye. Arguing is an action; sich ärgern means feeling annoyed.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cbb6d3de0842b9d57d28c40e71442e343b4d1c2111be75402541f813e78f1c22",
+      "bytes": 287616
+    },
+    "en_c4d796790ad6c9dd33f80016": {
+      "file": "en_c4d796790ad6c9dd33f80016.mp3",
+      "text": "Ich bin müde — I am tired. For ü, try ee with rounded lips, then listen and copy the German sound. Keep the dots: u is a different vowel. Spell mü + de. Needing sleep is müde, not traurig (sad).",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7869d20c87da36dcd364aa4834d1666951a0ccfaf1752519b6eb51e7df7e28f4",
+      "bytes": 289920
+    },
+    "en_60d28290a3465a8a9f108504": {
+      "file": "en_60d28290a3465a8a9f108504.mp3",
+      "text": "schlecht means bad. Build sch + le + ch + t. The first sch sounds like English sh; the later ch is a different German sound, not English ch in chair. Listen and copy. Keep both h letters.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d7e5cc9d7073b75beaba03ab45cab25794296c5a6cb45dc3d904942b28692e4e",
+      "bytes": 304128
+    },
+    "en_492ed1a7736e41d6d43e30ba": {
+      "file": "en_492ed1a7736e41d6d43e30ba.mp3",
+      "text": "Liebe means love. Build ver + lieb + t: verliebt means in love. Ich bin verliebt — I am in love. The ie sounds like ee; keep written bt even when the b sounds like p.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "4232dc82fa176eca98dedbdc18c2b4f690f6423809038f7ce002592fa3aea283",
+      "bytes": 255360
+    },
+    "en_397d1b3a37a60aefccf06b6c": {
+      "file": "en_397d1b3a37a60aefccf06b6c.mp3",
+      "text": "Ich bin glücklich — I am happy. Build Glück + lich, then use a lowercase g for the adjective. Keep ü, ck, and the different ending ch. Compare glücklich (happy) and traurig (sad). Listen to ü and ch before repeating.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "99df5e2dc58e74ed4f666755a66a70f17245414576ecb718ad85e9d62304fd20",
+      "bytes": 306816
+    },
+    "en_d59fe58d9058f93447731d3e": {
+      "file": "en_d59fe58d9058f93447731d3e.mp3",
+      "text": "fleißig means hard-working: Sie ist fleißig — She works hard. Build fleiß + ig. The ei sounds like English eye; ß sounds like s, not b. Keep the written ending ig. Use the ß key below the answer box.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5cefcb149ba1a34224df52c33edcdf6f318566544442c7eecb7074bc5dc749a6",
+      "bytes": 282240
+    },
+    "en_259b70b55353edee7af8af2b": {
+      "file": "en_259b70b55353edee7af8af2b.mp3",
+      "text": "Your friend keeps working on a build, even when it takes a few tries. Sie ist fleißig — She is hard-working. Think steady effort, not finishing fast.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7ba8623951f8bd654255128f7368ef4fe055214f773643fc1319fbddfbd1e38c",
+      "bytes": 169728
+    },
+    "en_90b0213c0ee9cffa46a11b29": {
+      "file": "en_90b0213c0ee9cffa46a11b29.mp3",
+      "text": "fleiß + ig: ei sounds like eye; ß sounds like s, not b. Keep the written ending ig and use the ß button.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "af3cff97ea1e476300a1dbcf3eea4c05ee1d0374b4e2b7b3f20324e437b6b502",
+      "bytes": 165888
+    },
+    "en_f52394138be2073565e54e7a": {
+      "file": "en_f52394138be2073565e54e7a.mp3",
+      "text": "Learn Ich höre dir zu — I am listening to you. German uses dir, not dich, with zuhören: learn höre dir zu as a phrase. Wir hören dir zu — We are listening to you. In these simple statements zu goes last. Listen to ö; it is not the same sound as o.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5ee6cb88924bf29824842d0f5abef338ad74b3e1d2f33f42a33b72efa878e6bb",
+      "bytes": 336000
+    },
+    "en_e53ae8c963a4174598a816f1": {
+      "file": "en_e53ae8c963a4174598a816f1.mp3",
+      "text": "Write zuhören with ö. Learn höre dir zu as a phrase: listening to you. German uses dir here, not dich. In Ich höre dir zu, zu goes last.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2194827dd8d345e499544a3d260daa5a7d3173346e414b694771bd258e0f8fbf",
+      "bytes": 210816
+    },
+    "en_bbe5e6bffa197f32d988a2f3": {
+      "file": "en_bbe5e6bffa197f32d988a2f3.mp3",
+      "text": "There are two r letters, neither doubled: one in inter and another in ieren. Keep double s: inter + ess + ieren. Learn Ich interessiere mich für Musik — I am interested in music. German needs mich and für here; do not translate English in word for word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "62d604a853ac7632c84fca3d60f5fd20a6d0d57f7e8a2f30071718c8dd389752",
+      "bytes": 342528
+    },
+    "en_f99ba9a696f1c46e51a02241": {
+      "file": "en_f99ba9a696f1c46e51a02241.mp3",
+      "text": "Two r letters, neither doubled: one in inter, another in ier. Double s; ie in ier. Learn sich interessieren für: to be interested in.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "909fc79658c804f6a313ac30a76e7460e37991354bf03131938827229f8fbda4",
+      "bytes": 208128
+    }
+  },
+  "voice_id": "eve"
+}

@@ -1,0 +1,1611 @@
+{
+  "voice_id": "eve",
+  "out_dir": "public/voice",
+  "clips": [
+    {
+      "id": "de_bd528940821204a39eb0343f",
+      "text": "der Brief",
+      "language": "de"
+    },
+    {
+      "id": "de_da8a3a4d3a7f45b1050d3f6d",
+      "text": "der Brief. Ich schreibe einen Brief.",
+      "language": "de"
+    },
+    {
+      "id": "de_70a754c4ff488423dfba9706",
+      "text": "Ich schreibe einen Brief.",
+      "language": "de"
+    },
+    {
+      "id": "en_e4968ddd7880eeb6588850fa",
+      "text": "Learn der Brief → die Briefe. In Ich schreibe einen Brief, einen means a: Brief receives the action, so masculine ein changes to einen. Brief keeps its capital B. Its long ee sound is written ie.",
+      "language": "en"
+    },
+    {
+      "id": "de_23f18f32b7afaf22ac227179",
+      "text": "Der Brief ist für dich.",
+      "language": "de"
+    },
+    {
+      "id": "de_23c260f9b6947da44875fb6e",
+      "text": "die Briefe",
+      "language": "de"
+    },
+    {
+      "id": "en_8eeeab6b3c069631e842c0bf",
+      "text": "One letter: der Brief. Several letters: die Briefe. Add -e. Use die for the plural in this naming exercise; articles can change in other sentence roles.",
+      "language": "en"
+    },
+    {
+      "id": "de_fe50edade7f0ab1a9c59bb44",
+      "text": "der",
+      "language": "de"
+    },
+    {
+      "id": "en_5825498d719fee6742ae8a81",
+      "text": "Brief is masculine: der Brief.",
+      "language": "en"
+    },
+    {
+      "id": "en_62edb760f20ad9acf4c5878d",
+      "text": "A brief message can go in a letter. English brief and German Brief share the same letters, but der Brief means the letter itself.",
+      "language": "en"
+    },
+    {
+      "id": "en_3b8d7d12331ce0447228e46e",
+      "text": "Learn der Brief together. Capital B; ie, not ei. More than one: die Briefe.",
+      "language": "en"
+    },
+    {
+      "id": "en_ea8de47176461c1fc651cfe0",
+      "text": "Picture a letter wearing a big capital B. On its envelope is a tiny label: der. Open the envelope and find the letters i then e inside.",
+      "language": "en"
+    },
+    {
+      "id": "en_e5049f93e7e0ff4305104c57",
+      "text": "ie, not ei. Capital B. Say the article with it: der Brief.",
+      "language": "en"
+    },
+    {
+      "id": "de_c2c567ae95a88d0fa7c92d96",
+      "text": "sich fühlen",
+      "language": "de"
+    },
+    {
+      "id": "de_f4e20efd18c03c1d42562539",
+      "text": "sich fühlen. Ich fühle mich gut.",
+      "language": "de"
+    },
+    {
+      "id": "de_f6008bde22eb41eedecf20fb",
+      "text": "Ich fühle mich gut.",
+      "language": "de"
+    },
+    {
+      "id": "en_189d9aaf4a8dcdb7f8d73352",
+      "text": "English says I feel good. German says Ich fühle mich gut: it needs mich here, although English does not say myself. Match ich → mich, du → dich, wir → uns. For ü, try saying ee with rounded lips, then listen and copy the German sound. Keep the h after ü.",
+      "language": "en"
+    },
+    {
+      "id": "de_0f6834be0af1647d733626c4",
+      "text": "Wir fühlen uns müde.",
+      "language": "de"
+    },
+    {
+      "id": "de_bd6fb3c4006bfc58c2639e19",
+      "text": "mich",
+      "language": "de"
+    },
+    {
+      "id": "en_db5b5cd42b44eabb35d4cc27",
+      "text": "With ich, use mich: Ich fühle mich gut.",
+      "language": "en"
+    },
+    {
+      "id": "de_214296b8256350d5755b80f3",
+      "text": "dich",
+      "language": "de"
+    },
+    {
+      "id": "en_b22c20d24dad9a2d4b613596",
+      "text": "With du, use dich: Du fühlst dich müde.",
+      "language": "en"
+    },
+    {
+      "id": "en_62bc4f8b7d136a846af9cb19",
+      "text": "Before a match: Ich fühle mich gut — I feel good. German needs mich here, even though English does not say myself. Learn the whole phrase together.",
+      "language": "en"
+    },
+    {
+      "id": "en_f43382fc27fd9df4021ab937",
+      "text": "sich fühlen: ü, then h. Keep sich when learning the verb; use mich with ich.",
+      "language": "en"
+    },
+    {
+      "id": "en_aa883cc448fb1735031dece6",
+      "text": "Picture a feelings thermometer. The two dots over ü are its two eyes, checking how you feel. Point at yourself when you say mich.",
+      "language": "en"
+    },
+    {
+      "id": "en_22a72c026210bcc7b8832eb4",
+      "text": "ü has two dots; a silent h follows it. Keep sich with the infinitive.",
+      "language": "en"
+    },
+    {
+      "id": "en_1f4b31f7f952ce971e96916e",
+      "text": "Before a match, check how you feel: Ich fühle mich gut — I feel good. The feeling is about you, so keep the ‘myself’ part: mich.",
+      "language": "en"
+    },
+    {
+      "id": "de_ac9ae46f98d7f78a42ea4700",
+      "text": "sich ärgern",
+      "language": "de"
+    },
+    {
+      "id": "de_dec382f029af28fa29beb8cd",
+      "text": "sich ärgern. Ich ärgere mich über den Lärm.",
+      "language": "de"
+    },
+    {
+      "id": "de_57b88e658b54927c240c7b5c",
+      "text": "Ich ärgere mich über den Lärm.",
+      "language": "de"
+    },
+    {
+      "id": "en_63c343c316acb6a0ed718873",
+      "text": "Learn sich ärgern über …: to get annoyed about something. Ich ärgere mich means I get annoyed; wir ärgern uns means we get annoyed. English leaves out myself/ourselves here, but German needs mich/uns. Start ärgern with ä.",
+      "language": "en"
+    },
+    {
+      "id": "de_4a43d41917db032b9a722ea9",
+      "text": "Wir ärgern uns über den Regen.",
+      "language": "de"
+    },
+    {
+      "id": "en_9fe90c7781ee413d0fb0aea8",
+      "text": "Ich pairs with mich. The extra e in ärgere belongs to the ich form.",
+      "language": "en"
+    },
+    {
+      "id": "de_652375cf18318d14a681aec7",
+      "text": "uns",
+      "language": "de"
+    },
+    {
+      "id": "en_16102671a4db964a66bd7463",
+      "text": "Wir pairs with uns: Wir ärgern uns.",
+      "language": "en"
+    },
+    {
+      "id": "en_4bc75cddb9f07649cdf61bbe",
+      "text": "Someone's loud video interrupts your homework. Ich ärgere mich über den Lärm. Ärger means annoyance or trouble; here you are getting annoyed by the noise.",
+      "language": "en"
+    },
+    {
+      "id": "en_7f6622af7c8494cb9b93f204",
+      "text": "Write sich ärgern: initial ä, then rgern. Ich uses ärgere mich; wir uses ärgern uns.",
+      "language": "en"
+    },
+    {
+      "id": "en_613ce0465d0193146bba2b85",
+      "text": "Imagine the two dots over ä turning into annoyed eyebrows. A noisy alarm makes you point at yourself: Ich ärgere mich!",
+      "language": "en"
+    },
+    {
+      "id": "en_cbee67b8a832b8fbe8309fed",
+      "text": "Start with ä, then r-g-ern. In ich ärgere, the ending changes to -e.",
+      "language": "en"
+    },
+    {
+      "id": "de_3e90122d42c97d8f1cf52464",
+      "text": "traurig",
+      "language": "de"
+    },
+    {
+      "id": "de_ed8df60b66242a6fc27887f0",
+      "text": "traurig. Ich bin traurig.",
+      "language": "de"
+    },
+    {
+      "id": "de_60f3430f6986f9f95b36ae94",
+      "text": "Ich bin traurig.",
+      "language": "de"
+    },
+    {
+      "id": "en_63b3ea06f714139e8f27692d",
+      "text": "Ich bin traurig means I am sad. Spell trau + rig. The au sounds like ow in cow. Listen to the German ending: even when it sounds like ich, write ig. Traurig is sad; müde is tired.",
+      "language": "en"
+    },
+    {
+      "id": "de_d4e4f39ecc664ee3889018da",
+      "text": "Mein Freund ist traurig.",
+      "language": "de"
+    },
+    {
+      "id": "en_580e74dc647d499e80f5df87",
+      "text": "Your friend moves away: traurig means sad. It’s a feeling, not tiredness. Learn the word in two short spelling blocks: trau + rig.",
+      "language": "en"
+    },
+    {
+      "id": "en_c22dec91342595e0dc8aa10b",
+      "text": "Keep au together. End with rig: the final written letter is g, even if it sounds different.",
+      "language": "en"
+    },
+    {
+      "id": "en_e5aad1188e3efdc9bfab4091",
+      "text": "Picture a sad face on a rainy window. Draw a tiny tear next to traurig. Pair it with the opposite: glücklich, happy.",
+      "language": "en"
+    },
+    {
+      "id": "en_61af535e5b7d8f254232f7da",
+      "text": "Two chunks: trau + rig. Keep au together and end with g, not ch.",
+      "language": "en"
+    },
+    {
+      "id": "de_3e48c781c39a1e2d394fc340",
+      "text": "der Job",
+      "language": "de"
+    },
+    {
+      "id": "de_b0fd7459f0bed40c8386ca12",
+      "text": "der Job. Mein Vater hat einen Job.",
+      "language": "de"
+    },
+    {
+      "id": "de_f4e42aca14d9154d747c638e",
+      "text": "Mein Vater hat einen Job.",
+      "language": "de"
+    },
+    {
+      "id": "en_ba539019711eed305d035941",
+      "text": "Learn der Job → die Jobs: the plural adds s. German nouns need a capital. In Mein Vater hat einen Job, einen means a; masculine ein changes to einen for the thing someone has.",
+      "language": "en"
+    },
+    {
+      "id": "de_0ecef9a4cef906f61b635eb3",
+      "text": "Der Job ist interessant.",
+      "language": "de"
+    },
+    {
+      "id": "de_4cf6798b6bf5464f0f91ab84",
+      "text": "die Jobs",
+      "language": "de"
+    },
+    {
+      "id": "en_0f34a2b38276abe06d15734b",
+      "text": "Add -s: Job → Jobs.",
+      "language": "en"
+    },
+    {
+      "id": "en_7c1076383ec0afe91e2b9697",
+      "text": "Job is masculine: der Job.",
+      "language": "en"
+    },
+    {
+      "id": "en_e9b380403ac03010e0f1d268",
+      "text": "Easy transfer: a job is der Job. You already know the English spelling; the new information is the German article and capital letter.",
+      "language": "en"
+    },
+    {
+      "id": "en_e2e1e660e9c4f42c2de9dc8e",
+      "text": "der Job: capital J. Plural die Jobs adds s, just like English.",
+      "language": "en"
+    },
+    {
+      "id": "en_93da6cd3be08889da1a0a89d",
+      "text": "Imagine a job badge with a giant J. The badge belongs to DER boss. The word already looks familiar from English.",
+      "language": "en"
+    },
+    {
+      "id": "en_bb18e7c6bdea9217c8b7ec57",
+      "text": "Capital J, article der. Add s for the plural: Jobs.",
+      "language": "en"
+    },
+    {
+      "id": "de_05e9c62092e4e55f1196abe3",
+      "text": "mitkommen",
+      "language": "de"
+    },
+    {
+      "id": "de_dc77b62a5e7a81131e88f1b0",
+      "text": "mitkommen. Ich komme mit.",
+      "language": "de"
+    },
+    {
+      "id": "de_ec4f32e4514355867180d75d",
+      "text": "Ich komme mit.",
+      "language": "de"
+    },
+    {
+      "id": "en_24a0d958f90d61cdeccc27dc",
+      "text": "mitkommen means come along. Learn Ich komme mit — I am coming along. Change the verb for the person: du kommst, wir kommen. In these simple statements, keep mit at the end. The dictionary form mitkommen is one word, with double m.",
+      "language": "en"
+    },
+    {
+      "id": "de_2eafb0ceda2b11141878a4d1",
+      "text": "Ich komme heute mit.",
+      "language": "de"
+    },
+    {
+      "id": "de_48174557d910b73263996f3f",
+      "text": "Du kommst heute mit.",
+      "language": "de"
+    },
+    {
+      "id": "de_145a7a395a4a5792c7156953",
+      "text": "komme mit",
+      "language": "de"
+    },
+    {
+      "id": "en_242d6b13bf0a90fbc7d81594",
+      "text": "Conjugate kommen → komme. Put mit at the end: Ich komme heute mit.",
+      "language": "en"
+    },
+    {
+      "id": "de_c0e7f74383407df0700c5c76",
+      "text": "kommen mit",
+      "language": "de"
+    },
+    {
+      "id": "en_66db0f19055be07237d18df1",
+      "text": "With wir, use kommen. The prefix mit goes at the end.",
+      "language": "en"
+    },
+    {
+      "id": "en_90fddfc3b6db0da34f948f30",
+      "text": "Friends head to the park and invite you along. Mit means with; kommen means come. Ich komme mit. Picture joining their group at the door.",
+      "language": "en"
+    },
+    {
+      "id": "en_d9b92d8bfdcb649841a765ae",
+      "text": "Write mitkommen as one infinitive, with double m in kommen. In Ich komme mit, mit moves to the end.",
+      "language": "en"
+    },
+    {
+      "id": "en_de455aae2ac0b62174334249",
+      "text": "Your friend says “Come along!” Two m letters walk side by side. In a sentence, mit runs ahead to wait at the very end.",
+      "language": "en"
+    },
+    {
+      "id": "en_95eac26fd170d726591b4ae7",
+      "text": "Two m letters in kommen. Join mitkommen in the infinitive; split komme … mit in a statement.",
+      "language": "en"
+    },
+    {
+      "id": "de_fe58680dccec055f058a89b0",
+      "text": "umziehen",
+      "language": "de"
+    },
+    {
+      "id": "de_197790b9c224bd0e4453ef3b",
+      "text": "umziehen. Wir ziehen nach Berlin um.",
+      "language": "de"
+    },
+    {
+      "id": "de_b1857575df544b0278bf94ce",
+      "text": "Wir ziehen nach Berlin um.",
+      "language": "de"
+    },
+    {
+      "id": "en_ae2f549557e5385391fe49fd",
+      "text": "Here umziehen means move home, not walk across a room. Ich ziehe um — I am moving. Wir ziehen um — We are moving. In these statements um goes last. In ziehen, ie makes a long ee sound and is followed by a silent h.",
+      "language": "en"
+    },
+    {
+      "id": "de_187d82be4ce14545be5d8431",
+      "text": "Ich ziehe morgen um.",
+      "language": "de"
+    },
+    {
+      "id": "de_9d9e627baacc9b83a37f3d76",
+      "text": "ziehen um",
+      "language": "de"
+    },
+    {
+      "id": "en_95775e58b06ad75b255d5717",
+      "text": "Wir ziehen morgen um. The prefix um goes at the end.",
+      "language": "en"
+    },
+    {
+      "id": "de_3a70a08e0af2fa11e02b946d",
+      "text": "ziehe um",
+      "language": "de"
+    },
+    {
+      "id": "en_cd0c9a6bbb7bc1afb48a79cc",
+      "text": "Ich needs ziehe. Keep um at the end.",
+      "language": "en"
+    },
+    {
+      "id": "en_24ea22b66315d3f36d3c6f08",
+      "text": "Think moving house, not walking across the room: Wir ziehen um — We’re moving. Keep the moving verb as one word when naming it: umziehen.",
+      "language": "en"
+    },
+    {
+      "id": "en_ecee23dd5b43c295e179c6fb",
+      "text": "um + ziehen. In ziehen, write ie followed by h. In Wir ziehen um, um goes last.",
+      "language": "en"
+    },
+    {
+      "id": "en_85d9c5411c76d7835a04eca0",
+      "text": "Imagine a moving box marked um. Inside, i and e stand in order next to a tall h. The box moves to the end: Wir ziehen um.",
+      "language": "en"
+    },
+    {
+      "id": "en_be1846f3b7f9186d9d1751d3",
+      "text": "ie, then h. Infinitive umziehen is one word.",
+      "language": "en"
+    },
+    {
+      "id": "de_11ca9e666c3d11a519893f2d",
+      "text": "weit weg",
+      "language": "de"
+    },
+    {
+      "id": "de_2b29a0de256663af639d1066",
+      "text": "weit weg. Meine Freundin wohnt weit weg.",
+      "language": "de"
+    },
+    {
+      "id": "de_25bdb124950c92fb85df7795",
+      "text": "Meine Freundin wohnt weit weg.",
+      "language": "de"
+    },
+    {
+      "id": "en_b639497fab9198671ab97aca",
+      "text": "weit means far; weg means away. Keep two words: weit weg. In weit, ei sounds like English eye. Hear the final sound in weg, but remember the written ending is g.",
+      "language": "en"
+    },
+    {
+      "id": "de_ba860681ee8530e259ef590e",
+      "text": "Berlin ist weit weg.",
+      "language": "de"
+    },
+    {
+      "id": "en_d27e0916341b3b0c2dd49d2a",
+      "text": "Your base is far away on the map: weit weg. Two separate words, two w starts. The space is part of the answer.",
+      "language": "en"
+    },
+    {
+      "id": "en_f203ef8c4c3b6405837b2b8d",
+      "text": "weit has ei; weg ends in g. Keep a space between them.",
+      "language": "en"
+    },
+    {
+      "id": "en_c3db9b98950c7304049fdaea",
+      "text": "Imagine two signposts far apart: WEIT on one, WEG on the other. The big gap reminds you to put a space between the words.",
+      "language": "en"
+    },
+    {
+      "id": "en_a81a3b7df5d3685ab3168507",
+      "text": "Two words, both starting with w. First word has ei; second ends in g.",
+      "language": "en"
+    },
+    {
+      "id": "de_f9f722db218c72fab45a41a4",
+      "text": "fast",
+      "language": "de"
+    },
+    {
+      "id": "de_ffb018592e922eb2cc57d80f",
+      "text": "fast. Ich bin fast fertig.",
+      "language": "de"
+    },
+    {
+      "id": "de_671b87520b378e4985888594",
+      "text": "Ich bin fast fertig.",
+      "language": "de"
+    },
+    {
+      "id": "en_0fd768416e634cc2772408f2",
+      "text": "False friend! German fast means almost. English fast would usually be schnell.",
+      "language": "en"
+    },
+    {
+      "id": "de_26c22b1ba912af327a02fe70",
+      "text": "Es ist fast acht Uhr.",
+      "language": "de"
+    },
+    {
+      "id": "en_4b8aaef1d81350f8ba6d971d",
+      "text": "Your download is at 99%: fast fertig — almost finished. German fast means almost, not speedy. Think nearly done, not going quickly.",
+      "language": "en"
+    },
+    {
+      "id": "en_ed647c6d0d889502dab15e48",
+      "text": "Same letters as English fast; different meaning. Write f-a-s-t, with no extra letters.",
+      "language": "en"
+    },
+    {
+      "id": "en_7ac7a15764c0db939cfda9d4",
+      "text": "Imagine a race runner ALMOST at the finish. Freeze the picture just before the line. German fast means almost, even though English fast makes you think of speed.",
+      "language": "en"
+    },
+    {
+      "id": "en_aa3e761e13c80c1b97b28168",
+      "text": "f-a-s-t. The spelling is familiar; the meaning is the trap.",
+      "language": "en"
+    },
+    {
+      "id": "de_29fd7ade06a3dfe97bd84144",
+      "text": "sich treffen",
+      "language": "de"
+    },
+    {
+      "id": "de_da3983e47c9eaf4042d5273e",
+      "text": "sich treffen. Wir treffen uns im Park.",
+      "language": "de"
+    },
+    {
+      "id": "de_4a59dc81322ea8bc75c419f7",
+      "text": "Wir treffen uns im Park.",
+      "language": "de"
+    },
+    {
+      "id": "en_7a678c757545211ae0626cea",
+      "text": "Double f: treffen. For meeting each other, use uns with wir and euch with ihr.",
+      "language": "en"
+    },
+    {
+      "id": "de_5704b3ee99ce81a56cc9270a",
+      "text": "Ich treffe mich mit Ben.",
+      "language": "de"
+    },
+    {
+      "id": "en_811b2244b25c1a7c23c600fc",
+      "text": "Wir treffen uns means we meet each other.",
+      "language": "en"
+    },
+    {
+      "id": "de_4b4418de59270acdca42a554",
+      "text": "euch",
+      "language": "de"
+    },
+    {
+      "id": "en_559940086f1b3ec5213dfb89",
+      "text": "With ihr, use euch: Ihr trefft euch.",
+      "language": "en"
+    },
+    {
+      "id": "en_7577fe1b60edcd7058f5dcf6",
+      "text": "Meet your friend at spawn: Wir treffen uns — We meet up. The two f letters make a simple pair to remember: two friends meeting.",
+      "language": "en"
+    },
+    {
+      "id": "en_c66ae92ee6244fa79d587827",
+      "text": "sich treffen: double f, one t at the start. Learn sich too; wir takes uns.",
+      "language": "en"
+    },
+    {
+      "id": "en_cc91423143bd428750a33db0",
+      "text": "Picture the two f letters as two friends meeting in a park. They stand together in the middle of treffen.",
+      "language": "en"
+    },
+    {
+      "id": "en_9d4862dd75d4c7f358bf1a5b",
+      "text": "Double f. Include sich in the vocabulary form; wir treffen uns in a sentence.",
+      "language": "en"
+    },
+    {
+      "id": "de_eca79a9277b4e66b76e854c3",
+      "text": "beide",
+      "language": "de"
+    },
+    {
+      "id": "de_c8afd194af5168fd5344c250",
+      "text": "beide. Wir sind beide müde.",
+      "language": "de"
+    },
+    {
+      "id": "de_85ddd5f3e0000de1c22030ad",
+      "text": "Wir sind beide müde.",
+      "language": "de"
+    },
+    {
+      "id": "en_e344dada46f36568854edf4b",
+      "text": "beide means both of two: Wir sind beide müde — We are both tired. In beide, ei sounds like English eye. Contrast einige: some or several, without specifying exactly two.",
+      "language": "en"
+    },
+    {
+      "id": "de_fd9e1f85c7187c203f98f6ef",
+      "text": "Die zwei Freunde kommen beide.",
+      "language": "de"
+    },
+    {
+      "id": "en_70a9ae7eb7502ccb0d954278",
+      "text": "Two players, and both are ready: beide. Both means exactly two; don’t mix it up with einige, which means some or several.",
+      "language": "en"
+    },
+    {
+      "id": "en_47d6fdb53a992818dc0472d4",
+      "text": "b + ei + de. The vowel pair is ei, not ie; finish with e.",
+      "language": "en"
+    },
+    {
+      "id": "en_66bc3f262124579073735f6e",
+      "text": "Hold up exactly two fingers. Both fingers stand over ei in beide. Both means two, not just some.",
+      "language": "en"
+    },
+    {
+      "id": "en_dbd05c82a767b15c2ccdfe35",
+      "text": "ei, not ie. End with de.",
+      "language": "en"
+    },
+    {
+      "id": "de_663dbeff2c8340dc78b0af3e",
+      "text": "der Fahrradtrial",
+      "language": "de"
+    },
+    {
+      "id": "de_d627ea0b6b2075ee813c9b6c",
+      "text": "der Fahrradtrial. Der Fahrradtrial ist schwer.",
+      "language": "de"
+    },
+    {
+      "id": "de_086144ee7495b1768a022802",
+      "text": "Der Fahrradtrial ist schwer.",
+      "language": "de"
+    },
+    {
+      "id": "en_dfd87f1f0aa4be93f65f97a9",
+      "text": "Bike trials involves balancing and riding over obstacles, not following a trail. Build Fahr + rad + trial; the r letters meet. Your class sheet uses der Fahrradtrial → die Fahrradtrials. The sporting word Trial is normally das Trial; ask your teacher about this article difference. These exercises follow the sheet.",
+      "language": "en"
+    },
+    {
+      "id": "de_e778030664f5eb0e0f533fb3",
+      "text": "Ich finde den Fahrradtrial spannend.",
+      "language": "de"
+    },
+    {
+      "id": "de_877e9c5f50f71f3fe0b7d7bf",
+      "text": "die Fahrradtrials",
+      "language": "de"
+    },
+    {
+      "id": "en_4aef472f6382548c17d390ef",
+      "text": "In this lesson, use der Fahrradtrial and die Fahrradtrials.",
+      "language": "en"
+    },
+    {
+      "id": "en_09ada898319285a1e956cf7f",
+      "text": "Learn the article supplied in your lesson: der Fahrradtrial.",
+      "language": "en"
+    },
+    {
+      "id": "en_88e910f898ccc2b3fc06c749",
+      "text": "Bike trials means balancing a bike over obstacles, not riding a trail. Build the name from Fahr + rad + trial; the r letters meet at the join.",
+      "language": "en"
+    },
+    {
+      "id": "en_63d410f7c851f711ccdab866",
+      "text": "Your class sheet uses der Fahrradtrial. Keep capital F, the rr join, and trial with i before a.",
+      "language": "en"
+    },
+    {
+      "id": "en_672e248dbde3ddd10b499f03",
+      "text": "Imagine a bike balancing over three blocks labeled Fahr, rad, trial. The r at the end of Fahr bumps into the r at the start of rad: rr.",
+      "language": "en"
+    },
+    {
+      "id": "en_798ddb9521123b6905e21b60",
+      "text": "Capital F, two r letters at the join. Learn der Fahrradtrial. Finish trial, not trail.",
+      "language": "en"
+    },
+    {
+      "id": "de_20ef9b210e7c3e97aabdc894",
+      "text": "hochfahren",
+      "language": "de"
+    },
+    {
+      "id": "de_8a2f5ada66e109ca5fa4b4c4",
+      "text": "hochfahren. Ich fahre den Berg hoch.",
+      "language": "de"
+    },
+    {
+      "id": "de_9c995b03259b050257622043",
+      "text": "Ich fahre den Berg hoch.",
+      "language": "de"
+    },
+    {
+      "id": "en_5c97dbae5f4843e82e17b82d",
+      "text": "hochfahren means ride or drive up. Compare Ich fahre hoch — I ride up; Er fährt hoch — He rides up. With er, a changes to ä; wir keeps fahren. In these simple statements hoch goes at the end. Keep the silent h in fahren.",
+      "language": "en"
+    },
+    {
+      "id": "de_ea99c57511c5d563feeda2a3",
+      "text": "Wir fahren den Berg hoch.",
+      "language": "de"
+    },
+    {
+      "id": "de_b2ce2744de1716c6209d2220",
+      "text": "fahre hoch",
+      "language": "de"
+    },
+    {
+      "id": "en_473c3cbd7d310e14505a60fd",
+      "text": "Ich fahre den Berg hoch. The prefix hoch goes at the end.",
+      "language": "en"
+    },
+    {
+      "id": "de_a7718f377ac2f48371f01369",
+      "text": "fährt hoch",
+      "language": "de"
+    },
+    {
+      "id": "en_62f2c5c7ff359035ce94c1c9",
+      "text": "Compare ich fahre and er fährt: with er, a changes to ä and the ending is t. Er fährt den Berg hoch — He rides up the mountain. Put hoch at the end.",
+      "language": "en"
+    },
+    {
+      "id": "en_978c4cbb887c5677d9e9c9bf",
+      "text": "Ride up a hill: hoch means up, fahren means travel by vehicle. Together: hochfahren. In Ich fahre hoch, the up part moves to the end.",
+      "language": "en"
+    },
+    {
+      "id": "en_7934cbe7789327efb2c3e761",
+      "text": "hoch + fahren. Keep ch in hoch and the h after a in fahren.",
+      "language": "en"
+    },
+    {
+      "id": "en_f0afe33919ad75e540f5e3a1",
+      "text": "Imagine a bike going hoch (up) a hill. At the summit, hoch is waiting at the end of the sentence: Ich fahre den Berg hoch.",
+      "language": "en"
+    },
+    {
+      "id": "en_677910a906d56d5f98e247cf",
+      "text": "hoch ends in ch; fahren contains h after a. Er fährt adds ä.",
+      "language": "en"
+    },
+    {
+      "id": "de_227ee7d1374ed0c02ced3eaf",
+      "text": "hoffentlich",
+      "language": "de"
+    },
+    {
+      "id": "de_dd1408fa695cc95f3088c876",
+      "text": "hoffentlich. Hoffentlich kommt sie mit.",
+      "language": "de"
+    },
+    {
+      "id": "de_aec1cd72918b67a77e6056ef",
+      "text": "Hoffentlich kommt sie mit.",
+      "language": "de"
+    },
+    {
+      "id": "en_6559cc4b0ccc0b527390fd1f",
+      "text": "Split it: hoffen + tlich. There are two f letters and a t before lich.",
+      "language": "en"
+    },
+    {
+      "id": "de_353296a3781fd89915e6db66",
+      "text": "Sie kommt hoffentlich mit.",
+      "language": "de"
+    },
+    {
+      "id": "de_ac51a8e13879807d2fe76094",
+      "text": "Wir treffen uns hoffentlich morgen.",
+      "language": "de"
+    },
+    {
+      "id": "en_957543a62a739ac7aad28da6",
+      "text": "Before opening a chest: Hoffentlich! — Hopefully! Link it to hoffen, meaning to hope. For spelling, build hoffen + t + lich; don’t lose that linking t.",
+      "language": "en"
+    },
+    {
+      "id": "en_6265833a3ab8858ca0e5f1b6",
+      "text": "Double f, then the t before lich. End with ch, not ck.",
+      "language": "en"
+    },
+    {
+      "id": "en_c375de5c0ce6f8449c5d6153",
+      "text": "Imagine two fingers crossed for hope: ff. Beside them stands a tiny T-shaped sign pointing to lich. Hopefully your wish comes true.",
+      "language": "en"
+    },
+    {
+      "id": "en_0b11d3153e91947bc4c2a787",
+      "text": "Double f AND the t: hoffen + t + lich.",
+      "language": "en"
+    },
+    {
+      "id": "de_36449adb896b907f669706c1",
+      "text": "die Treppe",
+      "language": "de"
+    },
+    {
+      "id": "de_41c9605861e3c7a6777e449d",
+      "text": "die Treppe. Die Treppe ist hoch.",
+      "language": "de"
+    },
+    {
+      "id": "de_95d6928cf0aa4883ae21629b",
+      "text": "Die Treppe ist hoch.",
+      "language": "de"
+    },
+    {
+      "id": "en_3231361d3a3e30b2a8179d30",
+      "text": "die Treppe means one staircase. English often calls this the stairs, but German Treppe is singular. Multiple staircases: die Treppen. Keep capital T and double p. Ich gehe die Treppe hoch means I am going up the stairs.",
+      "language": "en"
+    },
+    {
+      "id": "de_c0235a8e32edac82470a8aae",
+      "text": "Ich gehe die Treppe hoch.",
+      "language": "de"
+    },
+    {
+      "id": "de_dd21cd48eff7d7cadb7518ea",
+      "text": "die Treppen",
+      "language": "de"
+    },
+    {
+      "id": "en_525d1564dcbcce0790cecc86",
+      "text": "One staircase: die Treppe. Several staircases: die Treppen. Add n. English the stairs can describe just one German Treppe.",
+      "language": "en"
+    },
+    {
+      "id": "de_32e646db5d3d982c7fc48124",
+      "text": "die",
+      "language": "de"
+    },
+    {
+      "id": "en_d9f3a04e2912bd012bac3d25",
+      "text": "Treppe is feminine: die Treppe.",
+      "language": "en"
+    },
+    {
+      "id": "en_0335770c22527444bdb56777",
+      "text": "At school, you take the staircase to the next floor: Ich gehe die Treppe hoch. Picture the actual steps you use each day.",
+      "language": "en"
+    },
+    {
+      "id": "en_a4b8ad8c17080a69837e00dc",
+      "text": "die Treppe is one staircase, often called the stairs in English. Several staircases: die Treppen. Keep capital T, double p, and final e in Treppe.",
+      "language": "en"
+    },
+    {
+      "id": "en_7d473b02d5da5c0d8dbef071",
+      "text": "Imagine the two p letters as two steps in a staircase. A sign at the bottom says die; a capital T stands at the top.",
+      "language": "en"
+    },
+    {
+      "id": "en_706f691bfee47f46b0fdbc23",
+      "text": "Capital T and double p. Plural adds n: Treppen.",
+      "language": "en"
+    },
+    {
+      "id": "en_8d0eaf9a099ca0d8668bb4ad",
+      "text": "Write die Treppe with capital T, double p, and final e. Plural: die Treppen.",
+      "language": "en"
+    },
+    {
+      "id": "de_c2823ed6e93a30877df08656",
+      "text": "stark",
+      "language": "de"
+    },
+    {
+      "id": "de_6ab739b01c8f6fc5ff3094e3",
+      "text": "stark. Mein Bruder ist stark.",
+      "language": "de"
+    },
+    {
+      "id": "de_084726d89990a21224aacfd2",
+      "text": "Mein Bruder ist stark.",
+      "language": "de"
+    },
+    {
+      "id": "en_6aae151adcd476b9ef041c07",
+      "text": "Picture someone lifting something heavy: stark = strong. Finish with rk.",
+      "language": "en"
+    },
+    {
+      "id": "de_d17aeb8833bb84560254bfcd",
+      "text": "Wir sind stark.",
+      "language": "de"
+    },
+    {
+      "id": "en_9135e671e649b7a3c6b92b44",
+      "text": "Tony Stark has a strong suit. Use Stark as a name hook for stark — strong. The German adjective stays lowercase; this is a memory link, not a translation rule.",
+      "language": "en"
+    },
+    {
+      "id": "en_408476e350f2bcf15098508b",
+      "text": "st + ark. Finish rk, with no vowel between r and k. Lowercase s.",
+      "language": "en"
+    },
+    {
+      "id": "en_ee198cd1a5130ff7db7829ff",
+      "text": "Picture a strong person lifting the letters r and k like two heavy weights. The word ends with both weights: rk.",
+      "language": "en"
+    },
+    {
+      "id": "en_49ed9f59fa58cbcb2073b95a",
+      "text": "st at the start, rk at the end. No extra vowel between r and k.",
+      "language": "en"
+    },
+    {
+      "id": "de_a2ced6f4dd428513685da043",
+      "text": "streiten",
+      "language": "de"
+    },
+    {
+      "id": "de_c3be3f4611bcefcb8808bf79",
+      "text": "streiten. Wir streiten oft.",
+      "language": "de"
+    },
+    {
+      "id": "de_543eb8e48222c825e682a7e3",
+      "text": "Wir streiten oft.",
+      "language": "de"
+    },
+    {
+      "id": "en_8f9b0a7c2b6a5c92b9e25317",
+      "text": "streiten means argue: wir streiten — we argue. Use ich streite, but er streitet: the extra e before t helps you say the ending. The ei sounds like English eye. Arguing is an action; sich ärgern means feeling annoyed.",
+      "language": "en"
+    },
+    {
+      "id": "de_9a0dd50df895627ef4977376",
+      "text": "Die Freunde streiten nicht.",
+      "language": "de"
+    },
+    {
+      "id": "de_e92c8794e948ef8c453ebb96",
+      "text": "streite",
+      "language": "de"
+    },
+    {
+      "id": "en_06e174c52d96571698987a1a",
+      "text": "For ich, drop -n from streiten: ich streite.",
+      "language": "en"
+    },
+    {
+      "id": "de_ab442c283f1a5837dc6e6694",
+      "text": "streitet",
+      "language": "de"
+    },
+    {
+      "id": "en_d3db38430e9a00b82ff47644",
+      "text": "The er form is streitet. The extra e makes the ending pronounceable.",
+      "language": "en"
+    },
+    {
+      "id": "en_dfe0493300d4f556a6331246",
+      "text": "Two teammates argue about the plan: Sie streiten — They argue. This is the argument itself; sich ärgern is feeling annoyed.",
+      "language": "en"
+    },
+    {
+      "id": "en_14560d225638387d079b7d20",
+      "text": "str + ei + ten. Three consonants at the start; ei, not ie.",
+      "language": "en"
+    },
+    {
+      "id": "en_4ecadbb11186c9a43a6ef196",
+      "text": "Imagine two friends arguing over who goes first: e or i. Settle it: e goes before i in streiten.",
+      "language": "en"
+    },
+    {
+      "id": "en_ba57fe5c87d19a05a15e98d1",
+      "text": "Start str; use ei, not ie. The ending is -ten.",
+      "language": "en"
+    },
+    {
+      "id": "de_3e54f774d6826d6ca73804c7",
+      "text": "müde",
+      "language": "de"
+    },
+    {
+      "id": "de_7cd1195e5a19ee990b4abe6c",
+      "text": "müde. Ich bin müde.",
+      "language": "de"
+    },
+    {
+      "id": "de_1ca87be4d37fcb79766ae2a3",
+      "text": "Ich bin müde.",
+      "language": "de"
+    },
+    {
+      "id": "en_c4d796790ad6c9dd33f80016",
+      "text": "Ich bin müde — I am tired. For ü, try ee with rounded lips, then listen and copy the German sound. Keep the dots: u is a different vowel. Spell mü + de. Needing sleep is müde, not traurig (sad).",
+      "language": "en"
+    },
+    {
+      "id": "de_756ae781803ae9fe81d1f59c",
+      "text": "Nach der Schule sind wir müde.",
+      "language": "de"
+    },
+    {
+      "id": "en_ee2d6f958eab9b6c2d32d3e5",
+      "text": "After a late gaming session: Ich bin müde — I’m tired. Keep it separate from traurig: you need sleep, not cheering up.",
+      "language": "en"
+    },
+    {
+      "id": "en_b4273e44c45a237657394564",
+      "text": "m + ü + de. The two dots belong to ü; plain u is a different letter.",
+      "language": "en"
+    },
+    {
+      "id": "en_707e4b63e111dee06de40389",
+      "text": "Picture a tired face. The two dots over ü are sleepy eyes. Put the eyes back before you let the word go to bed.",
+      "language": "en"
+    },
+    {
+      "id": "en_5ecb3d50859040c02ea703a5",
+      "text": "Four letters: m-ü-d-e. The umlaut is part of the letter.",
+      "language": "en"
+    },
+    {
+      "id": "de_e3c9f2ab5aeab26328e43ce7",
+      "text": "schlecht",
+      "language": "de"
+    },
+    {
+      "id": "de_9383aeb01ba151c3510bf77a",
+      "text": "schlecht. Das Wetter ist schlecht.",
+      "language": "de"
+    },
+    {
+      "id": "de_da03bfe709c1134d580e9225",
+      "text": "Das Wetter ist schlecht.",
+      "language": "de"
+    },
+    {
+      "id": "en_60d28290a3465a8a9f108504",
+      "text": "schlecht means bad. Build sch + le + ch + t. The first sch sounds like English sh; the later ch is a different German sound, not English ch in chair. Listen and copy. Keep both h letters.",
+      "language": "en"
+    },
+    {
+      "id": "de_f34572dd16cbd5d4bca530b1",
+      "text": "Der Film ist schlecht.",
+      "language": "de"
+    },
+    {
+      "id": "en_32df8483549cc86d623fdfd4",
+      "text": "A bad connection makes the game lag: schlecht means bad. Build its spelling in four blocks: sch / le / ch / t.",
+      "language": "en"
+    },
+    {
+      "id": "en_a521e4ccc7266bbac350ff94",
+      "text": "Start sch. There is another ch before the final t; don’t drop that second h.",
+      "language": "en"
+    },
+    {
+      "id": "en_bea5b214c3d1d4feea780b39",
+      "text": "Imagine a BAD weather report. Rain falls on a sign split into four pieces: sch / le / ch / t. Rebuild it before the storm arrives.",
+      "language": "en"
+    },
+    {
+      "id": "en_c872615aba12bfa1ab48ecda",
+      "text": "There is ch inside sch at the start, and another ch before the last t.",
+      "language": "en"
+    },
+    {
+      "id": "de_ef94bc1021898e03230148f9",
+      "text": "verliebt",
+      "language": "de"
+    },
+    {
+      "id": "de_027cffc72f7e44db485c0462",
+      "text": "verliebt. Ich bin verliebt.",
+      "language": "de"
+    },
+    {
+      "id": "de_a671606f67adeee0b1aaf484",
+      "text": "Ich bin verliebt.",
+      "language": "de"
+    },
+    {
+      "id": "en_492ed1a7736e41d6d43e30ba",
+      "text": "Liebe means love. Build ver + lieb + t: verliebt means in love. Ich bin verliebt — I am in love. The ie sounds like ee; keep written bt even when the b sounds like p.",
+      "language": "en"
+    },
+    {
+      "id": "de_371742648fbc33afd08fe922",
+      "text": "Sie ist verliebt.",
+      "language": "de"
+    },
+    {
+      "id": "en_19505a7d53651e7d51e95259",
+      "text": "Liebe means love; verliebt means in love. The shared lieb gives you the meaning and the tricky ie spelling in one useful link.",
+      "language": "en"
+    },
+    {
+      "id": "en_1841e6707b8ef2751d36c8ed",
+      "text": "ver + lieb + t. Keep ie together; finish bt, not pt.",
+      "language": "en"
+    },
+    {
+      "id": "en_f7fbdaecb8db00f66e93c01d",
+      "text": "Picture a love note folded around ie. A little b and t seal the end of the note together.",
+      "language": "en"
+    },
+    {
+      "id": "en_64a56fc98e156715af0ef831",
+      "text": "ie, not ei. Finish with bt, not pt.",
+      "language": "en"
+    },
+    {
+      "id": "de_7c125fdee15b0fbdaf5bc5b7",
+      "text": "bestimmt",
+      "language": "de"
+    },
+    {
+      "id": "de_14056a6967e9574eb6db952c",
+      "text": "bestimmt. Er kommt bestimmt mit.",
+      "language": "de"
+    },
+    {
+      "id": "de_b6f8bf1949f0e4efe6a9f137",
+      "text": "Er kommt bestimmt mit.",
+      "language": "de"
+    },
+    {
+      "id": "en_9dce62aa19ebe506f9487d77",
+      "text": "In this lesson, bestimmt means definitely. Double m: be-stimmt.",
+      "language": "en"
+    },
+    {
+      "id": "de_c6930495e2d10d550e22d324",
+      "text": "Das ist bestimmt richtig.",
+      "language": "de"
+    },
+    {
+      "id": "en_3ffed8b1178fb4282d7f2c35",
+      "text": "‘Will you join us?’ ‘Definitely!’ That confident answer is bestimmt in this lesson. It’s a yes with confidence, not just a hopeful maybe.",
+      "language": "en"
+    },
+    {
+      "id": "en_d2ef26deb03922ffe35859e3",
+      "text": "be + stimmt. Double m followed by t; don’t shorten the ending to one m.",
+      "language": "en"
+    },
+    {
+      "id": "en_9698f2f3054b045cb33556f2",
+      "text": "Imagine a big DEFINITELY stamp. Two m-shaped stamp handles press down together, with a final t as the stamp’s handle.",
+      "language": "en"
+    },
+    {
+      "id": "en_28e8e90e35360d7a14f42758",
+      "text": "Double m, then t. The whole ending is -immt.",
+      "language": "en"
+    },
+    {
+      "id": "de_039c11c9ee3ca101c4017255",
+      "text": "glücklich",
+      "language": "de"
+    },
+    {
+      "id": "de_7b0b6f5e6fc326b9bf7a776f",
+      "text": "glücklich. Ich bin glücklich.",
+      "language": "de"
+    },
+    {
+      "id": "de_dd80f93d15aec7d2d4eef83d",
+      "text": "Ich bin glücklich.",
+      "language": "de"
+    },
+    {
+      "id": "en_397d1b3a37a60aefccf06b6c",
+      "text": "Ich bin glücklich — I am happy. Build Glück + lich, then use a lowercase g for the adjective. Keep ü, ck, and the different ending ch. Compare glücklich (happy) and traurig (sad). Listen to ü and ch before repeating.",
+      "language": "en"
+    },
+    {
+      "id": "de_aaa29741dce348cdc28a1292",
+      "text": "Meine Freunde sind glücklich.",
+      "language": "de"
+    },
+    {
+      "id": "en_ea21a543d866fd9332511c66",
+      "text": "Glück means luck or happiness. Finding diamonds can make you glücklich — happy. The useful spelling link is Glück + lich, with a lowercase start for the adjective.",
+      "language": "en"
+    },
+    {
+      "id": "en_70f83d8bd9691d50c8abea44",
+      "text": "glücklich: lowercase g, ü, ck, then lich. The ending is ch, not ck.",
+      "language": "en"
+    },
+    {
+      "id": "en_abec2d81df07ec9c3acc69a4",
+      "text": "Glück means luck or happiness. Imagine finding a lucky coin and smiling: glücklich. The two dots over ü are your happy eyes.",
+      "language": "en"
+    },
+    {
+      "id": "en_dbb860011ec256b35fe5dbf5",
+      "text": "ü + ck, then lich. There is no extra k after lich.",
+      "language": "en"
+    },
+    {
+      "id": "de_6ad4fd5f4aa9cdcebcba98ae",
+      "text": "sensibel",
+      "language": "de"
+    },
+    {
+      "id": "de_a926354e67fb2e5ca6258e85",
+      "text": "sensibel. Mein Freund ist sensibel.",
+      "language": "de"
+    },
+    {
+      "id": "de_fcc47c986f0a6d1c638d7f53",
+      "text": "Mein Freund ist sensibel.",
+      "language": "de"
+    },
+    {
+      "id": "en_3b3588ca6a8d78bff85d610e",
+      "text": "Another false friend: sensibel means sensitive, not sensible. It ends in -bel.",
+      "language": "en"
+    },
+    {
+      "id": "de_a3c1651453340b73cb5c3596",
+      "text": "Sie ist sehr sensibel.",
+      "language": "de"
+    },
+    {
+      "id": "en_c8ddd4a8a798d213177e77ab",
+      "text": "A friend notices when someone's joke hurts another person. Mein Freund ist sensibel. The shared sensi in sensitive and sensibel anchors the meaning: sensitive.",
+      "language": "en"
+    },
+    {
+      "id": "en_e253175f93b7d011eae01dd3",
+      "text": "Write sensibel with ending bel, not ble. It means sensitive, not the English sensible.",
+      "language": "en"
+    },
+    {
+      "id": "en_04fb2d79196db41dcd26c231",
+      "text": "Picture a sensitive person noticing a tiny sound from a bell. Let that bell remind you of the ending -bel, with only one l.",
+      "language": "en"
+    },
+    {
+      "id": "en_525cd5c44b548ec236667897",
+      "text": "sen-si-bel, not the English word sensible. Meaning: sensitive.",
+      "language": "en"
+    },
+    {
+      "id": "de_56856af97845dff2c750e6b5",
+      "text": "fleißig",
+      "language": "de"
+    },
+    {
+      "id": "de_cfc09847768269a1f3e992ec",
+      "text": "fleißig. Sie ist fleißig.",
+      "language": "de"
+    },
+    {
+      "id": "de_2ea16951487bde5ef8e364b3",
+      "text": "Sie ist fleißig.",
+      "language": "de"
+    },
+    {
+      "id": "en_d59fe58d9058f93447731d3e",
+      "text": "fleißig means hard-working: Sie ist fleißig — She works hard. Build fleiß + ig. The ei sounds like English eye; ß sounds like s, not b. Keep the written ending ig. Use the ß key below the answer box.",
+      "language": "en"
+    },
+    {
+      "id": "de_eb845b4c2f7f88caccd8a0c0",
+      "text": "Wir sind fleißig.",
+      "language": "de"
+    },
+    {
+      "id": "en_259b70b55353edee7af8af2b",
+      "text": "Your friend keeps working on a build, even when it takes a few tries. Sie ist fleißig — She is hard-working. Think steady effort, not finishing fast.",
+      "language": "en"
+    },
+    {
+      "id": "en_90b0213c0ee9cffa46a11b29",
+      "text": "fleiß + ig: ei sounds like eye; ß sounds like s, not b. Keep the written ending ig and use the ß button.",
+      "language": "en"
+    },
+    {
+      "id": "en_0f7f41b18a1c7b06193004d9",
+      "text": "Imagine a hard-working student carefully writing ei and then a big ß on a checklist. Every detail gets checked.",
+      "language": "en"
+    },
+    {
+      "id": "en_8e1656c33540a6f71af03348",
+      "text": "ei, then ß, then ig. For this German lesson use ß, even though Swiss spelling uses ss.",
+      "language": "en"
+    },
+    {
+      "id": "en_cb49a2dfa275d85b5c761c61",
+      "text": "A classmate steadily researches, writes, and improves a project. Sie ist fleißig. Fleiß means diligence; the adjective describes the person putting in that work.",
+      "language": "en"
+    },
+    {
+      "id": "en_749d002b32e2db22957967c3",
+      "text": "Write fleißig with ei, ß, and final ig. Keep the lesson's ß spelling.",
+      "language": "en"
+    },
+    {
+      "id": "de_2698d9d594c7ef32b9d5b9fa",
+      "text": "zuhören",
+      "language": "de"
+    },
+    {
+      "id": "de_ff98c28a910cd72616edb1e3",
+      "text": "zuhören. Ich höre dir zu.",
+      "language": "de"
+    },
+    {
+      "id": "de_5d84f45537912435512d5b76",
+      "text": "Ich höre dir zu.",
+      "language": "de"
+    },
+    {
+      "id": "en_f52394138be2073565e54e7a",
+      "text": "Learn Ich höre dir zu — I am listening to you. German uses dir, not dich, with zuhören: learn höre dir zu as a phrase. Wir hören dir zu — We are listening to you. In these simple statements zu goes last. Listen to ö; it is not the same sound as o.",
+      "language": "en"
+    },
+    {
+      "id": "de_18266ed8715499edcbe4253e",
+      "text": "Wir hören der Lehrerin zu.",
+      "language": "de"
+    },
+    {
+      "id": "de_8a995da4e869175f74e00166",
+      "text": "höre zu",
+      "language": "de"
+    },
+    {
+      "id": "en_f5ed62f6e127055577230e2e",
+      "text": "Ich höre dir zu. Keep ö in höre and put zu at the end.",
+      "language": "en"
+    },
+    {
+      "id": "de_b5794d8d7bde65e001f73e3c",
+      "text": "hören zu",
+      "language": "de"
+    },
+    {
+      "id": "en_4e1710677d516fc3ba8b6f68",
+      "text": "Wir hören dir zu. The prefix zu goes at the end.",
+      "language": "en"
+    },
+    {
+      "id": "en_e8a4073d366b7dac650e70ac",
+      "text": "A friend explains something important, and you put your phone down. Ich höre dir zu. Hören means hear; the added zu marks listening attentively to someone.",
+      "language": "en"
+    },
+    {
+      "id": "en_e53ae8c963a4174598a816f1",
+      "text": "Write zuhören with ö. Learn höre dir zu as a phrase: listening to you. German uses dir here, not dich. In Ich höre dir zu, zu goes last.",
+      "language": "en"
+    },
+    {
+      "id": "en_4ee19975465efe2631036998",
+      "text": "Imagine the dots over ö as two ears listening. The word zu walks to the end while those ears listen: Ich höre dir zu.",
+      "language": "en"
+    },
+    {
+      "id": "en_4f8b691af7122b07949781b1",
+      "text": "ö, not o. Join zuhören in the infinitive; split höre … zu in a statement.",
+      "language": "en"
+    },
+    {
+      "id": "en_e30fdef305a148407d98a049",
+      "text": "Write zuhören with ö. In Ich höre dir zu, zu goes last; dir is the dative form for you.",
+      "language": "en"
+    },
+    {
+      "id": "de_8b176f7d2e8496d6663edb1d",
+      "text": "einige",
+      "language": "de"
+    },
+    {
+      "id": "de_6911f22abce8a01ecb013cd1",
+      "text": "einige. Einige Freunde kommen mit.",
+      "language": "de"
+    },
+    {
+      "id": "de_c493f9a9727e63b00f27ba8c",
+      "text": "Einige Freunde kommen mit.",
+      "language": "de"
+    },
+    {
+      "id": "en_914f37a9770f2214ff46aea5",
+      "text": "einige means some or several. It does not mean exactly two; that is beide.",
+      "language": "en"
+    },
+    {
+      "id": "de_9a02d616176f93f6aab351ac",
+      "text": "Wir haben einige Bücher.",
+      "language": "de"
+    },
+    {
+      "id": "de_8cacd45ad88a167da98ba904",
+      "text": "Ich schreibe einige Briefe.",
+      "language": "de"
+    },
+    {
+      "id": "en_ac0d82ce19e6529f47257db3",
+      "text": "You have some blocks left, not necessarily two: einige. Contrast beide, meaning both of two. Spell it in three small blocks: ei + ni + ge.",
+      "language": "en"
+    },
+    {
+      "id": "en_02cf4e2ab8398a5bf70e5486",
+      "text": "Start ei, not ie. Keep the middle i: ei-ni-ge ends in e.",
+      "language": "en"
+    },
+    {
+      "id": "en_303894113a10fee1317f5624",
+      "text": "Imagine a basket with some apples. Label three parts of the basket ei / ni / ge. There are several apples, not exactly two.",
+      "language": "en"
+    },
+    {
+      "id": "en_dbb7cdfa288b56105e37621d",
+      "text": "Start ei, not ie. Three chunks: ei-ni-ge.",
+      "language": "en"
+    },
+    {
+      "id": "de_dc7fb52a2aeaf74a80a080cf",
+      "text": "sich interessieren",
+      "language": "de"
+    },
+    {
+      "id": "de_7bd90e032f0bf41b15378552",
+      "text": "sich interessieren. Ich interessiere mich für Musik.",
+      "language": "de"
+    },
+    {
+      "id": "de_b6d0b4a5f61e19b1e39ec216",
+      "text": "Ich interessiere mich für Musik.",
+      "language": "de"
+    },
+    {
+      "id": "en_bbe5e6bffa197f32d988a2f3",
+      "text": "There are two r letters, neither doubled: one in inter and another in ieren. Keep double s: inter + ess + ieren. Learn Ich interessiere mich für Musik — I am interested in music. German needs mich and für here; do not translate English in word for word.",
+      "language": "en"
+    },
+    {
+      "id": "de_dc36f8b0cb43595b676645ec",
+      "text": "Wir interessieren uns für Sport.",
+      "language": "de"
+    },
+    {
+      "id": "en_2f92489fc0cf3b4c2b2b6b3a",
+      "text": "Ich pairs with mich. Für means in in this expression.",
+      "language": "en"
+    },
+    {
+      "id": "en_14dd62f0d0e2aa363d2c8c7c",
+      "text": "Wir pairs with uns: Wir interessieren uns für Sport.",
+      "language": "en"
+    },
+    {
+      "id": "en_805d37344b8144f40b120033",
+      "text": "Think of an interest you actually have: games, music, or sports. sich interessieren means to be interested. Use four spelling blocks: inter / ess / ier / en.",
+      "language": "en"
+    },
+    {
+      "id": "en_f99ba9a696f1c46e51a02241",
+      "text": "Two r letters, neither doubled: one in inter, another in ier. Double s; ie in ier. Learn sich interessieren für: to be interested in.",
+      "language": "en"
+    },
+    {
+      "id": "en_dba6b9ed7bec749fd109f6f3",
+      "text": "Imagine an interesting museum. One r guards the entrance in inter; two s letters are the exhibits in ess. Follow the signs: inter / ess / ier / en.",
+      "language": "en"
+    },
+    {
+      "id": "en_675056b0de10c179f5f058c8",
+      "text": "inter has one r. ess has two s letters. Keep ie in -ieren. Include sich.",
+      "language": "en"
+    },
+    {
+      "id": "en_7eadba3452ee433916d62742",
+      "text": "One r in inter; double s in ess; ie in ier. Include sich when naming the verb.",
+      "language": "en"
+    },
+    {
+      "id": "en_2fbdb9e7380d345a36f733fb",
+      "text": "Learn der Brief as one piece. Nouns start with a capital letter. Plural: die Briefe.",
+      "language": "en"
+    },
+    {
+      "id": "en_829e5b9aac23ffd35c842a3b",
+      "text": "Add -e: Brief → Briefe. All plural nouns use die.",
+      "language": "en"
+    },
+    {
+      "id": "en_cc508c0b8bd8624792891a4c",
+      "text": "The ü matters. Change sich with the person: ich fühle mich, du fühlst dich, wir fühlen uns.",
+      "language": "en"
+    },
+    {
+      "id": "en_f372c2ae782dd75c56a07c7d",
+      "text": "ärgern starts with ä. Learn the whole phrase: sich ärgern. Ich ärgere mich means I get annoyed.",
+      "language": "en"
+    },
+    {
+      "id": "en_a9f033c308e30575c30c3366",
+      "text": "Picture a sad face. Say trau-rig in two parts. It ends in -ig, not -ich.",
+      "language": "en"
+    },
+    {
+      "id": "en_5f5281b0e904cfea87ae18c0",
+      "text": "Same word as English, but German adds a capital J and der. Plural: die Jobs.",
+      "language": "en"
+    },
+    {
+      "id": "en_83173cb3d69a921d43224195",
+      "text": "mit + kommen = come along. In a simple statement, mit moves to the end: Ich komme mit.",
+      "language": "en"
+    },
+    {
+      "id": "en_e5052ae0f31e08371934801f",
+      "text": "Here umziehen means move home. Split it: ziehen … um. Keep ie together in ziehen.",
+      "language": "en"
+    },
+    {
+      "id": "en_2e148f118fd800b1a3285d22",
+      "text": "Two words: weit means far, weg means away. Remember the space.",
+      "language": "en"
+    },
+    {
+      "id": "en_60dc98d2506f451b95168cd3",
+      "text": "beide means exactly two. Keep ei in that order: b-e-i-d-e.",
+      "language": "en"
+    },
+    {
+      "id": "en_ea54235c5f95860d35e5e13a",
+      "text": "A bike trial is riding over obstacles. Build the spelling: Fahr + rad + trial. The two r letters meet in Fahrrad. Plural: die Fahrradtrials.",
+      "language": "en"
+    },
+    {
+      "id": "en_307861a694b41e122694d24d",
+      "text": "hoch means up; fahren means go by vehicle or ride. In a statement, split fahren … hoch.",
+      "language": "en"
+    },
+    {
+      "id": "en_332636908196bec31b70a1d7",
+      "text": "Er uses fährt, with ä. The prefix hoch goes at the end.",
+      "language": "en"
+    },
+    {
+      "id": "en_a5042676f4d693c0cdaef91a",
+      "text": "Learn die Treppe. Double p, and a capital T. Plural: die Treppen.",
+      "language": "en"
+    },
+    {
+      "id": "en_84602d1309bee2d72461068b",
+      "text": "Add -n: Treppe → Treppen.",
+      "language": "en"
+    },
+    {
+      "id": "en_a3c09f6f53140c3290a94e78",
+      "text": "Keep ei in streiten. The lesson uses streiten; wir streiten means we argue.",
+      "language": "en"
+    },
+    {
+      "id": "en_79b9336b6b5d827f58dbfea4",
+      "text": "The two dots matter: müde, not mude. Think of feeling tired after a long school day.",
+      "language": "en"
+    },
+    {
+      "id": "en_4a7bbe4d0f8d7010bab50b57",
+      "text": "Build it: sch + lecht. Watch the ch before the final t.",
+      "language": "en"
+    },
+    {
+      "id": "en_814b1cc98ca811baea955bbe",
+      "text": "ver + liebt. Keep ie, then bt. With sein: Ich bin verliebt.",
+      "language": "en"
+    },
+    {
+      "id": "en_da87c084f00bfb732d499df0",
+      "text": "Build Glück + lich. Keep ü and ck. glücklich is happy; traurig is sad.",
+      "language": "en"
+    },
+    {
+      "id": "en_45b62b1f83fee9474491e699",
+      "text": "Keep ei and ß: fl-ei-ß-ig. Use the ß key below the answer box.",
+      "language": "en"
+    },
+    {
+      "id": "en_2efddd4746a38b5d523093d1",
+      "text": "zu + hören. The ö matters. In a statement: Ich höre dir zu. Listening to someone uses dative, here dir.",
+      "language": "en"
+    },
+    {
+      "id": "en_efec752148908332d993ecf5",
+      "text": "One r, double s: inter-ess-ieren. Use sich interessieren für, with mich for ich.",
+      "language": "en"
+    }
+  ]
+}

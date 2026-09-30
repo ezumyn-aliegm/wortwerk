@@ -19,7 +19,7 @@ export const WORDS = [
     "noun",
     "Ich schreibe einen Brief.",
     "I am writing a letter.",
-    "Learn der Brief as one piece. Nouns start with a capital letter. Plural: die Briefe.",
+    "Learn der Brief → die Briefe. In Ich schreibe einen Brief, einen means a: Brief receives the action, so masculine ein changes to einen. Brief keeps its capital B. Its long ee sound is written ie.",
     [
       ["Ich schreibe einen ___.", "I am writing a letter.", "Brief"],
       ["Der ___ ist für dich.", "The letter is for you.", "Brief"],
@@ -28,7 +28,7 @@ export const WORDS = [
       [
         "Write the plural of der Brief, including die.",
         "die Briefe",
-        "Add -e: Brief → Briefe. All plural nouns use die.",
+        "One letter: der Brief. Several letters: die Briefe. Add -e. Use die for the plural in this naming exercise; articles can change in other sentence roles.",
       ],
       [
         "Complete: ___ Brief (the letter).",
@@ -44,7 +44,7 @@ export const WORDS = [
     "reflexive verb",
     "Ich fühle mich gut.",
     "I feel good.",
-    "The ü matters. Change sich with the person: ich fühle mich, du fühlst dich, wir fühlen uns.",
+    "English says I feel good. German says Ich fühle mich gut: it needs mich here, although English does not say myself. Match ich → mich, du → dich, wir → uns. For ü, try saying ee with rounded lips, then listen and copy the German sound. Keep the h after ü.",
     [
       ["Ich ___ mich gut.", "I feel good.", "fühle"],
       ["Wir ___ uns müde.", "We feel tired.", "fühlen"],
@@ -69,7 +69,7 @@ export const WORDS = [
     "reflexive verb",
     "Ich ärgere mich über den Lärm.",
     "I am annoyed about the noise.",
-    "ärgern starts with ä. Learn the whole phrase: sich ärgern. Ich ärgere mich means I get annoyed.",
+    "Learn sich ärgern über …: to get annoyed about something. Ich ärgere mich means I get annoyed; wir ärgern uns means we get annoyed. English leaves out myself/ourselves here, but German needs mich/uns. Start ärgern with ä.",
     [
       [
         "Ich ___ mich über den Lärm.",
@@ -102,7 +102,7 @@ export const WORDS = [
     "adjective",
     "Ich bin traurig.",
     "I am sad.",
-    "Picture a sad face. Say trau-rig in two parts. It ends in -ig, not -ich.",
+    "Ich bin traurig means I am sad. Spell trau + rig. The au sounds like ow in cow. Listen to the German ending: even when it sounds like ich, write ig. Traurig is sad; müde is tired.",
     [
       ["Ich bin ___.", "I am sad.", "traurig"],
       ["Mein Freund ist ___.", "My friend is sad.", "traurig"],
@@ -115,7 +115,7 @@ export const WORDS = [
     "noun",
     "Mein Vater hat einen Job.",
     "My father has a job.",
-    "Same word as English, but German adds a capital J and der. Plural: die Jobs.",
+    "Learn der Job → die Jobs: the plural adds s. German nouns need a capital. In Mein Vater hat einen Job, einen means a; masculine ein changes to einen for the thing someone has.",
     [
       ["Mein Vater hat einen ___.", "My father has a job.", "Job"],
       ["Der ___ ist interessant.", "The job is interesting.", "Job"],
@@ -136,7 +136,7 @@ export const WORDS = [
     "separable verb",
     "Ich komme mit.",
     "I am coming along.",
-    "mit + kommen = come along. In a simple statement, mit moves to the end: Ich komme mit.",
+    "mitkommen means come along. Learn Ich komme mit — I am coming along. Change the verb for the person: du kommst, wir kommen. In these simple statements, keep mit at the end. The dictionary form mitkommen is one word, with double m.",
     [
       ["Ich komme heute ___.", "I am coming along today.", "mit"],
       ["Du ___ heute mit.", "You are coming along today.", "kommst"],
@@ -161,7 +161,7 @@ export const WORDS = [
     "separable verb",
     "Wir ziehen nach Berlin um.",
     "We are moving to Berlin.",
-    "Here umziehen means move home. Split it: ziehen … um. Keep ie together in ziehen.",
+    "Here umziehen means move home, not walk across a room. Ich ziehe um — I am moving. Wir ziehen um — We are moving. In these statements um goes last. In ziehen, ie makes a long ee sound and is followed by a silent h.",
     [
       ["Wir ziehen nach Berlin ___.", "We are moving to Berlin.", "um"],
       ["Ich ___ morgen um.", "I am moving tomorrow.", "ziehe"],
@@ -186,7 +186,7 @@ export const WORDS = [
     "expression",
     "Meine Freundin wohnt weit weg.",
     "My friend lives far away.",
-    "Two words: weit means far, weg means away. Remember the space.",
+    "weit means far; weg means away. Keep two words: weit weg. In weit, ei sounds like English eye. Hear the final sound in weg, but remember the written ending is g.",
     [
       ["Meine Freundin wohnt ___.", "My friend lives far away.", "weit weg"],
       ["Berlin ist ___.", "Berlin is far away.", "weit weg"],
@@ -237,7 +237,7 @@ export const WORDS = [
     "pronoun",
     "Wir sind beide müde.",
     "We are both tired.",
-    "beide means exactly two. Keep ei in that order: b-e-i-d-e.",
+    "beide means both of two: Wir sind beide müde — We are both tired. In beide, ei sounds like English eye. Contrast einige: some or several, without specifying exactly two.",
     [
       ["Wir sind ___ müde.", "We are both tired.", "beide"],
       [
@@ -254,7 +254,7 @@ export const WORDS = [
     "noun",
     "Der Fahrradtrial ist schwer.",
     "The bike trial is difficult.",
-    "A bike trial is riding over obstacles. Build the spelling: Fahr + rad + trial. The two r letters meet in Fahrrad. Plural: die Fahrradtrials.",
+    "Bike trials involves balancing and riding over obstacles, not following a trail. Build Fahr + rad + trial; the r letters meet. Your class sheet uses der Fahrradtrial → die Fahrradtrials. The sporting word Trial is normally das Trial; ask your teacher about this article difference. These exercises follow the sheet.",
     [
       ["Der ___ ist schwer.", "The bike trial is difficult.", "Fahrradtrial"],
       [
@@ -283,7 +283,7 @@ export const WORDS = [
     "separable verb",
     "Ich fahre den Berg hoch.",
     "I am riding up the mountain.",
-    "hoch means up; fahren means go by vehicle or ride. In a statement, split fahren … hoch.",
+    "hochfahren means ride or drive up. Compare Ich fahre hoch — I ride up; Er fährt hoch — He rides up. With er, a changes to ä; wir keeps fahren. In these simple statements hoch goes at the end. Keep the silent h in fahren.",
     [
       ["Ich fahre den Berg ___.", "I am riding up the mountain.", "hoch"],
       ["Wir ___ den Berg hoch.", "We are riding up the mountain.", "fahren"],
@@ -297,7 +297,7 @@ export const WORDS = [
       [
         "Fill both blanks, in order: Er ___ den Berg ___. (rides up)",
         "fährt hoch",
-        "Er uses fährt, with ä. The prefix hoch goes at the end.",
+        "Compare ich fahre and er fährt: with er, a changes to ä and the ending is t. Er fährt den Berg hoch — He rides up the mountain. Put hoch at the end.",
       ],
     ],
   ),
@@ -325,7 +325,7 @@ export const WORDS = [
     "noun",
     "Die Treppe ist hoch.",
     "The staircase is high.",
-    "Learn die Treppe. Double p, and a capital T. Plural: die Treppen.",
+    "die Treppe means one staircase. English often calls this the stairs, but German Treppe is singular. Multiple staircases: die Treppen. Keep capital T and double p. Ich gehe die Treppe hoch means I am going up the stairs.",
     [
       ["Die ___ ist hoch.", "The staircase is high.", "Treppe"],
       ["Ich gehe die ___ hoch.", "I am going up the stairs.", "Treppe"],
@@ -334,7 +334,7 @@ export const WORDS = [
       [
         "Write the plural of die Treppe, including die.",
         "die Treppen",
-        "Add -n: Treppe → Treppen.",
+        "One staircase: die Treppe. Several staircases: die Treppen. Add n. English the stairs can describe just one German Treppe.",
       ],
       [
         "Complete: ___ Treppe (the staircase).",
@@ -363,7 +363,7 @@ export const WORDS = [
     "verb",
     "Wir streiten oft.",
     "We argue often.",
-    "Keep ei in streiten. The lesson uses streiten; wir streiten means we argue.",
+    "streiten means argue: wir streiten — we argue. Use ich streite, but er streitet: the extra e before t helps you say the ending. The ei sounds like English eye. Arguing is an action; sich ärgern means feeling annoyed.",
     [
       ["Wir ___ oft.", "We argue often.", "streiten"],
       ["Die Freunde ___ nicht.", "The friends do not argue.", "streiten"],
@@ -388,7 +388,7 @@ export const WORDS = [
     "adjective",
     "Ich bin müde.",
     "I am tired.",
-    "The two dots matter: müde, not mude. Think of feeling tired after a long school day.",
+    "Ich bin müde — I am tired. For ü, try ee with rounded lips, then listen and copy the German sound. Keep the dots: u is a different vowel. Spell mü + de. Needing sleep is müde, not traurig (sad).",
     [
       ["Ich bin ___.", "I am tired.", "müde"],
       ["Nach der Schule sind wir ___.", "After school we are tired.", "müde"],
@@ -401,7 +401,7 @@ export const WORDS = [
     "adjective",
     "Das Wetter ist schlecht.",
     "The weather is bad.",
-    "Build it: sch + lecht. Watch the ch before the final t.",
+    "schlecht means bad. Build sch + le + ch + t. The first sch sounds like English sh; the later ch is a different German sound, not English ch in chair. Listen and copy. Keep both h letters.",
     [
       ["Das Wetter ist ___.", "The weather is bad.", "schlecht"],
       ["Der Film ist ___.", "The movie is bad.", "schlecht"],
@@ -414,7 +414,7 @@ export const WORDS = [
     "adjective",
     "Ich bin verliebt.",
     "I am in love.",
-    "ver + liebt. Keep ie, then bt. With sein: Ich bin verliebt.",
+    "Liebe means love. Build ver + lieb + t: verliebt means in love. Ich bin verliebt — I am in love. The ie sounds like ee; keep written bt even when the b sounds like p.",
     [
       ["Ich bin ___.", "I am in love.", "verliebt"],
       ["Sie ist ___.", "She is in love.", "verliebt"],
@@ -440,7 +440,7 @@ export const WORDS = [
     "adjective",
     "Ich bin glücklich.",
     "I am happy.",
-    "Build Glück + lich. Keep ü and ck. glücklich is happy; traurig is sad.",
+    "Ich bin glücklich — I am happy. Build Glück + lich, then use a lowercase g for the adjective. Keep ü, ck, and the different ending ch. Compare glücklich (happy) and traurig (sad). Listen to ü and ch before repeating.",
     [
       ["Ich bin ___.", "I am happy.", "glücklich"],
       ["Meine Freunde sind ___.", "My friends are happy.", "glücklich"],
@@ -466,7 +466,7 @@ export const WORDS = [
     "adjective",
     "Sie ist fleißig.",
     "She is hard-working.",
-    "Keep ei and ß: fl-ei-ß-ig. Use the ß key below the answer box.",
+    "fleißig means hard-working: Sie ist fleißig — She works hard. Build fleiß + ig. The ei sounds like English eye; ß sounds like s, not b. Keep the written ending ig. Use the ß key below the answer box.",
     [
       ["Sie ist ___.", "She is hard-working.", "fleißig"],
       ["Wir sind ___.", "We are hard-working.", "fleißig"],
@@ -479,7 +479,7 @@ export const WORDS = [
     "separable verb",
     "Ich höre dir zu.",
     "I am listening to you.",
-    "zu + hören. The ö matters. In a statement: Ich höre dir zu. Listening to someone uses dative, here dir.",
+    "Learn Ich höre dir zu — I am listening to you. German uses dir, not dich, with zuhören: learn höre dir zu as a phrase. Wir hören dir zu — We are listening to you. In these simple statements zu goes last. Listen to ö; it is not the same sound as o.",
     [
       ["Ich höre dir ___.", "I am listening to you.", "zu"],
       ["Wir ___ der Lehrerin zu.", "We are listening to the teacher.", "hören"],
@@ -517,7 +517,7 @@ export const WORDS = [
     "reflexive verb",
     "Ich interessiere mich für Musik.",
     "I am interested in music.",
-    "One r, double s: inter-ess-ieren. Use sich interessieren für, with mich for ich.",
+    "There are two r letters, neither doubled: one in inter and another in ieren. Keep double s: inter + ess + ieren. Learn Ich interessiere mich für Musik — I am interested in music. German needs mich and für here; do not translate English in word for word.",
     [
       ["Ich ___ mich für Musik.", "I am interested in music.", "interessiere"],
       [

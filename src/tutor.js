@@ -18,7 +18,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     return [
       {
         kind: "picture",
-        label: "Picture it",
+        label: "Make a link",
         tags: ["meaning"],
         answer: word.german,
       },
@@ -554,6 +554,19 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     )
       reason =
         "You have the verb. Include sich for this reflexive vocabulary entry.";
+    else if (q.type === 'spelling') {
+      const bareExpected = expected.replace(/^(der|die|das|sich) /, '');
+      const bareActual = actual.replace(/^(der|die|das|sich) /, '');
+      if (bareExpected === bareActual && BY_ID[q.wordId].kind === 'noun') {
+        reason = `The noun is spelled correctly. Check the article: learn ${expected} together.`;
+      } else {
+        const pattern = ['ie', 'ei', 'sch', 'ch', 'ff', 'mm', 'pp', 'ss', 'rr', 'ck'].find(part =>
+          bareExpected.includes(part) && !bareActual.includes(part));
+        reason = pattern
+          ? `You wrote “${actual}”. In “${expected}”, notice the spelling block “${pattern}”. Copy the correct spelling, then try it from memory later.`
+          : `You wrote “${actual}”. Compare it with “${expected}”: check the letters and their order. Copy it once, then try from memory later.`;
+      }
+    }
     return {
       correct: false,
       expected: spec.answer,

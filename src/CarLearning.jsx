@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Check, Lightbulb, PencilLine } from "lucide-react";
 import { useTutor } from "./TutorContext.jsx";
 
-export function CarLesson({ word, question, step, onStep, onAdvance, Action, Chunks }) {
+export function CarLesson({ word, question, step, onStep, onAdvance, Action, Chunks, Comparison }) {
   const { MEMORY, teachingPages } = useTutor();
   const memory = MEMORY[word.id];
   const pages = teachingPages(word, question),
@@ -13,7 +13,7 @@ export function CarLesson({ word, question, step, onStep, onAdvance, Action, Chu
     <>
       <div className="lesson-stages" aria-label="Teaching steps">
         {[
-          "Picture it",
+          "Make a link",
           "Spell it",
           "Use it",
           ...(word.forms.length ? ["Word forms"] : []),
@@ -30,6 +30,7 @@ export function CarLesson({ word, question, step, onStep, onAdvance, Action, Chu
       <p className="input-note">
         {page.label} · Step {step + 1} of {pages.length}
       </p>
+      {Comparison && <Comparison />}
       <div className="car-learning-grid">
         <div className="car-word-side">
           {picture || spelling ? (
@@ -54,7 +55,7 @@ export function CarLesson({ word, question, step, onStep, onAdvance, Action, Chu
         <div className="car-memory-side">
           <h3>
             {picture
-              ? "Make a picture in your mind"
+              ? "Make a memory link"
               : spelling
                 ? "Say the chunks. Check the letters."
                 : page.kind === "form"
@@ -70,7 +71,7 @@ export function CarLesson({ word, question, step, onStep, onAdvance, Action, Chu
           </p>
           <span className="car-coach-note">
             {picture
-              ? "Take a moment to imagine it. A silly picture is easier to remember."
+              ? "Make a meaningful connection between the word’s meaning and spelling."
               : spelling
                 ? "Look away. Say the letters aloud once. You’ll type it from memory soon."
                 : page.kind === "form"
@@ -111,6 +112,7 @@ export function CarFeedback({
   Action,
   Chunks,
   Keys,
+  Comparison,
 }) {
   const { correctionNeeded, correctionReady } = useTutor();
   const active = state.active,
@@ -201,7 +203,7 @@ export function CarFeedback({
                 ? "Rule to remember"
                 : feedback.correct
                   ? "Keep this clue"
-                  : "Your memory picture"}
+                  : "Your memory link"}
             </h3>
             <p>
               {!spelling && active.queue[0].type !== "meaning"
@@ -219,6 +221,7 @@ export function CarFeedback({
           </div>
         )}
       </div>
+      {Comparison && <Comparison />}
       {correctionNeeded(state) && !copy ? (
         <Action onClick={onCorrecting}>
           Practice the correct {spelling ? "spelling" : "answer"}

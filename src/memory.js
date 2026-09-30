@@ -1,208 +1,300 @@
-// Original visual/meaning associations; these are memory aids, not etymologies.
+import { WORDS } from './data.js';
+import { LEGACY_MEMORY } from './legacy-memory.js';
+import { PREVIOUS_WORDS, PREVIOUS_MEMORY } from './previous-content.js';
+
+// Selected by two independent reviewers and TypeSafe/Jev. See the selection report.
 export const MEMORY = {
-  brief: {
-    chunks: ["Br", "ie", "f"],
-    scene:
-      "Picture a letter wearing a big capital B. On its envelope is a tiny label: der. Open the envelope and find the letters i then e inside.",
-    watch: "ie, not ei. Capital B. Say the article with it: der Brief.",
-    recall:
-      "Imagine the envelope. Which two vowels were inside, and in what order?",
+  "brief": {
+    "chunks": [
+      "Br",
+      "ie",
+      "f"
+    ],
+    "scene": "A brief message can go in a letter. English brief and German Brief share the same letters, but der Brief means the letter itself.",
+    "watch": "Learn der Brief together. Capital B; ie, not ei. More than one: die Briefe.",
+    "recall": "Write ‘the letter’ with its article. Which vowel comes first?"
   },
-  fuehlen: {
-    chunks: ["f", "ü", "hl", "en"],
-    scene:
-      "Picture a feelings thermometer. The two dots over ü are its two eyes, checking how you feel. Point at yourself when you say mich.",
-    watch:
-      "ü has two dots; a silent h follows it. Keep sich with the infinitive.",
-    recall: "Picture the thermometer’s two eyes. Remember the h after ü.",
+  "fuehlen": {
+    "chunks": [
+      "f",
+      "ü",
+      "hl",
+      "en"
+    ],
+    "scene": "Before a match: Ich fühle mich gut — I feel good. German needs mich here, even though English does not say myself. Learn the whole phrase together.",
+    "watch": "sich fühlen: ü, then h. Keep sich when learning the verb; use mich with ich.",
+    "recall": "Write ‘to feel’ with its reflexive partner. What follows the umlaut?"
   },
-  aergern: {
-    chunks: ["ä", "r", "g", "ern"],
-    scene:
-      "Imagine the two dots over ä turning into annoyed eyebrows. A noisy alarm makes you point at yourself: Ich ärgere mich!",
-    watch:
-      "Start with ä, then r-g-ern. In ich ärgere, the ending changes to -e.",
-    recall: "What did the annoyed eyebrows sit above? An ä.",
+  "aergern": {
+    "chunks": [
+      "ärger",
+      "n"
+    ],
+    "scene": "Someone's loud video interrupts your homework. Ich ärgere mich über den Lärm. Ärger means annoyance or trouble; here you are getting annoyed by the noise.",
+    "watch": "Write sich ärgern: initial ä, then rgern. Ich uses ärgere mich; wir uses ärgern uns.",
+    "recall": "Describe getting annoyed about noise, speaking about yourself."
   },
-  traurig: {
-    chunks: ["trau", "rig"],
-    scene:
-      "Picture a sad face on a rainy window. Draw a tiny tear next to traurig. Pair it with the opposite: glücklich, happy.",
-    watch: "Two chunks: trau + rig. Keep au together and end with g, not ch.",
-    recall: "Picture the rainy window. Write trau, then rig.",
+  "traurig": {
+    "chunks": [
+      "trau",
+      "rig"
+    ],
+    "scene": "Your friend moves away: traurig means sad. It’s a feeling, not tiredness. Learn the word in two short spelling blocks: trau + rig.",
+    "watch": "Keep au together. End with rig: the final written letter is g, even if it sounds different.",
+    "recall": "Write ‘sad’ from memory. Check the vowel pair and final letter."
   },
-  job: {
-    chunks: ["J", "ob"],
-    scene:
-      "Imagine a job badge with a giant J. The badge belongs to DER boss. The word already looks familiar from English.",
-    watch: "Capital J, article der. Add s for the plural: Jobs.",
-    recall: "Picture the badge: a capital J and its der label.",
+  "job": {
+    "chunks": [
+      "J",
+      "ob"
+    ],
+    "scene": "Easy transfer: a job is der Job. You already know the English spelling; the new information is the German article and capital letter.",
+    "watch": "der Job: capital J. Plural die Jobs adds s, just like English.",
+    "recall": "Write ‘the job,’ then ‘the jobs.’ Don’t skip the articles."
   },
-  mitkommen: {
-    chunks: ["mit", "komm", "en"],
-    scene:
-      "Your friend says “Come along!” Two m letters walk side by side. In a sentence, mit runs ahead to wait at the very end.",
-    watch:
-      "Two m letters in kommen. Join mitkommen in the infinitive; split komme … mit in a statement.",
-    recall: "Remember the two m friends. Where does mit wait in a sentence?",
+  "mitkommen": {
+    "chunks": [
+      "mit",
+      "kommen"
+    ],
+    "scene": "Friends head to the park and invite you along. Mit means with; kommen means come. Ich komme mit. Picture joining their group at the door.",
+    "watch": "Write mitkommen as one infinitive, with double m in kommen. In Ich komme mit, mit moves to the end.",
+    "recall": "Friends invite you along. Answer in German: I am coming along."
   },
-  umziehen: {
-    chunks: ["um", "z", "ie", "h", "en"],
-    scene:
-      "Imagine a moving box marked um. Inside, i and e stand in order next to a tall h. The box moves to the end: Wir ziehen um.",
-    watch: "ie, then h. Infinitive umziehen is one word.",
-    recall: "Open the moving box: i, e, h. Then remember um at the end.",
+  "umziehen": {
+    "chunks": [
+      "um",
+      "z",
+      "ie",
+      "h",
+      "en"
+    ],
+    "scene": "Think moving house, not walking across the room: Wir ziehen um — We’re moving. Keep the moving verb as one word when naming it: umziehen.",
+    "watch": "um + ziehen. In ziehen, write ie followed by h. In Wir ziehen um, um goes last.",
+    "recall": "Write ‘to move house.’ Check the vowel order and the silent letter after it."
   },
   "weit-weg": {
-    chunks: ["weit", " ", "weg"],
-    scene:
-      "Imagine two signposts far apart: WEIT on one, WEG on the other. The big gap reminds you to put a space between the words.",
-    watch:
-      "Two words, both starting with w. First word has ei; second ends in g.",
-    recall:
-      "See the two distant signposts. Don’t close the space between them.",
+    "chunks": [
+      "weit",
+      " ",
+      "weg"
+    ],
+    "scene": "Your base is far away on the map: weit weg. Two separate words, two w starts. The space is part of the answer.",
+    "watch": "weit has ei; weg ends in g. Keep a space between them.",
+    "recall": "Write ‘far away.’ How many words, and which vowel pair comes first?"
   },
-  fast: {
-    chunks: ["f", "ast"],
-    scene:
-      "Imagine a race runner ALMOST at the finish. Freeze the picture just before the line. German fast means almost, even though English fast makes you think of speed.",
-    watch: "f-a-s-t. The spelling is familiar; the meaning is the trap.",
-    recall: "The runner is almost there. What does German fast mean?",
+  "fast": {
+    "chunks": [
+      "f",
+      "ast"
+    ],
+    "scene": "Your download is at 99%: fast fertig — almost finished. German fast means almost, not speedy. Think nearly done, not going quickly.",
+    "watch": "Same letters as English fast; different meaning. Write f-a-s-t, with no extra letters.",
+    "recall": "A download is at 99%. What does fast mean here?"
   },
-  treffen: {
-    chunks: ["tre", "ff", "en"],
-    scene:
-      "Picture the two f letters as two friends meeting in a park. They stand together in the middle of treffen.",
-    watch:
-      "Double f. Include sich in the vocabulary form; wir treffen uns in a sentence.",
-    recall: "Two friends, two f letters. Add sich when naming the verb.",
+  "treffen": {
+    "chunks": [
+      "tre",
+      "ff",
+      "en"
+    ],
+    "scene": "Meet your friend at spawn: Wir treffen uns — We meet up. The two f letters make a simple pair to remember: two friends meeting.",
+    "watch": "sich treffen: double f, one t at the start. Learn sich too; wir takes uns.",
+    "recall": "Write ‘to meet’ with its reflexive partner. Which letter forms a pair?"
   },
-  beide: {
-    chunks: ["b", "ei", "de"],
-    scene:
-      "Hold up exactly two fingers. Both fingers stand over ei in beide. Both means two, not just some.",
-    watch: "ei, not ie. End with de.",
-    recall: "Hold up both fingers: b + ei + de.",
+  "beide": {
+    "chunks": [
+      "b",
+      "ei",
+      "de"
+    ],
+    "scene": "Two players, and both are ready: beide. Both means exactly two; don’t mix it up with einige, which means some or several.",
+    "watch": "b + ei + de. The vowel pair is ei, not ie; finish with e.",
+    "recall": "Write the word for ‘both.’ Check the order of its two middle vowels."
   },
-  fahrradtrial: {
-    chunks: ["Fahr", "rad", "trial"],
-    scene:
-      "Imagine a bike balancing over three blocks labeled Fahr, rad, trial. The r at the end of Fahr bumps into the r at the start of rad: rr.",
-    watch:
-      "Capital F, two r letters at the join. Learn der Fahrradtrial. Finish trial, not trail.",
-    recall:
-      "Ride over the three blocks. Check the rr join and the i-a order in trial.",
+  "fahrradtrial": {
+    "chunks": [
+      "Fahr",
+      "rad",
+      "trial"
+    ],
+    "scene": "Bike trials means balancing a bike over obstacles, not riding a trail. Build the name from Fahr + rad + trial; the r letters meet at the join.",
+    "watch": "Your class sheet uses der Fahrradtrial. Keep capital F, the rr join, and trial with i before a.",
+    "recall": "Write the bike sport using your class sheet’s article. Check the doubled letter and final vowel order."
   },
-  hochfahren: {
-    chunks: ["hoch", "fahr", "en"],
-    scene:
-      "Imagine a bike going hoch (up) a hill. At the summit, hoch is waiting at the end of the sentence: Ich fahre den Berg hoch.",
-    watch: "hoch ends in ch; fahren contains h after a. Er fährt adds ä.",
-    recall:
-      "Climb the hill: hoch + fahren. Keep h in hoch and after a in fahren.",
+  "hochfahren": {
+    "chunks": [
+      "hoch",
+      "fahr",
+      "en"
+    ],
+    "scene": "Ride up a hill: hoch means up, fahren means travel by vehicle. Together: hochfahren. In Ich fahre hoch, the up part moves to the end.",
+    "watch": "hoch + fahren. Keep ch in hoch and the h after a in fahren.",
+    "recall": "Write ‘to go up’ by vehicle. Which two parts make the word?"
   },
-  hoffentlich: {
-    chunks: ["ho", "ff", "en", "t", "lich"],
-    scene:
-      "Imagine two fingers crossed for hope: ff. Beside them stands a tiny T-shaped sign pointing to lich. Hopefully your wish comes true.",
-    watch: "Double f AND the t: hoffen + t + lich.",
-    recall: "Cross two fingers for ff, then check the little t before lich.",
+  "hoffentlich": {
+    "chunks": [
+      "ho",
+      "ff",
+      "en",
+      "t",
+      "lich"
+    ],
+    "scene": "Before opening a chest: Hoffentlich! — Hopefully! Link it to hoffen, meaning to hope. For spelling, build hoffen + t + lich; don’t lose that linking t.",
+    "watch": "Double f, then the t before lich. End with ch, not ck.",
+    "recall": "Write ‘hopefully.’ Check the doubled letter and the letter just before lich."
   },
-  treppe: {
-    chunks: ["Tre", "pp", "e"],
-    scene:
-      "Imagine the two p letters as two steps in a staircase. A sign at the bottom says die; a capital T stands at the top.",
-    watch: "Capital T and double p. Plural adds n: Treppen.",
-    recall: "Climb the two p steps. Remember die Treppe.",
+  "treppe": {
+    "chunks": [
+      "Tre",
+      "ppe"
+    ],
+    "scene": "At school, you take the staircase to the next floor: Ich gehe die Treppe hoch. Picture the actual steps you use each day.",
+    "watch": "die Treppe is one staircase, often called the stairs in English. Several staircases: die Treppen. Keep capital T, double p, and final e in Treppe.",
+    "recall": "Name the staircase at school, with its article."
   },
-  stark: {
-    chunks: ["st", "ark"],
-    scene:
-      "Picture a strong person lifting the letters r and k like two heavy weights. The word ends with both weights: rk.",
-    watch: "st at the start, rk at the end. No extra vowel between r and k.",
-    recall: "Lift both final weights: r, k.",
+  "stark": {
+    "chunks": [
+      "st",
+      "ark"
+    ],
+    "scene": "Tony Stark has a strong suit. Use Stark as a name hook for stark — strong. The German adjective stays lowercase; this is a memory link, not a translation rule.",
+    "watch": "st + ark. Finish rk, with no vowel between r and k. Lowercase s.",
+    "recall": "Write ‘strong.’ Check the two letters at the end."
   },
-  streiten: {
-    chunks: ["str", "ei", "ten"],
-    scene:
-      "Imagine two friends arguing over who goes first: e or i. Settle it: e goes before i in streiten.",
-    watch: "Start str; use ei, not ie. The ending is -ten.",
-    recall: "End the argument: e first, i second.",
+  "streiten": {
+    "chunks": [
+      "str",
+      "ei",
+      "ten"
+    ],
+    "scene": "Two teammates argue about the plan: Sie streiten — They argue. This is the argument itself; sich ärgern is feeling annoyed.",
+    "watch": "str + ei + ten. Three consonants at the start; ei, not ie.",
+    "recall": "Write ‘to argue.’ Check the three starting consonants and vowel order."
   },
-  muede: {
-    chunks: ["m", "ü", "de"],
-    scene:
-      "Picture a tired face. The two dots over ü are sleepy eyes. Put the eyes back before you let the word go to bed.",
-    watch: "Four letters: m-ü-d-e. The umlaut is part of the letter.",
-    recall: "Don’t forget the sleepy eyes over ü.",
+  "muede": {
+    "chunks": [
+      "m",
+      "ü",
+      "de"
+    ],
+    "scene": "After a late gaming session: Ich bin müde — I’m tired. Keep it separate from traurig: you need sleep, not cheering up.",
+    "watch": "m + ü + de. The two dots belong to ü; plain u is a different letter.",
+    "recall": "Write ‘tired’ from memory. Which letter needs two dots?"
   },
-  schlecht: {
-    chunks: ["sch", "le", "ch", "t"],
-    scene:
-      "Imagine a BAD weather report. Rain falls on a sign split into four pieces: sch / le / ch / t. Rebuild it before the storm arrives.",
-    watch:
-      "There is ch inside sch at the start, and another ch before the last t.",
-    recall: "Rebuild all four pieces: sch, le, ch, t.",
+  "schlecht": {
+    "chunks": [
+      "sch",
+      "le",
+      "ch",
+      "t"
+    ],
+    "scene": "A bad connection makes the game lag: schlecht means bad. Build its spelling in four blocks: sch / le / ch / t.",
+    "watch": "Start sch. There is another ch before the final t; don’t drop that second h.",
+    "recall": "Write ‘bad.’ Can you rebuild all four spelling blocks without looking?"
   },
-  verliebt: {
-    chunks: ["ver", "lie", "bt"],
-    scene:
-      "Picture a love note folded around ie. A little b and t seal the end of the note together.",
-    watch: "ie, not ei. Finish with bt, not pt.",
-    recall: "Open the love note for ie, then seal it with b and t.",
+  "verliebt": {
+    "chunks": [
+      "ver",
+      "lie",
+      "bt"
+    ],
+    "scene": "Liebe means love; verliebt means in love. The shared lieb gives you the meaning and the tricky ie spelling in one useful link.",
+    "watch": "ver + lieb + t. Keep ie together; finish bt, not pt.",
+    "recall": "Write ‘in love.’ Check the vowel pair and the last two letters."
   },
-  bestimmt: {
-    chunks: ["be", "sti", "mm", "t"],
-    scene:
-      "Imagine a big DEFINITELY stamp. Two m-shaped stamp handles press down together, with a final t as the stamp’s handle.",
-    watch: "Double m, then t. The whole ending is -immt.",
-    recall: "Use both m stamp handles. Finish with t.",
+  "bestimmt": {
+    "chunks": [
+      "be",
+      "sti",
+      "mm",
+      "t"
+    ],
+    "scene": "‘Will you join us?’ ‘Definitely!’ That confident answer is bestimmt in this lesson. It’s a yes with confidence, not just a hopeful maybe.",
+    "watch": "be + stimmt. Double m followed by t; don’t shorten the ending to one m.",
+    "recall": "Write ‘definitely.’ Which consonant doubles before the final t?"
   },
-  gluecklich: {
-    chunks: ["gl", "ü", "ck", "lich"],
-    scene:
-      "Glück means luck or happiness. Imagine finding a lucky coin and smiling: glücklich. The two dots over ü are your happy eyes.",
-    watch: "ü + ck, then lich. There is no extra k after lich.",
-    recall: "Happy eyes over ü, lucky ck, then lich.",
+  "gluecklich": {
+    "chunks": [
+      "gl",
+      "ü",
+      "ck",
+      "lich"
+    ],
+    "scene": "Glück means luck or happiness. Finding diamonds can make you glücklich — happy. The useful spelling link is Glück + lich, with a lowercase start for the adjective.",
+    "watch": "glücklich: lowercase g, ü, ck, then lich. The ending is ch, not ck.",
+    "recall": "Write ‘happy.’ Check the umlaut and the two different consonant pairs."
   },
-  sensibel: {
-    chunks: ["sen", "si", "bel"],
-    scene:
-      "Picture a sensitive person noticing a tiny sound from a bell. Let that bell remind you of the ending -bel, with only one l.",
-    watch: "sen-si-bel, not the English word sensible. Meaning: sensitive.",
-    recall: "Sensitive to the bell: finish -bel, not -ble.",
+  "sensibel": {
+    "chunks": [
+      "sensi",
+      "bel"
+    ],
+    "scene": "A friend notices when someone's joke hurts another person. Mein Freund ist sensibel. The shared sensi in sensitive and sensibel anchors the meaning: sensitive.",
+    "watch": "Write sensibel with ending bel, not ble. It means sensitive, not the English sensible.",
+    "recall": "Which adjective describes a friend who is sensitive to others' feelings?"
   },
-  fleissig: {
-    chunks: ["fl", "ei", "ß", "ig"],
-    scene:
-      "Imagine a hard-working student carefully writing ei and then a big ß on a checklist. Every detail gets checked.",
-    watch:
-      "ei, then ß, then ig. For this German lesson use ß, even though Swiss spelling uses ss.",
-    recall: "Be the careful student: check ei, ß, and final ig.",
+  "fleissig": {
+    "chunks": [
+      "fleiß",
+      "ig"
+    ],
+    "scene": "Your friend keeps working on a build, even when it takes a few tries. Sie ist fleißig — She is hard-working. Think steady effort, not finishing fast.",
+    "watch": "fleiß + ig: ei sounds like eye; ß sounds like s, not b. Keep the written ending ig and use the ß button.",
+    "recall": "Describe a classmate who consistently works hard on a project."
   },
-  zuhoeren: {
-    chunks: ["zu", "h", "ö", "r", "en"],
-    scene:
-      "Imagine the dots over ö as two ears listening. The word zu walks to the end while those ears listen: Ich höre dir zu.",
-    watch:
-      "ö, not o. Join zuhören in the infinitive; split höre … zu in a statement.",
-    recall:
-      "Remember the two listening ears over ö, and zu waiting at the end.",
+  "zuhoeren": {
+    "chunks": [
+      "zu",
+      "hören"
+    ],
+    "scene": "A friend explains something important, and you put your phone down. Ich höre dir zu. Hören means hear; the added zu marks listening attentively to someone.",
+    "watch": "Write zuhören with ö. Learn höre dir zu as a phrase: listening to you. German uses dir here, not dich. In Ich höre dir zu, zu goes last.",
+    "recall": "Tell a friend: I am listening to you."
   },
-  einige: {
-    chunks: ["ei", "ni", "ge"],
-    scene:
-      "Imagine a basket with some apples. Label three parts of the basket ei / ni / ge. There are several apples, not exactly two.",
-    watch: "Start ei, not ie. Three chunks: ei-ni-ge.",
-    recall: "See the basket of several apples: ei, ni, ge.",
+  "einige": {
+    "chunks": [
+      "ei",
+      "ni",
+      "ge"
+    ],
+    "scene": "You have some blocks left, not necessarily two: einige. Contrast beide, meaning both of two. Spell it in three small blocks: ei + ni + ge.",
+    "watch": "Start ei, not ie. Keep the middle i: ei-ni-ge ends in e.",
+    "recall": "Write ‘some’ or ‘several.’ Does this word promise exactly two?"
   },
-  interessieren: {
-    chunks: ["inter", "ess", "ier", "en"],
-    scene:
-      "Imagine an interesting museum. One r guards the entrance in inter; two s letters are the exhibits in ess. Follow the signs: inter / ess / ier / en.",
-    watch:
-      "inter has one r. ess has two s letters. Keep ie in -ieren. Include sich.",
-    recall:
-      "Visit the museum: inter, ess, ier, en. Add sich when naming the verb.",
-  },
+  "interessieren": {
+    "chunks": [
+      "inter",
+      "ess",
+      "ier",
+      "en"
+    ],
+    "scene": "Think of an interest you actually have: games, music, or sports. sich interessieren means to be interested. Use four spelling blocks: inter / ess / ier / en.",
+    "watch": "Two r letters, neither doubled: one in inter, another in ier. Double s; ie in ier. Learn sich interessieren für: to be interested in.",
+    "recall": "Write ‘to be interested’ with its reflexive partner. Check the double consonant and ie."
+  }
 };
+
+const originalWords = new Map(WORDS.map(word => [word.id, word]));
+const previousWords = new Map(PREVIOUS_WORDS.map(word => [word.id, word]));
+const matchesWord = (word, original) => original && Object.keys(original).every(key =>
+  JSON.stringify(word[key]) === JSON.stringify(original[key]));
+const sameCue = (a, b) => a && b && ['scene', 'watch', 'recall', 'chunks'].every(key =>
+  JSON.stringify(a[key]) === JSON.stringify(b[key]));
+
+// Presentation-only update: saved words, drafts, queues and mastery remain untouched.
+export function memoryForWord(word, waveId) {
+  const original = originalWords.get(word.id);
+  if (waveId !== 'wave-1' || !(matchesWord(word, original) || matchesWord(word, previousWords.get(word.id)))) return word.memory;
+  if (sameCue(word.memory, LEGACY_MEMORY[word.id]) || sameCue(word.memory, PREVIOUS_MEMORY[word.id]) || sameCue(word.memory, MEMORY[word.id])) {
+    return MEMORY[word.id];
+  }
+  return word.memory;
+}
+
+// Upgrade known shipped copy only; keep saved answers, ordering and progress intact.
+export function wordForStudy(word, waveId) {
+  if (waveId !== 'wave-1' || !matchesWord(word, previousWords.get(word.id))) return word;
+  if (word.memory && ![LEGACY_MEMORY[word.id], PREVIOUS_MEMORY[word.id], MEMORY[word.id]].some(cue => sameCue(word.memory, cue))) return word;
+  return {...originalWords.get(word.id), memory: memoryForWord(word, waveId)};
+}

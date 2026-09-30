@@ -2,7 +2,7 @@
 
 A self-guided German vocabulary tutor for family use. Vocabulary waves each have a deadline, saved session, and mastery record. Wave 1 contains 27 words and is due September 28, 2026 at 9:00 a.m. in Miami. The tutor uses memory pictures, spelling chunks, sentence practice, articles, reflexive verbs, and separable verbs. Answers determine what comes next.
 
-React in the browser, one small Node server, one shared progress file. No AI API, account service, third-party analytics, or external database. Parent statistics stay in the same private family save. TTS is unchanged: device voices only.
+React in the browser, one small Node server, one shared progress file. No runtime AI API, account service, third-party analytics, or external database. Parent statistics stay in the same private family save. German and English use prerecorded Grok Voice MP3s; see [VOICE.md](VOICE.md) to generate audio for future lessons.
 
 ## Run locally
 
@@ -47,6 +47,10 @@ Do not update a live container while someone may be studying. First ask the fami
 
 ## Vocabulary waves
 
+Delivery tasks are tracked in [Linear](https://linear.app/ezumyn/project/wortwerk-b26d30da83ed); requirements, decisions and release history are maintained in the [Wortwerk Notion hub](https://app.notion.com/p/3e7f3f6888788136882cc335e5f0ed66). See [PROJECT-STATUS.md](PROJECT-STATUS.md) for the baseline and version policy, and AGENTS.md for the update workflow. Records are updated during project work; automatic synchronization is not configured.
+
+See [the practical vocabulary guide](VOCABULARY-GUIDE.md) for preparing, checking, recording, importing, and safely updating future sets.
+
 **Continue studying** recommends an actionable unfinished wave, prioritizing approaching deadlines. Each wave can be resumed independently. Edit its name/deadline in Miami time without resetting progress. Overdue work stays available and is never marked learned because its deadline passed. The route suggests learning, recall/repair and final rehearsal; it cannot send reminders when closed. A deadline within 12 hours brings cold recall forward, but delayed mastery still requires eight hours.
 
 Add another wave with **Import lesson file**. **Download format example** provides a JSON template: `title`, `dueAt` (ISO date/time with explicit offset), and `words`. Every word needs a stable unique ID, German/English text, kind, example, translation, tip, usage tuples `[German sentence with ___, English translation, answer]`, optional form-exercise tuples `[prompt, answer, explanation]`, and `memory: {scene, watch, recall, chunks}`. Chunks must reconstruct the German word without its article or `sich` prefix. Prepared lesson files need language/content review; the app validates structure, not linguistic correctness. It does not extract photos automatically.
@@ -67,7 +71,7 @@ Open the app at home and wait for offline readiness before leaving. The shell an
 
 Offline installation requires trusted HTTPS or localhost. Plain HTTP LAN addresses cannot install the offline cache. Clearing browser data removes the downloaded lesson and unsynced answers. Private browsing may not preserve them. Updates activate after old study tabs close, without forcing a mid-answer reload.
 
-Car view is on by default for a **passenger**: large text, wide controls, and Picture it → Spell it → Use it screens. Keys 1–4 select choices; Enter submits typed answers. Buttons insert German characters at the cursor. German and English audio use device voices; some voices need internet. No microphone or pronunciation grading.
+Car view is on by default for a **passenger**: large text, wide controls, and Picture it → Spell it → Use it screens. Keys 1–4 select choices; Enter submits typed answers. Buttons insert German characters at the cursor. German and English use saved AI-generated recordings, included in offline storage after the initial download. No microphone or pronunciation grading.
 
 ## How adaptation works
 

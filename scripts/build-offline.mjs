@@ -21,11 +21,24 @@ export async function buildOffline(dist = defaultDist) {
     }
   }
   if (rootFiles.includes('assets')) await visit(resolve(dist, 'assets'));
+  if (rootFiles.includes('voice')) await visit(resolve(dist, 'voice'));
   files.sort();
   const urls = files.map((file) => '/' + file.split('/').map(encodeURIComponent).join('/'));
   const body = `
 const SHELL = ${JSON.stringify(urls)};
 const SHELL_URLS = new Set(SHELL.map(path => new URL(path, self.location.origin).href));
+
+function audioRange(value, size) {
+  const match = /^bytes=(\\d*)-(\\d*)$/.exec(value);
+  if (!match || (!match[1] && !match[2]) || !size) return null;
+  const first = match[1] ? Number(match[1]) : null;
+  const last = match[2] ? Number(match[2]) : null;
+  if ((first !== null && !Number.isSafeInteger(first)) ||
+      (last !== null && !Number.isSafeInteger(last))) return null;
+  if (first === null) return last > 0 ? [Math.max(0, size - last), size - 1] : null;
+  if (first >= size || (last !== null && last < first)) return null;
+  return [first, Math.min(last ?? size - 1, size - 1)];
+}
 
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
@@ -73,7 +86,26 @@ self.addEventListener('fetch', event => {
   } else if (SHELL_URLS.has(url.href)) {
     event.respondWith((async () => {
       const cache = await caches.open(CACHE_NAME);
-      return (await cache.match(request)) || fetch(request, { redirect: 'error' });
+      const isAudio = url.pathname.toLowerCase().endsWith('.mp3');
+      // Match the full precached response without Range or other request headers.
+      const cached = await cache.match(isAudio ? url.href : request);
+      if (!cached) return fetch(request, { redirect: 'error' });
+      const rangeHeader = request.headers?.get('range');
+      if (!isAudio || rangeHeader == null || cached.status !== 200) return cached;
+      const content = await cached.arrayBuffer();
+      const range = audioRange(rangeHeader, content.byteLength);
+      const headers = new Headers(cached.headers);
+      headers.set('Accept-Ranges', 'bytes');
+      if (!range) {
+        headers.set('Content-Range', 'bytes */' + content.byteLength);
+        headers.set('Content-Length', '0');
+        return new Response(null, { status: 416, headers });
+      }
+      const [start, end] = range;
+      headers.set('Content-Type', 'audio/mpeg');
+      headers.set('Content-Range', 'bytes ' + start + '-' + end + '/' + content.byteLength);
+      headers.set('Content-Length', String(end - start + 1));
+      return new Response(content.slice(start, end + 1), { status: 206, headers });
     })());
   }
 });

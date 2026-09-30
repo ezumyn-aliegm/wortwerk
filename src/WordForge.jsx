@@ -1,8 +1,9 @@
 import React, { useId, useLayoutEffect, useRef, useState } from 'react';
 import { forgeChunks, shuffledTiles, selectedTiles, chooseTile, undoDraft, isComplete } from './forge.js';
 import './word-forge.css';
+import { firstWordContent } from './first-word-content.js';
 
-export default function WordForge({ word, memory, draft, onDraft, onAdvance, Action }) {
+export default function WordForge({ word, memory, draft, onDraft, onAdvance, Action, comparison, Speech }) {
   const [feedback, setFeedback] = useState(null);
   const input = useRef(null), caret = useRef(null), inputId = useId();
   const value = typeof draft === 'string' ? draft : '';
@@ -34,15 +35,29 @@ export default function WordForge({ word, memory, draft, onDraft, onAdvance, Act
     <section className="word-forge" aria-label="Spelling forge">
       <div className="forge-reference">
       <header>
-        <p className="forge-kicker">Spelling forge · build it once</p>
+        <p className="forge-kicker">Meet a new word · learn it, then build it</p>
         <h2 lang="de">{word.german}</h2>
         <p className="forge-meaning">{word.english}</p>
       </header>
-      <p className="forge-memory">{memory?.scene || 'Picture this word on a block. Notice each letter as you build it.'}</p>
+      <p className="forge-memory">{memory?.scene || 'Connect this word’s meaning to its spelling. Notice each letter as you build it.'}</p>
       {memory?.watch && <p className="forge-watch">{memory.watch}</p>}
+      {comparison}
+      <section className="first-word-examples" aria-label="Learn the word and its forms">
+        {firstWordContent(word).map((page,index) => <article key={index}>
+          <h3>{page.label}</h3>
+          {page.prompt && <p className="first-word-prompt">{page.prompt}</p>}
+          <strong lang="de">{page.answer}</strong>
+          {page.translation && <p>{page.translation}</p>}
+          {Speech && <Speech text={page.answer} label={`Hear German example ${index+1}`} caption="Hear German" />}
+          {(index === 0 || page.prompt) && <>
+            <p>{page.explanation}</p>
+            {Speech && <Speech text={page.explanation} lang="en-US" label={`Hear explanation ${index+1}`} caption="Hear explanation" />}
+          </>}
+        </article>)}
+      </section>
       </div>
       <div className="forge-workspace">
-      <p className="forge-instruction">Click the blocks in spelling order, or type the full word below.</p>
+      <p className="forge-instruction">First read and listen to the teaching card. Then click the blocks in spelling order, or type the full word below. The examples stay here while you build.</p>
       <div className="forge-tiles" aria-label="Spelling blocks">
         {shuffledTiles(tiles).map(tile => (
           <button type="button" key={tile.id} lang="de" disabled={selected.includes(tile.id)}

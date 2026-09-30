@@ -10,6 +10,7 @@ const COOKIE = "wortwerk_session";
 const SESSION_SECONDS = 30 * 24 * 60 * 60;
 const BODY_LIMIT = 2 * 1024 * 1024;
 const types = {
+  ".mp3": "audio/mpeg",
   ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8",
   ".css": "text/css; charset=utf-8", ".svg": "image/svg+xml",
   ".json": "application/json; charset=utf-8", ".png": "image/png",
@@ -21,6 +22,18 @@ const digest = (value) => createHash("sha256").update(value).digest();
 const equal = (a, b) => timingSafeEqual(digest(a), digest(b));
 const inside = (root, target) => target === root || target.startsWith(root + sep);
 const failure = (status, message) => Object.assign(new Error(message), { status });
+
+function audioRange(value, size) {
+  const match = /^bytes=(\d*)-(\d*)$/.exec(value);
+  if (!match || (!match[1] && !match[2]) || !size) return null;
+  const first = match[1] ? Number(match[1]) : null;
+  const last = match[2] ? Number(match[2]) : null;
+  if ((first !== null && !Number.isSafeInteger(first)) ||
+      (last !== null && !Number.isSafeInteger(last))) return null;
+  if (first === null) return last > 0 ? [Math.max(0, size - last), size - 1] : null;
+  if (first >= size || (last !== null && last < first)) return null;
+  return [first, Math.min(last ?? size - 1, size - 1)];
+}
 
 async function body(req, limit = BODY_LIMIT) {
   if (req.headers["content-type"]?.split(";")[0].trim() !== "application/json")
@@ -130,6 +143,23 @@ export function createServer({ env = process.env, distDir = resolve(appDir, "dis
       if (!inside(root, target) || store?.contains(target)) throw failure(403, "Forbidden path");
       if (!(await stat(target)).isFile()) throw failure(404, "Not found");
       const content = await readFile(target);
+      if (extname(target).toLowerCase() === ".mp3") {
+        res.setHeader("Accept-Ranges", "bytes");
+        if (req.method === "GET" && req.headers.range !== undefined) {
+          const range = audioRange(req.headers.range, content.length);
+          if (!range) {
+            res.writeHead(416, { "Content-Range": `bytes */${content.length}`, "Content-Length": 0 });
+            return res.end();
+          }
+          const [start, end] = range;
+          res.writeHead(206, {
+            "Content-Type": "audio/mpeg", "Cache-Control": "no-cache",
+            "Content-Range": `bytes ${start}-${end}/${content.length}`,
+            "Content-Length": end - start + 1,
+          });
+          return res.end(content.subarray(start, end + 1));
+        }
+      }
       res.writeHead(200, {
         "Content-Type": types[extname(target).toLowerCase()] || "application/octet-stream",
         "Content-Length": content.length,

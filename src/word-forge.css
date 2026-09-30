@@ -2,6 +2,12 @@
 .game-shell .lesson-panel:has(.word-forge) .eyebrow { color: #c7ec76; }
 .word-forge { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px; max-width: 820px; margin: 0 auto; font-size: 20px; line-height: 1.4; color: #f1f5f9; }
 .forge-reference, .forge-workspace { min-width: 0; }
+.word-forge .forge-workspace { align-self: start; position: sticky; top: 1rem; }
+.first-word-examples article { border-top: 1px solid #71957b; margin-top: 1rem; padding-top: 1rem; }
+.first-word-examples h3 { margin: 0 0 .5rem; font-size: 1.2rem; color: #c7ec76; }
+.first-word-examples strong { display: block; font-size: 1.5rem; overflow-wrap: anywhere; }
+.first-word-examples p { font-size: 1.1rem; }
+.first-word-examples .speech { margin: .5rem 0; }
 .forge-workspace > .primary { width: 100%; font-size: 20px; }
 .word-forge p { margin: 8px 0; }
 .word-forge .forge-kicker { font-size: 16px; color: #b8d9be; }

@@ -20,6 +20,11 @@ import { useTutor } from "./TutorContext.jsx";
 
 import { CarLesson, CarFeedback } from "./CarLearning.jsx";
 import WordForge from "./WordForge.jsx";
+import NounComparison from "./NounComparison.jsx";
+import { showNounComparison } from "./noun-forms.js";
+import audioCatalog from "./audio-catalog.json";
+import { audioKey } from "./audio-lines.js";
+import { playRecording, stopRecording } from "./recorded-audio.js";
 
 export function Primary({ children, ...props }) {
   return (
@@ -36,47 +41,23 @@ export function Speech({
   caption,
 }) {
   const [message, setMessage] = useState("");
+  const audioRef = useRef(null);
   function play() {
-    if (!("speechSynthesis" in window)) {
-      setMessage(
-        "Audio is unavailable in this browser. You can keep studying with the text.",
-      );
+    const source = audioCatalog[audioKey(text, lang)];
+    if (!source) {
+      setMessage("This lesson’s recording is not ready yet. You can keep studying with the text.");
       return;
     }
-    const voices = speechSynthesis.getVoices();
-    const voice =
-      voices.find(
-        (v) => v.lang.startsWith(lang.split("-")[0]) && v.localService,
-      ) || voices.find((v) => v.lang.startsWith(lang.split("-")[0]));
-    if (!voice) {
-      setMessage(
-        `No ${lang.startsWith("de") ? "German" : "English"} voice is installed. Add one in your device settings; all written practice still works.`,
-      );
-      return;
-    }
-    speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = lang;
-    utterance.voice = voice;
-    utterance.rate = 0.8;
-    utterance.onerror = () =>
-      setMessage("Audio couldn’t play. Try again, or continue with the text.");
-    speechSynthesis.speak(utterance);
-    setMessage(
-      voice.localService
-        ? ""
-        : "This device’s voice may need an internet connection.",
-    );
+    setMessage("");
+    audioRef.current = playRecording(source, () =>
+      setMessage("Audio couldn’t play. Try again when connected, or continue with the text."));
   }
-  useEffect(() => {
-    if ("speechSynthesis" in window) speechSynthesis.getVoices();
-  }, []);
   useEffect(() => {
     setMessage("");
     return () => {
-      if ("speechSynthesis" in window) speechSynthesis.cancel();
+      stopRecording(audioRef.current);
     };
-  }, [text]);
+  }, [text, lang]);
   return (
     <div className="speech">
       <button
@@ -152,9 +133,10 @@ export function MemoryCard({ word, compact = false }) {
     <div className={`memory-box ${compact ? "compact" : ""}`}>
       <div className="memory-title">
         <Lightbulb size={18} />
-        <strong>Make a picture in your mind</strong>
+        <strong>Make a memory link</strong>
       </div>
       <p>{trick.scene}</p>
+      <NounComparison word={word} Speech={Speech} />
       <Chunks word={word} />
       <p className="watch">
         <PencilLine size={15} />
@@ -472,6 +454,7 @@ export function Tutor({
           <div className="car-learning-grid">
             <div className="car-sentence">
               {prerequisite.kind === "form" && <p>{prerequisite.prompt}</p>}
+              <NounComparison word={lessonWord} Speech={Speech} />
               <strong lang="de">{prerequisite.answer}</strong>
               <p>
                 {prerequisite.translation ||
@@ -484,7 +467,7 @@ export function Tutor({
             <div className="car-memory-side">
               <h3>
                 {prerequisite.kind === "picture"
-                  ? "Make a memory picture"
+                  ? "Make a memory link"
                   : "Notice the exact answer"}
               </h3>
               <p>
@@ -521,18 +504,18 @@ export function Tutor({
   const tutorText =
     q.type === "teach"
       ? q.revisit
-        ? "Let’s take another look. Make the picture in your mind, then say the spelling chunks aloud."
+        ? "Let’s take another look. Connect the meaning to the spelling, then say the spelling chunks aloud."
         : q.intro
           ? "Build the word from its pieces. Then use your memory to earn blocks."
-          : `First, meet ${word.german}. Read it, picture it, then spell it aloud.`
+          : `First, meet ${word.german}. Read it, make a link, then spell it aloud.`
       : exam
         ? "Take your best shot. Your answers will be checked together at the end."
         : cold
           ? "No review first. Let’s find out what you remember after a break."
           : q.retry
-            ? "Here’s that word again. Use the memory picture, then try without peeking."
+            ? "Here’s that word again. Use the memory link, then try without peeking."
             : q.type === "spelling"
-              ? "Picture the word before typing. Check its letters, dots, and spaces."
+              ? "Use your memory link before typing. Check its letters, dots, and spaces."
               : q.type === "usage"
                 ? "Use the English sentence to choose the right German word and ending."
                 : q.type === "form"
@@ -582,9 +565,9 @@ export function Tutor({
               {carMode && q.type === "teach" && (
                 <Speech
                   text={
-                    (active.teachingStep || 0) === 0
+                    ["picture", "discovery"].includes(lessonPage.kind)
                       ? MEMORY[word.id].scene
-                      : active.teachingStep === 1
+                      : lessonPage.kind === "spelling"
                         ? MEMORY[word.id].watch
                         : lessonPage.explanation || MEMORY[word.id].watch
                   }
@@ -598,7 +581,8 @@ export function Tutor({
         </div>
         {q.type === "teach" && q.intro ? (
           <WordForge word={word} memory={MEMORY[word.id]} draft={active.draft}
-            onDraft={onDraft} onAdvance={onAdvance} Action={Primary} />
+            onDraft={onDraft} onAdvance={onAdvance} Action={Primary} Speech={Speech}
+            comparison={<NounComparison word={word} Speech={Speech} />} />
         ) : q.type === "teach" ? (
           <CarLesson
             word={word}
@@ -608,6 +592,7 @@ export function Tutor({
             onAdvance={onAdvance}
             Action={Primary}
             Chunks={Chunks}
+            Comparison={() => <NounComparison word={word} Speech={Speech} />}
           />
         ) : (
           <>
@@ -723,6 +708,7 @@ export function Tutor({
                   Action={Primary}
                   Chunks={Chunks}
                   Keys={CharacterKeys}
+                  Comparison={() => showNounComparison(word, q, feedback, exam) ? <NounComparison word={word} Speech={Speech} /> : null}
                 />
               ) : (
                 <div
@@ -756,6 +742,7 @@ export function Tutor({
                     </div>
                   )}
                   <p>{feedback.message}</p>
+                  {showNounComparison(word, q, feedback, exam) && <NounComparison word={word} Speech={Speech} />}
                   {!feedback.correct &&
                     (q.type === "form" || q.type === "usage" ? (
                       <div className="hint">
@@ -911,7 +898,7 @@ export function Home({ state, now, onStart, onProgress }) {
               <div>
                 <span>01</span>
                 <p>
-                  <strong>Make it memorable</strong>Picture a story. Break the
+                  <strong>Make it memorable</strong>Connect the meaning to the spelling. Break the
                   spelling into little pieces.
                 </p>
               </div>
@@ -939,7 +926,7 @@ export function Home({ state, now, onStart, onProgress }) {
           </div>
           <p className="intro-note">
             <PencilLine size={18} />
-            Spelling gets special attention: memory pictures, letter chunks,
+            Spelling gets special attention: memory links, letter chunks,
             corrections, and recall with the answer hidden.
           </p>
         </>
@@ -1288,18 +1275,18 @@ export function Help() {
       <p>
         Car view starts on: large type, a wide lesson area, large buttons, no
         animation, and one teaching idea per screen. Use the Car view button to
-        switch to the compact layout. Picture it, Spell it, Use it, and Word
+        switch to the compact layout. Make a link, Spell it, Use it, and Word
         forms lead into the same adaptive practice. The German button reads the
         word aloud; Hear tip reads the memory aid in English. In multiple
         choice, the number keys 1–4 also select an answer. Press Enter to check
         a typed answer.
       </p>
-      <h3>Picture → chunk → cover → write → check</h3>
+      <h3>Link → chunk → cover → write → check</h3>
       <p>
-        Every word has a visual memory trick and spelling chunks. Picture the
-        scene and say the chunks aloud. On the next screen, the word is hidden
+        Every word has a memory link and spelling chunks. Make a meaningful
+        connection to the spelling and say the chunks aloud. On the next screen, the word is hidden
         so you can retrieve it. If the spelling is wrong, you’ll type a
-        correction, then try from memory later. Memory pictures are invented
+        correction, then try from memory later. Memory links are
         reminders, not word origins or pronunciation guides.
       </p>
       <h3>Your two-day route</h3>

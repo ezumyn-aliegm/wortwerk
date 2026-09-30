@@ -1,0 +1,10 @@
+.noun-comparison { margin: 1rem 0; padding: 1rem; border: 2px solid #71957b; border-radius: 14px; background: #f3f8f1; color: #203c2d; }
+.noun-comparison h3 { margin: 0 0 .8rem; font-size: 1.35rem; }
+.noun-form-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.noun-form-pair > div { background: #fff; border-radius: 10px; padding: 1rem; min-width: 0; }
+.noun-form-pair h4 { font-size: 1.1rem; margin: 0 0 .6rem; }
+.noun-form-pair strong { display: block; font-size: clamp(1.55rem, 2.4vw, 2.2rem); overflow-wrap: anywhere; }
+.noun-form-pair p, .noun-comparison > p { font-size: 1.05rem; line-height: 1.5; }
+.noun-form-pair mark { background: #ffe59a; color: #253728; text-decoration: underline; text-underline-offset: .15em; }
+.noun-form-pair button { min-height: 48px; }
+@media (max-width: 560px) { .noun-form-pair { grid-template-columns: 1fr; } }
