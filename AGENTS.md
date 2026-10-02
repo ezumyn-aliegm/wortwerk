@@ -17,6 +17,6 @@ https://app.notion.com/p/3e7f3f68887881bc9dace4c9892a5959
 - If Notion is unavailable, report that explicitly and record pending updates locally; never claim the hub was updated.
 - Never put keys, passwords, backup data, or identifiable student performance into Notion or Git.
 - Do not update a live container while someone is studying. Require pause/sync confirmation, closed tabs, a current backup, and a rollback image. A previous one-time reset does not authorize future resets.
-- Current pending item WW-01: educator corrections are tested locally but NOT deployed. The family reported an active student session on September 26, 2026. Preserve subsequent progress.
+- October 1 live release includes WW-01 educator corrections and Wave 2. A confirmed pause/sync window, stopped-service backup and exact preservation checks protected existing Wave 1 progress. Preserve subsequent progress; this release did not authorize future resets.
 - No background synchronization or recurring monitoring is configured. This workflow applies during project work; do not imply unattended maintenance.
 - October 1 next-wave trigger implemented locally: Autumn Wave 2, 20 words, October 5 at 09:00 America/New_York. StudyVersion 2 uses learning-linked village scoring; Wave 1 remains legacy. Read WAVE-2-RELEASE.md and PROJECT-STATUS.md for the current contract and release evidence. Do not infer a Wave 1 reset/migration request or equate Git publication with deployment.
