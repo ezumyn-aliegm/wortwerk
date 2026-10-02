@@ -33,6 +33,8 @@ Wave 1 keeps its content, legacy scoring and progress. No live container replace
 
 ## Version and release rules
 
+October 1 deployment preparation: packaging fix `adb9115` adds the scoring module to the container runtime and an explicit, revision-checked atomic Wave 2 installer. All 166 tests pass. Candidate image `wortwerk:wave2-20261001-adb9115` is built on nest-server and passes runtime/HTTP health checks. A read-only dry run against the actual live save validates it and preserves every prior wave exactly. GitHub main is pushed. The running container and progress file remain unchanged; fresh pause/sync/closed-tabs confirmation is still required before replacement.
+
 1. Use Git commits to identify code/content snapshots. The September 30 snapshot is tagged `baseline-2026-09-30`; the tag represents reviewed local work, not a deployment.
 2. Keep vocabulary wave IDs separate from application versions. Before starting a wave, record its content version, deadline/timezone, taught targets, scoring rules and construction mapping. Do not silently change the active denominator.
 3. Record each deployed release's exact Git SHA, image tag, deployment date, validation and private backup/rollback reference. Never equate a pushed commit with a deployed release.
