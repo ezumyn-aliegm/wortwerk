@@ -1,8 +1,10 @@
 import { requiredSkills } from "./data.js";
-import { freshGame, awardGame, gameStatus, validateGame } from "./game.js";
+import { freshGame, freshVillage, updateVillage, awardGame, gameStatus, validateGame } from "./game.js";
+import { usesLearningScore, freshLearning, learningTargets, targetKey, learningSummary, recordLearning, exposeLearning, validateLearning, DELAY_MS } from './scoring.js';
 
 export function createTutor(WORDS, { deadlineAt = null } = {}) {
   const BY_ID = Object.fromEntries(WORDS.map((w) => [w.id, w]));
+  const scoringV2 = usesLearningScore(WORDS);
 
   const STORAGE_KEY = "wortwerk.progress.v1";
   const HOUR = 3_600_000;
@@ -63,9 +65,14 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
   }
   function missingTeaching(state) {
     const a = state.active;
+    if (scoringV2 && a && !a.feedback && a.queue[0].type === 'teach') {
+      const word = BY_ID[a.queue[0].wordId];
+      return { kind: 'complete', label: 'Meet your new word', wordId: word.id, topic: 'intro',
+        answer: word.german, tags: teachingPages(word).flatMap((p) => p.tags) };
+    }
     if (!a || a.feedback || a.queue[0].type === "teach") return null;
     const check =
-      a.kind === "exam" || (a.kind === "course" && a.phase === 4)
+      a.kind === "exam" || (!scoringV2 && a.kind === "course" && a.phase === 4)
         ? a.queue
         : a.queue.slice(0, 1);
     for (const q of check) {
@@ -81,12 +88,23 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     return null;
   }
   function acknowledgeTeaching(original, now = Date.now()) {
+    if (scoringV2 && original.active?.queue[0].type === 'teach') {
+      let state = original;
+      const q = original.active.queue[0];
+      for (let step = 1; step < teachingPages(BY_ID[q.wordId], q).length; step++) state = setTeachingStep(state, step);
+      return advance(state, now);
+    }
     const lesson = missingTeaching(original);
     if (!lesson) return original;
     const state = structuredClone(original),
       p = state.words[lesson.wordId];
     p.taught = [...new Set([...(p.taught || []), ...lesson.tags])];
     p.lastExposedAt = now;
+    if (scoringV2) {
+      p.seen = true;
+      p.introducedAt ||= now;
+      exposeLearning(state.learning, lesson.wordId, lesson.topic, now);
+    }
     const a = state.active;
     a.taughtHere = [
       ...new Set([...(a.taughtHere || []), `${lesson.wordId}/${lesson.topic}`]),
@@ -152,6 +170,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
   ];
   function freshState() {
     return {
+      ...(scoringV2 ? { learning: freshLearning(WORDS), game: freshVillage() } : {}),
       version: 1,
       startedAt: null,
       phase: 0,
@@ -181,6 +200,14 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     };
   }
   function mastery(state, id) {
+    if (scoringV2) {
+      const targets = learningTargets([BY_ID[id]]).map((q) => state.learning.targets[targetKey(q)]);
+      const v = state.learning.verification[id];
+      const ready = targets.every((t) => t.steps === 2) && v.delayed && v.finalSpelling && v.finalTransfer;
+      const percent = 90 * targets.reduce((n, t) => n + t.steps, 0) / (targets.length * 2)
+        + 5 * Number(v.delayed) + 5 * Number(v.finalSpelling && v.finalTransfer);
+      return { percent: ready ? 100 : Math.min(99, Math.floor(percent)), ready, label: ready ? 'Verified' : state.words[id].seen ? 'Practicing' : 'Not introduced' };
+    }
     const p = state.words[id];
     const skills = requiredSkills(BY_ID[id]);
     const score = skills.reduce((n, k) => n + Math.min(2, p.skills[k].wins), 0);
@@ -199,6 +226,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     };
   }
   function summary(state) {
+    if (scoringV2) return { ...learningSummary(state.learning, WORDS), introduced: WORDS.filter((w) => state.words[w.id].seen).length };
     const values = WORDS.map((w) => mastery(state, w.id));
     return {
       introduced: WORDS.filter((w) => state.words[w.id].seen).length,
@@ -218,6 +246,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     };
   }
   function dayTwoAt(state) {
+    if (scoringV2) return summary(state).nextDelayedAt;
     if (!state.startedAt) return 0;
     const tomorrow = new Date(state.startedAt);
     tomorrow.setDate(tomorrow.getDate() + 1);
@@ -232,6 +261,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     return deadlineAt ? Math.min(spaced, deadlineAt - 12 * HOUR) : spaced;
   }
   function delayedReviewAt(state) {
+    if (scoringV2) return summary(state).initialComplete ? summary(state).nextDelayedAt : 0;
     if (
       state.phase < 7 ||
       WORDS.some((w) =>
@@ -247,13 +277,24 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       : 0;
   }
   function dueAt(state) {
+    if (scoringV2) {
+      const stats = summary(state);
+      if (stats.complete) return 0;
+      // Failed final items can be repaired now; waiting applies only when every other check is complete.
+      const finalDone = Object.values(state.learning.verification).every((v) => v.finalSpelling && v.finalTransfer);
+      return stats.initialComplete && finalDone ? stats.nextDelayedAt : 0;
+    }
     return Math.max(
       state.nextAt,
       state.phase === 4 ? dayTwoAt(state) : 0,
       delayedReviewAt(state),
     );
   }
-  const phaseInfo = (state) =>
+  const phaseInfo = (state) => scoringV2 ? {
+    title: summary(state).initialComplete ? 'Verify and repair' : 'Learn to build',
+    short: 'Village mission', minutes: '5–8', day: 1,
+    coach: 'Independent recall builds your village. Guided practice helps you prepare.',
+  } :
     PHASES[state.phase] || {
       title: "Make the last words stick",
       short: "Follow-up practice",
@@ -345,6 +386,57 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
           .map((id) => question(id, "spelling", 1));
   }
   function buildQueue(state, kind = "course", now = Date.now()) {
+    if (scoringV2) {
+      const stats = summary(state);
+      if (stats.complete) return [];
+      if (stats.initialComplete && kind !== 'extra') {
+        const verification = state.learning.verification;
+        const first = !state.sessions.some((s) => s.kind === 'exam');
+        const checks = [
+          ...WORDS.filter((w) => first || !verification[w.id].finalSpelling || (!verification[w.id].delayed && now >= verification[w.id].exposedAt + DELAY_MS))
+            .map((w) => question(w.id, 'spelling')),
+          ...WORDS.filter((w) => first || !verification[w.id].finalTransfer).map((w, i) => {
+            const type = w.forms.length && i % 2 === 0 ? 'form' : 'usage';
+            return question(w.id, type, (state.sessions.length + i) % w[type === 'form' ? 'forms' : 'usages'].length);
+          }),
+        ];
+        const spaced = [], simulated = structuredClone(state.learning.targets), targets = learningTargets(WORDS);
+        for (const q of checks) {
+          while (simulated[targetKey(q)].other < 3) {
+            const filler = targets.find((t) => targetKey(t) !== targetKey(q) && simulated[targetKey(t)].other >= 3);
+            if (!filler) break;
+            spaced.push(question(filler.wordId, filler.type, filler.variant, { spacingOnly: true }));
+            for (const [key, t] of Object.entries(simulated)) t.other = key === targetKey(filler) ? 0 : Math.min(3, t.other + 1);
+          }
+          spaced.push(q);
+          for (const [key, t] of Object.entries(simulated)) t.other = key === targetKey(q) ? 0 : Math.min(3, t.other + 1);
+        }
+        return spaced;
+      }
+      const targets = learningTargets(WORDS);
+      const needs = targets.filter((q) => state.learning.targets[targetKey(q)].steps < 2);
+      if (!needs.length) return [];
+      const queue = [], simulated = structuredClone(state.learning.targets);
+      while (queue.length < 6) {
+        const due = needs.filter((q) => !queue.some((a) => targetKey(a) === targetKey(q)))
+          .sort((a, b) => Number(simulated[targetKey(b)].other >= 3) - Number(simulated[targetKey(a)].other >= 3)
+            || (kind === 'extra' ? Number(b.type === 'spelling') - Number(a.type === 'spelling') : Number(['usage', 'form'].includes(b.type)) - Number(['usage', 'form'].includes(a.type)))
+            || simulated[targetKey(a)].attempts - simulated[targetKey(b)].attempts);
+        let q = due.find((q) => simulated[targetKey(q)].other >= 3);
+        // Space a remaining repair with already learned OTHER targets, even in a one-word wave.
+        q ||= targets.find((q) => simulated[targetKey(q)].other >= 3);
+        q ||= due[0];
+        if (!q) break;
+        queue.push(question(q.wordId, q.type, q.variant));
+        for (const [key, t] of Object.entries(simulated)) t.other = key === targetKey(q) ? 0 : Math.min(3, t.other + 1);
+      }
+      const introduced = new Set();
+      return queue.flatMap((q) => {
+        if (state.words[q.wordId].seen || introduced.has(q.wordId)) return [q];
+        introduced.add(q.wordId);
+        return [question(q.wordId, 'teach'), q];
+      });
+    }
     if (kind === "extra") return repairQueue(state, now, 18);
     if (kind === "exam" || state.phase === 6)
       return [
@@ -406,13 +498,17 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
   }
   function startSession(original, now = Date.now(), kind = "course") {
     if (original.active) return original;
-    if (kind === "course" && original.phase === 4 && now < dayTwoAt(original))
+    if (scoringV2) {
+      if (kind === 'exam' && !summary(original).initialComplete) return original;
+      if (now < dueAt(original) || summary(original).complete) return original;
+    }
+    if (!scoringV2 && kind === "course" && original.phase === 4 && now < dayTwoAt(original))
       return original;
-    if (kind === "course" && now < delayedReviewAt(original)) return original;
+    if (!scoringV2 && kind === "course" && now < delayedReviewAt(original)) return original;
     if (kind === "extra" && !summary(original).introduced) return original;
     const state = structuredClone(original);
     while (
-      kind === "course" &&
+      !scoringV2 && kind === "course" &&
       state.phase < 3 &&
       Math.floor((state.phase * WORDS.length) / 3) ===
         Math.floor(((state.phase + 1) * WORDS.length) / 3)
@@ -423,13 +519,13 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     if (!queue.length) return original;
     state.active = {
       kind:
-        kind === "exam" || (kind === "course" && state.phase === 6)
+        scoringV2 ? (summary(state).initialComplete && kind !== 'extra' ? 'exam' : kind) : kind === "exam" || (kind === "course" && state.phase === 6)
           ? "exam"
           : kind,
       advances: kind === "course",
       phase: state.phase,
       queue,
-      initialCount: queue.length,
+      initialCount: scoringV2 ? queue.filter((q) => q.type !== 'teach').length : queue.length,
       completed: 0,
       answers: [],
       feedback: null,
@@ -446,6 +542,8 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     const w = BY_ID[q.wordId];
     if (q.type === "teach") return { title: w.german, answer: w.german };
     if (q.type === "meaning") {
+      if (scoringV2) return { title: `What does “${w.german}” mean?`, answer: w.english,
+        instruction: 'Recall the English meaning without choices.', explanation: `${w.german} means ${w.english}. ${w.tip}` };
       const others = shuffle(
         WORDS.filter((v) => v.id !== w.id),
         w.id,
@@ -512,7 +610,8 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     const spec = describe(q),
       actual = canonicalAnswer(input, q),
       expected = normalize(spec.answer);
-    if (actual === expected)
+    if (actual === expected || (scoringV2 && q.type === 'meaning' && [BY_ID[q.wordId].english, ...(BY_ID[q.wordId].meaningAnswers || [])]
+      .some((answer) => normalize(answer).toLowerCase() === actual.toLowerCase())))
       return {
         correct: true,
         expected: spec.answer,
@@ -634,25 +733,28 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     if (
       !original.active ||
       original.active.kind === "exam" ||
-      (original.active.phase === 4 && original.active.kind === "course") ||
+      (!scoringV2 && original.active.phase === 4 && original.active.kind === "course") ||
       original.active.feedback
     )
       return original;
     const state = structuredClone(original);
     state.active.helped = true;
     state.words[state.active.queue[0].wordId].lastExposedAt = now;
+    if (scoringV2) exposeLearning(state.learning, state.active.queue[0].wordId, questionTopic(state.active.queue[0]), now);
     return state;
   }
   function visitWordbank(original, now = Date.now()) {
     if (
       original.active &&
       (original.active.kind === "exam" ||
-        (original.active.phase === 4 && original.active.kind === "course"))
+        (!scoringV2 && original.active.phase === 4 && original.active.kind === "course"))
     )
       return original;
     const state = structuredClone(original);
     for (const word of Object.values(state.words))
       if (word.seen) word.lastExposedAt = now;
+    if (scoringV2) for (const w of WORDS) if (state.words[w.id].seen)
+      for (const q of learningTargets([w])) exposeLearning(state.learning, w.id, questionTopic(q), now);
     if (
       state.active &&
       !state.active.feedback &&
@@ -684,8 +786,8 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
         active.helped ||
         (active.taughtHere || []).includes(`${q.wordId}/${questionTopic(q)}`);
     state.totalSteps++;
-    recordSkill(p, q.type, result.correct, assisted, state.totalSteps);
-    if (q.type === "spelling") {
+    if (!scoringV2) recordSkill(p, q.type, result.correct, assisted, state.totalSteps);
+    if (!scoringV2 && q.type === "spelling") {
       recordSkill(p, "meaning", result.correct, assisted, state.totalSteps);
       if (!result.correct) p.delayed = false;
       else if (!assisted && now - p.lastExposedAt >= 8 * HOUR && p.seen)
@@ -703,8 +805,20 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       assisted,
       retry: q.retry,
       at: now,
+      ...(scoringV2 && q.spacingOnly ? { spacingOnly: true } : {}),
     };
-    if (active.kind !== "exam") {
+    if (scoringV2 && active.kind !== 'exam') {
+      const independentSuccess = recordLearning(state.learning, q, { ...result, assisted, at: now, exam: active.kind === 'exam' });
+      state.game = updateVillage(state.game, summary(state), independentSuccess);
+      response.independentSuccess = independentSuccess;
+      // Mirror aggregate skills only for legacy parent displays; scoring uses per-target evidence.
+      for (const type of requiredSkills(BY_ID[q.wordId])) {
+        const targets = learningTargets([BY_ID[q.wordId]]).filter((t) => t.type === type).map((t) => state.learning.targets[targetKey(t)]);
+        p.skills[type].wins = Math.min(...targets.map((t) => t.steps));
+        p.skills[type].attempts = targets.reduce((n, t) => n + t.attempts, 0);
+      }
+      p.delayed = state.learning.verification[q.wordId].delayed;
+    } else if (!scoringV2 && active.kind !== "exam") {
       const game = state.game || freshGame();
       const previousMiss = [
         ...active.answers,
@@ -721,7 +835,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       );
     active.feedback = active.kind === "exam" ? { hidden: true } : response;
     if (
-      active.kind !== "exam" &&
+      !scoringV2 && active.kind !== "exam" &&
       !(active.phase === 4 && active.kind === "course") &&
       (!result.correct || assisted) &&
       q.retry < 2
@@ -769,9 +883,15 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       p.seen = true;
       p.introducedAt ||= now;
       p.lastExposedAt = now;
+      if (scoringV2) for (const tag of teachingPages(BY_ID[current.wordId], current).flatMap((p) => p.tags))
+        exposeLearning(state.learning, current.wordId, tag, now);
+      if (scoringV2) active.taughtHere = [...new Set([...(active.taughtHere || []),
+        ...teachingPages(BY_ID[current.wordId], current).flatMap((p) => p.tags).map((tag) => `${current.wordId}/${tag}`)])];
     }
+    if (scoringV2 && current.type !== 'teach' && active.kind !== 'exam')
+      exposeLearning(state.learning, current.wordId, questionTopic(current), now);
     active.queue.shift();
-    active.completed++;
+    if (!scoringV2 || current.type !== 'teach') active.completed++;
     active.feedback = null;
     active.helped = false;
     active.draft = "";
@@ -779,8 +899,16 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     active.teachingStep = 0;
     active.correcting = false;
     if (active.queue.length) return state;
+    if (scoringV2 && active.kind === 'exam') {
+      // Apply grades together so neither village movement nor coverage leaks answers during inspection.
+      for (const a of active.answers) {
+        a.independentSuccess = recordLearning(state.learning, a, { ...a, exam: true });
+        state.game = updateVillage(state.game, summary(state), a.independentSuccess);
+        state.words[a.wordId].delayed = state.learning.verification[a.wordId].delayed;
+      }
+    }
     const correct = active.answers.filter(
-      (a) => a.correct && !a.assisted,
+      (a) => scoringV2 ? a.independentSuccess : a.correct && !a.assisted,
     ).length;
     const session = {
       kind: active.kind,
@@ -801,7 +929,10 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     };
     state.sessions.push(session);
     if (state.sessions.length > 100) state.sessions.shift();
-    if (active.kind === "exam")
+    if (scoringV2 && active.kind === 'exam') {
+      for (const a of active.answers) exposeLearning(state.learning, a.wordId, questionTopic(a), now);
+    }
+    if (!scoringV2 && active.kind === "exam")
       active.answers.forEach((a) => {
         state.words[a.wordId].lastExposedAt = now;
         const previousMiss = state.sessions
@@ -817,6 +948,8 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     return state;
   }
   function validateState(value) {
+    if (scoringV2 && (!validateLearning(value?.learning, WORDS) || !validateGame(value?.game, WORDS)
+      || value.game.percent !== learningSummary(value.learning, WORDS).percent)) return false;
     if (value?.game !== undefined && !validateGame(value.game, WORDS))
       return false;
     if (
@@ -974,6 +1107,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
   }
 
   return {
+    scoringV2,
     WORDS,
     BY_ID,
     teachingPages,

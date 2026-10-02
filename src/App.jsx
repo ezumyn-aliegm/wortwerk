@@ -10,6 +10,8 @@ import {
   CarFront,
 } from "lucide-react";
 import { useTutor } from "./TutorContext.jsx";
+import NounComparison from './NounComparison.jsx';
+import { firstWordContent } from './first-word-content.js';
 import Outpost, { MissionHUD } from "./Outpost.jsx";
 import {
   freshGame,
@@ -28,7 +30,66 @@ import {
   Progress,
   Help,
   Primary,
+  Speech,
+  MemoryCard,
 } from "./components.jsx";
+
+function WaveStudy({ state, update, next }) {
+  const t = useTutor(), a = state.active, q = a.queue[0], w = t.BY_ID[q.wordId];
+  const lesson = t.missingTeaching(state), spec = t.describe(q), exam = a.kind === 'exam';
+  if (q.type === 'teach') return <section className="wave-study lesson-panel teaching">
+    <p>Meet your new word · teaching, no score</p><h1>{w.german}</h1><p>{w.english} · {w.kind}</p>
+    <Speech text={w.german} />
+    <MemoryCard word={w} />
+    {w.memory?.scene && <Speech text={w.memory.scene} lang="en-US" label="Hear memory link" caption="Hear memory link" />}
+    {w.memory?.watch && <Speech text={w.memory.watch} lang="en-US" label="Hear spelling tip" caption="Hear spelling tip" />}
+    <p>{w.memory?.recall}</p>
+    {w.memory?.recall && <Speech text={w.memory.recall} lang="en-US" label="Hear recall cue" caption="Hear recall cue" />}
+    <section className="first-word-examples" aria-label="Learn the word and all its forms">{firstWordContent(w).map((page, i) => <article key={i}>
+      <h2>{page.label}</h2><p>{page.prompt}</p><strong lang="de">{page.answer}</strong><p>{page.translation}</p>
+      <Speech text={page.answer} caption="Hear German example" />
+      <p>{page.explanation}</p><Speech text={page.explanation} lang="en-US" label="Hear English explanation" caption="Hear explanation" />
+    </article>)}</section>
+    <Primary onClick={() => update((s) => {
+      let nextState = s;
+      for (let step = 1; step < t.teachingPages(w, q).length; step++) nextState = t.setTeachingStep(nextState, step);
+      return t.advance(nextState);
+    })}>Hide card and practice</Primary>
+  </section>;
+  if (lesson) return <section className="wave-study lesson-panel teaching">
+    <h1>{lesson.label}: {w.german}</h1><p>{lesson.prompt}</p>
+    <p className="guided-answer">{lesson.answer}</p><Speech text={lesson.answer} />
+    <p>{lesson.translation || w.english}</p><p>{lesson.explanation || w.tip}</p>
+    <Speech text={lesson.explanation || w.tip} lang="en-US" label="Hear English explanation" caption="Hear explanation" />
+    <NounComparison word={w} Speech={Speech} />
+    <p>{w.memory?.scene}</p><p>{w.memory?.watch}</p>
+    <p>Guided practice first. A later spaced answer can strengthen this target.</p>
+    <Primary onClick={() => update((s) => t.acknowledgeTeaching(s))}>Hide answer and practice</Primary>
+  </section>;
+  return <section className="wave-study lesson-panel">
+    <p>{exam ? `Final inspection · ${a.answers.length + (a.feedback ? 0 : 1)}/${a.initialCount} · answers hidden until the end` : `Mission challenge ${a.answers.length + (a.feedback ? 0 : 1)} of up to 6`}</p>
+    <h1>{spec.title}</h1><p>{spec.translation}</p><p>{spec.instruction}</p>
+    {!a.feedback ? <>
+      {a.helped && <div className="guided-answer">{spec.answer}<p>{spec.explanation}</p></div>}
+      <form onSubmit={(e) => { e.preventDefault(); if (a.draft.trim()) update((s) => t.answerQuestion(s, a.draft)); }}>
+        <label htmlFor="wave-answer">{q.type === 'meaning' ? 'English meaning' : 'German answer'}</label>
+        <input id="wave-answer" key={a.completed} autoFocus autoComplete="off" autoCorrect="off" spellCheck={false} value={a.draft} onChange={(e) => update((s) => t.setDraft(s, e.target.value))} />
+        <Primary type="submit">Check answer</Primary>
+      </form>
+      {!exam && <button className="text-button" onClick={() => update((s) => t.useHint(s))}>Show help (guided practice)</button>}
+    </> : exam ? <><p>Answer recorded.</p><Primary onClick={next}>Continue inspection</Primary></> : <>
+      <p role="status">{a.feedback.independentSuccess ? 'Independent success.' : a.feedback.correct ? 'Practice answer correct; no independent credit yet.' : 'Repair queued. Let’s learn it.'}</p>
+      <p className="guided-answer">{a.feedback.expected}</p><p>{a.feedback.message}</p>
+      {!a.feedback.correct && <><Speech text={spec.explanation} lang="en-US" label="Hear English explanation" caption="Hear explanation" /><NounComparison word={w} Speech={Speech} /></>}
+      {t.correctionNeeded(state) && <><label htmlFor="wave-correction">Copy the correct answer once (practice only)</label><input id="wave-correction" value={a.correction} autoComplete="off" spellCheck={false} onChange={(e) => update((s) => t.setCorrection(s, e.target.value))} /></>}
+      <Primary disabled={!t.correctionReady(state)} onClick={next}>{a.queue.length === 1 ? 'Finish mission' : 'Next challenge'}</Primary>
+    </>}
+  </section>;
+}
+
+function WaveCoverage({ learning }) {
+  return <details className="village-categories"><summary>Learning coverage · {learning.percent}% complete</summary><p>Two spaced independent answers per target. Verification adds delayed recall and final inspection.</p><dl>{Object.entries(learning.categories).map(([key, c]) => <React.Fragment key={key}><dt>{key === 'form' ? 'Forms' : key[0].toUpperCase() + key.slice(1)} ({c.weight}%)</dt><dd>{c.earned} of {c.possible} evidence steps</dd></React.Fragment>)}</dl></details>;
+}
 
 function download(text, name) {
   const url = URL.createObjectURL(
@@ -53,6 +114,7 @@ export default function App({
   onExportLibrary,
 }) {
   const {
+    scoringV2,
     WORDS,
     freshState,
     startSession,
@@ -228,7 +290,7 @@ export default function App({
   }
   const inExam = state.active?.kind === "exam";
   const wordbankLocked =
-    inExam || (state.active?.phase === 4 && state.active?.kind === "course");
+    inExam || (!scoringV2 && state.active?.phase === 4 && state.active?.kind === "course");
   const checkpoint =
     !wordbankLocked &&
     !state.active?.feedback &&
@@ -379,7 +441,7 @@ export default function App({
         <div className="main-column">
           {!showOutpost && (
             <>
-              <SessionHeader state={state} />
+              {scoringV2 ? <WaveCoverage learning={learning} /> : <SessionHeader state={state} />}
             </>
           )}
           {blocked || conflict ? (
@@ -420,9 +482,11 @@ export default function App({
               onSelect={(id) => changeGame((g) => selectBuild(g, id))}
               onBuild={(id) => changeGame((g) => constructBuild(g, id, learning))}
               onContinue={returnToMission}
+              onPractice={() => begin('extra')}
+              onWorkshop={() => begin('course')}
             />
           ) : state.active ? (
-            <Tutor
+            scoringV2 ? <WaveStudy state={state} update={update} next={next} /> : <Tutor
               state={state}
               onAdvance={next}
               onAnswer={(input) => update((s) => answerQuestion(s, input))}
@@ -435,7 +499,16 @@ export default function App({
               onCorrecting={() => update((s) => startCorrection(s))}
             />
           ) : (
-            <Home
+            scoringV2 ? <section className="home">
+              <h1>{learning.complete ? 'Every target verified. Your village is complete.' : learning.initialComplete ? 'Final inspection and later recall' : 'Your next village mission'}</h1>
+              <p>Up to six planned challenges. Independent successes and repairs are counted separately.</p>
+              {state.sessions.at(-1) && <p>Last mission: {state.sessions.at(-1).correct} independent successes from {state.sessions.at(-1).count} answers · {learning.repairs.length} repairs queued.</p>}
+              {state.sessions.at(-1)?.kind === 'exam' && <details onToggle={(e) => { if (e.currentTarget.open) update((s) => visitWordbank(s)); }}><summary>Inspection corrections</summary>{state.sessions.at(-1).mistakes.map((a, i) => <p key={i}>{a.wordId} · {a.type}: {a.expected} — {a.message}</p>)}</details>}
+              {!learning.complete && <>
+                {now < dueAt(state) ? <p>Delayed recall available {new Date(dueAt(state)).toLocaleString()}. Waiting carries no penalty.</p> : <Primary onClick={() => begin('course')}>{learning.initialComplete ? 'Start inspection / targeted recheck' : 'Recommended mission'}</Primary>}
+                {!learning.initialComplete && <div className="village-mission-choices"><button onClick={() => begin('extra')}>Spelling expedition</button><button onClick={() => begin('course')}>Sentence workshop</button></div>}
+              </>}
+            </section> : <Home
               state={state}
               now={now}
               onStart={begin}
@@ -443,7 +516,7 @@ export default function App({
             />
           )}
         </div>
-        <Route state={state} now={now} />
+        {!scoringV2 && <Route state={state} now={now} />}
       </main>
       <footer>
         <span>
@@ -464,15 +537,15 @@ export default function App({
           onClose={() => setModal(null)}
         >
           {modal === "progress" ? (
-            <Progress
+            <>{scoringV2 && <WaveCoverage learning={learning} />}<Progress
               state={state}
               onExport={exportData}
               onImport={onExportLibrary ? undefined : importData}
               onReset={onExportLibrary ? undefined : reset}
               damaged={blocked}
-            />
+            /></>
           ) : (
-            <Help />
+            scoringV2 ? <p>Meaning 20%, spelling 40%, every sentence 20%, every form 10%, verification 10%. Each target needs two independent answers with three other questions between exposures. Guided answers and immediate retries earn no evidence. Independent misses remove one step from that target; repairs restore it later. Verification requires spelling after eight hours and a final spelling plus usage/form inspection for each word. Upgrades happen automatically every 4%.</p> : <Help />
           )}
         </Modal>
       )}

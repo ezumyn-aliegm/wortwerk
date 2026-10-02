@@ -2,6 +2,8 @@
 
 A self-guided German vocabulary tutor for family use. Vocabulary waves each have a deadline, saved session, and mastery record. Wave 1 contains 27 words and is due September 28, 2026 at 9:00 a.m. in Miami. The tutor uses memory pictures, spelling chunks, sentence practice, articles, reflexive verbs, and separable verbs. Answers determine what comes next.
 
+Autumn Wave 2 contains 20 words and is due **October 5, 2026, 9:00 a.m. Miami**. On the waves screen, choose **Add Wave 2 · Autumn adventure**, then start the recommended mission. This does not replace Wave 1. It uses learning-linked construction: five buildings, five upgrades each, one evidence score, protected guided practice and target-level repair. See [Wave 2 release](WAVE-2-RELEASE.md) for the frozen targets and milestones.
+
 React in the browser, one small Node server, one shared progress file. No runtime AI API, account service, third-party analytics, or external database. Parent statistics stay in the same private family save. German and English use prerecorded Grok Voice MP3s; see [VOICE.md](VOICE.md) to generate audio for future lessons.
 
 ## Run locally

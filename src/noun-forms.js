@@ -6,10 +6,15 @@ const nouns = {
 };
 
 export function nounComparison(word) {
+  if (word.kind === 'noun' && word.studyVersion === 2 && word.nounForms) {
+    const f = word.nounForms;
+    if (![f.singular, f.plural].includes(word.german) || !word.forms.some(form => form[1] === f.plural)) return null;
+    return {...f, ending: '', note: '', rule: f.rule};
+  }
   const entry = nouns[word.id];
   if (word.kind !== 'noun' || !entry || word.german !== entry[0] || !word.forms.some(form => form[1] === entry[1])) return null;
   const [singular, plural, singularEnglish, pluralEnglish, ending, note] = entry;
-  return {singular, plural, singularEnglish, pluralEnglish, ending, note};
+  return {singular, plural, singularEnglish, pluralEnglish, ending, note, rule: `Add -${ending}. Learn both articles with the noun.`};
 }
 
 export function showNounComparison(word, question, feedback = null, exam = false) {

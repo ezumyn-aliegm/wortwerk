@@ -2567,6 +2567,1598 @@
       "language": "en",
       "sha256": "909fc79658c804f6a313ac30a76e7460e37991354bf03131938827229f8fbda4",
       "bytes": 208128
+    },
+    "de_606f2bb6c65b1bc2c0071a20": {
+      "file": "de_606f2bb6c65b1bc2c0071a20.mp3",
+      "text": "das Oktoberfest",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "648c15c95a8cd4c7a8e991ce24efcb3bfb22559f067d98d880997067855211df",
+      "bytes": 24960
+    },
+    "de_a4c02936c9c1ddefaf7ff592": {
+      "file": "de_a4c02936c9c1ddefaf7ff592.mp3",
+      "text": "das Oktoberfest. Das Oktoberfest ist ein Fest.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "bbe537b71fb31adc3113b4868c5c30657b59db0668e67296d8e8a902fc651979",
+      "bytes": 53376
+    },
+    "de_e6722a6639a4a72ba680fc17": {
+      "file": "de_e6722a6639a4a72ba680fc17.mp3",
+      "text": "Das Oktoberfest ist ein Fest.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "586c4a0441d382dea73daad734e4d3b76f61b7b0f067213ccd3f2b8f5c46a65d",
+      "bytes": 36480
+    },
+    "en_41ac61ad6bf55745c06867c7": {
+      "file": "en_41ac61ad6bf55745c06867c7.mp3",
+      "text": "das Oktoberfest means Oktoberfest festival. die Oktoberfeste means Oktoberfest celebrations. For several separate celebrations, add -e. The famous Munich event is normally named in the singular. Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7b6021952d0b50a561f12db248af78c157d3ae89ebdd309ecb289ace54a5edd6",
+      "bytes": 458880
+    },
+    "de_9f6c615b55a7febacc630cb7": {
+      "file": "de_9f6c615b55a7febacc630cb7.mp3",
+      "text": "Das Oktoberfest ist in München.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "df7e32cd9e8b887fa7feaa6e92bbe23b2a936286768a4573dd39ac88f69c478d",
+      "bytes": 36480
+    },
+    "de_20d47595fab833aa6bcf8c84": {
+      "file": "de_20d47595fab833aa6bcf8c84.mp3",
+      "text": "die Oktoberfeste",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "896bba9f287f384abf8b51704ee116d1076721e2a7ee6d716dd83b21582a40d2",
+      "bytes": 26496
+    },
+    "en_fa23ebd6e774be21524a1d6c": {
+      "file": "en_fa23ebd6e774be21524a1d6c.mp3",
+      "text": "Singular: das Oktoberfest. Plural: die Oktoberfeste. For several separate celebrations, add -e. The famous Munich event is normally named in the singular.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1d0c1fd658ca3a7255c63f6ffc142e26dda24df3c60cdafb4645c89eb2b178f9",
+      "bytes": 182400
+    },
+    "de_8ea834c172a6eb242a92c005": {
+      "file": "de_8ea834c172a6eb242a92c005.mp3",
+      "text": "das",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "8ccbd4c8afd275fa3692544fb61eeacbd95c392c29cfe97bb4103a87c1f1ad41",
+      "bytes": 11136
+    },
+    "en_30a6f0585bb3ad31cde2f4ae": {
+      "file": "en_30a6f0585bb3ad31cde2f4ae.mp3",
+      "text": "For one, say das Oktoberfest; for more than one, say die Oktoberfeste.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "fa744ff4c92b13efff821b38122b2b968e61ba098c955daf5fba86a25ba07b84",
+      "bytes": 97920
+    },
+    "en_cc833eea0368a34936f3bd63": {
+      "file": "en_cc833eea0368a34936f3bd63.mp3",
+      "text": "Picture an October festival with music and a giant pretzel. Oktober + Fest joins October and festival.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "dc304e60c3969992d995abd8c70ba6e8f23000895d3c8227833dc8f0e7fce2ad",
+      "bytes": 132480
+    },
+    "en_f0d044196bfd1e2e39c05ca4": {
+      "file": "en_f0d044196bfd1e2e39c05ca4.mp3",
+      "text": "Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5718b726725071c4b9c6956838ea73d55f443cba776ef3dd3277aba42d29c99c",
+      "bytes": 127488
+    },
+    "de_884b00d009047f7f9dc73b56": {
+      "file": "de_884b00d009047f7f9dc73b56.mp3",
+      "text": "das Erntedankfest",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "22825c0ad70fbeef0b381618dfbe1794d164cba8d719a14af91169221b541dca",
+      "bytes": 27648
+    },
+    "de_34142fa82502c99f48a8164b": {
+      "file": "de_34142fa82502c99f48a8164b.mp3",
+      "text": "das Erntedankfest. Das Erntedankfest ist im Herbst.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "80171d9837d51ed41021655c53d64525f3529a2e56a8bd0718d2b2997e673ca4",
+      "bytes": 66048
+    },
+    "de_ac73bf36526dd9d03259ae28": {
+      "file": "de_ac73bf36526dd9d03259ae28.mp3",
+      "text": "Das Erntedankfest ist im Herbst.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a9d46a50e1721bf33f63954f08a4971fa14ba8ab9253adf7e8a005096292bf1b",
+      "bytes": 35328
+    },
+    "en_7083b4bc8ef85b15d0f638ea": {
+      "file": "en_7083b4bc8ef85b15d0f638ea.mp3",
+      "text": "das Erntedankfest means harvest thanksgiving festival. die Erntedankfeste means harvest thanksgiving festivals. Add -e for several festivals. Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "344bf57c0247db3363227d249d7591d7fe79a8737da9cb2c0135c29d79bda217",
+      "bytes": 357888
+    },
+    "de_0c962afc7b513a432c42c7e3": {
+      "file": "de_0c962afc7b513a432c42c7e3.mp3",
+      "text": "Wir feiern das Erntedankfest.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2c0621dc39c39a2a4c91aad1c86d20cc5bfb46881ba902d40098309e50124b18",
+      "bytes": 34176
+    },
+    "de_31de8ba421dccfca15a2f8c0": {
+      "file": "de_31de8ba421dccfca15a2f8c0.mp3",
+      "text": "die Erntedankfeste",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "66dfd3eb0be4f986730aba109c4e016f8af06c4dd762414c66a48307a32d929e",
+      "bytes": 28800
+    },
+    "en_468697c6441c6660c5e75a69": {
+      "file": "en_468697c6441c6660c5e75a69.mp3",
+      "text": "Singular: das Erntedankfest. Plural: die Erntedankfeste. Add -e for several festivals.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7d492753052151b01e32bbc298770601f19ed29f25505390a8b6f31e8371bab5",
+      "bytes": 119808
+    },
+    "en_75c4c2a3be7ab7f7738dbdf7": {
+      "file": "en_75c4c2a3be7ab7f7738dbdf7.mp3",
+      "text": "For one, say das Erntedankfest; for more than one, say die Erntedankfeste.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d4dc96eecf58f24729cc817aabcf06a4750e1cec8423a8a5c81ae5bc2a29d295",
+      "bytes": 101760
+    },
+    "en_e0ee94217153b5221c641f74": {
+      "file": "en_e0ee94217153b5221c641f74.mp3",
+      "text": "Picture a harvest table: crops, a thank-you sign, and a festival. Ernte is harvest, Dank is thanks, and Fest is festival. It is not the American Thanksgiving holiday.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9893dc3ec747c2c6cb941fb7ab753ff427c6913f56df0a5e0cbb9cdde743d4e5",
+      "bytes": 200448
+    },
+    "en_fc5247093b0d194f4a0751c2": {
+      "file": "en_fc5247093b0d194f4a0751c2.mp3",
+      "text": "Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "16a210a3ab8b2f0edc64d72c779d027a84f8ae162e485ebf87c37bce6a1e0bbb",
+      "bytes": 110976
+    },
+    "de_05cf9c190f81c5ee6e54b035": {
+      "file": "de_05cf9c190f81c5ee6e54b035.mp3",
+      "text": "die Wanderung",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "af0dc964c5d10412f6d9b3e0a3796f9ff904878ab147b947a0ce8cf3b2acc91b",
+      "bytes": 19968
+    },
+    "de_31b643e5ee72cb70b36eca8c": {
+      "file": "de_31b643e5ee72cb70b36eca8c.mp3",
+      "text": "die Wanderung. Die Wanderung ist lang.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "ca2ae3e5104ad569ecaa30c2924d99579163da2d662c16a1fe48e45ab3cf08b6",
+      "bytes": 44160
+    },
+    "de_a3fe3fd21a815c8b974e0676": {
+      "file": "de_a3fe3fd21a815c8b974e0676.mp3",
+      "text": "Die Wanderung ist lang.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b56ebba3f712c70cf1581b3448fc3fff68b8916acb990517ebca58d1cd14b997",
+      "bytes": 24960
+    },
+    "en_b5fab2210ee4ef573c002f1b": {
+      "file": "en_b5fab2210ee4ef573c002f1b.mp3",
+      "text": "die Wanderung means hike. die Wanderungen means hikes. Add -en: Wanderung → Wanderungen. Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "fdb9647b68dd26d349aff307050af3b2c3b220c826321ab86fb92d210348be87",
+      "bytes": 352896
+    },
+    "de_5221b4e41cc1fac45c3c0348": {
+      "file": "de_5221b4e41cc1fac45c3c0348.mp3",
+      "text": "Wir machen eine Wanderung.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "445aa9ed0a545414d1b94474de93faa9cdceadbcc2150548b5b33c84cdb6ff65",
+      "bytes": 26496
+    },
+    "de_10424debbd0731d380b890e2": {
+      "file": "de_10424debbd0731d380b890e2.mp3",
+      "text": "die Wanderungen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "84a43036e50a217d9879682c16de73f6d511e729845402248588111225a20bf2",
+      "bytes": 21120
+    },
+    "en_574679661ea056328db3f5c1": {
+      "file": "en_574679661ea056328db3f5c1.mp3",
+      "text": "Singular: die Wanderung. Plural: die Wanderungen. Add -en: Wanderung → Wanderungen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e2ffedacfadadf6f5e6fe6834fee132050c62ac3d2081fab18db866d6d7cce44",
+      "bytes": 127488
+    },
+    "en_740466fb9a49d55085916195": {
+      "file": "en_740466fb9a49d55085916195.mp3",
+      "text": "For one, say die Wanderung; for more than one, say die Wanderungen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d8045b38b0c87f053badad3861eebd4dd41dec0b45d20a07282792197519b7a9",
+      "bytes": 84096
+    },
+    "en_75b361f98fc89ebf4088f4b8": {
+      "file": "en_75b361f98fc89ebf4088f4b8.mp3",
+      "text": "Picture a long hike along a forest trail. Connect Wanderung with English wander, but remember: this word names the hike.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "381ba97e13d8a7cf99046f718dff4dc7b83f11802285568327512965627db795",
+      "bytes": 144384
+    },
+    "en_c8c76f3c6b34b8feef22aec1": {
+      "file": "en_c8c76f3c6b34b8feef22aec1.mp3",
+      "text": "Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "671cf64ceb19fc37eb20aca1e7f93ae5bdb1f5bf8a673bacd0235f14025f0bc1",
+      "bytes": 119808
+    },
+    "de_4aea71ded27eee18165e2111": {
+      "file": "de_4aea71ded27eee18165e2111.mp3",
+      "text": "der Baum",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "8df721aaf3ea2646593d908bceac79b4608ea399463643adaff7193ec775d766",
+      "bytes": 16128
+    },
+    "de_ad05b3a590517a588be84b94": {
+      "file": "de_ad05b3a590517a588be84b94.mp3",
+      "text": "der Baum. Der Baum ist groß.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "affe93a6f3b9ff9423f59add032d6517b7a1a2b266f06d1f34f36ef203ba8f0b",
+      "bytes": 45696
+    },
+    "de_3cc9640e36343268c596816c": {
+      "file": "de_3cc9640e36343268c596816c.mp3",
+      "text": "Der Baum ist groß.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "e5948bb0c24da853a79ff168365075e1209969c5d1f8f0b108af3674159485fb",
+      "bytes": 24960
+    },
+    "en_c7540e7f2ebea7b2bd3d0df6": {
+      "file": "en_c7540e7f2ebea7b2bd3d0df6.mp3",
+      "text": "der Baum means tree. die Bäume means trees. Change a → ä and add -e. Singular Baum has au. Plural Bäume changes a to ä and adds e. Do not put the umlaut in the singular. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "665f903790b58efc1cefa0cf45721402f51b2f6aa8d9f478d627220dc3775063",
+      "bytes": 355200
+    },
+    "de_8b8553a12d41a7e153f710dc": {
+      "file": "de_8b8553a12d41a7e153f710dc.mp3",
+      "text": "Der Baum hat Blätter.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "7f4247805567c3923b5d888bd1005b2e86b9cdb5c60f8a35735062856dbd01e5",
+      "bytes": 23808
+    },
+    "de_475d63969e9bea2bce0d4412": {
+      "file": "de_475d63969e9bea2bce0d4412.mp3",
+      "text": "die Bäume",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "c3056b7f6f72fb44ff3e68a6cee03065aa610a9d1168170efa44fdd7e812455c",
+      "bytes": 17280
+    },
+    "en_578a868b7d609f6694040881": {
+      "file": "en_578a868b7d609f6694040881.mp3",
+      "text": "Singular: der Baum. Plural: die Bäume. Change a → ä and add -e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b80267e726511581b52e7d66348c51dd66e86e1ba235abe6b08526bd82e82d9f",
+      "bytes": 122496
+    },
+    "en_d54ccd2fe5d7c0b7812d32a8": {
+      "file": "en_d54ccd2fe5d7c0b7812d32a8.mp3",
+      "text": "For one, say der Baum; for more than one, say die Bäume.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "6a71bc14d020e6d1735e10aec16577a4283dfde410a6a4cf7eda367bb16fbc54",
+      "bytes": 81408
+    },
+    "en_091da5b4d51b693108ab8a9b": {
+      "file": "en_091da5b4d51b693108ab8a9b.mp3",
+      "text": "Picture one blocky tree; now add another tree and two dots over the a. One Baum becomes several Bäume.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1cd3e16fcdeeeaa4f5c042b451216a6fac90f0de2032026730ed1fa93e63ef7d",
+      "bytes": 123648
+    },
+    "en_41444319f39d1ddc8de78fff": {
+      "file": "en_41444319f39d1ddc8de78fff.mp3",
+      "text": "Singular Baum has au. Plural Bäume changes a to ä and adds e. Do not put the umlaut in the singular.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "857b45ccad17862386809a410704ab864adcbd80cd80b4bf38e68aa95167f54d",
+      "bytes": 156672
+    },
+    "de_875a7f0e2c105709a47bcc13": {
+      "file": "de_875a7f0e2c105709a47bcc13.mp3",
+      "text": "das Blatt",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "38920ec654165ffd9da98d7cb8bce9ecb984e4d7e728971250f54ea1536fba52",
+      "bytes": 16128
+    },
+    "de_3cdf2544489e4279a47a3ce3": {
+      "file": "de_3cdf2544489e4279a47a3ce3.mp3",
+      "text": "das Blatt. Das Blatt ist gelb.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "181f9aa7cd7e3b48bef5f54894854fe5ac8fd731750f6563e37b94edaabbad8f",
+      "bytes": 43008
+    },
+    "de_a051693bad680acd4ffe1adc": {
+      "file": "de_a051693bad680acd4ffe1adc.mp3",
+      "text": "Das Blatt ist gelb.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "e39381057834dc9da90d3f94e1a05558337d1fa78d0e460c682187f5c43f966a",
+      "bytes": 22656
+    },
+    "en_63eb35546ea74fa7f9a8b89c": {
+      "file": "en_63eb35546ea74fa7f9a8b89c.mp3",
+      "text": "das Blatt means leaf. die Blätter means leaves. Change a → ä and add -er. Blatt ends in double t. Blätter keeps tt, changes a to ä, and adds er. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "04d9ea19eed1b47e234936e66fd55e5b966a28682817835b69c1ffd5846d330b",
+      "bytes": 309120
+    },
+    "de_6ccc98074f4d777d8a54da3f": {
+      "file": "de_6ccc98074f4d777d8a54da3f.mp3",
+      "text": "Das Blatt fällt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9f7561f249981dcc806c7bb80254fd0ca187f58a01d0139fb7225ff989f39606",
+      "bytes": 19968
+    },
+    "de_8c039d0f598f0157fa0e08e3": {
+      "file": "de_8c039d0f598f0157fa0e08e3.mp3",
+      "text": "die Blätter",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "d7d7933ca65184411a52574b1455f9c3a080fb3126b806ef7513dc76dbae3eed",
+      "bytes": 14976
+    },
+    "en_bc00da0d193508f7a86c0f0e": {
+      "file": "en_bc00da0d193508f7a86c0f0e.mp3",
+      "text": "Singular: das Blatt. Plural: die Blätter. Change a → ä and add -er.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b3a44dcb428655f9514c684417b3da3053f58fc04fb02e3b5d445a054de2e093",
+      "bytes": 118272
+    },
+    "en_bdd372606a48706c19c5528f": {
+      "file": "en_bdd372606a48706c19c5528f.mp3",
+      "text": "For one, say das Blatt; for more than one, say die Blätter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0edb41e942cf51510cac04262fbbdcfea6b461c1bce06caae868c0d3886e1d6c",
+      "bytes": 78720
+    },
+    "en_0e9282f93355348ff2e5f223": {
+      "file": "en_0e9282f93355348ff2e5f223.mp3",
+      "text": "Picture a leaf falling beside a tree. Give its stem two little branches to remind you of the two t letters. The word can also mean a sheet of paper; this wave uses leaf.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c9b7c1858aaa862db473fa712f568eed02f76cbafe131d8ed28b9351fa630e58",
+      "bytes": 185088
+    },
+    "en_b5ba0a25dc256dd767b02389": {
+      "file": "en_b5ba0a25dc256dd767b02389.mp3",
+      "text": "Blatt ends in double t. Blätter keeps tt, changes a to ä, and adds er.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "86fcb7524ebfaeb8290ff908d4df9c8da323809bef86c8c24b8367325726a76d",
+      "bytes": 123648
+    },
+    "de_bfa6244459b522d2a7342a2c": {
+      "file": "de_bfa6244459b522d2a7342a2c.mp3",
+      "text": "das Bauernhaus",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "acbbdfa78bef423d45e098935c0e47719c4b8afb435bdb8a913be1ef5212066b",
+      "bytes": 23808
+    },
+    "de_054e981a97d768ec81cfa9e8": {
+      "file": "de_054e981a97d768ec81cfa9e8.mp3",
+      "text": "das Bauernhaus. Das Bauernhaus ist alt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "d9e78c8ab74e80e0fcb35d8d0cdbdbe8e459a63f62be1311f316dfa9e532ca30",
+      "bytes": 48000
+    },
+    "de_45d8525e9cc284dc244486ab": {
+      "file": "de_45d8525e9cc284dc244486ab.mp3",
+      "text": "Das Bauernhaus ist alt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "ee7f0397454aaa622ca791250803a21a015ff8cd975b44adc2926f0de70bd5d7",
+      "bytes": 31488
+    },
+    "en_11b9408de32b1df8358ce066": {
+      "file": "en_11b9408de32b1df8358ce066.mp3",
+      "text": "das Bauernhaus means farmhouse. die Bauernhäuser means farmhouses. Only the house part changes: Haus → Häuser; keep Bauern unchanged. Keep the n in Bauern. Singular ends haus; plural ends häuser, with ä. Capital B, no space. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d257dcd18f37c10d7ee9f17d10f19812a59195d6638104bcb6ad3630b89ef310",
+      "bytes": 392448
+    },
+    "de_703917dc82dc6ba132393452": {
+      "file": "de_703917dc82dc6ba132393452.mp3",
+      "text": "Das Bauernhaus ist auf dem Bauernhof.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "473fd60f809ab0e3e2b7f16352cb2bf6c872051ceef03f85824f1a1794103f58",
+      "bytes": 39168
+    },
+    "de_2659122fc980c2b2d58a88a9": {
+      "file": "de_2659122fc980c2b2d58a88a9.mp3",
+      "text": "die Bauernhäuser",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b784bb80bfcdaff8303fc1208006ab9be9bf4f91f94530abc21b2f7b1d04a535",
+      "bytes": 23808
+    },
+    "en_76f231a8b1848e1b17dfc139": {
+      "file": "en_76f231a8b1848e1b17dfc139.mp3",
+      "text": "Singular: das Bauernhaus. Plural: die Bauernhäuser. Only the house part changes: Haus → Häuser; keep Bauern unchanged.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "718f0aab3441b6dceab1ca6870270f6822f767b06f63859e6a2363354e226578",
+      "bytes": 158208
+    },
+    "en_74f47e7d829615b1c0493984": {
+      "file": "en_74f47e7d829615b1c0493984.mp3",
+      "text": "For one, say das Bauernhaus; for more than one, say die Bauernhäuser.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "df5612fc454a43095625d29f729404e8b9cdbb72015989af534f190c06669ff9",
+      "bytes": 90240
+    },
+    "en_3b2eacbcdc3f0556cc0e5a19": {
+      "file": "en_3b2eacbcdc3f0556cc0e5a19.mp3",
+      "text": "Picture the farmer’s house beside a field. Bauern + Haus builds one farmhouse word. Haus looks a little like English house.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "eeb547e04b833a7d525b812af653ba4fae5bfc703409c2c6f2603e7add5dcebf",
+      "bytes": 146688
+    },
+    "en_de371f975254d9c7bd038e57": {
+      "file": "en_de371f975254d9c7bd038e57.mp3",
+      "text": "Keep the n in Bauern. Singular ends haus; plural ends häuser, with ä. Capital B, no space.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "556017b999f02ab83e54ac59c173d6e459c25f899f74906851ece0f0a1a16006",
+      "bytes": 135168
+    },
+    "de_2869a21a523f9f5c5cbef51e": {
+      "file": "de_2869a21a523f9f5c5cbef51e.mp3",
+      "text": "der Kürbis",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2efa65b64a6e05bbd62adf28a3e11be1012599da05343ada849a602ff6f70413",
+      "bytes": 18816
+    },
+    "de_16e1316be7fa1f6d0871e16e": {
+      "file": "de_16e1316be7fa1f6d0871e16e.mp3",
+      "text": "der Kürbis. Der Kürbis ist orange.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b0ba60f41e9ee61d503ad2b0a9cd307f10466552bd08fdccbc936d61a4a03d40",
+      "bytes": 50688
+    },
+    "de_18ceb4e6411486c5a27dae9a": {
+      "file": "de_18ceb4e6411486c5a27dae9a.mp3",
+      "text": "Der Kürbis ist orange.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "fc562817e416d6d55634d862706b5d321fbe6f4ebd8c5d19e0ebd29c0ded8317",
+      "bytes": 30336
+    },
+    "en_1aac5dc817f49b85ea1b8072": {
+      "file": "en_1aac5dc817f49b85ea1b8072.mp3",
+      "text": "der Kürbis means pumpkin. die Kürbisse means pumpkins. Add -se to Kürbis: the resulting ending is -isse, with ss. Kürbis has ü, one s, and no final e. Kürbisse has double s and a final e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8c232802ca34437e5a00fbc05357b5f03843e7e4598602d6da3e9e244601a61e",
+      "bytes": 382080
+    },
+    "de_864ccb8da964f0d01fee5b26": {
+      "file": "de_864ccb8da964f0d01fee5b26.mp3",
+      "text": "Der Kürbis ist groß.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9361e78fe4fd983d25ba9f652d9b47c0179434177b5438c85e46e9ab37f9e6ec",
+      "bytes": 30336
+    },
+    "de_4c04f4fee62eb47d3e236bd2": {
+      "file": "de_4c04f4fee62eb47d3e236bd2.mp3",
+      "text": "die Kürbisse",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "3e6ca4f1fd4188039a861b07a1562dd41def6d73c3fd43d9467679ecd9cdb57e",
+      "bytes": 19968
+    },
+    "en_459d0e04df209f3fe9800283": {
+      "file": "en_459d0e04df209f3fe9800283.mp3",
+      "text": "Singular: der Kürbis. Plural: die Kürbisse. Add -se to Kürbis: the resulting ending is -isse, with ss.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a88aeb93db314bd53ec9049fc74646cd9f941f8767513bb70df237f5e47c09ce",
+      "bytes": 167040
+    },
+    "en_d58635e7a210d2c07ffade10": {
+      "file": "en_d58635e7a210d2c07ffade10.mp3",
+      "text": "For one, say der Kürbis; for more than one, say die Kürbisse.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "798f5a974d4322e9fb18e4e432029cdfbb72edfd275fa812e6063b68012b94d4",
+      "bytes": 85248
+    },
+    "en_576ac3b3c9316247d2285b81": {
+      "file": "en_576ac3b3c9316247d2285b81.mp3",
+      "text": "Picture a pumpkin with two seeds above it: the two dots belong over ü. On the pumpkin’s label, check Kürbis before adding more pumpkins.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0c8bf8e57115910f50a39585a2a7d70abd2e4fa1f97aacc1ad9450a58ba13e2e",
+      "bytes": 163200
+    },
+    "en_5b9a9fc86c5893815ede46b9": {
+      "file": "en_5b9a9fc86c5893815ede46b9.mp3",
+      "text": "Kürbis has ü, one s, and no final e. Kürbisse has double s and a final e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2b3d788d76f7815dd536d0e747b5c6358ad68fc3ba6aa1d3c444019204474145",
+      "bytes": 119808
+    },
+    "de_1a804586c12befcf77c74ba1": {
+      "file": "de_1a804586c12befcf77c74ba1.mp3",
+      "text": "der Igel",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1b7ef2bdc211327117dbabd9e590431e6c2750f05ed045c77793094799501ed3",
+      "bytes": 17280
+    },
+    "de_5d9f1f0b0dee6bed12a80bef": {
+      "file": "de_5d9f1f0b0dee6bed12a80bef.mp3",
+      "text": "der Igel. Der Igel ist klein.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "38a53aa285feded87ef34f1ea60a25b6095cf6530d094ee6ee679dc9e7a6e4f4",
+      "bytes": 46848
+    },
+    "de_2afde0ecb6fcc61b408e64d5": {
+      "file": "de_2afde0ecb6fcc61b408e64d5.mp3",
+      "text": "Der Igel ist klein.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "72a1b6b5dd04ea7bc93378f4bce44a09654c62a0596e645d8790120f98279911",
+      "bytes": 24960
+    },
+    "en_2a3d8c2dfb52a95448772104": {
+      "file": "en_2a3d8c2dfb52a95448772104.mp3",
+      "text": "der Igel means hedgehog. die Igel means hedgehogs. The noun spelling does not change; change the article der → die. Start with capital I, then gel. The long first vowel is written with just I: do not add an e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e6558e78d2794288682ff76e2cb8e2c89db710fb7b39c13ec559b56a275c6201",
+      "bytes": 349056
+    },
+    "de_f951368b43c26c08034c62fc": {
+      "file": "de_f951368b43c26c08034c62fc.mp3",
+      "text": "Der Igel hat Stacheln.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "04aeb87dd970e47f18d5bd5f922d75f206c902059290938eb218963260977569",
+      "bytes": 26496
+    },
+    "de_404674950d1905cb99bc6de7": {
+      "file": "de_404674950d1905cb99bc6de7.mp3",
+      "text": "die Igel",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "4515c773b11ab28c100700d89b6a3e6381c4a5c77c0e78bd9d99ca6e0976dce1",
+      "bytes": 13440
+    },
+    "en_b4e929b74eb98bb572363056": {
+      "file": "en_b4e929b74eb98bb572363056.mp3",
+      "text": "Singular: der Igel. Plural: die Igel. The noun spelling does not change; change the article der → die.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b53a337e7be76ad218042b6c7c128b3e4c72539da9146ff5c8e5bcba44675113",
+      "bytes": 146688
+    },
+    "en_2c0c2d0928aa039b1ae9ce34": {
+      "file": "en_2c0c2d0928aa039b1ae9ce34.mp3",
+      "text": "For one, say der Igel; for more than one, say die Igel.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "ddc987b94e51e512a660a85a03e74389e811b697aaeefb3e1d0303815d4ab587",
+      "bytes": 78720
+    },
+    "en_9fc8223614b45a98bbd67eed": {
+      "file": "en_9fc8223614b45a98bbd67eed.mp3",
+      "text": "Picture one hedgehog, then a family of hedgehogs. Their name stays Igel; only der changes to die.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "af6c7c0ad39f6a1a1ef89d10fb62304eca3a1d1daff5eea283431ae0b2328b01",
+      "bytes": 117120
+    },
+    "en_cdbe8509d05878b0a9faaef0": {
+      "file": "en_cdbe8509d05878b0a9faaef0.mp3",
+      "text": "Start with capital I, then gel. The long first vowel is written with just I: do not add an e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "fc26905e12497bd485be43f572f96c612d4c325cf019d5b545f0a98e7fd7dc74",
+      "bytes": 120960
+    },
+    "de_03c337488f7db118a2c2d0c0": {
+      "file": "de_03c337488f7db118a2c2d0c0.mp3",
+      "text": "die Laterne",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a71a9e3c2d5fb8678a76a8efa44e7d3ecacc2e8e6e31f28a134ae62ca22c1835",
+      "bytes": 18816
+    },
+    "de_e378448e0b4f9eb94d153638": {
+      "file": "de_e378448e0b4f9eb94d153638.mp3",
+      "text": "die Laterne. Die Laterne leuchtet.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "496e0ea74d36490676ce36d6db53cee1499d64c96d2c430e5db78a09734530da",
+      "bytes": 50688
+    },
+    "de_91a9155097c759d49bebefa3": {
+      "file": "de_91a9155097c759d49bebefa3.mp3",
+      "text": "Die Laterne leuchtet.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6d0d62a65b30455d49c31c38140400f6867f93c30fd18beddf173fb2fb202647",
+      "bytes": 24960
+    },
+    "en_a7f222af5edcded89e716293": {
+      "file": "en_a7f222af5edcded89e716293.mp3",
+      "text": "die Laterne means lantern. die Laternen means lanterns. Add -n to Laterne. Say and write La-ter-ne. Keep the e between t and r, and the final e. Laternen adds n. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d6b8588b1bfcf18d49814ac97662312563afae59716f0860ff29809671614ad2",
+      "bytes": 346368
+    },
+    "de_2f2b52bf4fdea5602f3ff852": {
+      "file": "de_2f2b52bf4fdea5602f3ff852.mp3",
+      "text": "Die Laterne ist bunt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "0946698ee96a422fc022477fc35ce8c32ef84b407095241a7468f6ad94e27893",
+      "bytes": 28800
+    },
+    "de_79aaf303ea5cf1c23cb1d588": {
+      "file": "de_79aaf303ea5cf1c23cb1d588.mp3",
+      "text": "die Laternen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1db971f1bff093ead349114100ba2c62355147c9827604ba7c4625c47eb2d18b",
+      "bytes": 18816
+    },
+    "en_74fc70d99d232a9a164c038d": {
+      "file": "en_74fc70d99d232a9a164c038d.mp3",
+      "text": "Singular: die Laterne. Plural: die Laternen. Add -n to Laterne.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "6adc67b20fbf2f22a6521e895fe0f6ec3324795007d93160a4f7918877e8da68",
+      "bytes": 104448
+    },
+    "en_2f89d08224ff9267f5b12919": {
+      "file": "en_2f89d08224ff9267f5b12919.mp3",
+      "text": "For one, say die Laterne; for more than one, say die Laternen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "05aab451180c854034fef422a7776a21834ea24215e94bd8bf418ba203775638",
+      "bytes": 89088
+    },
+    "en_5dcf69f88c1b1de9708d53ff": {
+      "file": "en_5dcf69f88c1b1de9708d53ff.mp3",
+      "text": "Picture carrying a bright lantern on an autumn evening. English lantern and German Laterne share many letters; look carefully at the different ending.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d49bdceecdb9df70f878d44f1ad40650f38de94f3383e4983ff63b74c2e104ff",
+      "bytes": 157056
+    },
+    "en_6ec7c9822f448856727ada71": {
+      "file": "en_6ec7c9822f448856727ada71.mp3",
+      "text": "Say and write La-ter-ne. Keep the e between t and r, and the final e. Laternen adds n.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2726014377b6d9def4f5c1cb23a8ba89e3521727e8d4f300290e67e2eab17287",
+      "bytes": 137856
+    },
+    "de_be2f459507f081d39a2bcd1e": {
+      "file": "de_be2f459507f081d39a2bcd1e.mp3",
+      "text": "neblig",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "bdc374abc0d9bc7a6f4db35701a34c022abe1befd694b5656c9a44de3dbd8ee4",
+      "bytes": 14976
+    },
+    "de_d5c4f66c8a325f7e1339a250": {
+      "file": "de_d5c4f66c8a325f7e1339a250.mp3",
+      "text": "neblig. Es ist neblig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2c64d6d3e7deeabcce380e95d50f0408d56dd0943d553878789bb06ad22983c2",
+      "bytes": 34176
+    },
+    "de_33cec77a1f99bb0ca85ca528": {
+      "file": "de_33cec77a1f99bb0ca85ca528.mp3",
+      "text": "Es ist neblig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "f1d819bda3806abd2c41b407d804c22ff21cf2e1c60dfca3aeeeedb4928525b3",
+      "bytes": 23808
+    },
+    "en_fb74301083f55ebf0a11ac72": {
+      "file": "en_fb74301083f55ebf0a11ac72.mp3",
+      "text": "For this lesson, learn neblig: neb-lig. Nebelig is also a correct German spelling, but your assigned word is neblig. The last three letters are lig. Keep lowercase n. In these sentences the describing word comes after ist or sind; use neblig unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "4bd5aa0a00d468387e4f3510f0bf2eec94cdd14767e4fb4d45ee29e8297b40ac",
+      "bytes": 398976
+    },
+    "de_aec66fba85da9af9eff59424": {
+      "file": "de_aec66fba85da9af9eff59424.mp3",
+      "text": "Der Morgen ist neblig.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5026c1fde831770c139364bc0874c63ac3b3be29859341a66db65245fcb70aa9",
+      "bytes": 28800
+    },
+    "en_ebc561b3969190befc6a6205": {
+      "file": "en_ebc561b3969190befc6a6205.mp3",
+      "text": "Picture fog hiding the trees. Nebel means fog; neblig describes foggy weather. Compare Nebel with neblig: the middle e disappears.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f403d488be4336fb0c9030c197230be2322c0bf451cf8d001d7994e7743cf4b3",
+      "bytes": 165888
+    },
+    "en_9d2fc54c36901ed7c9ae4278": {
+      "file": "en_9d2fc54c36901ed7c9ae4278.mp3",
+      "text": "For this lesson, learn neblig: neb-lig. Nebelig is also a correct German spelling, but your assigned word is neblig. The last three letters are lig. Keep lowercase n.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b7218a93773ed24117a5438ae3f08f02e4ee8bf371a47d2fd09519f92fa5b721",
+      "bytes": 204288
+    },
+    "de_a7c3b0707f2767a555312534": {
+      "file": "de_a7c3b0707f2767a555312534.mp3",
+      "text": "trüb",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "cf40de8aa1784c4c45f9cd84a45d7aacd9fe5c01536a33e1e39f2e0bbf46cdf6",
+      "bytes": 13440
+    },
+    "de_5a22cc7757d943040b3f8e53": {
+      "file": "de_5a22cc7757d943040b3f8e53.mp3",
+      "text": "trüb. Der Tag ist trüb.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b73b92fe66f0c1ae7369c96c0552a9f74e342a007c07f8e4d869949f862310de",
+      "bytes": 34176
+    },
+    "de_0317df65f720f3b17697e0f0": {
+      "file": "de_0317df65f720f3b17697e0f0.mp3",
+      "text": "Der Tag ist trüb.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "a6aa7e990ca09048fffcb042aa2f8c939eb482c4c2b1cadce04f75508c92bdce",
+      "bytes": 23808
+    },
+    "en_6f631931d784ead3720f8723": {
+      "file": "en_6f631931d784ead3720f8723.mp3",
+      "text": "Only four letters: t-r-ü-b. Keep ü; no final e. Listen to the rounded ü sound. In these sentences the describing word comes after ist or sind; use trüb unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3e226b62ad9b7c94b9365568f19e0dc3386a3684d4222e23bab9ffaee1808780",
+      "bytes": 312960
+    },
+    "de_4c5cfd6859f11f8a31d59f10": {
+      "file": "de_4c5cfd6859f11f8a31d59f10.mp3",
+      "text": "Das Wetter ist trüb.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "481c64fd1f9b60aa84b6826ea10f6a35fc2321ae7fb882e4d7efd91f8ae18bcf",
+      "bytes": 23808
+    },
+    "en_251e282cdd4cf32ac23244e0": {
+      "file": "en_251e282cdd4cf32ac23244e0.mp3",
+      "text": "Picture a gray, gloomy sky with no bright sunshine. Two little clouds above the word remind you of the two dots on ü. Trüb describes dull weather here, not a sad person.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d742b1d08eb87b2c5a3173fbfc41bb2d2f1e59b9f4484a48e7b809be948719d4",
+      "bytes": 204288
+    },
+    "en_0c87c1c753d8987f2ffc3db0": {
+      "file": "en_0c87c1c753d8987f2ffc3db0.mp3",
+      "text": "Only four letters: t-r-ü-b. Keep ü; no final e. Listen to the rounded ü sound.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "71af61e474bc01c24cda451cc0e75deae7ed3a4122fc8ca2e3458a281ffa9d7f",
+      "bytes": 132864
+    },
+    "de_302c852ee9250369f6189916": {
+      "file": "de_302c852ee9250369f6189916.mp3",
+      "text": "malerisch",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5f58c206fa5cf2b218bd4fcf595749d520d801a85f1be3abdcf0e2b7dcc06049",
+      "bytes": 18816
+    },
+    "de_067063a69dcb54045bc776cb": {
+      "file": "de_067063a69dcb54045bc776cb.mp3",
+      "text": "malerisch. Das Dorf ist malerisch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "563129678d9476b91a07076884c29cfcf1d503be62e74bc3f1ca9c8240fdd7bc",
+      "bytes": 45696
+    },
+    "de_cabe728ed14bcbbe80648685": {
+      "file": "de_cabe728ed14bcbbe80648685.mp3",
+      "text": "Das Dorf ist malerisch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "7d2b5a2cd9d3f9241d997efedf53b00edff26ad303b555d3700fcc65204d29be",
+      "bytes": 27648
+    },
+    "en_86498398dacb4a039034717d": {
+      "file": "en_86498398dacb4a039034717d.mp3",
+      "text": "Build maler + isch. The last four letters are isch; keep the three-letter sch together. In these sentences the describing word comes after ist or sind; use malerisch unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "777320ce836aa10ecec0d455be1f00254dd36242db93005888a7541266e6a839",
+      "bytes": 289920
+    },
+    "de_6e104207269056f696f35add": {
+      "file": "de_6e104207269056f696f35add.mp3",
+      "text": "Die Landschaft ist malerisch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "3a2418a30d863ace8ae493cbc3ac014985c7b2a0c5707a3cb6f3b3d30906cc63",
+      "bytes": 34176
+    },
+    "en_55e7d28d410a422786d2a28e": {
+      "file": "en_55e7d28d410a422786d2a28e.mp3",
+      "text": "Picture a village so beautiful that a painter wants to paint it. Maler means painter; malerisch means picturesque, like a lovely picture.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3691fe4b88ec1aeeef94cddbeba47c109d859c77ff5707896e745a5a661a5b54",
+      "bytes": 158208
+    },
+    "en_53913c45395a7b2682dc57b5": {
+      "file": "en_53913c45395a7b2682dc57b5.mp3",
+      "text": "Build maler + isch. The last four letters are isch; keep the three-letter sch together.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7b5e810d193d77495c385c7b3fabecd327da1cb8112dd2d0ca9734efc3639f4c",
+      "bytes": 108288
+    },
+    "de_db7142b2282beed3257be5c8": {
+      "file": "de_db7142b2282beed3257be5c8.mp3",
+      "text": "regnerisch",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "40a7a1084da3e0d3567a82e4cc435d07e29b25134e9620cace66e0f2df15e7fc",
+      "bytes": 17280
+    },
+    "de_f641f94a27e55b0fcb2e4e14": {
+      "file": "de_f641f94a27e55b0fcb2e4e14.mp3",
+      "text": "regnerisch. Das Wetter ist regnerisch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "18bca31e6e66710842a605870953a00e98b920fe8e286ee9382833ddcaafc65c",
+      "bytes": 45696
+    },
+    "de_62d9ec43777b25c9ef23983d": {
+      "file": "de_62d9ec43777b25c9ef23983d.mp3",
+      "text": "Das Wetter ist regnerisch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b2affb3aacf51f9550657c92a9eb252e30e4571ea9d28031065e312687951415",
+      "bytes": 28800
+    },
+    "en_b3be4cde3ed286feab3dc66b": {
+      "file": "en_b3be4cde3ed286feab3dc66b.mp3",
+      "text": "Write reg-ner-isch. The beginning is regn, not regen. Finish with isch, including sch. In these sentences the describing word comes after ist or sind; use regnerisch unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "895fb60fc93bf409efe396737d630e91764cd2797fa8875a31ece85477edc130",
+      "bytes": 311808
+    },
+    "de_e0b02fc0daffd548dc298c51": {
+      "file": "de_e0b02fc0daffd548dc298c51.mp3",
+      "text": "Der Tag ist regnerisch.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6db9ab9553859ae0351b26db94dc0f0ee0555fac6358ab1515d7054561bee866",
+      "bytes": 28800
+    },
+    "en_6645b35bde66797e734c7f3d": {
+      "file": "en_6645b35bde66797e734c7f3d.mp3",
+      "text": "Picture rain over your village. Regen means rain. Compare Regen and regnerisch: rain becomes the describing word rainy.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b03376c55794814c64e4e6b8560e8899eaa4c8d649196111a16624c6dc688c4b",
+      "bytes": 142848
+    },
+    "en_d5297bb0beb6cf0d923a3a9a": {
+      "file": "en_d5297bb0beb6cf0d923a3a9a.mp3",
+      "text": "Write reg-ner-isch. The beginning is regn, not regen. Finish with isch, including sch.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "870e35b4bf1a6aa53a358f5665aac94d2fcc5de887762bc27ef636ad331ea11f",
+      "bytes": 139008
+    },
+    "de_839357c818e3f56c85c50ee7": {
+      "file": "de_839357c818e3f56c85c50ee7.mp3",
+      "text": "kühl",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "599b2462e96df50ed8924949ee7bb1e6e84712d0c40532676ec41ad13d813fd3",
+      "bytes": 12288
+    },
+    "de_b57b6d879f4e0dbc6d82d611": {
+      "file": "de_b57b6d879f4e0dbc6d82d611.mp3",
+      "text": "kühl. Es ist kühl.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "ad403330cd1e83bb3ef2ea0547637d3859ec5dfdc0a3a4d4f3b462edc9f9e389",
+      "bytes": 27648
+    },
+    "de_bf9cbcd4c9d7598168a34485": {
+      "file": "de_bf9cbcd4c9d7598168a34485.mp3",
+      "text": "Es ist kühl.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "2af1fac78e9c0eb3b3786ff418cc12ad617f2b300c5168c0538a5542f165eb9d",
+      "bytes": 19968
+    },
+    "en_6d4b95245a4ae7dad7cdf793": {
+      "file": "en_6d4b95245a4ae7dad7cdf793.mp3",
+      "text": "Write k-ü-h-l. Keep both the two dots over ü and the silent h after it. In these sentences the describing word comes after ist or sind; use kühl unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "4814df5bcd7c0fc31bdab2b6b606670d4bdbf18fb6400c27409c2aaf59e6fc5d",
+      "bytes": 281088
+    },
+    "de_9cea5347cec1b41659e4cdc9": {
+      "file": "de_9cea5347cec1b41659e4cdc9.mp3",
+      "text": "Der Morgen ist kühl.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "43c4c67ab207e2dc1b49dee90b9341b5c1fcffb5813d2a82efd4b405e1940e95",
+      "bytes": 26496
+    },
+    "en_8134e0854616716e9d37e295": {
+      "file": "en_8134e0854616716e9d37e295.mp3",
+      "text": "Picture a cool autumn morning when you need a light jacket. Kühl is cool in temperature, not English cool meaning awesome.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "90f50a108c7a038a6891d723e179d7919e0a50842c306e329fb274137c72b97f",
+      "bytes": 139008
+    },
+    "en_dea448059bf9ef4f4dfa0f3a": {
+      "file": "en_dea448059bf9ef4f4dfa0f3a.mp3",
+      "text": "Write k-ü-h-l. Keep both the two dots over ü and the silent h after it.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8ffc8e0b4a82ea27b3ff63f902e3fa108d9e3a1ce15e624466bf3ba428e8d73b",
+      "bytes": 109440
+    },
+    "de_b1781b7e80ac525173413ef7": {
+      "file": "de_b1781b7e80ac525173413ef7.mp3",
+      "text": "wasserdicht",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "586a3779f286e93df0c7ae909ad83d054c5eb79b4a0013453a0a7b35f0a85733",
+      "bytes": 16128
+    },
+    "de_42a32201eb0a2356b3f076fa": {
+      "file": "de_42a32201eb0a2356b3f076fa.mp3",
+      "text": "wasserdicht. Die Jacke ist wasserdicht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "40e8791140d965d978c09257748555d3e007bb9f96b6e7d993c4ac091bf61459",
+      "bytes": 45312
+    },
+    "de_0efa712a0bd67058e4182989": {
+      "file": "de_0efa712a0bd67058e4182989.mp3",
+      "text": "Die Jacke ist wasserdicht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "0a81d1f66163f2137200ee5951fa4fd093945aa0aa00755b47846d1233692e21",
+      "bytes": 26496
+    },
+    "en_12309ba5dd6d558588d2a4e1": {
+      "file": "en_12309ba5dd6d558588d2a4e1.mp3",
+      "text": "Build wasser + dicht with no space. Wasser has double s; dicht ends cht. Lowercase w. In these sentences the describing word comes after ist or sind; use wasserdicht unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9f66cf713ee73db1739f6e96935c6647c312f52decb2bbbd01a0814f23e9209e",
+      "bytes": 312960
+    },
+    "de_ecae11ab7d2a6e8847fbf793": {
+      "file": "de_ecae11ab7d2a6e8847fbf793.mp3",
+      "text": "Die Gummistiefel sind wasserdicht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "1c4de96e41399bf15c76c1569bc4058eca2c449cbbccdf02e2ec7086b121b0bf",
+      "bytes": 35328
+    },
+    "en_5174868c830144f244556e58": {
+      "file": "en_5174868c830144f244556e58.mp3",
+      "text": "Picture water rolling off your rain boots. Wasser is water; dicht can mean sealed. Together, wasserdicht means waterproof.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0be83f28cbcbb35939f1e29b7779ccfed08470aa5f31c95c67a92cf10fee63d3",
+      "bytes": 149376
+    },
+    "en_f4e889348698a59fa1f3ce2e": {
+      "file": "en_f4e889348698a59fa1f3ce2e.mp3",
+      "text": "Build wasser + dicht with no space. Wasser has double s; dicht ends cht. Lowercase w.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "570b10778d53496d6ac11bb6dfdfeb4ada468c462e14ed1e538d46b1712fe1e0",
+      "bytes": 137856
+    },
+    "de_2fbc2049e9aebce25c8cdf10": {
+      "file": "de_2fbc2049e9aebce25c8cdf10.mp3",
+      "text": "dicht",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "e9641e838878315f7234025a1f2b4d4997d1df45998d3a3647a97a2e47ac9f41",
+      "bytes": 12288
+    },
+    "de_4af6b1120a9a5147c42d6c7a": {
+      "file": "de_4af6b1120a9a5147c42d6c7a.mp3",
+      "text": "dicht. Der Nebel ist dicht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "0589b7c547a3186a4d527fca49c5f44bcbe5966350760064dd177e58737d65a3",
+      "bytes": 32640
+    },
+    "de_9512d3585cdd7df788816a4a": {
+      "file": "de_9512d3585cdd7df788816a4a.mp3",
+      "text": "Der Nebel ist dicht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "967eabb55fbcac31b86f2cfe0f51313695d0781d4aa024d4b65ccdc92e9d0c26",
+      "bytes": 23808
+    },
+    "en_442c8a66e719e773162b4264": {
+      "file": "en_442c8a66e719e773162b4264.mp3",
+      "text": "Write d-i-c-h-t. Keep cht together; there is no second i or final e. In these sentences the describing word comes after ist or sind; use dicht unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "db449d517ba767d5187e75bfd2796d3b112ac685a96e05630322b94509e16d6f",
+      "bytes": 300288
+    },
+    "de_a15fa21570a27bbdb8936438": {
+      "file": "de_a15fa21570a27bbdb8936438.mp3",
+      "text": "Der Wald ist dicht.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "63968b5e8dad3deb467c92cbf9082de7530879d2fcfe7e3b334b76158fca489e",
+      "bytes": 23808
+    },
+    "en_cec43e3a94c2a2947a39d64f": {
+      "file": "en_cec43e3a94c2a2947a39d64f.mp3",
+      "text": "Picture fog packed so closely that you cannot see the next tree. Dicht means dense here. It can also mean sealed, as in wasserdicht; the sentence tells you which meaning fits.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "99746a33458c0ac839abbb417049e0baf72ad466ec889f3206cd7563d7f17685",
+      "bytes": 197760
+    },
+    "en_90e44aea16d43b4b5f6629fa": {
+      "file": "en_90e44aea16d43b4b5f6629fa.mp3",
+      "text": "Write d-i-c-h-t. Keep cht together; there is no second i or final e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a285b33cf23929550fb2c1aa71d08fb6ce2d407ac23a82ed41cc0eeb50ed381a",
+      "bytes": 114816
+    },
+    "de_3e020d7fa2ff1c79220bc306": {
+      "file": "de_3e020d7fa2ff1c79220bc306.mp3",
+      "text": "der Spaziergang",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "09da3d8fba4b23b366007156dcca6f10701ca098c2f181eaa4ddb2f8687d9d04",
+      "bytes": 21120
+    },
+    "de_db0f1c0fa526b1685d96d205": {
+      "file": "de_db0f1c0fa526b1685d96d205.mp3",
+      "text": "der Spaziergang. Der Spaziergang ist kurz.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "fdcbebf6f5ffa70b631e748f3b4b5a07cf40c0c9cbfaca87c4f4250c5194b891",
+      "bytes": 53376
+    },
+    "de_c02e9bed7eca64a7c1847511": {
+      "file": "de_c02e9bed7eca64a7c1847511.mp3",
+      "text": "Der Spaziergang ist kurz.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "78661f7acd1912cbeee78aaa2b590bce6c0f0bef174b524819aa073a1ce2d9a2",
+      "bytes": 30336
+    },
+    "en_94def023bd2a21681d560a29": {
+      "file": "en_94def023bd2a21681d560a29.mp3",
+      "text": "der Spaziergang means walk / stroll. die Spaziergänge means walks / strolls. Keep Spazier unchanged; Gang → Gänge: a → ä, then add -e. Write Spa-zier-gang. The long ee sound in zier is written ie. In Wir machen einen Spaziergang, masculine ein changes to einen because the walk receives the action. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8bffb37d5e1c31b931a5bc752a69947631939673fab2066e73cd28dbbed1ef7d",
+      "bytes": 515328
+    },
+    "de_47985ac55318876a35b61681": {
+      "file": "de_47985ac55318876a35b61681.mp3",
+      "text": "Wir machen einen Spaziergang.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "168ed867654b1b83069a95fe680f792e6a9731f5dae9de8be79d735ec53ffe06",
+      "bytes": 31488
+    },
+    "de_47d5f1fb4120554a39a5660f": {
+      "file": "de_47d5f1fb4120554a39a5660f.mp3",
+      "text": "die Spaziergänge",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "9ff56c1ae9fa7f4eeb3c47b431e3ade022db41218836415922b52792025d66f8",
+      "bytes": 19968
+    },
+    "en_60fe26943bad4ddeca19cee3": {
+      "file": "en_60fe26943bad4ddeca19cee3.mp3",
+      "text": "Singular: der Spaziergang. Plural: die Spaziergänge. Keep Spazier unchanged; Gang → Gänge: a → ä, then add -e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0a8c3a0b685a98c5e1cd6c40e139e585876f3e5a6f4399590bcfc30716071a2e",
+      "bytes": 163200
+    },
+    "en_326eb79b9e49e2981aa08d61": {
+      "file": "en_326eb79b9e49e2981aa08d61.mp3",
+      "text": "For one, say der Spaziergang; for more than one, say die Spaziergänge.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c5cf68fc2933eca4fd8fcf9146e590552540f5e2e8ada4375103d0569c379738",
+      "bytes": 89088
+    },
+    "en_7f222e93d246d656cca1aabb": {
+      "file": "en_7f222e93d246d656cca1aabb.mp3",
+      "text": "Picture a relaxed stroll around your village, rather than a long hike. Spaziergang is the walk; Wanderung is the hike. Gang can mean a walk or going.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3e47e66983b542ed51d5bee020f09f0347b94e20277365329f9c6b1ed36431ea",
+      "bytes": 181248
+    },
+    "en_11c7be363b127db205d6b634": {
+      "file": "en_11c7be363b127db205d6b634.mp3",
+      "text": "Write Spa-zier-gang. The long ee sound in zier is written ie. In Wir machen einen Spaziergang, masculine ein changes to einen because the walk receives the action.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "138c6a6d4870e32d7da51ed95fb8eb247e701b0693e366e0e3143518d3ff6205",
+      "bytes": 227328
+    },
+    "de_8380898968a49a13ba4c1e25": {
+      "file": "de_8380898968a49a13ba4c1e25.mp3",
+      "text": "die Ernte",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "b0559fdf9f935fea2456d25fcd05346527c956ab89957643731ee8303a330721",
+      "bytes": 16128
+    },
+    "de_fcedf8f5e552381656f2ab8f": {
+      "file": "de_fcedf8f5e552381656f2ab8f.mp3",
+      "text": "die Ernte. Die Ernte ist gut.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "407712727965342bb14597468771d0287965f2085f14c963d5bcba8582621efc",
+      "bytes": 44160
+    },
+    "de_1a3d755f31d4aa53e1001d94": {
+      "file": "de_1a3d755f31d4aa53e1001d94.mp3",
+      "text": "Die Ernte ist gut.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "4331c47f089c6b7d64e3b5164ee06863ad669014744c8c2c8a69d4f30258c43d",
+      "bytes": 24960
+    },
+    "en_bb26b729eff2e909f13eed5d": {
+      "file": "en_bb26b729eff2e909f13eed5d.mp3",
+      "text": "die Ernte means harvest. die Ernten means harvests. Add -n to Ernte. Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5e0641cee2a6dbcbfb309973cd51c5a0ea52525713275c08452df5f14ec9ff5b",
+      "bytes": 314496
+    },
+    "de_6ce1e88d8eec93ce5183b34a": {
+      "file": "de_6ce1e88d8eec93ce5183b34a.mp3",
+      "text": "Die Ernte ist im Herbst.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "3a3649e3296d204ce5dc5e30a9dd0b78f819e5bc7c40054fcaeab9ae7b61951c",
+      "bytes": 28800
+    },
+    "de_0da1e0f099b716a15c73f54a": {
+      "file": "de_0da1e0f099b716a15c73f54a.mp3",
+      "text": "die Ernten",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "647d25a95a86fb5a0a4cdd74ce263ee2236acc54d305dd125d70697399fec7d1",
+      "bytes": 17280
+    },
+    "en_1a521535741aaea9953663c8": {
+      "file": "en_1a521535741aaea9953663c8.mp3",
+      "text": "Singular: die Ernte. Plural: die Ernten. Add -n to Ernte.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cc20c2818075c24936d76398dee892e61d3de0d0be481efc89650643ddf4818c",
+      "bytes": 95616
+    },
+    "en_997bde3f13c45b1376ee8abc": {
+      "file": "en_997bde3f13c45b1376ee8abc.mp3",
+      "text": "For one, say die Ernte; for more than one, say die Ernten.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2563e9a0535cf907f0210e7eb84234a67161c3feb4103ef5aca3db3beea3f44f",
+      "bytes": 80256
+    },
+    "en_16431d77df950ae24648cfb0": {
+      "file": "en_16431d77df950ae24648cfb0.mp3",
+      "text": "Picture gathering pumpkins and crops from the field. That harvest is die Ernte. The same Ernte starts Erntedankfest.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "fd16bb3723bf74a23d074f31d36cd58cf259bd6ea5432538b382e75eb4c396fa",
+      "bytes": 142848
+    },
+    "en_0df3e7db17a95a11292e6211": {
+      "file": "en_0df3e7db17a95a11292e6211.mp3",
+      "text": "Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d5aa7ca2811abf79e1780c9aac2101ce005a74fb19904225274df115b7b753a2",
+      "bytes": 127488
+    },
+    "de_e1843aa5eaa84978c010ae7a": {
+      "file": "de_e1843aa5eaa84978c010ae7a.mp3",
+      "text": "der Drachen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "aba11cc5b7084e34ba955463e4e0e4c296e88a020d4bc6f0decf95ee98d3a13d",
+      "bytes": 16128
+    },
+    "de_76f2525167e584b9d2b117c6": {
+      "file": "de_76f2525167e584b9d2b117c6.mp3",
+      "text": "der Drachen. Der Drachen fliegt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "43d34c98688de687d5af0015f2b2dd7f3146c5c66685befd98c1145a922d717c",
+      "bytes": 41856
+    },
+    "de_23495d047a0f0bdfc4672cb8": {
+      "file": "de_23495d047a0f0bdfc4672cb8.mp3",
+      "text": "Der Drachen fliegt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "6ba5c4e9b4a183bb12f38f24a60957defc452437302cf3bb052e6978fbeea2f4",
+      "bytes": 23808
+    },
+    "en_24b0f6f12d24c978bb6c7948": {
+      "file": "en_24b0f6f12d24c978bb6c7948.mp3",
+      "text": "der Drachen means kite. die Drachen means kites. The noun spelling stays Drachen; change der → die for the plural. For a kite, write Dra-chen with ch and a final n. Both one kite and several kites keep that n. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "23fd4abd2103c72567b85707dcb555b11d84f4b03ef111bb4494fea7d81e4e64",
+      "bytes": 373248
+    },
+    "de_7f3cbb4f664e660f6c747fa7": {
+      "file": "de_7f3cbb4f664e660f6c747fa7.mp3",
+      "text": "Der Drachen ist bunt.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "25f4290fe12a03fb720a7d54b7f4a3fca65993da201d28a865c174a7167f3ec8",
+      "bytes": 27648
+    },
+    "de_aafc8ce8582b0c2d0cec11a2": {
+      "file": "de_aafc8ce8582b0c2d0cec11a2.mp3",
+      "text": "die Drachen",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "30cf29dea07b3d2a692574ee9842467dea6145784dd96844c30061d76072432a",
+      "bytes": 16128
+    },
+    "en_65567019194308887cb9acd6": {
+      "file": "en_65567019194308887cb9acd6.mp3",
+      "text": "Singular: der Drachen. Plural: die Drachen. The noun spelling stays Drachen; change der → die for the plural.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0bf0abe04ef2e8de8457e530ba3484db87b03e4a31ab199bad021c6e5c8c335d",
+      "bytes": 158208
+    },
+    "en_76f7618cb41f160d33eec083": {
+      "file": "en_76f7618cb41f160d33eec083.mp3",
+      "text": "For one, say der Drachen; for more than one, say die Drachen.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "42913c8f5f2e8900b261109162b025ae81285a4ffe7b9a1eb6a9b5864512bc45",
+      "bytes": 82560
+    },
+    "en_72f9b0c01f498a2d371adc51": {
+      "file": "en_72f9b0c01f498a2d371adc51.mp3",
+      "text": "Picture a colorful kite on a string in the wind. Keep its tail: the final n in Drachen. A mythical dragon is der Drache, without that final n in its singular name.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "0498af3fd64e2ee23897580da6ac47014d6519ce027f99109f1ee55bbfdce9e2",
+      "bytes": 193920
+    },
+    "en_528e5052afa3307bb868c1da": {
+      "file": "en_528e5052afa3307bb868c1da.mp3",
+      "text": "For a kite, write Dra-chen with ch and a final n. Both one kite and several kites keep that n.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "20d7b3c71accfee81d1be863d5ebbedac9a3476ddbf92f0ba464f1772e762e19",
+      "bytes": 142848
+    },
+    "de_7494f413c80641955623c9b8": {
+      "file": "de_7494f413c80641955623c9b8.mp3",
+      "text": "die Gummistiefel",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "115f36081f7c9bd17ddf64d358cbc6f31f5d577393b26e8cab5f8cc49521448d",
+      "bytes": 22656
+    },
+    "de_9bb58fabf7900df66ee8ffe5": {
+      "file": "de_9bb58fabf7900df66ee8ffe5.mp3",
+      "text": "die Gummistiefel. Die Gummistiefel sind gelb.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5003d928723a12ecbe627084707ce3ee3d8255d4a644564f5d88344f49eb347b",
+      "bytes": 50688
+    },
+    "de_bc23b90b8961524dfcf324e8": {
+      "file": "de_bc23b90b8961524dfcf324e8.mp3",
+      "text": "Die Gummistiefel sind gelb.",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "5f7b3d2bb89914bf28bead747e00ba959e3f0d5f5d72d72ee9e05e77bff8082f",
+      "bytes": 28800
+    },
+    "en_7280dc34538fe04597da9062": {
+      "file": "en_7280dc34538fe04597da9062.mp3",
+      "text": "der Gummistiefel means one rain boot. die Gummistiefel means rain boots / rubber boots. The noun spelling stays the same. One: der Gummistiefel. More than one: die Gummistiefel. Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. With several boots use sind, not singular ist. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "dbea36adb945154c2896c2a67a07d3406416a9304b71cb6c5330bc0cf8201bf9",
+      "bytes": 461568
+    },
+    "en_99261c921b06a1770c15c55a": {
+      "file": "en_99261c921b06a1770c15c55a.mp3",
+      "text": "Singular: der Gummistiefel. Plural: die Gummistiefel. The noun spelling stays the same. One: der Gummistiefel. More than one: die Gummistiefel.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b3bd46a7391d2017fd441317b5839cb2370bed253de62f41100f8208449f136e",
+      "bytes": 174720
+    },
+    "en_b73fe1061cd0c5cca8479b4a": {
+      "file": "en_b73fe1061cd0c5cca8479b4a.mp3",
+      "text": "For one, say der Gummistiefel; for more than one, say die Gummistiefel.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "677b5dd3a15e275fcb9c5f12791f21e079cb17b96c4bbd4a0ae472d59bba57ad",
+      "bytes": 97920
+    },
+    "en_3705323bc67dff54f94483ef": {
+      "file": "en_3705323bc67dff54f94483ef.mp3",
+      "text": "Picture a pair of rubber boots splashing in a puddle. Gummi means rubber; Stiefel means boot. Your lesson gives the plural: die Gummistiefel. One boot is der Gummistiefel.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cff22d34362f8c0437bd5302e422eceb73c27dc48c7e2d9232bd607d81bb663c",
+      "bytes": 205440
+    },
+    "en_4e828b93cc204fca83696269": {
+      "file": "en_4e828b93cc204fca83696269.mp3",
+      "text": "Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. With several boots use sind, not singular ist.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "4bc0b9b6c055259eb9d1f61a92faf22e76f3c4d93dc5a1f0a378d54c97117c07",
+      "bytes": 172416
+    },
+    "de_0fdee77b77a921a155063f61": {
+      "file": "de_0fdee77b77a921a155063f61.mp3",
+      "text": "der Gummistiefel",
+      "voice_id": "eve",
+      "language": "de",
+      "sha256": "bba4a9752857b93146fe6d99b378d3df7a02418a87dabc75b9932294b2d5c681",
+      "bytes": 22656
+    },
+    "en_d99a6dfadb411f7b07dbdf86": {
+      "file": "en_d99a6dfadb411f7b07dbdf86.mp3",
+      "text": "Picture the scene, cover the German, and write das Oktoberfest. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "448c580fd17a24130f61e4694fb3aae7ca6e8b7f8e588e3e24b161ecb56a4e56",
+      "bytes": 118656
+    },
+    "en_d5dbb17dd973eeb9fb9cd917": {
+      "file": "en_d5dbb17dd973eeb9fb9cd917.mp3",
+      "text": "Picture the scene, cover the German, and write das Erntedankfest. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cf129fac6d1797345fb6d23db3ed4845cfbbc2c0ca29b9720ec32d995a33ca5b",
+      "bytes": 117120
+    },
+    "en_f7377500775f768538bfe1c6": {
+      "file": "en_f7377500775f768538bfe1c6.mp3",
+      "text": "Picture the scene, cover the German, and write die Wanderung. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "9509409f2881b1cd11b5f84f268997662d24a8e4be888f8ca186553efc041dc6",
+      "bytes": 105600
+    },
+    "en_7565d2c005bcb9108b206fd0": {
+      "file": "en_7565d2c005bcb9108b206fd0.mp3",
+      "text": "Picture the scene, cover the German, and write der Baum. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a56e0bf33cb0b5dc62cdf680da9d8a4a008b601ceb7f82f6348e4e6c00220a73",
+      "bytes": 105600
+    },
+    "en_188495974d0959cf25a39ac7": {
+      "file": "en_188495974d0959cf25a39ac7.mp3",
+      "text": "Picture the scene, cover the German, and write das Blatt. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "50335e9f038d64cd09cf6d6df0c6c53d2c4652ead21c131d8f77dd39bf701fe3",
+      "bytes": 101760
+    },
+    "en_8ebf2527fcf563ff78de8037": {
+      "file": "en_8ebf2527fcf563ff78de8037.mp3",
+      "text": "Picture the scene, cover the German, and write das Bauernhaus. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "dd2de082ccc1c69e5a133aabf08c3e3955a9344225017902733a3998af753239",
+      "bytes": 104448
+    },
+    "en_59770f2e39d9bed68f247e9a": {
+      "file": "en_59770f2e39d9bed68f247e9a.mp3",
+      "text": "Picture the scene, cover the German, and write der Kürbis. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cae9eddb72a1cb5b1da75e656846b6391d79fae46baa2f7855f84e612d656858",
+      "bytes": 103296
+    },
+    "en_e8137232b76d47d5d9d6d9af": {
+      "file": "en_e8137232b76d47d5d9d6d9af.mp3",
+      "text": "Picture the scene, cover the German, and write der Igel. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "70223a04543bb95543fc7cd36f0aa36fac2ca26bf294df057da3b5b8f41e208b",
+      "bytes": 109824
+    },
+    "en_bfc488304279443567f30dd1": {
+      "file": "en_bfc488304279443567f30dd1.mp3",
+      "text": "Picture the scene, cover the German, and write die Laterne. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f86e85fb06d125d4b4682f84e5939558f280b5b4962014ea99f23d44d9dce3de",
+      "bytes": 112128
+    },
+    "en_269a22cdb1da48dc9ef1b214": {
+      "file": "en_269a22cdb1da48dc9ef1b214.mp3",
+      "text": "Picture the scene, hide the word, and write neblig from memory. Check it letter by letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "630b52a10ecb4be7a116700a16cd8eddf04f2950b831f1bf382a0f5d312ea9dc",
+      "bytes": 107136
+    },
+    "en_c63ca724fdb94b1d69b89278": {
+      "file": "en_c63ca724fdb94b1d69b89278.mp3",
+      "text": "Picture the scene, hide the word, and write trüb from memory. Check it letter by letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "864670035b50be7ff384f41daebd39159d0e6ebad8766421a0baccb885914480",
+      "bytes": 103296
+    },
+    "en_35d37a5475c4de90781a33cc": {
+      "file": "en_35d37a5475c4de90781a33cc.mp3",
+      "text": "Picture the scene, hide the word, and write malerisch from memory. Check it letter by letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "6edee0b7c1742550a79f11390fe79b23cab7a704b901d11964f7206f58bfaeae",
+      "bytes": 109440
+    },
+    "en_b74266bc9b4838b22aab1e41": {
+      "file": "en_b74266bc9b4838b22aab1e41.mp3",
+      "text": "Picture the scene, hide the word, and write regnerisch from memory. Check it letter by letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "79afc6e2d5b7e6c75ce3ec467a356dbc73e074feb173fe763fa5564f93cf552e",
+      "bytes": 103296
+    },
+    "en_512bdf7ebc26e08ef7324588": {
+      "file": "en_512bdf7ebc26e08ef7324588.mp3",
+      "text": "Picture the scene, hide the word, and write kühl from memory. Check it letter by letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1a3ab2a2426a2d4a4f53f5582b7e01982ff3fdcdbbd873dc4c94623473b7af40",
+      "bytes": 112128
+    },
+    "en_8f56d62a664357db14827958": {
+      "file": "en_8f56d62a664357db14827958.mp3",
+      "text": "Picture the scene, hide the word, and write wasserdicht from memory. Check it letter by letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2ffa6d33429e244b3f153c080f131fcbd3e6b0f31271b80bc5c906abbe87a211",
+      "bytes": 102912
+    },
+    "en_b78283f09c1371b5e1d2694a": {
+      "file": "en_b78283f09c1371b5e1d2694a.mp3",
+      "text": "Picture the scene, hide the word, and write dicht from memory. Check it letter by letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "134c13bb4f68e426ceef0cba9a68f6dfb46feb592b360376df9de2c80a75d169",
+      "bytes": 86400
+    },
+    "en_7a38524e8eaf0d54d875a9e7": {
+      "file": "en_7a38524e8eaf0d54d875a9e7.mp3",
+      "text": "Picture the scene, cover the German, and write der Spaziergang. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "42b7f8277ad06ae10e246ccfd55cfeca3aafc053a76ffa070e8d570f3ac534ed",
+      "bytes": 103296
+    },
+    "en_6380ca1ee1229a38d4aee888": {
+      "file": "en_6380ca1ee1229a38d4aee888.mp3",
+      "text": "Picture the scene, cover the German, and write die Ernte. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "e116065cd22aeb94b95a4de6e9835e1e87a20f2720b2d3ad8f5e2a8dd6440402",
+      "bytes": 104448
+    },
+    "en_e894b183fcc5044bf5e654fc": {
+      "file": "en_e894b183fcc5044bf5e654fc.mp3",
+      "text": "Picture the scene, cover the German, and write der Drachen. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2c9b41c95d398f892d449ad6d4a767975121cd88bc79c07c6cfbf4ae5d9c9bff",
+      "bytes": 108288
+    },
+    "en_8d102c5d6e195d19f19b5c23": {
+      "file": "en_8d102c5d6e195d19f19b5c23.mp3",
+      "text": "Picture the scene, cover the German, and write die Gummistiefel. Check every letter and the article.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "22cb7d01a010613850a490b984ee5ead4d4d2be7b346d1f64ed98bce71a0ed62",
+      "bytes": 105600
     }
   },
   "voice_id": "eve"

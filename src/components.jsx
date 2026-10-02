@@ -25,6 +25,8 @@ import { showNounComparison } from "./noun-forms.js";
 import audioCatalog from "./audio-catalog.json";
 import { audioKey } from "./audio-lines.js";
 import { playRecording, stopRecording } from "./recorded-audio.js";
+import { learningTargets, targetKey } from './scoring.js';
+import { firstWordContent } from './first-word-content.js';
 
 export function Primary({ children, ...props }) {
   return (
@@ -1177,8 +1179,16 @@ export function Progress({ state, onExport, onImport, onReset, damaged }) {
                     <Speech text={`${w.german}. ${w.example}`} />
                   </div>
                   <MemoryCard word={w} />
+                  {state.learning && <section aria-label="Review all taught forms and examples">{firstWordContent(w).map((page, i) => <article key={i}>
+                    <h4>{page.label}</h4><p>{page.prompt}</p><strong lang="de">{page.answer}</strong><p>{page.translation}</p>
+                    <Speech text={page.answer} /><p>{page.explanation}</p><Speech text={page.explanation} lang="en-US" label="Hear English explanation" />
+                  </article>)}</section>}
                   <ul className="skill-list">
-                    {requiredSkills(w).map((k) => (
+                    {state.learning ? learningTargets([w]).map(q => {
+                      const target = state.learning.targets[targetKey(q)];
+                      return <li key={targetKey(q)}><span>{SKILL_LABELS[q.type]}{['usage','form'].includes(q.type) ? ` · ${q.variant + 1}` : ''}</span>
+                        <span aria-label={`${target.steps} of 2 spaced successes`}>{[0,1].map(i => <span key={i} className={`skill-dot ${target.steps > i ? 'filled' : ''}`} />)}</span></li>;
+                    }) : requiredSkills(w).map((k) => (
                       <li key={k}>
                         <span>{SKILL_LABELS[k]}</span>
                         <span
@@ -1196,14 +1206,15 @@ export function Progress({ state, onExport, onImport, onReset, damaged }) {
                     <li>
                       <span>Recall after 8 hours</span>
                       <span>
-                        {p.delayed ? <Check size={17} /> : "Still to check"}
+                        {(state.learning ? state.learning.verification[w.id].delayed : p.delayed) ? <Check size={17} /> : "Still to check"}
                       </span>
                     </li>
                   </ul>
-                  <p className="fine">
+                  {state.learning && <p className="fine">Final spelling: {state.learning.verification[w.id].finalSpelling ? 'verified' : 'still to check'} · Final sentence/form: {state.learning.verification[w.id].finalTransfer ? 'verified' : 'still to check'}</p>}
+                  <p className="fine">{state.learning ? 'Every listed target needs two spaced independent successes. An independent mistake removes at most one evidence step on that target. Guided practice and copied repairs do not earn evidence.' : <>
                     Two unaided correct answers, at least three questions apart,
                     are needed for each skill. A mistake resets that skill’s
-                    two-answer check.
+                    two-answer check.</>}
                   </p>
                 </div>
               )}

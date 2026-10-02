@@ -5,7 +5,7 @@
 1. Send clear photos or the teacher's list. Mark exactly which entries belong to the new wave.
 2. Give the wave a name and an exact deadline, including time and time zone. For example: “Wave 2 — school life, Monday October 5, 2026 at 9:00 a.m., Miami.” Avoid “next Monday” in saved lesson files.
 3. Have the assistant prepare and review the lesson, exercises, and German/English recordings. Review uncertainties rather than silently guessing.
-4. Download an all-waves backup before adding the new lesson. Use **Import lesson file**, not **Restore backup**. Import adds a wave; restore replaces a library.
+4. Download an all-waves backup before adding the new lesson. For bundled Autumn Wave 2, use **Add Wave 2 · Autumn adventure** on the waves screen. Otherwise use **Import lesson file**, not **Restore backup**. Adding/importing preserves the library; restore replaces it.
 5. Open the new wave and check its title, due date, word count, first card, and sound. Wait for synchronization and offline readiness before switching devices or leaving home.
 6. Let the student follow the tutor. Use the parent dashboard to check independent accuracy and recurring errors, not just minutes or rewards.
 
@@ -68,7 +68,9 @@ Use **Download format example** for the current JSON structure. A lesson contain
 - The importer accepts 1–90 words per wave, up to 50 waves, and files up to 500 KB. These are technical limits, not ideal session sizes.
 - JSON validation checks structure, not German accuracy or pedagogical quality.
 
-**Important: a JSON import alone does not create audio.** The current recording collector is wired to the bundled Wave 1 dataset. For a new wave, the maintainer must include that wave's spoken lines in the collection, generate them with the existing Grok Voice batch script, rebuild the audio catalog/offline bundle, and test playback. There is no paid speech request during study. Unchanged recordings are reused. Keep API keys outside the project and browser.
+**Important: a JSON import alone does not create audio.** The recording collector includes bundled Wave 1 and Autumn Wave 2. For another wave, the maintainer must include that wave's spoken lines in the collection, generate them with the existing Grok Voice batch script, rebuild the audio catalog/offline bundle, and test playback. There is no paid speech request during study. Unchanged recordings are reused. Keep API keys outside the project and browser.
+
+New learning-linked waves opt in with `studyVersion: 2` on every word. Their reviewed targets and answers are frozen into saved progress. Every usage and form variant has its own evidence. Include `nounForms` (singular, plural, English meanings, rule) for explicit comparison cards, including nouns supplied in the plural. Do not opt an ongoing legacy wave into new scoring by editing its saved words. The bundled Wave 2 has a reproducible import file: run `node scripts/prepare-wave-two.mjs` to regenerate `wave-2-autumn.json` from `src/wave-two.js`.
 
 For corrections, retain recordings needed by older tabs and unchanged imported lessons. Do not delete old clips as part of a routine content edit.
 

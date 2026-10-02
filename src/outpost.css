@@ -1,6 +1,31 @@
 .game-shell {
   background: #eff3e8;
 }
+.village-world { min-height: 300px; }
+.village-v2 .world-caption { z-index: 8; max-width: calc(100% - 36px); font-size: 15px; }
+.village-v2 .world-caption strong { font-size: 19px; }
+.village-stage { clip-path: inset(0); }
+.village-stage.stage-0 { opacity: .15; filter: grayscale(1); }
+.village-stage.stage-1 { clip-path: inset(80% 0 0); }
+.village-stage.stage-2 { clip-path: inset(60% 0 0); }
+.village-stage.stage-3 { clip-path: inset(40% 0 0); }
+.village-stage.stage-4 { clip-path: inset(20% 0 0); }
+.historical-outline { opacity: .28; filter: grayscale(1); outline: 2px dashed #fff; outline-offset: -3px; }
+.village-repairs { font-size: 16px; max-height: 190px; overflow: auto; padding: 12px; border: 2px dashed #b58336; }
+.village-repairs ul { margin: 8px 0 0; padding-left: 24px; }
+.village-mission-choices { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+.village-mission-choices button { min-height: 48px; padding: 10px 16px; font: inherit; }
+.wave-study input { font-size: 24px; min-height: 54px; width: 100%; margin: 12px 0; }
+.wave-study button { min-height: 48px; }
+.car-mode .wave-study p, .car-mode .wave-study label { font-size: 21px; line-height: 1.55; }
+.car-mode .wave-study h1 { font-size: clamp(32px, 5vw, 50px); overflow-wrap: anywhere; }
+.car-mode .wave-study .first-word-examples strong { font-size: 26px; line-height: 1.4; }
+.wave-study .guided-answer { font-size: 27px; padding: 16px; background: #e6f4c3; }
+.village-categories { padding: 16px 0; font-size: 16px; }
+.village-categories summary { cursor: pointer; min-height: 36px; }
+.village-categories dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; }
+.village-categories dd { margin: 0; }
+@media (prefers-reduced-motion: reduce) { .village-v2 * { animation: none !important; transition: none !important; } }
 .game-shell .topbar {
   background: #183c30;
   color: #fff;

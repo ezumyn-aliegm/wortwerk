@@ -1,6 +1,6 @@
 # Wortwerk project status
 
-Updated September 30, 2026. Internal family-use application.
+Updated October 1, 2026. Internal family-use application.
 
 ## Records
 
@@ -17,7 +17,9 @@ Source baseline: commit `1cfa770f4c9b67df7511ebaea57a6be7f72528bf`, annotated ta
 
 Last recorded deployed image: `wortwerk:mnemonics-20260926`. Deployment was not re-audited on September 30. New local card/educator corrections are not deployed. No student progress was read or changed during this management update.
 
-The village improvements remain a proposal. The family intends to trigger work with the next vocabulary set and timeline. No new content, start date or deadline has been supplied. Wave 1's historical deadline was September 28, 2026, 9:00 a.m., America/New_York; passing that date does not establish completion.
+The family triggered the next wave on October 1: 20 autumn words, with das Bauernhaus and Monday October 5, 2026, 9:00 a.m. America/New_York explicitly confirmed. Wave 2 is ready locally with independent educator review, full introductory/review cards, 199 additional recordings (520 cataloged clips total), separate import/installation, learning-linked village upgrades, adaptive per-target practice and delayed/final verification. See [release contract](WAVE-2-RELEASE.md). All 164 tests and the production/offline build pass; browser checks verified teaching, noun comparisons, German/English playback controls, wrong-answer correction, draft persistence on reload, per-word evidence/review and the parent dashboard. Pronunciation quality/student outcomes are not certified. New source release tag: `wave-2-2026-10-01` (publication tracked in Notion/Linear).
+
+Wave 1 keeps its content, legacy scoring and progress. No live container replacement or reset was performed. Deployment still requires fresh pause/sync/closed-tabs confirmation. Wave 1's historical deadline was September 28, 2026, 9:00 a.m., America/New_York; passing that date does not establish completion. Local candidate preview: http://127.0.0.1:4189/ while the server is running.
 
 | Work | Linear | State |
 |---|---|---|
@@ -25,9 +27,9 @@ The village improvements remain a proposal. The family intends to trigger work w
 | WW-02: version and publish baseline | [EZU-52](https://linear.app/ezumyn/issue/EZU-52) | Done: baseline and tag published; remote references verified |
 | WW-03: Fahrradtrial article clarification | [EZU-53](https://linear.app/ezumyn/issue/EZU-53) | Awaiting teacher clarification |
 | WW-04: pronunciation and observed lesson | [EZU-54](https://linear.app/ezumyn/issue/EZU-54) | Open |
-| WW-05: next vocabulary wave | [EZU-55](https://linear.app/ezumyn/issue/EZU-55) | Waiting for words and exact deadline |
+| WW-05: next vocabulary wave | [EZU-55](https://linear.app/ezumyn/issue/EZU-55) | Wave 2 ready locally; live release waits for safe window |
 | WW-06: supported transfer exercises | [EZU-56](https://linear.app/ezumyn/issue/EZU-56) | Optional backlog |
-| WW-09: learning-linked village improvements | [EZU-57](https://linear.app/ezumyn/issue/EZU-57) | Proposed; waiting for next-wave trigger |
+| WW-09: learning-linked village improvements | [EZU-57](https://linear.app/ezumyn/issue/EZU-57) | Implemented/tested for Wave 2 only; not live |
 
 ## Version and release rules
 

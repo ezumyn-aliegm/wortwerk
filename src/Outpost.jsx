@@ -20,6 +20,7 @@ export function BuildingSprite({ id, className = "" }) {
 }
 
 export function MissionHUD({ game, locked, onOpen, onBuild, learning }) {
+  if (learning?.scoringVersion === 2) return <VillageView game={game} learning={learning} compact locked={locked} onOpen={onOpen} />;
   game ||= freshGame();
   const status = gameStatus(game);
   const selected = status.selectedBuild;
@@ -77,7 +78,7 @@ export function MissionHUD({ game, locked, onOpen, onBuild, learning }) {
   );
 }
 
-export default function Outpost({
+function LegacyOutpost({
   game,
   onSelect,
   onBuild,
@@ -221,4 +222,46 @@ export default function Outpost({
       </div>
     </section>
   );
+}
+
+const STAGES = {
+  cabin: ['Platform', 'Walls', 'Roof', 'Chimney and windows', 'Furnished and lit'],
+  lookout: ['Base', 'First deck', 'Tall tower', 'Covered lookout', 'Beacon'],
+  greenhouse: ['Beds', 'Frame', 'Glass roof', 'Growing plants', 'Full garden'],
+  library: ['Foundation', 'Walls', 'Roof', 'Shelves', 'Filled and lit'],
+  portal: ['Plinth', 'Pillars', 'Frame', 'Crystals', 'Active portal'],
+};
+
+export function VillageView({ game, learning, compact, locked, checkpoint, onOpen, onContinue, active, onPractice, onWorkshop }) {
+  const status = gameStatus(game);
+  return <section className={compact ? 'mission-hud village-v2' : 'outpost-screen village-v2'} aria-label="Learning village">
+    <div className={compact ? '' : 'outpost-main'}>
+      <div className="outpost-world village-world" role="img" aria-label={`Learning and village: ${learning.percent} percent. ${BUILDINGS.map((b) => `${b.label} level ${status.levels[b.id]}`).join(', ')}`}>
+        <img className="outpost-island" src={island} alt="" />
+        {BUILDINGS.map((b) => <React.Fragment key={b.id}>
+          {status.historicalLevels[b.id] > status.levels[b.id] && <BuildingSprite id={b.id} className={`world-building historical-outline plot-${b.id}`} />}
+          <BuildingSprite id={b.id} className={`world-building village-stage stage-${status.levels[b.id]} plot-${b.id}`} />
+        </React.Fragment>)}
+        <div className="world-caption"><strong>{learning.percent}% learned · {learning.percent}% built</strong><span>{status.allBuilt ? 'All targets verified · portal active' : 'Independent recall builds automatically'}</span></div>
+      </div>
+      <div className={compact ? 'mission-inventory' : 'outpost-workbench'}>
+        <h2>{status.allBuilt ? 'Your village is complete.' : `${status.selectedBuild.label}: next upgrade at ${status.nextThreshold}%`}</h2>
+        {!status.allBuilt && <progress className="build-meter" aria-label="Next four percent construction segment" value={status.segmentProgress} max="4" />}
+        <p>{locked ? 'Inspection in progress. Answers stay hidden until the end.' : `${status.missionProgress}/6 planned challenges · ${status.independentSuccesses} independent successes · ${learning.repairs.length} repairs queued`}</p>
+        {checkpoint && <p className="mission-done">Mission finished: {status.independentSuccesses} independent successes, {learning.repairs.length} repairs queued.</p>}
+        {learning.repairs.length > 0 && <div className="village-repairs"><strong>Repair workbench</strong><ul>{learning.repairs.map((key) => <li key={key}>{key.replace('/', ': ').replace('usage:', 'sentence ').replace('form:', 'form ')}</li>)}</ul></div>}
+        {Number.isFinite(learning.nextDelayedAt) && <p>Next delayed spelling check: {new Date(learning.nextDelayedAt).toLocaleString()} (eight hours after exposure).</p>}
+        {compact ? <button className="outpost-link" onClick={onOpen}><Map />Explore village</button> : <>
+          <button className="mission-return" onClick={onContinue}><ArrowLeft />{active ? 'Continue mission' : 'Recommended mission'}</button>
+          {!active && !learning.initialComplete && <div className="village-mission-choices"><button onClick={onPractice}>Spelling expedition</button><button onClick={onWorkshop}>Sentence workshop</button></div>}
+        </>}
+        <p className="mission-tip">Guided work prepares you. Later independent recall earns evidence. A miss removes at most one step from that target; outlines preserve your previous milestones.</p>
+      </div>
+    </div>
+    {!compact && <div className="blueprint-queue">{BUILDINGS.map((b) => <div className="blueprint-choice" key={b.id}><BuildingSprite id={b.id} /><span><strong>{b.label}: {status.levels[b.id]}/5</strong><small>{STAGES[b.id][status.levels[b.id] - 1] || 'Not yet built'}</small>{status.historicalLevels[b.id] > status.levels[b.id] && <small>Outline: previously level {status.historicalLevels[b.id]}</small>}</span></div>)}</div>}
+  </section>;
+}
+
+export default function Outpost(props) {
+  return props.learning?.scoringVersion === 2 ? <VillageView {...props} /> : <LegacyOutpost {...props} />;
 }

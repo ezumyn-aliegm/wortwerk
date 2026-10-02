@@ -1,0 +1,961 @@
+{
+  "id": "wave-2-autumn-2026",
+  "title": "Wave 2 · Autumn adventure",
+  "dueAt": "2026-10-05T09:00:00-04:00",
+  "words": [
+    {
+      "id": "oktoberfest",
+      "german": "das Oktoberfest",
+      "english": "Oktoberfest festival",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Das Oktoberfest ist ein Fest.",
+      "translation": "Oktoberfest is a festival.",
+      "tip": "das Oktoberfest means Oktoberfest festival. die Oktoberfeste means Oktoberfest celebrations. For several separate celebrations, add -e. The famous Munich event is normally named in the singular. Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Das ___ ist ein Fest.",
+          "Oktoberfest is a festival.",
+          "Oktoberfest"
+        ],
+        [
+          "Das ___ ist in München.",
+          "Oktoberfest is in Munich.",
+          "Oktoberfest"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of das Oktoberfest, including die.",
+          "die Oktoberfeste",
+          "Singular: das Oktoberfest. Plural: die Oktoberfeste. For several separate celebrations, add -e. The famous Munich event is normally named in the singular."
+        ],
+        [
+          "Complete the singular: ___ Oktoberfest.",
+          "das",
+          "For one, say das Oktoberfest; for more than one, say die Oktoberfeste."
+        ]
+      ],
+      "nounForms": {
+        "singular": "das Oktoberfest",
+        "plural": "die Oktoberfeste",
+        "singularEnglish": "Oktoberfest festival",
+        "pluralEnglish": "Oktoberfest celebrations",
+        "rule": "For several separate celebrations, add -e. The famous Munich event is normally named in the singular."
+      },
+      "memory": {
+        "scene": "Picture an October festival with music and a giant pretzel. Oktober + Fest joins October and festival.",
+        "watch": "Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O.",
+        "chunks": [
+          "Oktober",
+          "fest"
+        ],
+        "recall": "Picture the scene, cover the German, and write das Oktoberfest. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "Oktoberfest festival",
+        "Oktoberfest",
+        "October festival"
+      ]
+    },
+    {
+      "id": "erntedankfest",
+      "german": "das Erntedankfest",
+      "english": "harvest thanksgiving festival",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Das Erntedankfest ist im Herbst.",
+      "translation": "The harvest thanksgiving festival is in autumn.",
+      "tip": "das Erntedankfest means harvest thanksgiving festival. die Erntedankfeste means harvest thanksgiving festivals. Add -e for several festivals. Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Das ___ ist im Herbst.",
+          "The harvest thanksgiving festival is in autumn.",
+          "Erntedankfest"
+        ],
+        [
+          "Wir feiern das ___.",
+          "We celebrate the harvest thanksgiving festival.",
+          "Erntedankfest"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of das Erntedankfest, including die.",
+          "die Erntedankfeste",
+          "Singular: das Erntedankfest. Plural: die Erntedankfeste. Add -e for several festivals."
+        ],
+        [
+          "Complete the singular: ___ Erntedankfest.",
+          "das",
+          "For one, say das Erntedankfest; for more than one, say die Erntedankfeste."
+        ]
+      ],
+      "nounForms": {
+        "singular": "das Erntedankfest",
+        "plural": "die Erntedankfeste",
+        "singularEnglish": "harvest thanksgiving festival",
+        "pluralEnglish": "harvest thanksgiving festivals",
+        "rule": "Add -e for several festivals."
+      },
+      "memory": {
+        "scene": "Picture a harvest table: crops, a thank-you sign, and a festival. Ernte is harvest, Dank is thanks, and Fest is festival. It is not the American Thanksgiving holiday.",
+        "watch": "Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank.",
+        "chunks": [
+          "Ernte",
+          "dank",
+          "fest"
+        ],
+        "recall": "Picture the scene, cover the German, and write das Erntedankfest. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "harvest thanksgiving festival",
+        "harvest festival",
+        "harvest thanksgiving"
+      ]
+    },
+    {
+      "id": "wanderung",
+      "german": "die Wanderung",
+      "english": "hike",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Die Wanderung ist lang.",
+      "translation": "The hike is long.",
+      "tip": "die Wanderung means hike. die Wanderungen means hikes. Add -en: Wanderung → Wanderungen. Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Die ___ ist lang.",
+          "The hike is long.",
+          "Wanderung"
+        ],
+        [
+          "Wir machen eine ___.",
+          "We go on a hike.",
+          "Wanderung"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of die Wanderung, including die.",
+          "die Wanderungen",
+          "Singular: die Wanderung. Plural: die Wanderungen. Add -en: Wanderung → Wanderungen."
+        ],
+        [
+          "Complete the singular: ___ Wanderung.",
+          "die",
+          "For one, say die Wanderung; for more than one, say die Wanderungen."
+        ]
+      ],
+      "nounForms": {
+        "singular": "die Wanderung",
+        "plural": "die Wanderungen",
+        "singularEnglish": "hike",
+        "pluralEnglish": "hikes",
+        "rule": "Add -en: Wanderung → Wanderungen."
+      },
+      "memory": {
+        "scene": "Picture a long hike along a forest trail. Connect Wanderung with English wander, but remember: this word names the hike.",
+        "watch": "Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die.",
+        "chunks": [
+          "Wander",
+          "ung"
+        ],
+        "recall": "Picture the scene, cover the German, and write die Wanderung. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "hike"
+      ]
+    },
+    {
+      "id": "baum",
+      "german": "der Baum",
+      "english": "tree",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Der Baum ist groß.",
+      "translation": "The tree is big.",
+      "tip": "der Baum means tree. die Bäume means trees. Change a → ä and add -e. Singular Baum has au. Plural Bäume changes a to ä and adds e. Do not put the umlaut in the singular. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Der ___ ist groß.",
+          "The tree is big.",
+          "Baum"
+        ],
+        [
+          "Der ___ hat Blätter.",
+          "The tree has leaves.",
+          "Baum"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of der Baum, including die.",
+          "die Bäume",
+          "Singular: der Baum. Plural: die Bäume. Change a → ä and add -e."
+        ],
+        [
+          "Complete the singular: ___ Baum.",
+          "der",
+          "For one, say der Baum; for more than one, say die Bäume."
+        ]
+      ],
+      "nounForms": {
+        "singular": "der Baum",
+        "plural": "die Bäume",
+        "singularEnglish": "tree",
+        "pluralEnglish": "trees",
+        "rule": "Change a → ä and add -e."
+      },
+      "memory": {
+        "scene": "Picture one blocky tree; now add another tree and two dots over the a. One Baum becomes several Bäume.",
+        "watch": "Singular Baum has au. Plural Bäume changes a to ä and adds e. Do not put the umlaut in the singular.",
+        "chunks": [
+          "B",
+          "au",
+          "m"
+        ],
+        "recall": "Picture the scene, cover the German, and write der Baum. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "tree"
+      ]
+    },
+    {
+      "id": "blatt",
+      "german": "das Blatt",
+      "english": "leaf",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Das Blatt ist gelb.",
+      "translation": "The leaf is yellow.",
+      "tip": "das Blatt means leaf. die Blätter means leaves. Change a → ä and add -er. Blatt ends in double t. Blätter keeps tt, changes a to ä, and adds er. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Das ___ ist gelb.",
+          "The leaf is yellow.",
+          "Blatt"
+        ],
+        [
+          "Das ___ fällt.",
+          "The leaf is falling.",
+          "Blatt"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of das Blatt, including die.",
+          "die Blätter",
+          "Singular: das Blatt. Plural: die Blätter. Change a → ä and add -er."
+        ],
+        [
+          "Complete the singular: ___ Blatt.",
+          "das",
+          "For one, say das Blatt; for more than one, say die Blätter."
+        ]
+      ],
+      "nounForms": {
+        "singular": "das Blatt",
+        "plural": "die Blätter",
+        "singularEnglish": "leaf",
+        "pluralEnglish": "leaves",
+        "rule": "Change a → ä and add -er."
+      },
+      "memory": {
+        "scene": "Picture a leaf falling beside a tree. Give its stem two little branches to remind you of the two t letters. The word can also mean a sheet of paper; this wave uses leaf.",
+        "watch": "Blatt ends in double t. Blätter keeps tt, changes a to ä, and adds er.",
+        "chunks": [
+          "Bl",
+          "a",
+          "tt"
+        ],
+        "recall": "Picture the scene, cover the German, and write das Blatt. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "leaf"
+      ]
+    },
+    {
+      "id": "bauernhaus",
+      "german": "das Bauernhaus",
+      "english": "farmhouse",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Das Bauernhaus ist alt.",
+      "translation": "The farmhouse is old.",
+      "tip": "das Bauernhaus means farmhouse. die Bauernhäuser means farmhouses. Only the house part changes: Haus → Häuser; keep Bauern unchanged. Keep the n in Bauern. Singular ends haus; plural ends häuser, with ä. Capital B, no space. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Das ___ ist alt.",
+          "The farmhouse is old.",
+          "Bauernhaus"
+        ],
+        [
+          "Das ___ ist auf dem Bauernhof.",
+          "The farmhouse is on the farm.",
+          "Bauernhaus"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of das Bauernhaus, including die.",
+          "die Bauernhäuser",
+          "Singular: das Bauernhaus. Plural: die Bauernhäuser. Only the house part changes: Haus → Häuser; keep Bauern unchanged."
+        ],
+        [
+          "Complete the singular: ___ Bauernhaus.",
+          "das",
+          "For one, say das Bauernhaus; for more than one, say die Bauernhäuser."
+        ]
+      ],
+      "nounForms": {
+        "singular": "das Bauernhaus",
+        "plural": "die Bauernhäuser",
+        "singularEnglish": "farmhouse",
+        "pluralEnglish": "farmhouses",
+        "rule": "Only the house part changes: Haus → Häuser; keep Bauern unchanged."
+      },
+      "memory": {
+        "scene": "Picture the farmer’s house beside a field. Bauern + Haus builds one farmhouse word. Haus looks a little like English house.",
+        "watch": "Keep the n in Bauern. Singular ends haus; plural ends häuser, with ä. Capital B, no space.",
+        "chunks": [
+          "Bauern",
+          "haus"
+        ],
+        "recall": "Picture the scene, cover the German, and write das Bauernhaus. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "farmhouse"
+      ]
+    },
+    {
+      "id": "kuerbis",
+      "german": "der Kürbis",
+      "english": "pumpkin",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Der Kürbis ist orange.",
+      "translation": "The pumpkin is orange.",
+      "tip": "der Kürbis means pumpkin. die Kürbisse means pumpkins. Add -se to Kürbis: the resulting ending is -isse, with ss. Kürbis has ü, one s, and no final e. Kürbisse has double s and a final e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Der ___ ist orange.",
+          "The pumpkin is orange.",
+          "Kürbis"
+        ],
+        [
+          "Der ___ ist groß.",
+          "The pumpkin is big.",
+          "Kürbis"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of der Kürbis, including die.",
+          "die Kürbisse",
+          "Singular: der Kürbis. Plural: die Kürbisse. Add -se to Kürbis: the resulting ending is -isse, with ss."
+        ],
+        [
+          "Complete the singular: ___ Kürbis.",
+          "der",
+          "For one, say der Kürbis; for more than one, say die Kürbisse."
+        ]
+      ],
+      "nounForms": {
+        "singular": "der Kürbis",
+        "plural": "die Kürbisse",
+        "singularEnglish": "pumpkin",
+        "pluralEnglish": "pumpkins",
+        "rule": "Add -se to Kürbis: the resulting ending is -isse, with ss."
+      },
+      "memory": {
+        "scene": "Picture a pumpkin with two seeds above it: the two dots belong over ü. On the pumpkin’s label, check Kürbis before adding more pumpkins.",
+        "watch": "Kürbis has ü, one s, and no final e. Kürbisse has double s and a final e.",
+        "chunks": [
+          "K",
+          "ür",
+          "bis"
+        ],
+        "recall": "Picture the scene, cover the German, and write der Kürbis. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "pumpkin"
+      ]
+    },
+    {
+      "id": "igel",
+      "german": "der Igel",
+      "english": "hedgehog",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Der Igel ist klein.",
+      "translation": "The hedgehog is small.",
+      "tip": "der Igel means hedgehog. die Igel means hedgehogs. The noun spelling does not change; change the article der → die. Start with capital I, then gel. The long first vowel is written with just I: do not add an e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Der ___ ist klein.",
+          "The hedgehog is small.",
+          "Igel"
+        ],
+        [
+          "Der ___ hat Stacheln.",
+          "The hedgehog has spines.",
+          "Igel"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of der Igel, including die.",
+          "die Igel",
+          "Singular: der Igel. Plural: die Igel. The noun spelling does not change; change the article der → die."
+        ],
+        [
+          "Complete the singular: ___ Igel.",
+          "der",
+          "For one, say der Igel; for more than one, say die Igel."
+        ]
+      ],
+      "nounForms": {
+        "singular": "der Igel",
+        "plural": "die Igel",
+        "singularEnglish": "hedgehog",
+        "pluralEnglish": "hedgehogs",
+        "rule": "The noun spelling does not change; change the article der → die."
+      },
+      "memory": {
+        "scene": "Picture one hedgehog, then a family of hedgehogs. Their name stays Igel; only der changes to die.",
+        "watch": "Start with capital I, then gel. The long first vowel is written with just I: do not add an e.",
+        "chunks": [
+          "I",
+          "gel"
+        ],
+        "recall": "Picture the scene, cover the German, and write der Igel. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "hedgehog"
+      ]
+    },
+    {
+      "id": "laterne",
+      "german": "die Laterne",
+      "english": "lantern",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Die Laterne leuchtet.",
+      "translation": "The lantern shines.",
+      "tip": "die Laterne means lantern. die Laternen means lanterns. Add -n to Laterne. Say and write La-ter-ne. Keep the e between t and r, and the final e. Laternen adds n. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Die ___ leuchtet.",
+          "The lantern shines.",
+          "Laterne"
+        ],
+        [
+          "Die ___ ist bunt.",
+          "The lantern is colorful.",
+          "Laterne"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of die Laterne, including die.",
+          "die Laternen",
+          "Singular: die Laterne. Plural: die Laternen. Add -n to Laterne."
+        ],
+        [
+          "Complete the singular: ___ Laterne.",
+          "die",
+          "For one, say die Laterne; for more than one, say die Laternen."
+        ]
+      ],
+      "nounForms": {
+        "singular": "die Laterne",
+        "plural": "die Laternen",
+        "singularEnglish": "lantern",
+        "pluralEnglish": "lanterns",
+        "rule": "Add -n to Laterne."
+      },
+      "memory": {
+        "scene": "Picture carrying a bright lantern on an autumn evening. English lantern and German Laterne share many letters; look carefully at the different ending.",
+        "watch": "Say and write La-ter-ne. Keep the e between t and r, and the final e. Laternen adds n.",
+        "chunks": [
+          "La",
+          "ter",
+          "ne"
+        ],
+        "recall": "Picture the scene, cover the German, and write die Laterne. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "lantern"
+      ]
+    },
+    {
+      "id": "neblig",
+      "german": "neblig",
+      "english": "foggy",
+      "kind": "adjective",
+      "studyVersion": 2,
+      "example": "Es ist neblig.",
+      "translation": "It is foggy.",
+      "usages": [
+        [
+          "Es ist ___.",
+          "It is foggy.",
+          "neblig"
+        ],
+        [
+          "Der Morgen ist ___.",
+          "The morning is foggy.",
+          "neblig"
+        ]
+      ],
+      "forms": [],
+      "tip": "For this lesson, learn neblig: neb-lig. Nebelig is also a correct German spelling, but your assigned word is neblig. The last three letters are lig. Keep lowercase n. In these sentences the describing word comes after ist or sind; use neblig unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "memory": {
+        "scene": "Picture fog hiding the trees. Nebel means fog; neblig describes foggy weather. Compare Nebel with neblig: the middle e disappears.",
+        "watch": "For this lesson, learn neblig: neb-lig. Nebelig is also a correct German spelling, but your assigned word is neblig. The last three letters are lig. Keep lowercase n.",
+        "chunks": [
+          "neb",
+          "lig"
+        ],
+        "recall": "Picture the scene, hide the word, and write neblig from memory. Check it letter by letter."
+      },
+      "meaningAnswers": [
+        "foggy"
+      ]
+    },
+    {
+      "id": "trueb",
+      "german": "trüb",
+      "english": "gloomy / dull",
+      "kind": "adjective",
+      "studyVersion": 2,
+      "example": "Der Tag ist trüb.",
+      "translation": "The day is gloomy.",
+      "usages": [
+        [
+          "Der Tag ist ___.",
+          "The day is gloomy.",
+          "trüb"
+        ],
+        [
+          "Das Wetter ist ___.",
+          "The weather is gloomy.",
+          "trüb"
+        ]
+      ],
+      "forms": [],
+      "tip": "Only four letters: t-r-ü-b. Keep ü; no final e. Listen to the rounded ü sound. In these sentences the describing word comes after ist or sind; use trüb unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "memory": {
+        "scene": "Picture a gray, gloomy sky with no bright sunshine. Two little clouds above the word remind you of the two dots on ü. Trüb describes dull weather here, not a sad person.",
+        "watch": "Only four letters: t-r-ü-b. Keep ü; no final e. Listen to the rounded ü sound.",
+        "chunks": [
+          "tr",
+          "ü",
+          "b"
+        ],
+        "recall": "Picture the scene, hide the word, and write trüb from memory. Check it letter by letter."
+      },
+      "meaningAnswers": [
+        "gloomy",
+        "dull"
+      ]
+    },
+    {
+      "id": "malerisch",
+      "german": "malerisch",
+      "english": "picturesque / scenic",
+      "kind": "adjective",
+      "studyVersion": 2,
+      "example": "Das Dorf ist malerisch.",
+      "translation": "The village is picturesque.",
+      "usages": [
+        [
+          "Das Dorf ist ___.",
+          "The village is picturesque.",
+          "malerisch"
+        ],
+        [
+          "Die Landschaft ist ___.",
+          "The landscape is picturesque.",
+          "malerisch"
+        ]
+      ],
+      "forms": [],
+      "tip": "Build maler + isch. The last four letters are isch; keep the three-letter sch together. In these sentences the describing word comes after ist or sind; use malerisch unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "memory": {
+        "scene": "Picture a village so beautiful that a painter wants to paint it. Maler means painter; malerisch means picturesque, like a lovely picture.",
+        "watch": "Build maler + isch. The last four letters are isch; keep the three-letter sch together.",
+        "chunks": [
+          "maler",
+          "isch"
+        ],
+        "recall": "Picture the scene, hide the word, and write malerisch from memory. Check it letter by letter."
+      },
+      "meaningAnswers": [
+        "picturesque",
+        "scenic"
+      ]
+    },
+    {
+      "id": "regnerisch",
+      "german": "regnerisch",
+      "english": "rainy",
+      "kind": "adjective",
+      "studyVersion": 2,
+      "example": "Das Wetter ist regnerisch.",
+      "translation": "The weather is rainy.",
+      "usages": [
+        [
+          "Das Wetter ist ___.",
+          "The weather is rainy.",
+          "regnerisch"
+        ],
+        [
+          "Der Tag ist ___.",
+          "The day is rainy.",
+          "regnerisch"
+        ]
+      ],
+      "forms": [],
+      "tip": "Write reg-ner-isch. The beginning is regn, not regen. Finish with isch, including sch. In these sentences the describing word comes after ist or sind; use regnerisch unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "memory": {
+        "scene": "Picture rain over your village. Regen means rain. Compare Regen and regnerisch: rain becomes the describing word rainy.",
+        "watch": "Write reg-ner-isch. The beginning is regn, not regen. Finish with isch, including sch.",
+        "chunks": [
+          "reg",
+          "ner",
+          "isch"
+        ],
+        "recall": "Picture the scene, hide the word, and write regnerisch from memory. Check it letter by letter."
+      },
+      "meaningAnswers": [
+        "rainy"
+      ]
+    },
+    {
+      "id": "kuehl",
+      "german": "kühl",
+      "english": "cool / chilly",
+      "kind": "adjective",
+      "studyVersion": 2,
+      "example": "Es ist kühl.",
+      "translation": "It is cool.",
+      "usages": [
+        [
+          "Es ist ___.",
+          "It is cool.",
+          "kühl"
+        ],
+        [
+          "Der Morgen ist ___.",
+          "The morning is chilly.",
+          "kühl"
+        ]
+      ],
+      "forms": [],
+      "tip": "Write k-ü-h-l. Keep both the two dots over ü and the silent h after it. In these sentences the describing word comes after ist or sind; use kühl unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "memory": {
+        "scene": "Picture a cool autumn morning when you need a light jacket. Kühl is cool in temperature, not English cool meaning awesome.",
+        "watch": "Write k-ü-h-l. Keep both the two dots over ü and the silent h after it.",
+        "chunks": [
+          "k",
+          "üh",
+          "l"
+        ],
+        "recall": "Picture the scene, hide the word, and write kühl from memory. Check it letter by letter."
+      },
+      "meaningAnswers": [
+        "cool",
+        "chilly"
+      ]
+    },
+    {
+      "id": "wasserdicht",
+      "german": "wasserdicht",
+      "english": "waterproof",
+      "kind": "adjective",
+      "studyVersion": 2,
+      "example": "Die Jacke ist wasserdicht.",
+      "translation": "The jacket is waterproof.",
+      "usages": [
+        [
+          "Die Jacke ist ___.",
+          "The jacket is waterproof.",
+          "wasserdicht"
+        ],
+        [
+          "Die Gummistiefel sind ___.",
+          "The rain boots are waterproof.",
+          "wasserdicht"
+        ]
+      ],
+      "forms": [],
+      "tip": "Build wasser + dicht with no space. Wasser has double s; dicht ends cht. Lowercase w. In these sentences the describing word comes after ist or sind; use wasserdicht unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "memory": {
+        "scene": "Picture water rolling off your rain boots. Wasser is water; dicht can mean sealed. Together, wasserdicht means waterproof.",
+        "watch": "Build wasser + dicht with no space. Wasser has double s; dicht ends cht. Lowercase w.",
+        "chunks": [
+          "wasser",
+          "dicht"
+        ],
+        "recall": "Picture the scene, hide the word, and write wasserdicht from memory. Check it letter by letter."
+      },
+      "meaningAnswers": [
+        "waterproof"
+      ]
+    },
+    {
+      "id": "dicht",
+      "german": "dicht",
+      "english": "dense / thick",
+      "kind": "adjective",
+      "studyVersion": 2,
+      "example": "Der Nebel ist dicht.",
+      "translation": "The fog is dense.",
+      "usages": [
+        [
+          "Der Nebel ist ___.",
+          "The fog is dense.",
+          "dicht"
+        ],
+        [
+          "Der Wald ist ___.",
+          "The forest is dense.",
+          "dicht"
+        ]
+      ],
+      "forms": [],
+      "tip": "Write d-i-c-h-t. Keep cht together; there is no second i or final e. In these sentences the describing word comes after ist or sind; use dicht unchanged. The other sentence words are supplied: you only fill in the describing word.",
+      "memory": {
+        "scene": "Picture fog packed so closely that you cannot see the next tree. Dicht means dense here. It can also mean sealed, as in wasserdicht; the sentence tells you which meaning fits.",
+        "watch": "Write d-i-c-h-t. Keep cht together; there is no second i or final e.",
+        "chunks": [
+          "di",
+          "cht"
+        ],
+        "recall": "Picture the scene, hide the word, and write dicht from memory. Check it letter by letter."
+      },
+      "meaningAnswers": [
+        "dense",
+        "thick"
+      ]
+    },
+    {
+      "id": "spaziergang",
+      "german": "der Spaziergang",
+      "english": "walk / stroll",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Der Spaziergang ist kurz.",
+      "translation": "The walk is short.",
+      "tip": "der Spaziergang means walk / stroll. die Spaziergänge means walks / strolls. Keep Spazier unchanged; Gang → Gänge: a → ä, then add -e. Write Spa-zier-gang. The long ee sound in zier is written ie. In Wir machen einen Spaziergang, masculine ein changes to einen because the walk receives the action. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Der ___ ist kurz.",
+          "The walk is short.",
+          "Spaziergang"
+        ],
+        [
+          "Wir machen einen ___.",
+          "We go for a walk.",
+          "Spaziergang"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of der Spaziergang, including die.",
+          "die Spaziergänge",
+          "Singular: der Spaziergang. Plural: die Spaziergänge. Keep Spazier unchanged; Gang → Gänge: a → ä, then add -e."
+        ],
+        [
+          "Complete the singular: ___ Spaziergang.",
+          "der",
+          "For one, say der Spaziergang; for more than one, say die Spaziergänge."
+        ]
+      ],
+      "nounForms": {
+        "singular": "der Spaziergang",
+        "plural": "die Spaziergänge",
+        "singularEnglish": "walk / stroll",
+        "pluralEnglish": "walks / strolls",
+        "rule": "Keep Spazier unchanged; Gang → Gänge: a → ä, then add -e."
+      },
+      "memory": {
+        "scene": "Picture a relaxed stroll around your village, rather than a long hike. Spaziergang is the walk; Wanderung is the hike. Gang can mean a walk or going.",
+        "watch": "Write Spa-zier-gang. The long ee sound in zier is written ie. In Wir machen einen Spaziergang, masculine ein changes to einen because the walk receives the action.",
+        "chunks": [
+          "Spa",
+          "zier",
+          "gang"
+        ],
+        "recall": "Picture the scene, cover the German, and write der Spaziergang. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "walk",
+        "stroll"
+      ]
+    },
+    {
+      "id": "ernte",
+      "german": "die Ernte",
+      "english": "harvest",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Die Ernte ist gut.",
+      "translation": "The harvest is good.",
+      "tip": "die Ernte means harvest. die Ernten means harvests. Add -n to Ernte. Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Die ___ ist gut.",
+          "The harvest is good.",
+          "Ernte"
+        ],
+        [
+          "Die ___ ist im Herbst.",
+          "The harvest is in autumn.",
+          "Ernte"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of die Ernte, including die.",
+          "die Ernten",
+          "Singular: die Ernte. Plural: die Ernten. Add -n to Ernte."
+        ],
+        [
+          "Complete the singular: ___ Ernte.",
+          "die",
+          "For one, say die Ernte; for more than one, say die Ernten."
+        ]
+      ],
+      "nounForms": {
+        "singular": "die Ernte",
+        "plural": "die Ernten",
+        "singularEnglish": "harvest",
+        "pluralEnglish": "harvests",
+        "rule": "Add -n to Ernte."
+      },
+      "memory": {
+        "scene": "Picture gathering pumpkins and crops from the field. That harvest is die Ernte. The same Ernte starts Erntedankfest.",
+        "watch": "Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e.",
+        "chunks": [
+          "Ern",
+          "te"
+        ],
+        "recall": "Picture the scene, cover the German, and write die Ernte. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "harvest"
+      ]
+    },
+    {
+      "id": "drachen",
+      "german": "der Drachen",
+      "english": "kite",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Der Drachen fliegt.",
+      "translation": "The kite flies.",
+      "tip": "der Drachen means kite. die Drachen means kites. The noun spelling stays Drachen; change der → die for the plural. For a kite, write Dra-chen with ch and a final n. Both one kite and several kites keep that n. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Der ___ fliegt.",
+          "The kite flies.",
+          "Drachen"
+        ],
+        [
+          "Der ___ ist bunt.",
+          "The kite is colorful.",
+          "Drachen"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of der Drachen, including die.",
+          "die Drachen",
+          "Singular: der Drachen. Plural: die Drachen. The noun spelling stays Drachen; change der → die for the plural."
+        ],
+        [
+          "Complete the singular: ___ Drachen.",
+          "der",
+          "For one, say der Drachen; for more than one, say die Drachen."
+        ]
+      ],
+      "nounForms": {
+        "singular": "der Drachen",
+        "plural": "die Drachen",
+        "singularEnglish": "kite",
+        "pluralEnglish": "kites",
+        "rule": "The noun spelling stays Drachen; change der → die for the plural."
+      },
+      "memory": {
+        "scene": "Picture a colorful kite on a string in the wind. Keep its tail: the final n in Drachen. A mythical dragon is der Drache, without that final n in its singular name.",
+        "watch": "For a kite, write Dra-chen with ch and a final n. Both one kite and several kites keep that n.",
+        "chunks": [
+          "Dra",
+          "chen"
+        ],
+        "recall": "Picture the scene, cover the German, and write der Drachen. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "kite"
+      ]
+    },
+    {
+      "id": "gummistiefel",
+      "german": "die Gummistiefel",
+      "english": "rain boots / rubber boots",
+      "kind": "noun",
+      "studyVersion": 2,
+      "example": "Die Gummistiefel sind gelb.",
+      "translation": "The rain boots are yellow.",
+      "tip": "der Gummistiefel means one rain boot. die Gummistiefel means rain boots / rubber boots. The noun spelling stays the same. One: der Gummistiefel. More than one: die Gummistiefel. Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. With several boots use sind, not singular ist. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "usages": [
+        [
+          "Die ___ sind gelb.",
+          "The rain boots are yellow.",
+          "Gummistiefel"
+        ],
+        [
+          "Die ___ sind wasserdicht.",
+          "The rain boots are waterproof.",
+          "Gummistiefel"
+        ]
+      ],
+      "forms": [
+        [
+          "Write the plural of der Gummistiefel, including die.",
+          "die Gummistiefel",
+          "Singular: der Gummistiefel. Plural: die Gummistiefel. The noun spelling stays the same. One: der Gummistiefel. More than one: die Gummistiefel."
+        ],
+        [
+          "Complete the singular: ___ Gummistiefel.",
+          "der",
+          "For one, say der Gummistiefel; for more than one, say die Gummistiefel."
+        ]
+      ],
+      "nounForms": {
+        "singular": "der Gummistiefel",
+        "plural": "die Gummistiefel",
+        "singularEnglish": "one rain boot",
+        "pluralEnglish": "rain boots / rubber boots",
+        "rule": "The noun spelling stays the same. One: der Gummistiefel. More than one: die Gummistiefel."
+      },
+      "memory": {
+        "scene": "Picture a pair of rubber boots splashing in a puddle. Gummi means rubber; Stiefel means boot. Your lesson gives the plural: die Gummistiefel. One boot is der Gummistiefel.",
+        "watch": "Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. With several boots use sind, not singular ist.",
+        "chunks": [
+          "Gummi",
+          "stie",
+          "fel"
+        ],
+        "recall": "Picture the scene, cover the German, and write die Gummistiefel. Check every letter and the article."
+      },
+      "meaningAnswers": [
+        "rain boots",
+        "rubber boots"
+      ]
+    }
+  ]
+}

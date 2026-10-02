@@ -1,4 +1,25 @@
 import { requiredSkills } from "./data.js";
+import { usesLearningScore } from './scoring.js';
+
+export function freshVillage() {
+  return { version: 2, percent: 0, highPercent: 0, totalAnswers: 0, checkpointAnswers: 0,
+    successes: 0, checkpointSuccesses: 0, repairs: [] };
+}
+export function villageLevels(percent) {
+  const segments = Math.min(25, Math.floor(percent / 4));
+  return Object.fromEntries(BUILDINGS.map((b, i) => [b.id, Math.max(0, Math.min(5, Math.floor((segments + 4 - i) / 5)))]));
+}
+export function updateVillage(game, learning, success = false) {
+  return { ...game, percent: learning.percent, highPercent: Math.max(game.highPercent, learning.percent),
+    repairs: learning.repairs, totalAnswers: game.totalAnswers + 1, successes: game.successes + Number(success) };
+}
+function validVillage(g) {
+  return g?.version === 2 && Number.isFinite(g.percent) && g.percent >= 0 && g.percent <= 100
+    && Number.isFinite(g.highPercent) && g.highPercent >= g.percent && g.highPercent <= 100
+    && count(g.totalAnswers, MAX_ANSWERS) && count(g.checkpointAnswers, g.totalAnswers)
+    && count(g.successes, g.totalAnswers) && count(g.checkpointSuccesses, g.successes)
+    && Array.isArray(g.repairs) && g.repairs.length <= 1980 && g.repairs.every((s) => typeof s === 'string');
+}
 
 export const BUILDINGS = Object.freeze([
   { id: "cabin", cost: 6, label: "Cozy cabin", description: "Build a warm home base for your outpost." },
@@ -80,6 +101,7 @@ function validShape(game) {
 /** Missing optional game state is handled by the library caller, not here. */
 export function validateGame(value, words) {
   try {
+    if (usesLearningScore(words)) return validVillage(value);
     if (!validShape(value) || !Array.isArray(words) || words.length < 1 || words.length > 90
       || Object.keys(words).length !== words.length
       || !words.every((word) => plain(word) && wordIdOK(word.id) && Array.isArray(word.forms))
@@ -163,12 +185,23 @@ export function constructBuild(game, buildId = game?.selected, learning) {
 
 /** Call only after leaving feedback/correction and outside exams/cold checks. */
 export function checkpointGame(game) {
+  if (validVillage(game)) return { ...game, checkpointAnswers: game.totalAnswers, checkpointSuccesses: game.successes };
   if (!validShape(game) || game.checkpointAnswers === game.totalAnswers) return game;
   return { ...game, checkpointAnswers: game.totalAnswers };
 }
 
 /** Returns null for invalid state; the caller can surface a save error. */
 export function gameStatus(game) {
+  if (validVillage(game)) {
+    const levels = villageLevels(game.percent), historicalLevels = villageLevels(game.highPercent);
+    const segment = Math.min(24, Math.floor(game.percent / 4));
+    return { ...game, levels, historicalLevels, allBuilt: game.percent === 100, canBuild: false,
+      selectedBuild: BUILDINGS[segment % 5], nextThreshold: Math.min(100, (segment + 1) * 4),
+      segmentProgress: game.percent === 100 ? 4 : game.percent % 4,
+      missionProgress: Math.min(6, game.totalAnswers - game.checkpointAnswers),
+      independentSuccesses: game.successes - game.checkpointSuccesses,
+      readyCheckpoint: game.totalAnswers - game.checkpointAnswers >= 6 };
+  }
   if (!validShape(game)) return null;
   const resources = budget(game);
   const selectedBuild = building(game.selected);

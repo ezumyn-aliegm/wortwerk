@@ -68,7 +68,7 @@ function WaveReadiness({ wave, now }) {
           null,
         ),
         nextPhase: tutor.phaseInfo(
-          progress.active ? { phase: progress.active.phase } : progress,
+          progress.active && !tutor.scoringV2 ? { phase: progress.active.phase } : progress,
         ),
         availableAt: tutor.dueAt(progress),
         weak: wave.words
@@ -83,7 +83,7 @@ function WaveReadiness({ wave, now }) {
   }, [wave]);
   const deadlineKnown = Number.isFinite(wave.dueAt) && wave.dueAt >= 0;
   const remaining = view ? wave.words.length - view.summary.ready : 0;
-  const complete = view && remaining === 0 && wave.progress.phase >= 7;
+  const complete = view && (view.summary.scoringVersion === 2 ? view.summary.complete : remaining === 0 && wave.progress.phase >= 7);
   const nextTitle =
     view &&
     (wave.progress.active?.kind === "exam"
@@ -145,7 +145,8 @@ function WaveReadiness({ wave, now }) {
                 {remaining}{" "}
                 {remaining === 1 ? "word still needs" : "words still need"}{" "}
                 secure recall
-                {wave.progress.phase < 7
+                {view.summary.scoringVersion === 2 ? ". Each target and the final checks must be completed"
+                  : wave.progress.phase < 7
                   ? ` · ${7 - wave.progress.phase} course ${7 - wave.progress.phase === 1 ? "stage" : "stages"} remaining`
                   : ". Follow-up practice focuses on the remaining words"}
                 .

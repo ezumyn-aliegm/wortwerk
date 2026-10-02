@@ -3,6 +3,7 @@ import { MEMORY } from './memory.js';
 import { LEGACY_MEMORY } from './legacy-memory.js';
 import { PREVIOUS_WORDS, PREVIOUS_MEMORY } from './previous-content.js';
 import { createTutor } from './tutor.js';
+import { WAVE_TWO } from './wave-two.js';
 
 export const audioKey = (text, language) => JSON.stringify([language.split('-')[0], text]);
 
@@ -26,6 +27,22 @@ export function collectAudioLines() {
     add(LEGACY_MEMORY[word.id].watch, 'en');
     add(PREVIOUS_MEMORY[word.id].scene, 'en');
     add(PREVIOUS_MEMORY[word.id].watch, 'en');
+  }
+  const autumnTutor = createTutor(WAVE_TWO.words);
+  for (const word of WAVE_TWO.words) {
+    add(word.german, 'de');
+    add(`${word.german}. ${word.example}`, 'de');
+    for (const page of autumnTutor.teachingPages(word)) {
+      add(page.answer, 'de');
+      add(page.explanation, 'en');
+    }
+    add(word.memory.scene, 'en');
+    add(word.memory.watch, 'en');
+    add(word.memory.recall, 'en');
+    if (word.nounForms) {
+      add(word.nounForms.singular, 'de');
+      add(word.nounForms.plural, 'de');
+    }
   }
   return [...lines.values()];
 }

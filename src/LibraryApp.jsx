@@ -11,11 +11,12 @@ import { TutorContext } from "./TutorContext.jsx";
 import { createTutor } from "./tutor.js";
 import { memoryForWord, wordForStudy } from "./memory.js";
 import { STORAGE_KEY } from "./engine.js";
+import { WAVE_TWO } from "./wave-two.js";
 import { recordActivity } from "./activity.js";
 import { activeSeconds, timeSegments } from "./study-clock.js";
 import {
   serializeBackup, parseLibraryBackup, importWave, replaceWaveProgress,
-  parentLocked, prepareParentView, emptyStudyClock, touchStudyClock,
+  parentLocked, prepareParentView, emptyStudyClock, touchStudyClock, appendWave,
 } from "./library-state.js";
 import {
   LIBRARY_KEY,
@@ -26,6 +27,7 @@ import {
   formatDeadline,
   miamiInput,
   parseMiami,
+  parseWave,
 } from "./library.js";
 import "./waves.css";
 
@@ -318,6 +320,16 @@ export default function LibraryApp({
       setError(e.message);
     }
   }
+  function addAutumnWave() {
+    if (writeBlocked.current) return;
+    try {
+      const wave = parseWave(JSON.stringify(WAVE_TWO), WAVE_TWO.id);
+      setLibrary(current => current.waves.some(w => w.id === WAVE_TWO.id ||
+        w.words.some(word => word.id === 'oktoberfest' && word.studyVersion === 2))
+        ? current : appendWave(current, wave));
+      setError("");
+    } catch (e) { setError(e.message); }
+  }
   async function restore(file) {
     const epoch = replacementEpoch.current;
     try {
@@ -525,6 +537,12 @@ export default function LibraryApp({
             </div>
           </section>
           <section aria-labelledby="waves-title">
+            {!library.waves.some(w => w.id === WAVE_TWO.id || w.words.some(word => word.id === 'oktoberfest' && word.studyVersion === 2)) &&
+              <section className="wave-manage" aria-label="New autumn lesson">
+                <h2>Ready: Autumn adventure</h2>
+                <p>20 words · Monday, October 5, 9:00 a.m. Miami. New island, five buildings with five upgrades each. Your earlier waves and sessions stay saved.</p>
+                <button className="primary" onClick={addAutumnWave}>Add Wave 2 · Autumn adventure</button>
+              </section>}
             <div className="wave-section-title">
               <h2 id="waves-title">Your vocabulary waves</h2>
               <span>

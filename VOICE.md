@@ -16,7 +16,7 @@ npm run build
 The shared skill loads XAI_API_KEY from the environment; zsh loads ~/.zshenv.
 Never copy the key into this project or the browser. Generation incurs xAI
 usage charges. Unchanged clips are skipped using public/voice/voice-index.json.
-The manifest includes current audio-button content and retained original-wave
+The manifest includes bundled Autumn Wave 2, current audio-button content and retained original-wave
 recordings for older tabs and imported copies. Only new text is regenerated. Catalog
 paths change when the text changes. New custom waves require regeneration.
 

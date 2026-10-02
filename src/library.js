@@ -24,6 +24,11 @@ export function validWords(words) {
       (w) =>
         w &&
         idOK(w.id) &&
+        (w.studyVersion === undefined || w.studyVersion === 1 || w.studyVersion === 2) &&
+        (w.meaningAnswers === undefined || (Array.isArray(w.meaningAnswers) && w.meaningAnswers.length <= 30 && w.meaningAnswers.every((s) => text(s, 200)))) &&
+        (w.nounForms === undefined || (w.kind === 'noun' && w.nounForms &&
+          ['singular', 'plural', 'singularEnglish', 'pluralEnglish', 'rule'].every(k => text(w.nounForms[k])) &&
+          [w.nounForms.singular, w.nounForms.plural].includes(w.german))) &&
         text(w.german, 200) &&
         ["german", "english", "kind", "example", "translation", "tip"].every(
           (k) => text(w[k]),
@@ -151,7 +156,8 @@ export function saveCounts(value) {
 }
 export function waveStatus(wave, now = Date.now()) {
   const stats = createTutor(wave.words).summary(wave.progress);
-  if (stats.ready === wave.words.length && wave.progress.phase >= 7)
+  if (stats.scoringVersion === 2 && stats.complete) return 'Ready';
+  if (stats.scoringVersion !== 2 && stats.ready === wave.words.length && wave.progress.phase >= 7)
     return "Ready";
   if (now >= wave.dueAt) return "Past due";
   return wave.progress.startedAt ? "Studying" : "Upcoming";
@@ -165,6 +171,28 @@ export function wavePlan(wave, now = Date.now()) {
   const overdue = hours <= 0,
     urgent = hours <= 24;
   const availableAt = tutor.dueAt(p);
+  if (tutor.scoringV2) {
+    const categories = stats.categories;
+    const evidenceLeft = Object.entries(categories).filter(([key]) => key !== 'verification')
+      .reduce((n, [, c]) => n + c.possible - c.earned, 0);
+    const checks = Object.values(p.learning.verification);
+    const verificationLeft = checks.reduce((n, v) => n + Number(!v.delayed) + Number(!v.finalSpelling) + Number(!v.finalTransfer), 0);
+    // Lower-bound workload: teaching, spacing fillers and future mistakes can add questions.
+    const sessionsLeft = Math.ceil((evidenceLeft + verificationLeft) / 6);
+    const days = Math.max(1, Math.ceil(Math.max(hours, 0) / 24));
+    return {
+      kind: 'course', availableAt, urgent, remaining, sessionsLeft,
+      tight: sessionsLeft > days * 3, evidenceLeft, verificationLeft,
+      message: stats.complete ? 'All targets and verification complete.'
+        : availableAt > now ? 'Delayed recall is waiting for its eight-hour gap. Your progress is saved.'
+        : `${overdue ? 'Deadline passed; keep repairing. ' : ''}At least ${sessionsLeft} short mission equivalents remain (${evidenceLeft} evidence steps, ${verificationLeft} checks). Teaching and spacing may add questions. Aim for ${Math.ceil(sessionsLeft / days)} per day.`,
+      steps: [
+        { title: 'Learn every target', done: stats.initialComplete, at: now },
+        { title: 'Delayed recall & repair', done: checks.every((v) => v.delayed) && !stats.repairs.length, at: Number.isFinite(stats.nextDelayedAt) ? stats.nextDelayedAt : now + 8 * 3600000 },
+        { title: 'Final inspection', done: stats.initialComplete && checks.every((v) => v.finalSpelling && v.finalTransfer), at: now },
+      ],
+    };
+  }
   let kind = "course";
   if (!p.active && availableAt > now && urgent && stats.introduced)
     kind = "extra";
@@ -212,7 +240,7 @@ export function recommendedWave(library, now = Date.now()) {
     const waiting = (w) =>
       !w.progress.active &&
       createTutor(w.words, { deadlineAt: w.dueAt }).dueAt(w.progress) > now &&
-      !wavePlan(w, now).urgent;
+      (createTutor(w.words).scoringV2 || !wavePlan(w, now).urgent);
     return Number(waiting(a)) - Number(waiting(b)) || a.dueAt - b.dueAt;
   })[0];
 }

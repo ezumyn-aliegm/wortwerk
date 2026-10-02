@@ -16,12 +16,12 @@ export default function NounComparison({word, Speech}) {
       </div>
       <div>
         <h4>Plural · more than one</h4>
-        <strong lang="de">{forms.plural.slice(0,-forms.ending.length)}<mark>{forms.ending}</mark></strong>
+        <strong lang="de">{forms.ending ? <>{forms.plural.slice(0,-forms.ending.length)}<mark>{forms.ending}</mark></> : forms.plural}</strong>
         <p>{forms.pluralEnglish}</p>
         <Speech text={forms.plural} label="Hear plural form" caption="Hear plural" />
       </div>
     </div>
-    <p className="noun-form-rule">Add <strong lang="de">-{forms.ending}</strong>. Learn both articles with the noun.</p>
+    <p className="noun-form-rule">{forms.rule}</p>
     {forms.note && <p>{forms.note}</p>}
   </section>;
 }
