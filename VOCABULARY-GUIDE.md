@@ -76,6 +76,8 @@ For corrections, retain recordings needed by older tabs and unchanged imported l
 
 ## Safe live updates
 
+Before preparing each wave, confirm **what the school test actually assesses**, separately from useful optional knowledge. Do not assume noun plural conversion is required. For `studyVersion: 2`, `assessedFormVariants` selects the indices of required `forms` entries; omitted means all forms are required, and an empty array means none of that word's form exercises are assessed. Keep optional noun comparisons collapsed. Always require the exact teacher-assigned form (for example **die Gummistiefel**), meaning, spelling and applicable article. Optional transformations must not appear in mandatory practice/final tests or the mastery/village denominator. Changing an active assessment scope requires a backed-up, revision-checked migration that retains existing evidence for kept targets; do not reset the wave.
+
 While anyone is studying, prepare and test locally only. Before replacing the live container: pause, wait for **Synced across devices**, export a backup, close study tabs, and preserve a server-data backup and prior image. Do not reset progress unless explicitly requested. After updating, verify the saved question, draft, counts, audio, and synchronization before other devices reopen. No deployment is scheduled automatically.
 
 ## Reusable request for the next set

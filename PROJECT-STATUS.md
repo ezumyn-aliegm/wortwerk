@@ -1,6 +1,8 @@
 # Wortwerk project status
 
-Updated October 1, 2026. Internal family-use application.
+Updated October 3, 2026. Internal family-use application.
+
+Current live release: `wortwerk:wave2-scope-20261003-c579452`, runtime source `c579452`. October 3 requested scope correction excludes untested plural conversions from current Wave 2 practice/final-test/mastery/village. Assigned die Gummistiefel remains required; alternate forms are optional reference. 92 required targets instead of 106; 171 tests pass. 37 replacement recordings generated (557 cataloged). Confirmed paused/synced; stopped-service backup and exact post-migration comparison preserve Wave 1, retained Wave 2 evidence/history/verification, activity and selected wave. Revision 2100 → 2101. Live authenticated save/page/audio and HTTPS health passed. See WAVE-2-RELEASE.md for the deployment/rollback reference and browser evidence.
 
 ## Records
 
