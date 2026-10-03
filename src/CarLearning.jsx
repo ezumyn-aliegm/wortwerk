@@ -148,13 +148,13 @@ export function CarFeedback({
       </div>
       <div className="car-feedback-grid">
         <div>
-          {!feedback.correct && !copy && (
+          {!feedback.correct && (
             <p className="car-your-answer">
-              You wrote: <s>{feedback.input || "Not remembered yet"}</s>
+              You wrote: <s>{feedback.input || "No answer entered"}</s>
             </p>
           )}
           <div className="car-correct-answer">
-            <span>{copy ? "Look, then type this" : "Correct answer"}</span>
+            <span>Correct answer{copy ? ' · look, then type this' : ''}</span>
             <strong lang={active.queue[0].type === "meaning" ? "en" : "de"}>
               {feedback.expected}
             </strong>

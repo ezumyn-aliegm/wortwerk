@@ -579,7 +579,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
         title,
         translation,
         answer,
-        instruction: "Complete the sentence using the English meaning.",
+        instruction: "Write only the missing word or words, not the whole sentence. Use the English meaning.",
         explanation: `${title.replace("___", answer)} — ${translation} ${w.tip}`,
       };
     }
@@ -788,6 +788,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       assisted =
         active.helped ||
         (active.taughtHere || []).includes(`${q.wordId}/${questionTopic(q)}`);
+    active.draft = input.slice(0, 200);
     state.totalSteps++;
     if (!scoringV2) recordSkill(p, q.type, result.correct, assisted, state.totalSteps);
     if (!scoringV2 && q.type === "spelling") {

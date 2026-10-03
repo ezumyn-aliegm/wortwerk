@@ -26,6 +26,7 @@ import audioCatalog from "./audio-catalog.json";
 import { audioKey } from "./audio-lines.js";
 import { playRecording, stopRecording } from "./recorded-audio.js";
 import { learningTargets, targetKey } from './scoring.js';
+import { submittedAnswer, sessionAccuracy } from './answer-feedback.js';
 import { firstWordContent } from './first-word-content.js';
 
 export function Primary({ children, ...props }) {
@@ -624,7 +625,8 @@ export function Tutor({
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  if (!feedback && active.draft.trim()) onAnswer(active.draft);
+                  const answer = submittedAnswer(e.currentTarget, active.draft);
+                  if (!feedback && answer.trim()) onAnswer(answer);
                 }}
               >
                 <label className="answer-label" htmlFor="answer">
@@ -632,6 +634,7 @@ export function Tutor({
                 </label>
                 <input
                   id="answer"
+                  name="answer"
                   ref={inputRef}
                   value={active.draft}
                   onChange={(e) => onDraft(e.target.value)}
@@ -735,11 +738,11 @@ export function Tutor({
                     <div className="answer-comparison">
                       <div>
                         <span>You wrote</span>
-                        <s>{feedback.input || "Not remembered yet"}</s>
+                        <s>{feedback.input || "No answer entered"}</s>
                       </div>
                       <div>
                         <span>Correct answer</span>
-                        <strong lang="de">{feedback.expected}</strong>
+                        <strong lang={q.type === 'meaning' ? 'en' : 'de'}>{feedback.expected}</strong>
                       </div>
                     </div>
                   )}
@@ -944,13 +947,13 @@ export function Home({ state, now, onStart, onProgress }) {
                   {exam ? "FINAL REHEARSAL RESULTS" : "LAST SESSION"}
                 </span>
                 <h2>
-                  {exam ? `${last.correct} of ${last.count} answers correct without hints`
+                  {exam ? `${sessionAccuracy(last).unaidedCorrect} of ${last.count} answers correct without hints`
                     : `${stats.introduced} words discovered. Your world is growing.`}
                 </h2>
                 <p>
                   {exam
-                    ? `${last.score}% · ${last.score >= 90 ? "Strong rehearsal." : "More practice will help."} This score is separate from word mastery.`
-                    : `${last.correct} answers from memory · ${last.count - last.correct} practice tries · ${stats.ready} words remembered after a gap`}
+                    ? `${sessionAccuracy(last).unaidedPercent}% · ${sessionAccuracy(last).unaidedPercent >= 90 ? "Strong rehearsal." : "More practice will help."} This score is separate from word mastery.`
+                    : `${sessionAccuracy(last).correct} correct answers · ${sessionAccuracy(last).wrong} to review · ${sessionAccuracy(last).guided} correct with guidance. Mastery grows through later independent recall.`}
                 </p>
                 {last.preparationAdded && (exam || last.phase === 4) && (
                   <p>
@@ -958,6 +961,13 @@ export function Home({ state, now, onStart, onProgress }) {
                     check. Try a later rehearsal for an independent score.
                   </p>
                 )}
+                {last.mistakes.filter(answer => !answer.correct).length > 0 && <section aria-label="Review wrong answers">
+                  <h3>Let’s review the wrong answers</h3>
+                  {last.mistakes.filter(answer => !answer.correct).map((answer, i) => <div className="answer-comparison" key={i}>
+                    <div><span>You wrote</span><s>{answer.input || 'No answer entered'}</s></div>
+                    <div><span>Correct answer</span><strong lang={answer.type === 'meaning' ? 'en' : 'de'}>{answer.expected}</strong></div>
+                  </div>)}
+                </section>}
               </div>
             </div>
           )}

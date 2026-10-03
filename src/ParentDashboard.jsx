@@ -5,6 +5,7 @@ import {
   validateActivity,
 } from "./activity.js";
 import { createTutor } from "./tutor.js";
+import { sessionAccuracy } from './answer-feedback.js';
 import "./parent.css";
 
 const dateFormat = new Intl.DateTimeFormat("en-US", {
@@ -164,7 +165,7 @@ function WaveReadiness({ wave, now }) {
           {view.exam ? (
             <>
               <p>
-                <strong>{view.exam.score}%</strong> · {view.exam.correct} /{" "}
+                <strong>{sessionAccuracy(view.exam).unaidedPercent}%</strong> · {sessionAccuracy(view.exam).unaidedCorrect} /{" "}
                 {view.exam.count} answers correct without help
               </p>
               <p className="parent-muted">

@@ -875,6 +875,17 @@ input:disabled {
   border-radius: 8px;
   flex-wrap: wrap;
 }
+.mission-results {
+  padding: 24px;
+  background: #fffaf3;
+  color: #203c30;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.mission-results p { margin-bottom: 14px; }
+.mission-results .answer-comparison span { font-size: 16px; }
+.mission-results .answer-comparison s,
+.mission-results .answer-comparison strong { font-size: 26px; }
 .answer-comparison > div {
   flex: 1;
   min-width: 130px;

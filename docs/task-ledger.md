@@ -1,5 +1,13 @@
 # Task ledger
 
+## October 3 · Answer verdict investigation
+
+Inherited checkpoint: clean main fc04e2b; live Wave 2 assessment-scope release c579452. Request: investigate a correct answer marked wrong then accepted on retry; fix a reproduced cause. Read-only live replay found no stored wrong answer that now grades correct and no stored identical input/expected text. Deterministic check: all 92 Wave 2 expected answers have the same correct verdict on original and retry. Related reporting repro: six correct guided responses produce correct=0 and six records in mistakes because mastery credit and answer correctness share session fields.
+
+Fixed: both typed-answer forms read the current submitted control, not an older React draft, and save that exact input. Isolated browser red/green reproducer: visible Oktoberfest with draft Oktoberfes was rejected before and accepted after the patch; this is a plausible cause, not confirmation of the student's exact incident. Wrong feedback and correction copying retain submitted/expected text. Mission/final results expose actual wrong responses, including the village checkpoint screen; guided correct responses are never called wrong. Parent accuracy is separated from mastery credits without rewriting evidence/history. Usage prompts explicitly request only missing words.
+
+Verification: 177 tests pass; production/offline build passes. Desktop browser checks cover the stale-field submission, wrong/correct comparison, copying, reload persistence, and completed Wave 2 mission at the village checkpoint. Independent reviewer found and verified the missing Wave 2 results branch; browser checking additionally exposed the checkpoint overlay, now covered by the same reusable results component. No Safari-specific or student-incident reproduction. No save/schema migration, reset, paid audio calls or live writes. Ready locally; fresh pause/sync/closed-tabs confirmation is still required before container replacement.
+
 ## October 3 · Wave 2 assessment scope
 
 Inherited checkpoint: clean main at 1c892a3; Wave 2 live, preserve all existing saves.

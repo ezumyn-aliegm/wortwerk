@@ -2,6 +2,8 @@
 
 Updated October 3, 2026. Internal family-use application.
 
+Ready locally, not deployed: answer submission now grades the current visible field rather than a potentially stale draft. Wrong feedback, correction copying and mission/final reviews show both submitted and expected text; village checkpoints also expose the review. Correct guided answers are labeled correct, separately from independent mastery. 177 tests pass; isolated browser red/green reproduction and completed Wave 2 review pass. Saved evidence/history and assessment scope are unchanged. Deployment awaits fresh pause/sync/closed-tabs confirmation. See docs/task-ledger.md for evidence and limits.
+
 Current live release: `wortwerk:wave2-scope-20261003-c579452`, runtime source `c579452`. October 3 requested scope correction excludes untested plural conversions from current Wave 2 practice/final-test/mastery/village. Assigned die Gummistiefel remains required; alternate forms are optional reference. 92 required targets instead of 106; 171 tests pass. 37 replacement recordings generated (557 cataloged). Confirmed paused/synced; stopped-service backup and exact post-migration comparison preserve Wave 1, retained Wave 2 evidence/history/verification, activity and selected wave. Revision 2100 → 2101. Live authenticated save/page/audio and HTTPS health passed. See WAVE-2-RELEASE.md for the deployment/rollback reference and browser evidence.
 
 ## Records

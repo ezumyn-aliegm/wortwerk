@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useTutor } from "./TutorContext.jsx";
 import NounComparison from './NounComparison.jsx';
+import { submittedAnswer, answerFeedback, sessionAccuracy } from './answer-feedback.js';
 import { firstWordContent } from './first-word-content.js';
 import Outpost, { MissionHUD } from "./Outpost.jsx";
 import {
@@ -34,9 +35,27 @@ import {
   MemoryCard,
 } from "./components.jsx";
 
+function MissionResults({ session, accuracy, repairs }) {
+  return <section className="mission-results" aria-label="Last mission results">
+    <p>Last mission: {accuracy.correct} correct answers · {accuracy.wrong} to review · {accuracy.guided} correct with guidance.</p>
+    <p>{session.correct} independent successes · {repairs} repairs queued. Correct practice answers still count as correct; later independent recall builds mastery.</p>
+    {accuracy.wrong > 0 && <section aria-label="Review wrong answers">
+      <h2>{session.kind === 'exam' ? 'Inspection corrections' : 'Let’s review the wrong answers'}</h2>
+      {session.mistakes.filter(a => !a.correct).map((a, i) => <article key={i}>
+        <div className="answer-comparison">
+          <div><span>You wrote</span><s>{a.input || 'No answer entered'}</s></div>
+          <div><span>Correct answer</span><strong lang={a.type === 'meaning' ? 'en' : 'de'}>{a.expected}</strong></div>
+        </div>
+        <p>{a.message}</p>
+      </article>)}
+    </section>}
+  </section>;
+}
+
 function WaveStudy({ state, update, next }) {
   const t = useTutor(), a = state.active, q = a.queue[0], w = t.BY_ID[q.wordId];
   const lesson = t.missingTeaching(state), spec = t.describe(q), exam = a.kind === 'exam';
+  const feedback = a.feedback && !exam ? answerFeedback(a.feedback) : null;
   if (q.type === 'teach') return <section className="wave-study lesson-panel teaching">
     <p>Meet your new word · teaching, no score</p><h1>{w.german}</h1><p>{w.english} · {w.kind}</p>
     {w.assessedFormVariants !== undefined && <p>Test focus: learn <strong>{w.german}</strong> as assigned, including its article. Other noun forms are optional—not tested and not required to build your village.</p>}
@@ -72,15 +91,19 @@ function WaveStudy({ state, update, next }) {
     <h1>{spec.title}</h1><p>{spec.translation}</p><p>{spec.instruction}</p>
     {!a.feedback ? <>
       {a.helped && <div className="guided-answer">{spec.answer}<p>{spec.explanation}</p></div>}
-      <form onSubmit={(e) => { e.preventDefault(); if (a.draft.trim()) update((s) => t.answerQuestion(s, a.draft)); }}>
+      <form onSubmit={(e) => { e.preventDefault(); const answer = submittedAnswer(e.currentTarget, a.draft); if (answer.trim()) update((s) => t.answerQuestion(s, answer)); }}>
         <label htmlFor="wave-answer">{q.type === 'meaning' ? 'English meaning' : 'German answer'}</label>
-        <input id="wave-answer" key={a.completed} autoFocus autoComplete="off" autoCorrect="off" spellCheck={false} value={a.draft} onChange={(e) => update((s) => t.setDraft(s, e.target.value))} />
+        <input id="wave-answer" name="answer" key={a.completed} autoFocus autoComplete="off" autoCorrect="off" autoCapitalize="none" maxLength={200} spellCheck={false} value={a.draft} onChange={(e) => update((s) => t.setDraft(s, e.target.value))} />
         <Primary type="submit">Check answer</Primary>
       </form>
       {!exam && <button className="text-button" onClick={() => update((s) => t.useHint(s))}>Show help (guided practice)</button>}
     </> : exam ? <><p>Answer recorded.</p><Primary onClick={next}>Continue inspection</Primary></> : <>
-      <p role="status">{a.feedback.independentSuccess ? 'Independent success.' : a.feedback.correct ? 'Practice answer correct; no independent credit yet.' : 'Repair queued. Let’s learn it.'}</p>
-      <p className="guided-answer">{a.feedback.expected}</p><p>{a.feedback.message}</p>
+      <p role="status"><strong>{feedback.title}</strong> {feedback.note}</p>
+      {!a.feedback.correct ? <section className="answer-comparison" aria-label="Your answer and the correction">
+        <div><span>You wrote</span><s>{feedback.input}</s></div>
+        <div><span>Correct answer</span><strong lang={q.type === 'meaning' ? 'en' : 'de'}>{feedback.expected}</strong></div>
+      </section> : <p className="guided-answer">{a.feedback.expected}</p>}
+      <p>{a.feedback.message}</p>
       {!a.feedback.correct && <><Speech text={spec.explanation} lang="en-US" label="Hear English explanation" caption="Hear explanation" /><NounComparison word={w} Speech={Speech} /></>}
       {t.correctionNeeded(state) && <><label htmlFor="wave-correction">Copy the correct answer once (practice only)</label><input id="wave-correction" value={a.correction} autoComplete="off" spellCheck={false} onChange={(e) => update((s) => t.setCorrection(s, e.target.value))} /></>}
       <Primary disabled={!t.correctionReady(state)} onClick={next}>{a.queue.length === 1 ? 'Finish mission' : 'Next challenge'}</Primary>
@@ -170,6 +193,8 @@ export default function App({
   const [notice, setNotice] = useState("");
   const [outpostOpen, setOutpostOpen] = useState(false);
   const learning = { ...summary(state), total: WORDS.length };
+  const lastSession = state.sessions.at(-1);
+  const lastAccuracy = lastSession ? sessionAccuracy(lastSession) : null;
   useEffect(() => {
     const interval = setInterval(() => setNow(Date.now()), 15000);
     return () => clearInterval(interval);
@@ -475,6 +500,8 @@ export default function App({
               )}
             </section>
           ) : showOutpost ? (
+            <>
+            {scoringV2 && !state.active && lastSession && <MissionResults session={lastSession} accuracy={lastAccuracy} repairs={learning.repairs.length} />}
             <Outpost
               game={state.game}
               learning={learning}
@@ -486,6 +513,7 @@ export default function App({
               onPractice={() => begin('extra')}
               onWorkshop={() => begin('course')}
             />
+            </>
           ) : state.active ? (
             scoringV2 ? <WaveStudy state={state} update={update} next={next} /> : <Tutor
               state={state}
@@ -503,8 +531,7 @@ export default function App({
             scoringV2 ? <section className="home">
               <h1>{learning.complete ? 'Every target verified. Your village is complete.' : learning.initialComplete ? 'Final inspection and later recall' : 'Your next village mission'}</h1>
               <p>Up to six planned challenges. Independent successes and repairs are counted separately.</p>
-              {state.sessions.at(-1) && <p>Last mission: {state.sessions.at(-1).correct} independent successes from {state.sessions.at(-1).count} answers · {learning.repairs.length} repairs queued.</p>}
-              {state.sessions.at(-1)?.kind === 'exam' && <details onToggle={(e) => { if (e.currentTarget.open) update((s) => visitWordbank(s)); }}><summary>Inspection corrections</summary>{state.sessions.at(-1).mistakes.map((a, i) => <p key={i}>{a.wordId} · {a.type}: {a.expected} — {a.message}</p>)}</details>}
+              {lastSession && <MissionResults session={lastSession} accuracy={lastAccuracy} repairs={learning.repairs.length} />}
               {!learning.complete && <>
                 {now < dueAt(state) ? <p>Delayed recall available {new Date(dueAt(state)).toLocaleString()}. Waiting carries no penalty.</p> : <Primary onClick={() => begin('course')}>{learning.initialComplete ? 'Start inspection / targeted recheck' : 'Recommended mission'}</Primary>}
                 {!learning.initialComplete && <div className="village-mission-choices"><button onClick={() => begin('extra')}>Spelling expedition</button><button onClick={() => begin('course')}>Sentence workshop</button></div>}
