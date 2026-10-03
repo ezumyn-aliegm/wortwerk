@@ -6,6 +6,7 @@ import { appendWave, serializeBackup, parseLibraryBackup } from '../src/library-
 import { createTutor } from '../src/tutor.js';
 import { freshState, startSession, setDraft } from '../src/engine.js';
 import { nounComparison } from '../src/noun-forms.js';
+import { assessedFormVariants } from '../src/scoring.js';
 
 test('autumn wave has the exact twenty words and confirmed deadline', () => {
   assert.equal(WAVE_TWO.words.length, 20);
@@ -26,12 +27,12 @@ test('all assessment variants are explicitly taught and memory chunks spell the 
       assert.equal(page.answer, sentence.replace('___', answer));
       assert.equal(page.translation, english);
     });
-    w.forms.forEach(([, answer], i) => assert.equal(pages.find(p => p.tags.includes(`form:${i}`)).answer, answer));
+    assessedFormVariants(w).forEach(i => assert.equal(pages.find(p => p.tags.includes(`form:${i}`)).answer, w.forms[i][1]));
     if (w.kind === 'noun') {
       const forms = nounComparison(w);
       assert.ok(forms, w.id);
-      assert.ok(w.tip.includes(forms.singular));
-      assert.ok(w.tip.includes(forms.plural));
+      assert.ok(w.tip.includes(w.german));
+      assert.ok(w.tip.includes('assigned'));
       assert.ok(w.forms.some(f => f[1] === forms.plural));
     }
   }

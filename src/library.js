@@ -38,6 +38,9 @@ export function validWords(words) {
         w.usages.length <= 10 &&
         w.usages.every((v) => tuple(v) && text(v[2], 200) && v[0].includes("___")) &&
         Array.isArray(w.forms) &&
+        (w.assessedFormVariants === undefined || (Array.isArray(w.assessedFormVariants) &&
+          new Set(w.assessedFormVariants).size === w.assessedFormVariants.length &&
+          w.assessedFormVariants.every(i => Number.isInteger(i) && i >= 0 && i < w.forms.length))) &&
         w.forms.length <= 10 &&
         w.forms.every((v) => tuple(v) && text(v[1], 200)) &&
         w.memory &&

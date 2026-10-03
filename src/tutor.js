@@ -1,6 +1,6 @@
 import { requiredSkills } from "./data.js";
 import { freshGame, freshVillage, updateVillage, awardGame, gameStatus, validateGame } from "./game.js";
-import { usesLearningScore, freshLearning, learningTargets, targetKey, learningSummary, recordLearning, exposeLearning, validateLearning, DELAY_MS } from './scoring.js';
+import { usesLearningScore, freshLearning, learningTargets, targetKey, learningSummary, recordLearning, exposeLearning, validateLearning, DELAY_MS, assessedFormVariants } from './scoring.js';
 
 export function createTutor(WORDS, { deadlineAt = null } = {}) {
   const BY_ID = Object.fromEntries(WORDS.map((w) => [w.id, w]));
@@ -47,14 +47,16 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
         translation,
         explanation: word.tip,
       })),
-      ...word.forms.map(([prompt, answer, explanation], variant) => ({
+      ...assessedFormVariants(word).map((variant) => {
+        const [prompt, answer, explanation] = word.forms[variant];
+        return {
         kind: "form",
         label: `Word form ${variant + 1}`,
         tags: [`form:${variant}`],
         prompt,
         answer,
         explanation,
-      })),
+      }; }),
     ];
   }
   function questionTopic(q) {
@@ -396,8 +398,9 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
           ...WORDS.filter((w) => first || !verification[w.id].finalSpelling || (!verification[w.id].delayed && now >= verification[w.id].exposedAt + DELAY_MS))
             .map((w) => question(w.id, 'spelling')),
           ...WORDS.filter((w) => first || !verification[w.id].finalTransfer).map((w, i) => {
-            const type = w.forms.length && i % 2 === 0 ? 'form' : 'usage';
-            return question(w.id, type, (state.sessions.length + i) % w[type === 'form' ? 'forms' : 'usages'].length);
+            const forms = assessedFormVariants(w);
+            const type = forms.length && i % 2 === 0 ? 'form' : 'usage';
+            return question(w.id, type, type === 'form' ? forms[(state.sessions.length + i) % forms.length] : (state.sessions.length + i) % w.usages.length);
           }),
         ];
         const spaced = [], simulated = structuredClone(state.learning.targets), targets = learningTargets(WORDS);
@@ -814,6 +817,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       // Mirror aggregate skills only for legacy parent displays; scoring uses per-target evidence.
       for (const type of requiredSkills(BY_ID[q.wordId])) {
         const targets = learningTargets([BY_ID[q.wordId]]).filter((t) => t.type === type).map((t) => state.learning.targets[targetKey(t)]);
+        if (!targets.length) continue;
         p.skills[type].wins = Math.min(...targets.map((t) => t.steps));
         p.skills[type].attempts = targets.reduce((n, t) => n + t.attempts, 0);
       }
@@ -902,12 +906,15 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     if (scoringV2 && active.kind === 'exam') {
       // Apply grades together so neither village movement nor coverage leaks answers during inspection.
       for (const a of active.answers) {
+        if (!state.learning.targets[targetKey(a)]) continue;
         a.independentSuccess = recordLearning(state.learning, a, { ...a, exam: true });
         state.game = updateVillage(state.game, summary(state), a.independentSuccess);
         state.words[a.wordId].delayed = state.learning.verification[a.wordId].delayed;
       }
     }
-    const correct = active.answers.filter(
+    const assessedAnswers = scoringV2 ? active.answers.filter(a => state.learning.targets[targetKey(a)]) : active.answers;
+    const retiredAnswers = active.answers.filter(a => !assessedAnswers.includes(a));
+    const correct = assessedAnswers.filter(
       (a) => scoringV2 ? a.independentSuccess : a.correct && !a.assisted,
     ).length;
     const session = {
@@ -915,22 +922,23 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       phase: active.phase,
       startedAt: active.startedAt,
       finishedAt: now,
-      count: active.answers.length,
+      count: assessedAnswers.length,
       correct,
-      score: active.answers.length
-        ? Math.round((correct / active.answers.length) * 100)
+      score: assessedAnswers.length
+        ? Math.round((correct / assessedAnswers.length) * 100)
         : 0,
-      mistakes: active.answers.filter((a) => !a.correct || a.assisted),
+      mistakes: assessedAnswers.filter((a) => !a.correct || a.assisted),
+      ...(retiredAnswers.length ? {retiredAnswers} : {}),
       firstTry:
-        active.answers.length -
-        active.answers.filter((a) => !a.correct || a.assisted).length,
+        assessedAnswers.length -
+        assessedAnswers.filter((a) => !a.correct || a.assisted).length,
       preparationAdded:
         !!active.preparationAdded || !!active.taughtHere?.length,
     };
     state.sessions.push(session);
     if (state.sessions.length > 100) state.sessions.shift();
     if (scoringV2 && active.kind === 'exam') {
-      for (const a of active.answers) exposeLearning(state.learning, a.wordId, questionTopic(a), now);
+      for (const a of active.answers) if (state.learning.targets[targetKey(a)]) exposeLearning(state.learning, a.wordId, questionTopic(a), now);
     }
     if (!scoringV2 && active.kind === "exam")
       active.answers.forEach((a) => {
@@ -987,7 +995,8 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
           p.taught.length > 30 ||
           new Set(p.taught).size !== p.taught.length ||
           !p.taught.every((t) =>
-            teachingPages(w).some((page) => page.tags.includes(t)),
+            teachingPages(w).some((page) => page.tags.includes(t)) ||
+              w.forms.some((_, i) => t === `form:${i}`),
           ))
       )
         return false;

@@ -2,13 +2,14 @@ export const LEARNING_WEIGHTS = Object.freeze({ meaning: 20, spelling: 40, usage
 export const DELAY_MS = 8 * 3_600_000;
 export const usesLearningScore = (words) => words.length > 0 && words.every((w) => w.studyVersion === 2);
 export const targetKey = (q) => `${q.wordId}/${q.type}${['usage', 'form'].includes(q.type) ? `:${q.variant}` : ''}`;
+export const assessedFormVariants = (word) => word.assessedFormVariants ?? word.forms.map((_, i) => i);
 
 export function learningTargets(words) {
   return words.flatMap((w) => [
     { wordId: w.id, type: 'meaning', variant: 0 },
     { wordId: w.id, type: 'spelling', variant: 0 },
     ...w.usages.map((_, variant) => ({ wordId: w.id, type: 'usage', variant })),
-    ...w.forms.map((_, variant) => ({ wordId: w.id, type: 'form', variant })),
+    ...assessedFormVariants(w).map((variant) => ({ wordId: w.id, type: 'form', variant })),
   ]);
 }
 
@@ -18,7 +19,8 @@ export function freshLearning(words) {
   return {
     version: 2,
     // Freeze the denominator and reviewed answers in the save.
-    contract: JSON.stringify(words.map((w) => [w.id, w.german, w.english, w.meaningAnswers || [], w.usages, w.forms])),
+    contract: JSON.stringify(words.map((w) => [w.id, w.german, w.english, w.meaningAnswers || [], w.usages, w.forms,
+      ...(w.assessedFormVariants === undefined ? [] : [w.assessedFormVariants])])),
     targets: Object.fromEntries(learningTargets(words).map((q) => [targetKey(q), { steps: 0, attempts: 0, other: 3, repair: false }])),
     verification: Object.fromEntries(words.map((w) => [w.id, { delayed: false, finalSpelling: false, finalTransfer: false, exposedAt: 0 }])),
   };
@@ -60,6 +62,8 @@ export function learningSummary(learning, words) {
 // Called once per accepted question. Tutor feedback guards duplicate deliveries.
 export function recordLearning(learning, q, { correct, assisted, at, exam = false }) {
   const key = targetKey(q), t = learning.targets[key], v = learning.verification[q.wordId];
+  // Historical answers to retired targets remain in the session history, not mastery.
+  if (!t) return false;
   const independent = !assisted && !q.retry && (correct ? t.other >= 3 : !t.repair || t.other >= 3);
   t.attempts++;
   if (independent) {

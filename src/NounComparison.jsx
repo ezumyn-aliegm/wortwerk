@@ -5,7 +5,7 @@ import './noun-forms.css';
 export default function NounComparison({word, Speech}) {
   const forms = nounComparison(word);
   if (!forms) return null;
-  return <section className="noun-comparison" aria-label="Singular and plural forms">
+  const comparison = <section className="noun-comparison" aria-label="Singular and plural forms">
     <h3>One or more than one?</h3>
     <div className="noun-form-pair">
       <div>
@@ -24,4 +24,9 @@ export default function NounComparison({word, Speech}) {
     <p className="noun-form-rule">{forms.rule}</p>
     {forms.note && <p>{forms.note}</p>}
   </section>;
+  return word.assessedFormVariants !== undefined ? <details className="optional-noun-forms">
+    <summary>Good to know · other noun forms (not tested)</summary>
+    <p>Learn the assigned word: <strong lang="de">{word.german}</strong>. You do not need to convert it to another form for this wave.</p>
+    {comparison}
+  </details> : comparison;
 }

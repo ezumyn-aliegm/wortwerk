@@ -8,3 +8,5 @@
 .noun-form-pair mark { background: #ffe59a; color: #253728; text-decoration: underline; text-underline-offset: .15em; }
 .noun-form-pair button { min-height: 48px; }
 @media (max-width: 560px) { .noun-form-pair { grid-template-columns: 1fr; } }
+.optional-noun-forms { margin: 1rem 0; }
+.optional-noun-forms summary { cursor: pointer; font-size: 1.15rem; padding: .8rem; }

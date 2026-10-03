@@ -39,6 +39,7 @@ function WaveStudy({ state, update, next }) {
   const lesson = t.missingTeaching(state), spec = t.describe(q), exam = a.kind === 'exam';
   if (q.type === 'teach') return <section className="wave-study lesson-panel teaching">
     <p>Meet your new word · teaching, no score</p><h1>{w.german}</h1><p>{w.english} · {w.kind}</p>
+    {w.assessedFormVariants !== undefined && <p>Test focus: learn <strong>{w.german}</strong> as assigned, including its article. Other noun forms are optional—not tested and not required to build your village.</p>}
     <Speech text={w.german} />
     <MemoryCard word={w} />
     {w.memory?.scene && <Speech text={w.memory.scene} lang="en-US" label="Hear memory link" caption="Hear memory link" />}

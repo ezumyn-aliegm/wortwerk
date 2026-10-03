@@ -11,7 +11,10 @@
       "studyVersion": 2,
       "example": "Das Oktoberfest ist ein Fest.",
       "translation": "Oktoberfest is a festival.",
-      "tip": "das Oktoberfest means Oktoberfest festival. die Oktoberfeste means Oktoberfest celebrations. For several separate celebrations, add -e. The famous Munich event is normally named in the singular. Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "das Oktoberfest means Oktoberfest festival. Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Das ___ ist ein Fest.",
@@ -33,7 +36,7 @@
         [
           "Complete the singular: ___ Oktoberfest.",
           "das",
-          "For one, say das Oktoberfest; for more than one, say die Oktoberfeste."
+          "Learn the assigned noun das Oktoberfest, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -66,7 +69,10 @@
       "studyVersion": 2,
       "example": "Das Erntedankfest ist im Herbst.",
       "translation": "The harvest thanksgiving festival is in autumn.",
-      "tip": "das Erntedankfest means harvest thanksgiving festival. die Erntedankfeste means harvest thanksgiving festivals. Add -e for several festivals. Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "das Erntedankfest means harvest thanksgiving festival. Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Das ___ ist im Herbst.",
@@ -88,7 +94,7 @@
         [
           "Complete the singular: ___ Erntedankfest.",
           "das",
-          "For one, say das Erntedankfest; for more than one, say die Erntedankfeste."
+          "Learn the assigned noun das Erntedankfest, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -122,7 +128,10 @@
       "studyVersion": 2,
       "example": "Die Wanderung ist lang.",
       "translation": "The hike is long.",
-      "tip": "die Wanderung means hike. die Wanderungen means hikes. Add -en: Wanderung → Wanderungen. Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "die Wanderung means hike. Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Die ___ ist lang.",
@@ -144,7 +153,7 @@
         [
           "Complete the singular: ___ Wanderung.",
           "die",
-          "For one, say die Wanderung; for more than one, say die Wanderungen."
+          "Learn the assigned noun die Wanderung, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -175,7 +184,10 @@
       "studyVersion": 2,
       "example": "Der Baum ist groß.",
       "translation": "The tree is big.",
-      "tip": "der Baum means tree. die Bäume means trees. Change a → ä and add -e. Singular Baum has au. Plural Bäume changes a to ä and adds e. Do not put the umlaut in the singular. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "der Baum means tree. Write B-au-m. Baum has au, with no umlaut. Learn der Baum. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Der ___ ist groß.",
@@ -197,7 +209,7 @@
         [
           "Complete the singular: ___ Baum.",
           "der",
-          "For one, say der Baum; for more than one, say die Bäume."
+          "Learn the assigned noun der Baum, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -208,8 +220,8 @@
         "rule": "Change a → ä and add -e."
       },
       "memory": {
-        "scene": "Picture one blocky tree; now add another tree and two dots over the a. One Baum becomes several Bäume.",
-        "watch": "Singular Baum has au. Plural Bäume changes a to ä and adds e. Do not put the umlaut in the singular.",
+        "scene": "Picture one blocky tree. Its label is der Baum. Connect the au letters with the tall trunk you can see.",
+        "watch": "Write B-au-m. Baum has au, with no umlaut. Learn der Baum.",
         "chunks": [
           "B",
           "au",
@@ -229,7 +241,10 @@
       "studyVersion": 2,
       "example": "Das Blatt ist gelb.",
       "translation": "The leaf is yellow.",
-      "tip": "das Blatt means leaf. die Blätter means leaves. Change a → ä and add -er. Blatt ends in double t. Blätter keeps tt, changes a to ä, and adds er. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "das Blatt means leaf. Write Bl-a-tt. Blatt ends in double t. Learn das Blatt. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Das ___ ist gelb.",
@@ -251,7 +266,7 @@
         [
           "Complete the singular: ___ Blatt.",
           "das",
-          "For one, say das Blatt; for more than one, say die Blätter."
+          "Learn the assigned noun das Blatt, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -263,7 +278,7 @@
       },
       "memory": {
         "scene": "Picture a leaf falling beside a tree. Give its stem two little branches to remind you of the two t letters. The word can also mean a sheet of paper; this wave uses leaf.",
-        "watch": "Blatt ends in double t. Blätter keeps tt, changes a to ä, and adds er.",
+        "watch": "Write Bl-a-tt. Blatt ends in double t. Learn das Blatt.",
         "chunks": [
           "Bl",
           "a",
@@ -283,7 +298,10 @@
       "studyVersion": 2,
       "example": "Das Bauernhaus ist alt.",
       "translation": "The farmhouse is old.",
-      "tip": "das Bauernhaus means farmhouse. die Bauernhäuser means farmhouses. Only the house part changes: Haus → Häuser; keep Bauern unchanged. Keep the n in Bauern. Singular ends haus; plural ends häuser, with ä. Capital B, no space. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "das Bauernhaus means farmhouse. Keep the n in Bauern. Build Bauern + haus without spaces, with capital B. Learn das Bauernhaus. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Das ___ ist alt.",
@@ -305,7 +323,7 @@
         [
           "Complete the singular: ___ Bauernhaus.",
           "das",
-          "For one, say das Bauernhaus; for more than one, say die Bauernhäuser."
+          "Learn the assigned noun das Bauernhaus, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -317,7 +335,7 @@
       },
       "memory": {
         "scene": "Picture the farmer’s house beside a field. Bauern + Haus builds one farmhouse word. Haus looks a little like English house.",
-        "watch": "Keep the n in Bauern. Singular ends haus; plural ends häuser, with ä. Capital B, no space.",
+        "watch": "Keep the n in Bauern. Build Bauern + haus without spaces, with capital B. Learn das Bauernhaus.",
         "chunks": [
           "Bauern",
           "haus"
@@ -336,7 +354,10 @@
       "studyVersion": 2,
       "example": "Der Kürbis ist orange.",
       "translation": "The pumpkin is orange.",
-      "tip": "der Kürbis means pumpkin. die Kürbisse means pumpkins. Add -se to Kürbis: the resulting ending is -isse, with ss. Kürbis has ü, one s, and no final e. Kürbisse has double s and a final e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "der Kürbis means pumpkin. Kürbis has ü, one s, and no final e. The two dots belong over ü. Learn der Kürbis. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Der ___ ist orange.",
@@ -358,7 +379,7 @@
         [
           "Complete the singular: ___ Kürbis.",
           "der",
-          "For one, say der Kürbis; for more than one, say die Kürbisse."
+          "Learn the assigned noun der Kürbis, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -370,7 +391,7 @@
       },
       "memory": {
         "scene": "Picture a pumpkin with two seeds above it: the two dots belong over ü. On the pumpkin’s label, check Kürbis before adding more pumpkins.",
-        "watch": "Kürbis has ü, one s, and no final e. Kürbisse has double s and a final e.",
+        "watch": "Kürbis has ü, one s, and no final e. The two dots belong over ü. Learn der Kürbis.",
         "chunks": [
           "K",
           "ür",
@@ -390,7 +411,10 @@
       "studyVersion": 2,
       "example": "Der Igel ist klein.",
       "translation": "The hedgehog is small.",
-      "tip": "der Igel means hedgehog. die Igel means hedgehogs. The noun spelling does not change; change the article der → die. Start with capital I, then gel. The long first vowel is written with just I: do not add an e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "der Igel means hedgehog. Start with capital I, then gel. The long first vowel is written with just I: do not add an e. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Der ___ ist klein.",
@@ -412,7 +436,7 @@
         [
           "Complete the singular: ___ Igel.",
           "der",
-          "For one, say der Igel; for more than one, say die Igel."
+          "Learn the assigned noun der Igel, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -423,7 +447,7 @@
         "rule": "The noun spelling does not change; change the article der → die."
       },
       "memory": {
-        "scene": "Picture one hedgehog, then a family of hedgehogs. Their name stays Igel; only der changes to die.",
+        "scene": "Picture a small hedgehog curled up beside a tree. Its label is der Igel. Check the capital I at the start.",
         "watch": "Start with capital I, then gel. The long first vowel is written with just I: do not add an e.",
         "chunks": [
           "I",
@@ -443,7 +467,10 @@
       "studyVersion": 2,
       "example": "Die Laterne leuchtet.",
       "translation": "The lantern shines.",
-      "tip": "die Laterne means lantern. die Laternen means lanterns. Add -n to Laterne. Say and write La-ter-ne. Keep the e between t and r, and the final e. Laternen adds n. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "die Laterne means lantern. Say and write La-ter-ne. Keep the e between t and r, and the final e. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Die ___ leuchtet.",
@@ -465,7 +492,7 @@
         [
           "Complete the singular: ___ Laterne.",
           "die",
-          "For one, say die Laterne; for more than one, say die Laternen."
+          "Learn the assigned noun die Laterne, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -477,7 +504,7 @@
       },
       "memory": {
         "scene": "Picture carrying a bright lantern on an autumn evening. English lantern and German Laterne share many letters; look carefully at the different ending.",
-        "watch": "Say and write La-ter-ne. Keep the e between t and r, and the final e. Laternen adds n.",
+        "watch": "Say and write La-ter-ne. Keep the e between t and r, and the final e.",
         "chunks": [
           "La",
           "ter",
@@ -749,7 +776,10 @@
       "studyVersion": 2,
       "example": "Der Spaziergang ist kurz.",
       "translation": "The walk is short.",
-      "tip": "der Spaziergang means walk / stroll. die Spaziergänge means walks / strolls. Keep Spazier unchanged; Gang → Gänge: a → ä, then add -e. Write Spa-zier-gang. The long ee sound in zier is written ie. In Wir machen einen Spaziergang, masculine ein changes to einen because the walk receives the action. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "der Spaziergang means walk / stroll. Write Spa-zier-gang. The long ee sound in zier is written ie. Learn der Spaziergang. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Der ___ ist kurz.",
@@ -771,7 +801,7 @@
         [
           "Complete the singular: ___ Spaziergang.",
           "der",
-          "For one, say der Spaziergang; for more than one, say die Spaziergänge."
+          "Learn the assigned noun der Spaziergang, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -783,7 +813,7 @@
       },
       "memory": {
         "scene": "Picture a relaxed stroll around your village, rather than a long hike. Spaziergang is the walk; Wanderung is the hike. Gang can mean a walk or going.",
-        "watch": "Write Spa-zier-gang. The long ee sound in zier is written ie. In Wir machen einen Spaziergang, masculine ein changes to einen because the walk receives the action.",
+        "watch": "Write Spa-zier-gang. The long ee sound in zier is written ie. Learn der Spaziergang.",
         "chunks": [
           "Spa",
           "zier",
@@ -804,7 +834,10 @@
       "studyVersion": 2,
       "example": "Die Ernte ist gut.",
       "translation": "The harvest is good.",
-      "tip": "die Ernte means harvest. die Ernten means harvests. Add -n to Ernte. Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "die Ernte means harvest. Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Die ___ ist gut.",
@@ -826,7 +859,7 @@
         [
           "Complete the singular: ___ Ernte.",
           "die",
-          "For one, say die Ernte; for more than one, say die Ernten."
+          "Learn the assigned noun die Ernte, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -857,7 +890,10 @@
       "studyVersion": 2,
       "example": "Der Drachen fliegt.",
       "translation": "The kite flies.",
-      "tip": "der Drachen means kite. die Drachen means kites. The noun spelling stays Drachen; change der → die for the plural. For a kite, write Dra-chen with ch and a final n. Both one kite and several kites keep that n. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [
+        1
+      ],
+      "tip": "der Drachen means kite. For a kite, write Dra-chen with ch and a final n. Learn der Drachen, not der Drache. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Der ___ fliegt.",
@@ -879,7 +915,7 @@
         [
           "Complete the singular: ___ Drachen.",
           "der",
-          "For one, say der Drachen; for more than one, say die Drachen."
+          "Learn the assigned noun der Drachen, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -891,7 +927,7 @@
       },
       "memory": {
         "scene": "Picture a colorful kite on a string in the wind. Keep its tail: the final n in Drachen. A mythical dragon is der Drache, without that final n in its singular name.",
-        "watch": "For a kite, write Dra-chen with ch and a final n. Both one kite and several kites keep that n.",
+        "watch": "For a kite, write Dra-chen with ch and a final n. Learn der Drachen, not der Drache.",
         "chunks": [
           "Dra",
           "chen"
@@ -910,7 +946,8 @@
       "studyVersion": 2,
       "example": "Die Gummistiefel sind gelb.",
       "translation": "The rain boots are yellow.",
-      "tip": "der Gummistiefel means one rain boot. die Gummistiefel means rain boots / rubber boots. The noun spelling stays the same. One: der Gummistiefel. More than one: die Gummistiefel. Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. With several boots use sind, not singular ist. Learn the whole noun with its article. All German nouns start with a capital letter.",
+      "assessedFormVariants": [],
+      "tip": "die Gummistiefel means rain boots / rubber boots. Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. Learn the assigned die Gummistiefel: rain boots. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
       "usages": [
         [
           "Die ___ sind gelb.",
@@ -932,7 +969,7 @@
         [
           "Complete the singular: ___ Gummistiefel.",
           "der",
-          "For one, say der Gummistiefel; for more than one, say die Gummistiefel."
+          "Learn the assigned noun die Gummistiefel, including its article. All German nouns start with a capital letter."
         ]
       ],
       "nounForms": {
@@ -943,8 +980,8 @@
         "rule": "The noun spelling stays the same. One: der Gummistiefel. More than one: die Gummistiefel."
       },
       "memory": {
-        "scene": "Picture a pair of rubber boots splashing in a puddle. Gummi means rubber; Stiefel means boot. Your lesson gives the plural: die Gummistiefel. One boot is der Gummistiefel.",
-        "watch": "Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. With several boots use sind, not singular ist.",
+        "scene": "Picture a pair of rubber boots splashing in a puddle. Gummi means rubber; Stiefel means boot. Learn die Gummistiefel for the pair.",
+        "watch": "Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. Learn the assigned die Gummistiefel: rain boots.",
         "chunks": [
           "Gummi",
           "stie",

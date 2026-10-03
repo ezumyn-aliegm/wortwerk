@@ -5,6 +5,8 @@ const noun = (id, singular, plural, english, pluralEnglish, example, translation
   const german = id === 'gummistiefel' ? plural : singular;
   return {
     id, german, english, kind: 'noun', studyVersion: 2, example, translation,
+    // Only the assigned form is assessed. Conversion remains optional reference.
+    assessedFormVariants: id === 'gummistiefel' ? [] : [1],
     tip: `${singular} means ${id === 'gummistiefel' ? 'one rain boot' : english}. ${plural} means ${pluralEnglish}. ${rule} ${spelling} Learn the whole noun with its article. All German nouns start with a capital letter.`,
     usages,
     forms: [
@@ -15,13 +17,45 @@ const noun = (id, singular, plural, english, pluralEnglish, example, translation
     memory: {scene: cue, watch: spelling, chunks, recall: `Picture the scene, cover the German, and write ${german}. Check every letter and the article.`},
   };
 };
+
+// Keep shipped recordings usable for saved historical content and optional reference.
+const assignedSpelling = {
+  oktoberfest: 'Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O.',
+  erntedankfest: 'Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank.',
+  wanderung: 'Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die.',
+  baum: 'Write B-au-m. Baum has au, with no umlaut. Learn der Baum.',
+  blatt: 'Write Bl-a-tt. Blatt ends in double t. Learn das Blatt.',
+  bauernhaus: 'Keep the n in Bauern. Build Bauern + haus without spaces, with capital B. Learn das Bauernhaus.',
+  kuerbis: 'Kürbis has ü, one s, and no final e. The two dots belong over ü. Learn der Kürbis.',
+  igel: 'Start with capital I, then gel. The long first vowel is written with just I: do not add an e.',
+  laterne: 'Say and write La-ter-ne. Keep the e between t and r, and the final e.',
+  spaziergang: 'Write Spa-zier-gang. The long ee sound in zier is written ie. Learn der Spaziergang.',
+  ernte: 'Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e.',
+  drachen: 'For a kite, write Dra-chen with ch and a final n. Learn der Drachen, not der Drache.',
+  gummistiefel: 'Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. Learn the assigned die Gummistiefel: rain boots.',
+};
+const assignedScenes = {
+  baum: 'Picture one blocky tree. Its label is der Baum. Connect the au letters with the tall trunk you can see.',
+  igel: 'Picture a small hedgehog curled up beside a tree. Its label is der Igel. Check the capital I at the start.',
+  gummistiefel: 'Picture a pair of rubber boots splashing in a puddle. Gummi means rubber; Stiefel means boot. Learn die Gummistiefel for the pair.',
+};
+function applyAssignedScope(wave) {
+  return {...wave, words:wave.words.map(word => {
+    if (word.kind !== 'noun') return word;
+    const memory = {...word.memory, watch:assignedSpelling[word.id], scene:assignedScenes[word.id] || word.memory.scene};
+    return {...word, memory,
+      tip:`${word.german} means ${word.english}. ${memory.watch} Learn the whole assigned noun with its article. All German nouns start with a capital letter.`,
+      forms:word.forms.map((form,i) => i !== 1 ? form : [form[0], form[1], `Learn the assigned noun ${word.german}, including its article. All German nouns start with a capital letter.`]),
+    };
+  })};
+}
 const adjective = (id, german, english, example, translation, usages, chunks, cue, spelling) => ({
   id, german, english, kind: 'adjective', studyVersion: 2, example, translation, usages, forms: [],
   tip: `${spelling} In these sentences the describing word comes after ist or sind; use ${german} unchanged. The other sentence words are supplied: you only fill in the describing word.`,
   memory: { scene: cue, watch: spelling, chunks, recall: `Picture the scene, hide the word, and write ${german} from memory. Check it letter by letter.` },
 });
 
-export const WAVE_TWO = {
+export const WAVE_TWO_REFERENCE = {
   id: 'wave-2-autumn-2026',
   title: 'Wave 2 · Autumn adventure',
   dueAt: '2026-10-05T09:00:00-04:00',
@@ -125,3 +159,4 @@ export const WAVE_TWO = {
     ...(word.id === 'erntedankfest' ? ['harvest festival', 'harvest thanksgiving'] : []),
   ])]})),
 };
+export const WAVE_TWO = applyAssignedScope(WAVE_TWO_REFERENCE);

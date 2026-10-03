@@ -4159,6 +4159,302 @@
       "language": "en",
       "sha256": "22cb7d01a010613850a490b984ee5ead4d4d2be7b346d1f64ed98bce71a0ed62",
       "bytes": 105600
+    },
+    "en_de0461062b1b0dba10567c95": {
+      "file": "en_de0461062b1b0dba10567c95.mp3",
+      "text": "das Oktoberfest means Oktoberfest festival. Write Oktober with k, not the English c. Join Oktober and fest into one word; capital O. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "f58d9b3a9ba5a7d9394352a114289ce6192fe0875939584de0f8b925289104a0",
+      "bytes": 293760
+    },
+    "en_452c015564103958d7c11fb1": {
+      "file": "en_452c015564103958d7c11fb1.mp3",
+      "text": "Learn the assigned noun das Oktoberfest, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "64ef8152c456acae068743080f76bb4337393455399e5cb8d53d44e7f79a6004",
+      "bytes": 130176
+    },
+    "en_2a36fc6a689b7ac8606c9520": {
+      "file": "en_2a36fc6a689b7ac8606c9520.mp3",
+      "text": "das Erntedankfest means harvest thanksgiving festival. Build Ernte + dank + fest without spaces. Keep the e in Ernte and the k in dank. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8a69956e178d612007608623048d41a3c653c10dad58ec2b13916df4cee85bd0",
+      "bytes": 291456
+    },
+    "en_5c19b5e9b474ea7d8f669bb5": {
+      "file": "en_5c19b5e9b474ea7d8f669bb5.mp3",
+      "text": "Learn the assigned noun das Erntedankfest, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "c4a917086f28bc48b950e27146b30fbb711b81be69894414ea0c0d67afeb28fc",
+      "bytes": 127488
+    },
+    "en_4794c2e581926c9f91592a06": {
+      "file": "en_4794c2e581926c9f91592a06.mp3",
+      "text": "die Wanderung means hike. Write Wander + ung: only one r in Wander. The noun ending -ung is a useful clue for die. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a344ee9e9efa0552a86262e45c2f5de92c72569df1ffc78673caf3269f6697de",
+      "bytes": 236160
+    },
+    "en_dedb3b88eeee90b24a0faaf8": {
+      "file": "en_dedb3b88eeee90b24a0faaf8.mp3",
+      "text": "Learn the assigned noun die Wanderung, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "23edc2976f44485bd52378363d9caf28732eacb043f32cbe6b7f2a916fad833f",
+      "bytes": 118656
+    },
+    "en_09080df7d4489198ab4e4aea": {
+      "file": "en_09080df7d4489198ab4e4aea.mp3",
+      "text": "der Baum means tree. Write B-au-m. Baum has au, with no umlaut. Learn der Baum. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "81cae5a260d16f80b31705c9ec64c66999ca43157d352c90b54552a5fbad677f",
+      "bytes": 232320
+    },
+    "en_671381364d98a1ef4bfb6f04": {
+      "file": "en_671381364d98a1ef4bfb6f04.mp3",
+      "text": "Learn the assigned noun der Baum, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "2c80aa61db94dab18f3fde958bfe24a0c6b5b62fbb07fde1daa055fc9eab68be",
+      "bytes": 115968
+    },
+    "en_04b7eab1b1db754041b18cde": {
+      "file": "en_04b7eab1b1db754041b18cde.mp3",
+      "text": "Picture one blocky tree. Its label is der Baum. Connect the au letters with the tall trunk you can see.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "5c9342e43ed3b8075759312760ec7fc0a4e62684895ea09023d06e132c3f5d3f",
+      "bytes": 136320
+    },
+    "en_37f9ed3508eb13adcc3d699e": {
+      "file": "en_37f9ed3508eb13adcc3d699e.mp3",
+      "text": "Write B-au-m. Baum has au, with no umlaut. Learn der Baum.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "96178fd01a170bd1bd51b58aee8f5b74f1dfeb8db7cdd6ec146c253851b76d31",
+      "bytes": 109440
+    },
+    "en_d4838bc578ee29ec2b4dd771": {
+      "file": "en_d4838bc578ee29ec2b4dd771.mp3",
+      "text": "das Blatt means leaf. Write Bl-a-tt. Blatt ends in double t. Learn das Blatt. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "33d2dc86847ca273cd0ab4789c8c206d56b5394405ecfa668c2553c54b784f2d",
+      "bytes": 224640
+    },
+    "en_ccc7082e916f2deb657832e9": {
+      "file": "en_ccc7082e916f2deb657832e9.mp3",
+      "text": "Learn the assigned noun das Blatt, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "622e5cf64d23b9f711a660b2f3e87c885ba093d99b25593bdf2b013ddbdf081c",
+      "bytes": 112512
+    },
+    "en_01ef72d146f8246406b494d9": {
+      "file": "en_01ef72d146f8246406b494d9.mp3",
+      "text": "Write Bl-a-tt. Blatt ends in double t. Learn das Blatt.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "12bf436b3095a879efc3b9f8a4391e4c3a8a0099fe03699ef9a787b22f212f6a",
+      "bytes": 94080
+    },
+    "en_9c60772d0b5442e84c5a4eb0": {
+      "file": "en_9c60772d0b5442e84c5a4eb0.mp3",
+      "text": "das Bauernhaus means farmhouse. Keep the n in Bauern. Build Bauern + haus without spaces, with capital B. Learn das Bauernhaus. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b9579e4a96adb3c2c0e5118395c133f989bd0b9b01da8b6de60d926bd486c39b",
+      "bytes": 286080
+    },
+    "en_3211c2a5de596d9f6f0cc85b": {
+      "file": "en_3211c2a5de596d9f6f0cc85b.mp3",
+      "text": "Learn the assigned noun das Bauernhaus, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1f7ac4a25ea11ca8c0cfbb1fa9259b5e4aae4f1d1092c645e3f71ee905807bce",
+      "bytes": 124800
+    },
+    "en_3a11960d9a9469ff4865f016": {
+      "file": "en_3a11960d9a9469ff4865f016.mp3",
+      "text": "Keep the n in Bauern. Build Bauern + haus without spaces, with capital B. Learn das Bauernhaus.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a846134d387f0d3bd171f483f01c52db6bb573572dea0dfe2669735decb75752",
+      "bytes": 132480
+    },
+    "en_80b03d55e8db79a0d65cd6bb": {
+      "file": "en_80b03d55e8db79a0d65cd6bb.mp3",
+      "text": "der Kürbis means pumpkin. Kürbis has ü, one s, and no final e. The two dots belong over ü. Learn der Kürbis. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "facf71b023ef9e8b1bca4d9c7b5bd133656bef27c2466c36e13ddcfbd3848891",
+      "bytes": 251520
+    },
+    "en_faf13f88a4ed47bbbee0cece": {
+      "file": "en_faf13f88a4ed47bbbee0cece.mp3",
+      "text": "Learn the assigned noun der Kürbis, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "82cd8c7864d9665345ac2cd8ad6dabfcbcaa7291e4100b944614b49b288e9757",
+      "bytes": 120960
+    },
+    "en_3b73dbb8ca9473b4b6829a32": {
+      "file": "en_3b73dbb8ca9473b4b6829a32.mp3",
+      "text": "Kürbis has ü, one s, and no final e. The two dots belong over ü. Learn der Kürbis.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "77022cbc787f5393c08483ddeef07046d5e090ab6b5b89183d8aaf13a34f3483",
+      "bytes": 132480
+    },
+    "en_688408d2e6aaf7dbb80c8dd6": {
+      "file": "en_688408d2e6aaf7dbb80c8dd6.mp3",
+      "text": "der Igel means hedgehog. Start with capital I, then gel. The long first vowel is written with just I: do not add an e. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "21bc966360fec6755f22fbb4622425b8f910bb341531dcb156998353983bdff8",
+      "bytes": 249216
+    },
+    "en_6b094ffa703cd3a215fd325b": {
+      "file": "en_6b094ffa703cd3a215fd325b.mp3",
+      "text": "Learn the assigned noun der Igel, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "3d9dc8da149a07dc5ca4a875d99af36060f556c406e8612d303bcf054b360b89",
+      "bytes": 109440
+    },
+    "en_7bb3204a02b3194786e91b89": {
+      "file": "en_7bb3204a02b3194786e91b89.mp3",
+      "text": "Picture a small hedgehog curled up beside a tree. Its label is der Igel. Check the capital I at the start.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "65bd154b5b02b9e0e69d001ff0ec8ab82814335cb6f2c3d6df95125460a8724c",
+      "bytes": 134016
+    },
+    "en_bebc60ca13cdacee572b3017": {
+      "file": "en_bebc60ca13cdacee572b3017.mp3",
+      "text": "die Laterne means lantern. Say and write La-ter-ne. Keep the e between t and r, and the final e. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "a0dc0d1fc605c2f660c1ae2c83c06ef10b289bdfcdd364b423eaa81bacec42a5",
+      "bytes": 221184
+    },
+    "en_fe6826a641e96138b7c1325f": {
+      "file": "en_fe6826a641e96138b7c1325f.mp3",
+      "text": "Learn the assigned noun die Laterne, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "07fa1a281ab950d658ffe31d43f6b78e39a59e9a198b950ffe603a19c1ed9897",
+      "bytes": 114816
+    },
+    "en_236a435de5af056acef5b67e": {
+      "file": "en_236a435de5af056acef5b67e.mp3",
+      "text": "Say and write La-ter-ne. Keep the e between t and r, and the final e.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "6df9e00fec8cfb462e785c7ab0915c0a9b21bf6c37175f4a811d81b72793c092",
+      "bytes": 103296
+    },
+    "en_03eb5e321a98608546bba272": {
+      "file": "en_03eb5e321a98608546bba272.mp3",
+      "text": "der Spaziergang means walk / stroll. Write Spa-zier-gang. The long ee sound in zier is written ie. Learn der Spaziergang. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8f7ff8c85e327d145216e581019d42ad198780b7d916b35b30a0f946cd19f697",
+      "bytes": 289920
+    },
+    "en_6ffb31b102bf92c8da512905": {
+      "file": "en_6ffb31b102bf92c8da512905.mp3",
+      "text": "Learn the assigned noun der Spaziergang, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "fb30863e34cc59771c19c9381d7b6aecfee5c05f6a88669312519e6cf50bb628",
+      "bytes": 117120
+    },
+    "en_f9b5bded190c272acb681ad1": {
+      "file": "en_f9b5bded190c272acb681ad1.mp3",
+      "text": "Write Spa-zier-gang. The long ee sound in zier is written ie. Learn der Spaziergang.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "d3eeee25eb92020d056d84f708b54985033938188dfaf52fc4f12ab2f7642aef",
+      "bytes": 136704
+    },
+    "en_f9102b04d07d4b9def723815": {
+      "file": "en_f9102b04d07d4b9def723815.mp3",
+      "text": "die Ernte means harvest. Write Ern-te: keep r, n, and t in that order. Start with capital E and end with e. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "4c065170b89d9304f958da88ee34a576b8b6aa7a213ccb245e56e15eac13b8c6",
+      "bytes": 264576
+    },
+    "en_0e69282ddc3af8db7685819b": {
+      "file": "en_0e69282ddc3af8db7685819b.mp3",
+      "text": "Learn the assigned noun die Ernte, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "8466f267a712d05bceea29f44df4171520189f2d01c78ee5926879531dc43252",
+      "bytes": 110976
+    },
+    "en_c4f271eb797ead2f1d37a900": {
+      "file": "en_c4f271eb797ead2f1d37a900.mp3",
+      "text": "der Drachen means kite. For a kite, write Dra-chen with ch and a final n. Learn der Drachen, not der Drache. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "7d70b87b6a8599951791464556de192cde4fd88cc62925e1bde5465e0dca083b",
+      "bytes": 261888
+    },
+    "en_2cd7384cf5113826b3947615": {
+      "file": "en_2cd7384cf5113826b3947615.mp3",
+      "text": "Learn the assigned noun der Drachen, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "1a754d2cc7d6c707e05d109a923b8f32fd144d240af6a3348a4d78b3da4c52f5",
+      "bytes": 113664
+    },
+    "en_380d0e531ba1a5c530f0943d": {
+      "file": "en_380d0e531ba1a5c530f0943d.mp3",
+      "text": "For a kite, write Dra-chen with ch and a final n. Learn der Drachen, not der Drache.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "08d887c4e8e2a9ff244fc93399c780097fcbec29dda947a47bb5b2d64c5d865c",
+      "bytes": 145536
+    },
+    "en_fa289fd4671fc345cb475288": {
+      "file": "en_fa289fd4671fc345cb475288.mp3",
+      "text": "die Gummistiefel means rain boots / rubber boots. Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. Learn the assigned die Gummistiefel: rain boots. Learn the whole assigned noun with its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "259c666bfaa6caa76d991d2ee60182a13c4d1ab619f49a5e23a9e6d4eb47c5cd",
+      "bytes": 318336
+    },
+    "en_64db40e26515cef25e21a28b": {
+      "file": "en_64db40e26515cef25e21a28b.mp3",
+      "text": "Picture a pair of rubber boots splashing in a puddle. Gummi means rubber; Stiefel means boot. Learn die Gummistiefel for the pair.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "db1e95170e307e9168fcfd17fa2533464bd7bb9db75e65f55980a2a6d427d529",
+      "bytes": 145536
+    },
+    "en_a337cd5d109f4ff4f4555c01": {
+      "file": "en_a337cd5d109f4ff4f4555c01.mp3",
+      "text": "Gummi has double m. Stiefel has ie for its long ee sound. Join them: Gummistiefel. Learn the assigned die Gummistiefel: rain boots.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "cc9f511e4aa9227eaca4ad144ee251463e7e5cd44ee76ee518f874d0590fb35f",
+      "bytes": 186240
+    },
+    "en_785ac4d753d922b66380e2c7": {
+      "file": "en_785ac4d753d922b66380e2c7.mp3",
+      "text": "Learn the assigned noun die Gummistiefel, including its article. All German nouns start with a capital letter.",
+      "voice_id": "eve",
+      "language": "en",
+      "sha256": "b8dfe078422bedbcdd34731f9721f81e39ce916f198d662210816f5b8dc6d9d5",
+      "bytes": 130176
     }
   },
   "voice_id": "eve"
