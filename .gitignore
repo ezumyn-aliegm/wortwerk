@@ -10,3 +10,6 @@ data/
 *-backup*.json
 Current-progress.json
 compose.local.yml
+
+.playwright-cli/
+output/playwright/

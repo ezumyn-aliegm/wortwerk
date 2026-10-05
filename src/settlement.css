@@ -1,0 +1,65 @@
+.settlement { margin: 24px 0; padding: 24px; border: 1px solid #54746a; border-radius: 20px; background: #102d2a; color: #f5e8c5; }
+.settlement-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.settlement-heading h2 { margin: 8px 0; font-size: clamp(25px,3vw,38px); }
+.settlement p { line-height: 1.55; }
+.settlement button, .settlement select { min-height: 44px; }
+.world-preview-control { display: grid; gap: 8px; font-size: 17px; }
+.world-preview-control select { background: #f5e8c5; color: #173f34; padding: 10px; border-radius: 8px; max-width: 100%; }
+.planning-notice { border-left: 3px solid #d8b469; padding: 10px 14px; background: #264238; }
+.settlement-scroll { overflow-x: auto; border-radius: 14px; margin-top: 18px; }
+.settlement-scene { position: relative; aspect-ratio: 3 / 2; min-width: 760px; isolation: isolate; }
+.settlement-scene > img { display: block; width: 100%; height: 100%; }
+.settlement-site { position: absolute; width: 21%; height: 24%; transform: translate(-50%,-66%); background: transparent; border: 0; padding: 0; color: #fff1c9; cursor: pointer; }
+.settlement-site:hover,.settlement-site:focus-visible { background: transparent; outline: 3px solid #e6bd64; border-radius: 20px; }
+.settlement-site.selected { border-radius: 20px; box-shadow: inset 0 0 0 2px #e6bd64; }
+.settlement-site-label { position: absolute; top: 91%; left: 50%; transform: translateX(-50%); width: max-content; max-width: 116%; background: #112e28ed; padding: 6px 10px; border: 1px solid #9b8859; border-radius: 8px; font-size: clamp(12px,1.2vw,17px); line-height: 1.3; }
+.settlement-site-label strong,.settlement-site-label small { display:block; }
+.settlement-site-label small { color: #ddca9a; font-size: .85em; }
+.settlement-site .construction-sprite,.settlement-site .landmark-sprite { position: absolute; bottom: 0; width: 94%; left: 3%; }
+.construction-sprite { display: block; aspect-ratio: 1/2; background-size: 600% 100%; background-repeat: no-repeat; }
+.landmark-sprite { display:block; aspect-ratio: 1/1; background-size: 500% 200%; background-repeat:no-repeat; }
+.settlement-site .construction-sprite { aspect-ratio: 1/2; height: 100%; width: 47%; left: 26.5%; }
+.settlement-cluster { position:absolute; inset:0; }
+.settlement-old-building { position:absolute; width: 28%; height: 67%; background-size: 500% 100%; }
+.settlement-repair { position: absolute; right: 0; top: 0; padding: 4px 8px; background: #a54f27; border-radius: 6px; font-size: 14px; }
+.settlement-inspector { display: grid; grid-template-columns: 1.4fr 1fr; gap: 30px; margin-top: 24px; padding: 20px; background: #193a32; border-radius: 14px; }
+.settlement-inspector h3 { font-size: 29px; margin: 7px 0; }
+.settlement-inspector h4 { font-size: 20px; margin: 7px 0; }
+.settlement-inventory ol { padding-left: 24px; line-height: 1.8; }
+.district-celebration { padding: 15px; border: 2px solid #d8b469; border-radius: 12px; background: #31583c; }
+.construction-workshop { margin-top: 22px; padding: 16px; border: 1px solid #718167; border-radius: 12px; }
+.construction-workshop summary { font-size: 20px; cursor: pointer; }
+.construction-demo { display: grid; grid-template-columns: minmax(180px,310px) 1fr; align-items: center; gap: 32px; }
+.construction-demo .construction-sprite { width: 100%; }
+.construction-demo input { display: block; width:100%; margin-top: 18px; }
+.construction-stage-buttons { display:flex; gap: 8px; flex-wrap:wrap; }
+.construction-stage-buttons button[aria-pressed=true] { background: #d8b469; color: #112e28; }
+.construction-stage-strip { display: grid; grid-template-columns: repeat(6,1fr); gap:12px; }
+.construction-stage-strip figure { margin:0; }
+.construction-stage-strip figcaption { text-align:center; font-size: 15px; }
+.imported-district { margin-top: 16px; padding: 12px; display: flex; align-items:center; gap: 16px; flex-wrap:wrap; background: #264238; border-radius: 10px; }
+.outpost-workspace .settlement { grid-column: 1 / -1; }
+@media (max-width: 760px) { .settlement { padding: 12px; } .settlement-inspector { grid-template-columns: 1fr; padding:14px; gap:12px; } .construction-demo { grid-template-columns:1fr; gap: 0; } .construction-demo > .construction-sprite { width: 230px; margin:auto; } .construction-stage-strip { grid-template-columns:repeat(3,1fr); } .world-preview-control { width:100%; } }
+@media (prefers-reduced-motion: reduce) { .settlement * { animation:none !important; transition:none !important; } }
+.home-slot-0 { left: 7%; top: 21%; }
+.home-slot-1 { left: 33%; top: 0; }
+.home-slot-2 { left: 62%; top: 19%; }
+.home-slot-3 { left: 27%; top: 37%; }
+.home-slot-4 { left: 66%; top: 39%; }
+.settlement-site .landmark-sprite { width: 50%; left: 25%; }
+.selected-landmark { width: min(260px,100%); float: right; margin-left: 18px; }
+.settlement-site-label { z-index: 2; }
+@media (max-width: 760px) { .selected-landmark { float:none; margin:0 auto; } }
+.settlement-old-building.village-building { height:67%; aspect-ratio:120 / 210; }
+.settlement-cluster .village-upgrade-earned { fill:#ffd06b; stroke:#274737; }
+.settlement-cluster .village-upgrade-previous { fill:none; stroke:#ffd06b; stroke-width:2; }
+.settlement-cluster .village-upgrade-pending { fill:#3a5446; stroke:#869782; }
+.settlement-scene > img { pointer-events:none; position:relative; z-index:0; }
+.settlement-site { z-index:1; }
+.settlement .settlement-site:not(:disabled):active { transform:translate(-50%,-66%); }
+.settlement-site { transition: none; }
+.construction-stage-buttons button { background:#315848; color:#fff1c9; border:1px solid #ad9b72; border-radius:8px; font-size:18px; padding:8px 12px; }
+.settlement-inspector .primary,.imported-district button { background:#d8b469; color:#112e28; border:1px solid #d8b469; border-radius:10px; padding:10px 18px; font-size:20px; }
+.selected-bakery { width: min(260px,100%); float:right; margin-left:18px; }
+.map-scroll-hint { display:none; }
+@media (max-width:760px) { .map-scroll-hint { display:block; font-size:16px; } .selected-bakery { float:none; margin:0 auto; } }

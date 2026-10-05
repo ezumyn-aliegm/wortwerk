@@ -245,10 +245,10 @@ export function VillageView({ game, learning, compact, locked, checkpoint, onOpe
           <button className="mission-return" onClick={onContinue}><ArrowLeft />{active ? 'Continue mission' : 'Recommended mission'}</button>
           {!active && !learning.initialComplete && <div className="village-mission-choices"><button onClick={onPractice}>Spelling expedition</button><button onClick={onWorkshop}>Sentence workshop</button></div>}
         </>}
-        <p className="mission-tip">Guided work prepares you. Later independent recall earns evidence. A miss removes at most one step from that target; outlines preserve your previous milestones.</p>
+        <p className="mission-tip">Guided work prepares you. Later independent recall earns evidence. A miss removes at most one step from that target; earned architecture stays standing while markers show repairs.</p>
       </div>
     </div>
-    {!compact && <div className="blueprint-queue">{BUILDINGS.map((b) => <div className="blueprint-choice" key={b.id}><VillageBuilding id={b.id} currentLevel={status.levels[b.id]} historicalLevel={status.historicalLevels[b.id]} /><span><strong>{b.label}: {status.levels[b.id]}/5</strong><small>{villageStage(b.id,status.levels[b.id])}</small>{status.historicalLevels[b.id] > status.levels[b.id] && <small>Outline: previously level {status.historicalLevels[b.id]}</small>}</span></div>)}</div>}
+    {!compact && <div className="blueprint-queue">{BUILDINGS.map((b) => <div className="blueprint-choice" key={b.id}><VillageBuilding id={b.id} currentLevel={status.levels[b.id]} historicalLevel={status.historicalLevels[b.id]} /><span><strong>{b.label}: {status.levels[b.id]}/5</strong><small>{villageStage(b.id,status.levels[b.id])}</small>{status.historicalLevels[b.id] > status.levels[b.id] && <small>Earned architecture: previously level {status.historicalLevels[b.id]}</small>}</span></div>)}</div>}
   </section>;
 }
 

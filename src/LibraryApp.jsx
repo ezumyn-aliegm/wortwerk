@@ -6,6 +6,7 @@ import React, {
   useState,
 } from "react";
 import App from "./App.jsx";
+import Settlement from "./Settlement.jsx";
 import ParentDashboard from "./ParentDashboard.jsx";
 import { TutorContext } from "./TutorContext.jsx";
 import { createTutor } from "./tutor.js";
@@ -496,6 +497,8 @@ export default function LibraryApp({
                 onLibrary={() => go("waves")}
                 onParent={() => go("parent")}
                 wave={selected}
+                settlementLibrary={library}
+                onOpenWave={openWave}
                 onExportLibrary={exportLibrary}
               />
             </TutorContext.Provider>
@@ -536,11 +539,12 @@ export default function LibraryApp({
               </button>
             </div>
           </section>
+          <Settlement library={library} onOpenWave={openWave} />
           <section aria-labelledby="waves-title">
             {!library.waves.some(w => w.id === WAVE_TWO.id || w.words.some(word => word.id === 'oktoberfest' && word.studyVersion === 2)) &&
               <section className="wave-manage" aria-label="New autumn lesson">
                 <h2>Ready: Autumn adventure</h2>
-                <p>20 words · Monday, October 5, 9:00 a.m. Miami. New island, five buildings with five upgrades each. Your earlier waves and sessions stay saved.</p>
+                <p>20 words · Monday, October 5, 9:00 a.m. Miami. Autumn district, five buildings with five upgrades each. Your earlier waves and sessions stay saved.</p>
                 <button className="primary" onClick={addAutumnWave}>Add Wave 2 · Autumn adventure</button>
               </section>}
             <div className="wave-section-title">

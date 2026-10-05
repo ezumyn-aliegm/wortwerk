@@ -17,7 +17,7 @@ test('village upgrades reuse whole atlas art and distinguish earned from histori
         assert.equal((html.match(/class="village-upgrade-earned"/g)||[]).length,level);
         assert.equal((html.match(/class="village-upgrade-previous"/g)||[]).length,5-level);
         assert.ok(!html.includes('clipPath'));
-        if(level===0) assert.match(html,/opacity:0\.12/);
+        assert.match(html,/opacity:1;filter:saturate\(1\)/);
         if(level===5) assert.match(html,/opacity:1;filter:saturate\(1\)/);
         assert.ok(villageStage(id,level));
       }

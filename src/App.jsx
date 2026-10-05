@@ -14,6 +14,7 @@ import NounComparison from './NounComparison.jsx';
 import { submittedAnswer, answerFeedback, sessionAccuracy } from './answer-feedback.js';
 import { firstWordContent } from './first-word-content.js';
 import Outpost, { MissionHUD } from "./Outpost.jsx";
+import Settlement from "./Settlement.jsx";
 import {
   freshGame,
   gameStatus,
@@ -142,6 +143,8 @@ export default function App({
   onLibrary,
   onParent,
   wave,
+  settlementLibrary,
+  onOpenWave,
   onExportLibrary,
 }) {
   const {
@@ -509,6 +512,7 @@ export default function App({
           ) : showOutpost ? (
             <>
             {scoringV2 && !state.active && lastSession && <MissionResults session={lastSession} accuracy={lastAccuracy} repairs={learning.repairs.length} />}
+            {settlementLibrary && <Settlement library={{...settlementLibrary, waves:settlementLibrary.waves.map(w=>w.id===wave.id ? {...w,progress:state} : w)}} onOpenWave={onOpenWave} initialSelection={wave.id} />}
             <Outpost
               game={state.game}
               learning={learning}
