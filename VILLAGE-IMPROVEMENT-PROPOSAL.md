@@ -1,5 +1,7 @@
 # Wortwerk improvement proposal: learn to build
 
+October 4 follow-up: the separate-island recommendation in section 7 is superseded by [One village that grows with each lesson](VILLAGE-EXPANSION-PLAN.md). The proposed connected settlement appends distinct districts and preserves existing waves. Expansion remains planning-only. Existing deployed learning rules are not changed by either proposal.
+
 September 27, 2026 · WW-09 · Proposed, awaiting review · No implementation or deployment authorized by this document
 
 ## 1. Recommended direction

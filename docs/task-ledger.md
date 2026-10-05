@@ -1,5 +1,17 @@
 # Task ledger
 
+## October 4 · Release preparation and cumulative village plan
+
+Checkpoint 12d1e69 on fix/study-controls-construction. User requests deployment of current fixes and a plan for a place that expands each lesson. Expansion is documentation only. Throughput checkpoint: main owns current-container inspection, immutable candidate build and save checks; a bounded planning reviewer examines connected districts while an independent release reviewer checks saved-state compatibility. Supported inherited-model agents substitute for unavailable Cursor roles.
+
+Planning checklist follows Investigation. Route through how over current wave ownership and renderer. Throughput checkpoint: n/a, read-only investigation. Produce the recommendation with concrete alternatives and apply unslop. Recommended responsive connected districts use existing library order and per-wave evidence. Preserve legacy Wave 1 rewards honestly. New waves need genuinely different building art. No world database, game engine or new scoring contract is included. VILLAGE-EXPANSION-PLAN.md records the stages and acceptance checks.
+
+Release checklist: independently verify the exact patch; inspect existing Compose project/image/mounts; build candidate; run read-only current-save validation; obtain fresh pause/sync/closed-tabs confirmation; stop and back up; replace only image; verify full saved bytes and authenticated page/API/new bundle/HTTPS health; retain rollback image. PR landing steps skipped because deploy is requested, not merging a GitHub stack. No auto-merge was armed. Separate documentation commits do not change the candidate source SHA.
+
+Independent reviewer Wegener returned PASS+NOTES for 12d1e69 against f461e6c. All 92 base-state targets and 17 packaged runtime modules checked; 33 focused tests pass. Existing corrections use saved expected text, saved evidence and completed inspections remain valid. Future prompts request full nouns; a retained partial draft may need completion. Candidate image wortwerk:study-20261004-12d1e69 builds on nest-server and read-only validation accepts the actual two-wave save. No migration/write/reset. Existing project wortwerk uses wortwerk-wortwerk-1 and named volume wortwerk_wortwerk-data. Missing nest-server skill acknowledged; verified prior release records and current config used. Remote rg absent; grep used for bounded inventory.
+
+Candidate override and verification/deployment scripts are prepared in /opt/docker/wortwerk-releases/study-20261004-12d1e69. Previous image/override retained. Current service remains grading-20261003-6f3b3c1. Awaiting the fresh safe-window answer before stopping/replacing it. No progress changes or final backup yet; no claim of deployment.
+
 ## October 4 · Wave 2 artwork quality correction
 
 Inherited checkpoint b6cef3b on fix/study-controls-construction, PR 4. User clarified that Wave 1 art is acceptable and must remain unchanged. Only Wave 2 rendering is in scope. No scoring, vocabulary, saved evidence, progress or live container changes.
