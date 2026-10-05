@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { deriveSettlement, DISTRICT_CATALOG, buildingMilestones } from './settlement.js';
-import { BUILDINGS } from './game.js';
+import { BUILDINGS, gameStatus } from './game.js';
 import { BuildingSprite } from './Outpost.jsx';
 import VillageBuilding from './VillageBuilding.jsx';
 import ConstructionSprite, { CONSTRUCTION_STAGES } from './ConstructionSprite.jsx';
@@ -19,6 +19,24 @@ function ExistingDistrict({ district }) {
   return <span className="settlement-cluster" aria-label={district.legacy ? `${built.length} legacy rewards` : `Earned architecture at ${district.historicalPercent}%`}>
     {built.map(id => {const i=BUILDINGS.findIndex(b=>b.id===id); return district.legacy ? <BuildingSprite key={id} id={id} className={`settlement-old-building home-slot-${i}`} /> : <VillageBuilding key={id} id={id} currentLevel={district.currentLevels[id]} historicalLevel={district.earnedLevels[id]} className={`settlement-old-building home-slot-${i}`} />;})}
   </span>;
+}
+
+export function DistrictFocus({ library, waveId }) {
+  const district=deriveSettlement(library).find(d=>d.waveId===waveId);
+  if (!district || district.legacy) return null;
+  const status=gameStatus(district.wave.progress.game);
+  const building=status.selectedBuild;
+  const position=district.design.position || {x:50,y:50};
+  return <div className="district-focus" aria-label={`${district.design.name} study close-up`} data-district-id={district.id}>
+    <div className="district-focus-heading"><span className="eyebrow">YOUR DISTRICT · CLOSE-UP</span><strong>{district.design.name}</strong></div>
+    <div className="district-focus-ground" style={{backgroundImage:`url(${terrain})`,backgroundPosition:`${position.x}% ${position.y}%`}}>
+      <ExistingDistrict district={district}/>
+    </div>
+    <div className="district-focus-building">
+      <VillageBuilding id={building.id} currentLevel={district.currentLevels[building.id]} historicalLevel={district.earnedLevels[building.id]}/>
+      <div><span className="eyebrow">{status.allBuilt ? 'EARNED LANDMARK' : 'CURRENT BUILDING'}</span><h3>{building.label}</h3><p>{status.allBuilt ? 'All five upgrades earned.' : `Current · ${district.currentLevels[building.id]===0 ? 'Plot' : `Upgrade ${district.currentLevels[building.id]}`} · Next part: Upgrade ${district.currentLevels[building.id]+1}`}</p><p>{status.allBuilt ? 'District complete.' : `Next milestone · ${status.nextThreshold}% mastery`}</p></div>
+    </div>
+  </div>;
 }
 
 function Scene({ districts, selectedId, onSelect, previewCount, bakeryPreviewLevel }) {

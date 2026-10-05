@@ -49,6 +49,8 @@ export async function verifySettlement(page) {
   await page.setViewportSize({width:1440,height:1000});
   await page.goto(`${origin}/settlement-preview.html?app&correction`);
   await page.getByRole('button',{name:'Waves',exact:true}).waitFor();
+  await page.getByLabel('Autumn village study close-up').waitFor();
+  await page.locator('.district-focus').screenshot({path:`${output}/study-closeup-correction.png`});
   const saved=await page.evaluate(()=>structuredClone(window.__fixtureLibrary));
   const waveId=saved.selectedWaveId;
   const snapshot=JSON.stringify(saved.waves.find(w=>w.id===waveId).progress);
@@ -72,6 +74,26 @@ export async function verifySettlement(page) {
     assert.deepEqual(rendered,expected);
     await page.locator('.settlement-scene').screenshot({path:`${output}/connected-current-${percent}.png`});
   }
+  for(const percent of [0,4,20,40,60,80,100]) {
+    await page.goto(`${origin}/settlement-preview.html?app&session&percent=${percent}`);
+    if(percent===100) await page.locator('.settlement-inspector').getByRole('button',{name:'Open this lesson'}).click();
+    await page.getByLabel('Autumn village study close-up').waitFor();
+    const expected=percent===0 ? [0,0,0,0,0] : percent===4 ? [1,0,0,0,0] : Array(5).fill(percent/20);
+    assert.deepEqual(await page.locator('.district-focus-ground .village-building').evaluateAll(els=>els.map(el=>Number(el.dataset.level))),expected,'Study district matches world');
+    const focus=page.locator('.district-focus-building');
+    assert.equal(await focus.locator('.village-building').getAttribute('data-level'),String(percent===100 ? 5 : Math.floor(percent/20)));
+    if(percent<100) assert.equal(await focus.getByText(`Next milestone · ${percent+4}% mastery`,{exact:true}).count(),1);
+    await page.locator('.district-focus').screenshot({path:`${output}/study-closeup-${percent}.png`});
+  }
+  for(const width of [1280,1024,390]) {
+    await page.setViewportSize({width,height:1000});
+    await page.goto(`${origin}/settlement-preview.html?app&correction&percent=40`);
+    await page.getByLabel('Autumn village study close-up').waitFor();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth===document.documentElement.clientWidth),true,`Study fits ${width}`);
+    assert.equal(await page.locator('#wave-correction').inputValue(),'exact unfinished correction');
+    await page.screenshot({path:`${output}/study-layout-${width}.png`});
+  }
+  await page.setViewportSize({width:1440,height:1000});
   for(const compact of [false,true]) {
     for(const percent of [0,4,20,40,60,80,100]) {
       await page.goto(`${origin}/village-preview.html?percent=${percent}${compact ? '&compact' : ''}`);
@@ -83,5 +105,5 @@ export async function verifySettlement(page) {
     }
   }
   assert.deepEqual(errors,[]);
-  return {stages:results,viewports:[1440,1280,1024,390],futurePreviewReadOnly:true,historicalArchitecturePreserved:true,exactCorrectionResume:true,olderUnfinishedLessonUnchanged:true,connectedCurrentStages:[0,4,20,40,60,80,100],historicalLevels:[5,5,5,5,5],historicalSpriteOpacity:[1,1,1,1,1],currentFullAndCompactStages:[0,4,20,40,60,80,100],surface:'isolated Chrome synthetic LibraryApp and preview fixtures',liveDataAccess:false,pageErrors:errors};
+  return {studyCloseupStages:[0,4,20,40,60,80,100],studyCloseupViewports:[1280,1024,390],stages:results,viewports:[1440,1280,1024,390],futurePreviewReadOnly:true,historicalArchitecturePreserved:true,exactCorrectionResume:true,olderUnfinishedLessonUnchanged:true,connectedCurrentStages:[0,4,20,40,60,80,100],historicalLevels:[5,5,5,5,5],historicalSpriteOpacity:[1,1,1,1,1],currentFullAndCompactStages:[0,4,20,40,60,80,100],surface:'isolated Chrome synthetic LibraryApp and preview fixtures',liveDataAccess:false,pageErrors:errors};
 }

@@ -94,3 +94,9 @@ Delivery plan, audit trail, asset prompts and activation prerequisites are docum
 PR 5: https://github.com/ezumyn-aliegm/wortwerk/pull/5 is open against fix/study-controls-construction and depends on PR 4. Created through GitHub CLI after the built-in connector returned 403; attached to the implementation chat. Verification source checkpoint: ed69902.
 
 Automatic approval review rejected the requested Notion and Linear posts as sensitive external sharing. Neither record was updated. The exact proposed payload and existing destinations are recorded in docs/growing-village-management-update.md pending explicit approval. No deployment occurred.
+
+## October 5 · Study close-up refinement
+
+Inherited clean 92fcc5c on the existing expansion branch; no restart or live access. Added a Wave 2 study close-up using the same continuous landscape as exploration, large accepted current-building art and explicit current upgrade/next mastery threshold. Wave 1 keeps its accepted study HUD. The whole world remains a single landscape with roads, bridges, forest, fields and harbor, plus ten different future landmark sprites; no repeated district backdrop tiles. Earlier earned structures remain derived from historical evidence.
+
+188 tests pass and production/offline build passes. Expanded real Chrome verification proves matching study/world levels at 0/4/20/40/60/80/100, correction layouts at 1280/1024/390, no page overflow, and exact old/new unfinished session navigation. Screenshots for both views are saved under docs/evidence/growing-village. No deployment, learning-engine, curriculum or save-format changes. Existing management updates remain pending approval after automatic review rejection.

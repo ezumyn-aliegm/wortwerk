@@ -20,8 +20,8 @@ export function BuildingSprite({ id, className = "" }) {
   );
 }
 
-export function MissionHUD({ game, locked, onOpen, onBuild, learning }) {
-  if (learning?.scoringVersion === 2) return <VillageView game={game} learning={learning} compact locked={locked} onOpen={onOpen} />;
+export function MissionHUD({ game, locked, onOpen, onBuild, learning, districtVisual }) {
+  if (learning?.scoringVersion === 2) return <VillageView game={game} learning={learning} compact locked={locked} onOpen={onOpen} districtVisual={districtVisual} />;
   game ||= freshGame();
   const status = gameStatus(game);
   const selected = status.selectedBuild;
@@ -225,14 +225,14 @@ function LegacyOutpost({
   );
 }
 
-export function VillageView({ game, learning, compact, locked, checkpoint, onOpen, onContinue, active, onPractice, onWorkshop }) {
+export function VillageView({ game, learning, compact, locked, checkpoint, onOpen, onContinue, active, onPractice, onWorkshop, districtVisual }) {
   const status = gameStatus(game);
   return <section className={compact ? 'mission-hud village-v2' : 'outpost-screen village-v2'} aria-label="Learning village">
     <div className={compact ? '' : 'outpost-main'}>
-      <div className="outpost-world village-world" role="group" aria-label={`Learning and village: ${learning.percent} percent. ${BUILDINGS.map((b) => `${b.label} level ${status.levels[b.id]}`).join(', ')}`}>
+      {districtVisual || <div className="outpost-world village-world" role="group" aria-label={`Learning and village: ${learning.percent} percent. ${BUILDINGS.map((b) => `${b.label} level ${status.levels[b.id]}`).join(', ')}`}>
         <img className="outpost-island" src={island} alt="" />
         {BUILDINGS.map((b) => <VillageBuilding key={b.id} id={b.id} currentLevel={status.levels[b.id]} historicalLevel={status.historicalLevels[b.id]} className={`world-building plot-${b.id}`} />)}
-      </div>
+      </div>}
       <div className={compact ? 'mission-inventory' : 'outpost-workbench'}>
         <div className="world-caption"><strong>{learning.percent}% learned · {learning.percent}% built</strong><span>{status.allBuilt ? 'All targets verified · portal active' : 'Independent recall builds automatically'}</span></div>
         <h2>{status.allBuilt ? 'Your village is complete.' : `${status.selectedBuild.label}: next upgrade at ${status.nextThreshold}%`}</h2>

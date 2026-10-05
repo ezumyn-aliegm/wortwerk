@@ -14,7 +14,7 @@ import NounComparison from './NounComparison.jsx';
 import { submittedAnswer, answerFeedback, sessionAccuracy } from './answer-feedback.js';
 import { firstWordContent } from './first-word-content.js';
 import Outpost, { MissionHUD } from "./Outpost.jsx";
-import Settlement from "./Settlement.jsx";
+import Settlement, { DistrictFocus } from "./Settlement.jsx";
 import {
   freshGame,
   gameStatus,
@@ -468,6 +468,7 @@ export default function App({
         className={`workspace ${showOutpost ? "outpost-workspace" : "mission-workspace"}`}
       >
         {!showOutpost && <MissionHUD
+          districtVisual={scoringV2 && settlementLibrary ? <DistrictFocus library={{...settlementLibrary, waves:settlementLibrary.waves.map(w=>w.id===wave.id ? {...w,progress:state} : w)}} waveId={wave.id}/> : null}
           game={state.game}
           learning={learning}
           locked={wordbankLocked || blocked || conflict || paused}

@@ -71,3 +71,9 @@ The original authoritative checkout remains clean and unchanged at ad58e30. The 
 PR 5: https://github.com/ezumyn-aliegm/wortwerk/pull/5 is open against fix/study-controls-construction and depends on PR 4. Created through GitHub CLI after the built-in connector returned 403; attached to the implementation chat. Verification source checkpoint: ed69902.
 
 Automatic approval review rejected the requested Notion and Linear posts as sensitive external sharing. Neither record was updated. The exact proposed payload and existing destinations are recorded in docs/growing-village-management-update.md pending explicit approval. No deployment occurred.
+
+## Study close-up and whole-world evidence
+
+Study now shows the selected Autumn district on a crop of the continuous world terrain, large current-building artwork, current upgrade and next mastery threshold. It uses the live selected-wave state, not a copied saved snapshot. Existing Autumn sprites honestly remain learning upgrades; structural foundation/frame artwork remains in the future bakery preview. Wave 1 study artwork is unchanged.
+
+Actual browser screenshots: study-closeup-4.png, study-closeup-40.png, study-closeup-100.png; study-layout-1280.png, study-layout-1024.png and study-layout-390.png; connected-complete-future.png for the whole landscape. These files are in docs/evidence/growing-village. Browser assertions cover all seven checkpoints and exact unfinished correction round-trip. Ten future landmarks differ; the two current districts retain their accepted shared atlas. Future places remain nonplayable plans.
