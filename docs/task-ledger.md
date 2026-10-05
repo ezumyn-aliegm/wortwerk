@@ -1,5 +1,11 @@
 # Task ledger
 
+## October 4 · Study fixes deployed safely
+
+Family confirmed ready to deploy in response to the fresh paused/synced/closed-tabs question. Runtime source 12d1e69, image wortwerk:study-20261004-12d1e69. Stopped the exact existing service, backed up named volume wortwerk_wortwerk-data to /opt/docker/wortwerk-backups/before-study-20261004-12d1e69/data, and recreated through base/network/current release overrides with the same project and volume. Previous grading image retained for rollback. No saved-state migration/reset.
+
+Candidate read-only validation, backup comparison and final byte-for-byte saved-record comparison passed. Both waves, saved session/draft, history/evidence and revision 2960 preserved. Authenticated login/progress retrieval exactly matches the validated record. Served bundle includes German keys, new upgrade markers and wrong-answer comparisons. Local HTTP and live HTTPS health checks pass. Release override /opt/docker/wortwerk-releases/study-20261004-12d1e69/compose.release.yml. Return to previous grading override only in a new safe window and retain latest volume; old backup is recovery material, not an automatic reset. Cumulative settlement remains planning-only.
+
 ## October 4 · Release preparation and cumulative village plan
 
 Checkpoint 12d1e69 on fix/study-controls-construction. User requests deployment of current fixes and a plan for a place that expands each lesson. Expansion is documentation only. Throughput checkpoint: main owns current-container inspection, immutable candidate build and save checks; a bounded planning reviewer examines connected districts while an independent release reviewer checks saved-state compatibility. Supported inherited-model agents substitute for unavailable Cursor roles.

@@ -1,5 +1,7 @@
 # Autumn adventure · Wave 2
 
+October 4 current live release: source 12d1e69, image wortwerk:study-20261004-12d1e69. Family confirmed paused/synced/closed tabs. Restored German keys, full assigned noun prompts, larger passenger controls and Wave 2 original block-art buildings with upgrade markers. Wave 1 artwork remains unchanged. Stopped-service backup /opt/docker/wortwerk-backups/before-study-20261004-12d1e69/data and whole-file comparison establish exact preservation of both waves, ongoing session/draft, history/evidence and revision 2960. Authenticated progress/page/new JavaScript plus HTTP/HTTPS health passed. No migration/reset. Active override is /opt/docker/wortwerk-releases/study-20261004-12d1e69/compose.release.yml. Previous grading override retained for rollback with the latest data volume. Expansion remains proposed only.
+
 Content version: `autumn-2026-v2-assigned-forms` (October 3 correction). Scoring opt-in: `studyVersion: 2`. Plural conversion is optional reference, not assessed. The assigned **die Gummistiefel** remains required as given; its singular conversion is also optional.
 Confirmed deadline: **Monday October 5, 2026, 9:00 a.m. America/New_York** (`2026-10-05T13:00:00Z`).
 
