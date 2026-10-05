@@ -756,3 +756,47 @@
     min-height: 0;
   }
 }
+
+.game-shell .mission-hud.village-v2 {
+  display: block;
+}
+.village-v2 .village-world {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 3 / 2;
+  align-self: start;
+}
+.village-v2 .village-world > .outpost-island {
+  object-fit: contain;
+}
+.village-v2 .village-building {
+  aspect-ratio: 120 / 210;
+  height: auto;
+}
+.village-v2 .village-world > .village-building {
+  width: 16%;
+  transform: translate(-50%, -90%);
+}
+.village-v2 .village-world > .plot-cabin { left: 33%; top: 55%; }
+.village-v2 .village-world > .plot-lookout { left: 54%; top: 43%; }
+.village-v2 .village-world > .plot-greenhouse { left: 72%; top: 55%; }
+.village-v2 .village-world > .plot-library { left: 53%; top: 63%; }
+.village-v2 .village-world > .plot-portal { left: 38%; top: 42%; }
+.village-v2 .village-upgrade-markers circle {
+  stroke-width: 1.5;
+}
+.village-v2 .village-upgrade-earned {
+  fill: #e6f4c3;
+  stroke: #345d43;
+}
+.village-v2 .village-upgrade-previous {
+  fill: none;
+  stroke: #68558d;
+  stroke-dasharray: 2 1.5;
+}
+.village-v2 .village-upgrade-pending {
+  fill: #edf3e166;
+  stroke: #63755d;
+  opacity: 0.45;
+}

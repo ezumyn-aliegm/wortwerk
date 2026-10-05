@@ -1,5 +1,19 @@
 # Task ledger
 
+## October 4 · Wave 2 artwork quality correction
+
+Inherited checkpoint b6cef3b on fix/study-controls-construction, PR 4. User clarified that Wave 1 art is acceptable and must remain unchanged. Only Wave 2 rendering is in scope. No scoring, vocabulary, saved evidence, progress or live container changes.
+
+Throughput checkpoint: inspect the actual complete village first, delegate the isolated renderer replacement, then inspect empty, partial, complete and repaired villages at desktop and compact sizes. Keep the existing sprite atlas. No paid asset generation or new dependencies. The Bug fix checklist below also applies to this follow-up; failing screenshot reproduction replaces a cheap failing unit test because the defect is visual quality.
+
+Architect phases: Ground traced Outpost, gameStatus and the raster atlas. Sketch compared coherent raster sprites with stage markers against new vector construction art. Agree proceeds without a product checkpoint. Implement retains the VillageBuilding props. Scrap rejects cropped roofs and the mismatched flat polygons. Model the Domain keeps the existing current/historical level inputs as the sole progress source. Prove It Works requires actual screenshots, not only shape counts.
+
+The complete-stage reproduction shows flat polygons on a detailed block-art island. Those polygons are the rendering defect. Existing Wave 1 assets already provide the requested art style. Reusing full sprites avoids invented architecture and asset cost. Intermediate states use subdued artwork and explicit upgrade markers, not a claim of literal wall-by-wall construction. Wave 1 markup and CSS remain untouched.
+
+Verification complete locally. 181 tests and production/offline build pass. Real-browser checks exercise twelve full/compact fixtures across 0, 20, 40, 60, 80 and 100 percent, five contained sprites each, plus 60 percent current with 100 percent historical and a 390-pixel mobile fixture. Earned markers match current levels; ten previous markers remain at the historical-regression fixture. Screenshots inspected for empty, partial, complete, historical and compact views. Actual app on port 4195 shows the updated atlas renderer. Wave 1 reference rendered successfully with a valid synthetic earned-block fixture. An initial invalid legacy fixture was rejected by gameStatus; the fixture was fixed, not the application. Independent code/comment review found no blockers. Prove It Works changed verification from shape counts to rendered screenshot inspection. Safari remains untested. No live writes.
+
+Rerun visual checks through the development-only village-preview.html page. Use percent=0 through 100, high=100 for previous progress, compact for the mission HUD and wave=1 for the unchanged legacy renderer. Fixtures never read or write student storage. This page is not a production build entry. Stage progress is represented by upgrades, not literal foundation/frame geometry. Supported inherited-model agents replaced unavailable Cursor Task types; manual diff and comment review replaced unavailable deslop. Notion and EZU-57 updated. Publishing through the existing PR 4 branch preserves the pending release history.
+
 ## October 4 · Study controls and construction regressions
 
 Published source 3227e5f on fix/study-controls-construction in PR 4, open and non-draft. Built-in GitHub PR creation returned 403; authenticated gh CLI created the PR and its state was verified. Notion and EZU-55 updated. Worktree step skipped to preserve the established shared checkout used by bounded workers; all changes are isolated on a feature branch. Cursor deslop/control-ui/Comment Sicko roles are unavailable, so actual diff review and supported independent reviewers covered code/comment checks. No new comments were added. Live deployment remains unrequested for this patch and awaits a fresh safe window.
