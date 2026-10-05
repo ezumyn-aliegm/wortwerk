@@ -2,6 +2,8 @@
 
 ## October 4 · Study controls and construction regressions
 
+Published source 3227e5f on fix/study-controls-construction in PR 4, open and non-draft. Built-in GitHub PR creation returned 403; authenticated gh CLI created the PR and its state was verified. Notion and EZU-55 updated. Worktree step skipped to preserve the established shared checkout used by bounded workers; all changes are isolated on a feature branch. Cursor deslop/control-ui/Comment Sicko roles are unavailable, so actual diff review and supported independent reviewers covered code/comment checks. No new comments were added. Live deployment remains unrequested for this patch and awaits a fresh safe window.
+
 Inherited checkpoint: clean main f461e6c. User reports missing German keys, partial assigned-word prompts, small car text and broken construction visuals. Live remains untouched. Throughput checkpoint: reproduce locally first; preserve save keys, target counts, evidence/history and Wave 1 behavior; repair the existing controls and renderer, not the scoring/world contract. Main agent owns browser reproduction and integration. Bounded read-only helper traces ownership/history; implementation ownership will be split by file after reproduction.
 
 Bug-fix checklist:
