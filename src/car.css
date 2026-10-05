@@ -2,6 +2,44 @@
 .car-mode {
   --muted: #46594f;
 }
+.car-mode .wave-study {
+  font-size: 24px;
+  line-height: 1.5;
+}
+.car-mode .wave-study :is(p, label, small, span, button) {
+  font-size: 24px;
+  line-height: 1.5;
+}
+.car-mode .wave-study :is(h2, h3) {
+  font-size: 30px;
+  line-height: 1.35;
+}
+.car-mode .wave-study :is(input, .guided-answer),
+.car-mode .wave-study .first-word-examples strong {
+  font-size: 34px;
+  min-height: 68px;
+}
+.car-mode .wave-study .answer-comparison span { font-size: 22px; }
+.car-mode .wave-study .answer-comparison :is(s, strong) { font-size: 32px; }
+.car-mode .wave-study button { min-height: 54px; }
+.car-mode .wave-study .character-keys { flex-wrap: wrap; }
+.car-mode .wave-study .character-keys > span { font-size: 22px; }
+.car-mode .wave-study .character-keys > button {
+  width: 58px;
+  height: 58px;
+  font-size: 32px;
+}
+.car-mode .wave-study .noun-comparison :is(strong, .noun-form) { font-size: 30px; }
+.car-mode .village-v2 :is(p, span, small, button),
+.car-mode .village-categories :is(summary, dt, dd, p) {
+  font-size: 22px;
+  line-height: 1.5;
+}
+.car-mode .village-v2 .world-caption :is(strong, span) { font-size: 22px; }
+.car-mode .village-v2 .mission-tip { color: inherit; }
+.car-mode .mission-results :is(p, span) { font-size: 24px; }
+.car-mode .mission-results .answer-comparison :is(s, strong) { font-size: 34px; }
+.car-mode .home p { font-size: 24px; line-height: 1.5; }
 .car-mode * {
   transition: none !important;
   scroll-behavior: auto !important;

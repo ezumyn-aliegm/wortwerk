@@ -3,7 +3,7 @@ export function firstWordContent(word) {
     {label:'Use it in a sentence', answer:word.example, translation:word.translation, explanation:word.tip},
     ...word.usages.map(([sentence,translation,answer], i) => ({label:`Practice example ${i+1}`, answer:sentence.replace('___',answer), translation, explanation:word.tip})),
     ...assessedFormVariants(word).map(i => {
-      const [prompt,answer,explanation] = word.forms[i];
+      const {prompt,answer,explanation} = formContent(word, i);
       return {label:'Learn this form', prompt, answer, explanation};
     }),
   ];
@@ -16,3 +16,4 @@ export function firstWordContent(word) {
   });
 }
 import { assessedFormVariants } from './scoring.js';
+import {formContent} from './entry-content.js';

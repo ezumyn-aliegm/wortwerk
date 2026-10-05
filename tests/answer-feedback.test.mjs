@@ -10,13 +10,13 @@ test('submission grades the current field, not a stale draft, and saves exactly 
   let state=tutor.startSession(tutor.freshState(),now);
   state=tutor.acknowledgeTeaching(state,now+1);
   assert.equal(state.active.queue[0].wordId,'oktoberfest');
-  state=tutor.setDraft(state,'Oktoberfes');
-  const form={elements:{namedItem:name=>name==='answer'?{value:'Oktoberfest'}:null}};
+  state=tutor.setDraft(state,'das Oktoberfes');
+  const form={elements:{namedItem:name=>name==='answer'?{value:'das Oktoberfest'}:null}};
   const submitted=submittedAnswer(form,state.active.draft);
   state=tutor.answerQuestion(state,submitted,now+2);
   assert.equal(state.active.feedback.correct,true);
-  assert.equal(state.active.feedback.input,'Oktoberfest');
-  assert.equal(state.active.draft,'Oktoberfest');
+  assert.equal(state.active.feedback.input,'das Oktoberfest');
+  assert.equal(state.active.draft,'das Oktoberfest');
   assert.equal(tutor.validateState(state),true);
 });
 test('all 92 assigned answers get identical correct verdicts on original and retry', () => {

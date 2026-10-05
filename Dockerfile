@@ -18,6 +18,7 @@ COPY scripts/install-wave-two.mjs ./scripts/
 COPY scripts/update-wave-two-scope.mjs ./scripts/
 COPY src/engine.js src/tutor.js src/data.js src/memory.js src/legacy-memory.js src/previous-content.js src/library.js src/activity.js src/game.js src/scoring.js src/wave-two.js ./src/
 COPY src/wave-two-scope.js ./src/
+COPY src/entry-content.js ./src/
 RUN mkdir -p /data && chown node:node /data
 USER node
 EXPOSE 4173
