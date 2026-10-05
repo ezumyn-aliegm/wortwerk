@@ -88,3 +88,9 @@ Independent review found stopped visual growth after 20% and off-ground lower an
 All 188 tests and production/offline build pass. Browser result and selected screenshots are in docs/evidence/growing-village. Reproducible browser check covers bakery and connected/full/compact stage levels at 0/4/20/40/60/80/100, historical opacity and current repair markers, ten nonplayable previews, unchanged synthetic library, laptop/mobile page bounds and exact correction plus older unfinished-session round-trip. Actual screenshots inspected; no floating roofs or clipped current buildings observed. Fresh independent review reports no remaining code blocker. Safari/student enjoyment/physical car use/live backend persistence remain unverified. No live save, container or volume access.
 
 Delivery plan, audit trail, asset prompts and activation prerequisites are documented. Cursor-only review helpers and cross-family models unavailable; bounded supported-model reviewers and manual comment/diff review used. Publication and management links follow in the final handoff record. Future deployment requires a new safe window, backup/rollback and exact persisted-state checks. The previous live window is consumed.
+
+## Publication and pending management update
+
+PR 5: https://github.com/ezumyn-aliegm/wortwerk/pull/5 is open against fix/study-controls-construction and depends on PR 4. Created through GitHub CLI after the built-in connector returned 403; attached to the implementation chat. Verification source checkpoint: ed69902.
+
+Automatic approval review rejected the requested Notion and Linear posts as sensitive external sharing. Neither record was updated. The exact proposed payload and existing destinations are recorded in docs/growing-village-management-update.md pending explicit approval. No deployment occurred.

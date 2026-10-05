@@ -65,3 +65,9 @@ For any later release, require a fresh pause/sync/closed-tabs confirmation. Reva
 - The verification commit contains isolated fixtures, browser script, inspected evidence, management status and deployment handoff.
 
 The original authoritative checkout remains clean and unchanged at ad58e30. The isolated branch targets the same approved baseline. GitHub CLI is the forge fallback because Origin is unavailable. A built-in PR connector is attempted first for creation.
+
+## Publication and pending management update
+
+PR 5: https://github.com/ezumyn-aliegm/wortwerk/pull/5 is open against fix/study-controls-construction and depends on PR 4. Created through GitHub CLI after the built-in connector returned 403; attached to the implementation chat. Verification source checkpoint: ed69902.
+
+Automatic approval review rejected the requested Notion and Linear posts as sensitive external sharing. Neither record was updated. The exact proposed payload and existing destinations are recorded in docs/growing-village-management-update.md pending explicit approval. No deployment occurred.
