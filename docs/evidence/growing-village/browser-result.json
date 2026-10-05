@@ -1,0 +1,77 @@
+{
+  "stages": [
+    {
+      "percent": 0,
+      "level": 0
+    },
+    {
+      "percent": 4,
+      "level": 1
+    },
+    {
+      "percent": 20,
+      "level": 1
+    },
+    {
+      "percent": 40,
+      "level": 2
+    },
+    {
+      "percent": 60,
+      "level": 3
+    },
+    {
+      "percent": 80,
+      "level": 4
+    },
+    {
+      "percent": 100,
+      "level": 5
+    }
+  ],
+  "viewports": [
+    1440,
+    1280,
+    1024,
+    390
+  ],
+  "futurePreviewReadOnly": true,
+  "historicalArchitecturePreserved": true,
+  "exactCorrectionResume": true,
+  "olderUnfinishedLessonUnchanged": true,
+  "connectedCurrentStages": [
+    0,
+    4,
+    20,
+    40,
+    60,
+    80,
+    100
+  ],
+  "historicalLevels": [
+    5,
+    5,
+    5,
+    5,
+    5
+  ],
+  "historicalSpriteOpacity": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "currentFullAndCompactStages": [
+    0,
+    4,
+    20,
+    40,
+    60,
+    80,
+    100
+  ],
+  "surface": "isolated Chrome synthetic LibraryApp and preview fixtures",
+  "liveDataAccess": false,
+  "pageErrors": []
+}

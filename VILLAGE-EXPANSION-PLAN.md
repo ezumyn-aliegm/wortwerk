@@ -1,5 +1,7 @@
 # One village that grows with each lesson
 
+October 5 follow-up. The approved artwork-based connected settlement is implemented locally on feat/growing-village-milestones. See docs/growing-village-catalog.md for Waves 3–12 and docs/growing-village-delivery.md for acceptance evidence. The schematic district-panel recommendation below is historical and superseded by the connected landscape. No live deployment.
+
 October 4, 2026. WW-09 follow-up. Proposed implementation plan, not implemented. The current graphics/control fixes are a separate release. This document does not authorize changing learning evidence, resetting waves or generating assets.
 
 ## Recommended experience
