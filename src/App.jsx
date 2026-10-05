@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   ChartNoAxesColumnIncreasing,
   Check,
@@ -33,6 +33,7 @@ import {
   Primary,
   Speech,
   MemoryCard,
+  CharacterKeys,
 } from "./components.jsx";
 
 function MissionResults({ session, accuracy, repairs }) {
@@ -53,6 +54,7 @@ function MissionResults({ session, accuracy, repairs }) {
 }
 
 function WaveStudy({ state, update, next }) {
+  const answerRef = useRef(null), correctionRef = useRef(null);
   const t = useTutor(), a = state.active, q = a.queue[0], w = t.BY_ID[q.wordId];
   const lesson = t.missingTeaching(state), spec = t.describe(q), exam = a.kind === 'exam';
   const feedback = a.feedback && !exam ? answerFeedback(a.feedback) : null;
@@ -93,7 +95,8 @@ function WaveStudy({ state, update, next }) {
       {a.helped && <div className="guided-answer">{spec.answer}<p>{spec.explanation}</p></div>}
       <form onSubmit={(e) => { e.preventDefault(); const answer = submittedAnswer(e.currentTarget, a.draft); if (answer.trim()) update((s) => t.answerQuestion(s, answer)); }}>
         <label htmlFor="wave-answer">{q.type === 'meaning' ? 'English meaning' : 'German answer'}</label>
-        <input id="wave-answer" name="answer" key={a.completed} autoFocus autoComplete="off" autoCorrect="off" autoCapitalize="none" maxLength={200} spellCheck={false} value={a.draft} onChange={(e) => update((s) => t.setDraft(s, e.target.value))} />
+        <input id="wave-answer" name="answer" ref={answerRef} key={a.completed} autoFocus autoComplete="off" autoCorrect="off" autoCapitalize="none" maxLength={200} spellCheck={false} value={a.draft} onChange={(e) => update((s) => t.setDraft(s, e.target.value))} />
+        {q.type !== 'meaning' && <CharacterKeys inputRef={answerRef} value={a.draft} onChange={(value) => update((s) => t.setDraft(s, value))} />}
         <Primary type="submit">Check answer</Primary>
       </form>
       {!exam && <button className="text-button" onClick={() => update((s) => t.useHint(s))}>Show help (guided practice)</button>}
@@ -105,7 +108,11 @@ function WaveStudy({ state, update, next }) {
       </section> : <p className="guided-answer">{a.feedback.expected}</p>}
       <p>{a.feedback.message}</p>
       {!a.feedback.correct && <><Speech text={spec.explanation} lang="en-US" label="Hear English explanation" caption="Hear explanation" /><NounComparison word={w} Speech={Speech} /></>}
-      {t.correctionNeeded(state) && <><label htmlFor="wave-correction">Copy the correct answer once (practice only)</label><input id="wave-correction" value={a.correction} autoComplete="off" spellCheck={false} onChange={(e) => update((s) => t.setCorrection(s, e.target.value))} /></>}
+      {t.correctionNeeded(state) && <>
+        <label htmlFor="wave-correction">Copy the correct answer once (practice only)</label>
+        <input id="wave-correction" ref={correctionRef} value={a.correction} autoComplete="off" autoCorrect="off" autoCapitalize="none" maxLength={200} spellCheck={false} onChange={(e) => update((s) => t.setCorrection(s, e.target.value))} />
+        {q.type !== 'meaning' && <CharacterKeys inputRef={correctionRef} value={a.correction} onChange={(value) => update((s) => t.setCorrection(s, value))} />}
+      </>}
       <Primary disabled={!t.correctionReady(state)} onClick={next}>{a.queue.length === 1 ? 'Finish mission' : 'Next challenge'}</Primary>
     </>}
   </section>;

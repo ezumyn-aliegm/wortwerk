@@ -1,4 +1,5 @@
 import { requiredSkills } from "./data.js";
+import {formContent} from './entry-content.js';
 import { freshGame, freshVillage, updateVillage, awardGame, gameStatus, validateGame } from "./game.js";
 import { usesLearningScore, freshLearning, learningTargets, targetKey, learningSummary, recordLearning, exposeLearning, validateLearning, DELAY_MS, assessedFormVariants } from './scoring.js';
 
@@ -48,7 +49,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
         explanation: word.tip,
       })),
       ...assessedFormVariants(word).map((variant) => {
-        const [prompt, answer, explanation] = word.forms[variant];
+        const {prompt, answer, explanation} = formContent(word, variant);
         return {
         kind: "form",
         label: `Word form ${variant + 1}`,
@@ -575,6 +576,12 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
     if (q.type === "usage") {
       const [title, translation, answer] =
         w.usages[q.variant % w.usages.length];
+      if (scoringV2 && w.kind === 'noun') return {
+        title: translation,
+        answer: w.german,
+        instruction: 'Which vocabulary entry fits this situation? Write the complete assigned German noun with its article. Do not write the whole sentence.',
+        explanation: `${title.replace('___', answer)} — ${translation} ${w.tip}`,
+      };
       return {
         title,
         translation,
@@ -583,7 +590,13 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
         explanation: `${title.replace("___", answer)} — ${translation} ${w.tip}`,
       };
     }
-    const [title, answer, explanation] = w.forms[q.variant % w.forms.length];
+    const {prompt:title, answer, explanation, wholeNoun} = formContent(w, q.variant % w.forms.length);
+    if (scoringV2 && wholeNoun) return {
+      title: w.english,
+      answer: w.german,
+      instruction: 'Write the complete assigned German noun with its article. Keep the article and the whole word together.',
+      explanation,
+    };
     return {
       title,
       answer,
@@ -644,7 +657,7 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
       reason =
         "You remembered the word. Now use the exact lesson spelling, including ä, ö, ü or ß. The character keys can help.";
     else if (
-      q.type === "spelling" &&
+      (q.type === "spelling" || scoringV2) &&
       BY_ID[q.wordId].kind === "noun" &&
       actual === expected.replace(/^(der|die|das) /, "")
     )
@@ -729,7 +742,9 @@ export function createTutor(WORDS, { deadlineAt = null } = {}) {
   function correctionReady(state) {
     return (
       !correctionNeeded(state) ||
-      grade(state.active.queue[0], state.active.correction || "").correct
+      (scoringV2
+        ? canonicalAnswer(state.active.correction || '', state.active.queue[0]) === normalize(state.active.feedback.expected)
+        : grade(state.active.queue[0], state.active.correction || '').correct)
     );
   }
   function useHint(original, now = Date.now()) {

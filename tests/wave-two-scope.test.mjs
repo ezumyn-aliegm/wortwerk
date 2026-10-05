@@ -80,7 +80,7 @@ test('already answered plural in an ongoing inspection remains historical but ne
   wave.progress=oldTutor.answerQuestion(wave.progress,'die Bäume',now+1);
   assert.equal(wave.progress.active.answers[0].correct,true);
   const {state}=updateWaveTwoScope(library), migrated=state.waves[1], tutor=createTutor(migrated.words);
-  let p=tutor.answerQuestion(migrated.progress,'der',now+2);
+  let p=tutor.answerQuestion(migrated.progress,'der Baum',now+2);
   p=tutor.advance(p,now+3);
   assert.equal(p.active,null);
   const result=p.sessions.at(-1);

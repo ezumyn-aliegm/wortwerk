@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createTutor} from '../src/tutor.js';
 import {WAVE_TWO} from '../src/wave-two.js';
 import {learningTargets} from '../src/scoring.js';
+import {firstWordContent} from '../src/first-word-content.js';
 
 test('every assessed German noun response recalls the complete assigned article and word', () => {
   const tutor=createTutor(WAVE_TWO.words);
@@ -26,4 +27,20 @@ test('form teaching introduces the complete assigned noun before it is requested
   const form=pages.find(page=>page.tags.includes('form:1'));
   assert.equal(form.answer,'der Kürbis');
   assert.ok(form.prompt.includes('complete'));
+  assert.equal(firstWordContent(tutor.BY_ID.kuerbis).find(page=>page.label === 'Learn this form').answer,'der Kürbis');
+});
+
+test('a saved old correction can finish without rewriting the historical feedback or evidence', () => {
+  const tutor=createTutor(WAVE_TWO.words);
+  let state=tutor.startSession(tutor.freshState(),Date.parse('2026-10-04T12:00:00Z'));
+  state=tutor.acknowledgeTeaching(state);
+  state=tutor.answerQuestion(state,'wrong');
+  state.active.feedback.expected='Oktoberfest';
+  state.active.answers.at(-1).expected='Oktoberfest';
+  const feedback=structuredClone(state.active.feedback), learning=structuredClone(state.learning);
+  state=tutor.setCorrection(state,'Oktoberfest');
+  assert.equal(tutor.correctionReady(state),true);
+  assert.deepEqual(state.active.feedback,feedback);
+  assert.deepEqual(state.learning,learning);
+  assert.equal(tutor.validateState(state),true);
 });

@@ -27,7 +27,7 @@ test('all assessment variants are explicitly taught and memory chunks spell the 
       assert.equal(page.answer, sentence.replace('___', answer));
       assert.equal(page.translation, english);
     });
-    assessedFormVariants(w).forEach(i => assert.equal(pages.find(p => p.tags.includes(`form:${i}`)).answer, w.forms[i][1]));
+    assessedFormVariants(w).forEach(i => assert.equal(pages.find(p => p.tags.includes(`form:${i}`)).answer, w.kind === 'noun' ? w.german : w.forms[i][1]));
     if (w.kind === 'noun') {
       const forms = nounComparison(w);
       assert.ok(forms, w.id);

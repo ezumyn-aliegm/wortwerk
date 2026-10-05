@@ -1,16 +1,15 @@
 .game-shell {
   background: #eff3e8;
 }
-.village-world { min-height: 300px; }
-.village-v2 .world-caption { z-index: 8; max-width: calc(100% - 36px); font-size: 15px; }
+.village-v2 .village-world { width: 100%; min-height: 300px; aspect-ratio: 1.5; }
+.village-world > .outpost-island { position: absolute; inset: 0; object-fit: cover; }
+.village-v2 .world-caption { position: static; width: 100%; min-width: 0; grid-template-columns: minmax(0, 1fr); margin-bottom: 16px; box-sizing: border-box; font-size: 15px; color: #183c30; background: #eef9f8f5; overflow-wrap: anywhere; }
 .village-v2 .world-caption strong { font-size: 19px; }
-.village-stage { clip-path: inset(0); }
-.village-stage.stage-0 { opacity: .15; filter: grayscale(1); }
-.village-stage.stage-1 { clip-path: inset(80% 0 0); }
-.village-stage.stage-2 { clip-path: inset(60% 0 0); }
-.village-stage.stage-3 { clip-path: inset(40% 0 0); }
-.village-stage.stage-4 { clip-path: inset(20% 0 0); }
-.historical-outline { opacity: .28; filter: grayscale(1); outline: 2px dashed #fff; outline-offset: -3px; }
+.village-building { display: block; width: 72px; height: auto; aspect-ratio: 120 / 128; flex-shrink: 0; }
+.village-world > .village-building { width: 23%; transform: translate(-50%, -92.1875%); }
+.village-history > * { fill: none; stroke: #493a67; stroke-width: 2; }
+.village-v2 .blueprint-choice { cursor: default; }
+.village-v2 .blueprint-choice .village-building { width: 64px; }
 .village-repairs { font-size: 16px; max-height: 190px; overflow: auto; padding: 12px; border: 2px dashed #b58336; }
 .village-repairs ul { margin: 8px 0 0; padding-left: 24px; }
 .village-mission-choices { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }

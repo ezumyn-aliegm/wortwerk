@@ -9,7 +9,7 @@ import {freshState, startSession, setDraft} from '../src/engine.js';
 test('container runtime includes every relative dependency of copied source modules', async () => {
   const docker = await readFile(new URL('../Dockerfile', import.meta.url), 'utf8');
   const runtime = docker.split('FROM node:22-alpine\n')[1];
-  const sources = runtime.match(/^COPY (src\/.*) \.\/src\/$/m)[1].split(' ');
+  const sources = [...runtime.matchAll(/^COPY (src\/.*) \.\/src\/$/gm)].flatMap(match => match[1].split(' '));
   for (const source of sources) {
     const code = await readFile(new URL(`../${source}`, import.meta.url), 'utf8');
     for (const [, dependency] of code.matchAll(/from\s+["'](\.[^"']+)["']/g)) {
