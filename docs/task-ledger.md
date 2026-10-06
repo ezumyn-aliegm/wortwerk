@@ -72,3 +72,41 @@ Request: remove plural conversion from required study/test/mastery in current Wa
 Implementation: explicit assessed form variants, stable evidence keys, revision-checked atomic scope migration, optional collapsed comparison. Preserve retained target evidence, verification, history, activity and other waves. Remove only excluded pending questions; replace a wholly excluded queue with assigned-word spelling to keep the ongoing mission valid.
 
 Validation/deployment: runtime source c579452 deployed as wortwerk:wave2-scope-20261003-c579452. 171 tests pass; production/offline build succeeds. 37 recordings generated, zero failures. Actual-save read-only dry run passed, followed by stopped-service backup, atomic revision 2100 → 2101 update and exact comparison with backup-derived expected state. Authenticated live save/page/new audio and HTTPS health passed. Isolated desktop first-card/optional-reference interaction passed with no console errors/warnings. Independent education review passed; migration review's ongoing-exam score defect was fixed and regression-tested. Wave 1 and retained evidence/history preserved; no reset. Safari/mobile/offline travel not re-tested.
+
+## October 4 · Growing village implementation checkpoint
+
+Inherited clean ad58e30 on fix/study-controls-construction. PR 4 rechecked open. Dedicated feat/growing-village-milestones starts at the approved baseline in an isolated normal clone under Daniel_German; original checkout untouched. Read AGENTS.md, project status, ledger, expansion/progress plans and release contract. Read the existing Notion hub and EZU-57. Approved detailed concept inspected and versioned. No live release or student-state access.
+
+Delivery and throughput checkpoint are in docs/growing-village-delivery.md. Milestones are connected ten-wave plan, genuine bakery stage assets, evidence-derived integration and mixed-wave/history/resume validation. Future Waves 3–12 have no supplied curriculum or deadlines and remain previews. Existing two waves retain their contracts and artwork. Architecture review compares derived catalog with scene components; catalog wins because wave evidence stays authoritative.
+
+## October 5 · Growing village verified locally
+
+Implemented on feat/growing-village-milestones from approved ad58e30. Connected textured landscape, roads/bridges, ten distinct future landmark previews, 50-building planning inventory and genuine five-stage bakery. Existing Wave 1 sprites remain unchanged. Wave 2 retains its accepted original atlas and frozen learning denominator; markers show current upgrades while highPercent preserves earned architecture after mistakes. Pure catalog derivation owns no saved learning state. Future plots add no curriculum, dates or sessions; unknown imports remain neutral pending an explicit design binding.
+
+Independent review found stopped visual growth after 20% and off-ground lower anchors. Corrected the connected renderer to use actual current/historical levels, moved anchors onto the clearings, added a stone quay and removed a prebuilt background gateway. Browser clicks exposed the global active-button transform overriding map placement; scoped active styling fixes it. An invalid synthetic fixture used a string deadline; corrected the fixture rather than weakening save validation.
+
+All 188 tests and production/offline build pass. Browser result and selected screenshots are in docs/evidence/growing-village. Reproducible browser check covers bakery and connected/full/compact stage levels at 0/4/20/40/60/80/100, historical opacity and current repair markers, ten nonplayable previews, unchanged synthetic library, laptop/mobile page bounds and exact correction plus older unfinished-session round-trip. Actual screenshots inspected; no floating roofs or clipped current buildings observed. Fresh independent review reports no remaining code blocker. Safari/student enjoyment/physical car use/live backend persistence remain unverified. No live save, container or volume access.
+
+Delivery plan, audit trail, asset prompts and activation prerequisites are documented. Cursor-only review helpers and cross-family models unavailable; bounded supported-model reviewers and manual comment/diff review used. Publication and management links follow in the final handoff record. Future deployment requires a new safe window, backup/rollback and exact persisted-state checks. The previous live window is consumed.
+
+## Publication and pending management update
+
+PR 5: https://github.com/ezumyn-aliegm/wortwerk/pull/5 is open against fix/study-controls-construction and depends on PR 4. Created through GitHub CLI after the built-in connector returned 403; attached to the implementation chat. Verification source checkpoint: ed69902.
+
+Automatic approval review rejected the requested Notion and Linear posts as sensitive external sharing. Neither record was updated. The exact proposed payload and existing destinations are recorded in docs/growing-village-management-update.md pending explicit approval. No deployment occurred.
+
+## October 5 · Study close-up refinement
+
+Inherited clean 92fcc5c on the existing expansion branch; no restart or live access. Added a Wave 2 study close-up using the same continuous landscape as exploration, large accepted current-building art and explicit current upgrade/next mastery threshold. Wave 1 keeps its accepted study HUD. The whole world remains a single landscape with roads, bridges, forest, fields and harbor, plus ten different future landmark sprites; no repeated district backdrop tiles. Earlier earned structures remain derived from historical evidence.
+
+188 tests pass and production/offline build passes. Expanded real Chrome verification proves matching study/world levels at 0/4/20/40/60/80/100, correction layouts at 1280/1024/390, no page overflow, and exact old/new unfinished session navigation. Screenshots for both views are saved under docs/evidence/growing-village. No deployment, learning-engine, curriculum or save-format changes. Existing management updates remain pending approval after automatic review rejection.
+
+## October 5 · Visual acceptance reopened
+
+The whole-world screenshot was rejected against the approved composition. Prior functional pass and ready-locally wording do not constitute visual acceptance. Expansion is in progress: visual acceptance outstanding. One bounded composition correction will replace the selector-grid layout and label cards, integrate existing art with authored terrain anchors, and provide a framed reference comparison. Preserve study close-up, accepted Wave 1 art and all saved learning contracts. No live deployment. Notion/Linear posts remain blocked pending direct approval of the sanitized payload and exact destinations in docs/growing-village-management-update.md.
+
+## Bounded composition pass evidence
+
+One approved-reference terrain edit; no broad new asset generation. Authored irregular anchors, different current district arrangements, small accessible map markers and actual-world study crop replace the selector-grid composition. Current fixture and completed-future planning fixture are shown beside the title/upgrade-strip-free reference in docs/evidence/growing-village/composition-comparison.png. Detailed assessment is docs/growing-village-visual-review.md.
+
+Visual acceptance remains outstanding: future sprite base/camera/light seams and full district supporting assets are not solved by this bounded pass. The independent review found substantial terrain/label improvement but rejected initial grounding. Upper/market anchors and current wheat overlap were corrected afterward; no approval is inferred. 188 tests, production/offline build and final Chrome milestone/history/resume/layout checks pass. No live deployment. Sanitized management text records in-progress status and was not posted.

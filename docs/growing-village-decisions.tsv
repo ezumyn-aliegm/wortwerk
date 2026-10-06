@@ -1,0 +1,7 @@
+ts	phase	decision	why	evidence	result
+2026-10-05T02:00:00Z	frame	Start isolated checkout at approved ad58e30 baseline	Preserve original clean checkout and pending PR dependency	docs/growing-village-delivery.md	verified clean baseline
+2026-10-05T02:01:00Z	design	Use static district catalog with pure per-wave derivation	Existing saved contracts and highPercent already own evidence and earned architecture	src/game.js,src/scoring.js,src/library-state.js	implementation pending
+2026-10-05T03:52:36Z	audit	Initial two timestamps were editorial placeholders; this row records the actual checkpoint time	Avoid implying observed timestamps for earlier actions	docs/growing-village-delivery.md	prior actions confirmed, exact earlier time unrecorded
+2026-10-05T04:08:00Z	art	Keep genuine staged bakery separate from accepted Wave 2 upgrade atlas	Preserve approved current art and avoid claiming fades are construction	docs/growing-village-assets.md	stage strip inspected
+2026-10-05T04:08:00Z	review	Correct level rendering, ground anchors and baked gateway after independent findings	The real map must visibly evolve and foundations must rest on ground	src/Settlement.jsx,src/assets/settlement-terrain-v2.png	independent final review finds no code blocker
+2026-10-05T04:08:00Z	verification	Fix global active-button transform and use valid numeric deadline fixture	Real browser clicks and saved-session validation exposed defects that static tests missed	scripts/verify-settlement-browser.mjs	exact correction roundtrip passed

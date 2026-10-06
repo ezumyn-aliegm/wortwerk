@@ -6,7 +6,7 @@ import buildings from "./assets/outpost-buildings.png";
 import VillageBuilding, { villageStage } from './VillageBuilding.jsx';
 import "./outpost.css";
 
-export function BuildingSprite({ id, className = "" }) {
+export function BuildingSprite({ id, className = "", style }) {
   const index = BUILDINGS.findIndex((b) => b.id === id);
   return (
     <span
@@ -15,13 +15,14 @@ export function BuildingSprite({ id, className = "" }) {
       style={{
         backgroundImage: `url(${buildings})`,
         backgroundPosition: `${index * 25}% center`,
+        ...style,
       }}
     />
   );
 }
 
-export function MissionHUD({ game, locked, onOpen, onBuild, learning }) {
-  if (learning?.scoringVersion === 2) return <VillageView game={game} learning={learning} compact locked={locked} onOpen={onOpen} />;
+export function MissionHUD({ game, locked, onOpen, onBuild, learning, districtVisual }) {
+  if (learning?.scoringVersion === 2) return <VillageView game={game} learning={learning} compact locked={locked} onOpen={onOpen} districtVisual={districtVisual} />;
   game ||= freshGame();
   const status = gameStatus(game);
   const selected = status.selectedBuild;
@@ -225,14 +226,14 @@ function LegacyOutpost({
   );
 }
 
-export function VillageView({ game, learning, compact, locked, checkpoint, onOpen, onContinue, active, onPractice, onWorkshop }) {
+export function VillageView({ game, learning, compact, locked, checkpoint, onOpen, onContinue, active, onPractice, onWorkshop, districtVisual }) {
   const status = gameStatus(game);
   return <section className={compact ? 'mission-hud village-v2' : 'outpost-screen village-v2'} aria-label="Learning village">
     <div className={compact ? '' : 'outpost-main'}>
-      <div className="outpost-world village-world" role="group" aria-label={`Learning and village: ${learning.percent} percent. ${BUILDINGS.map((b) => `${b.label} level ${status.levels[b.id]}`).join(', ')}`}>
+      {districtVisual || <div className="outpost-world village-world" role="group" aria-label={`Learning and village: ${learning.percent} percent. ${BUILDINGS.map((b) => `${b.label} level ${status.levels[b.id]}`).join(', ')}`}>
         <img className="outpost-island" src={island} alt="" />
         {BUILDINGS.map((b) => <VillageBuilding key={b.id} id={b.id} currentLevel={status.levels[b.id]} historicalLevel={status.historicalLevels[b.id]} className={`world-building plot-${b.id}`} />)}
-      </div>
+      </div>}
       <div className={compact ? 'mission-inventory' : 'outpost-workbench'}>
         <div className="world-caption"><strong>{learning.percent}% learned · {learning.percent}% built</strong><span>{status.allBuilt ? 'All targets verified · portal active' : 'Independent recall builds automatically'}</span></div>
         <h2>{status.allBuilt ? 'Your village is complete.' : `${status.selectedBuild.label}: next upgrade at ${status.nextThreshold}%`}</h2>
@@ -245,10 +246,10 @@ export function VillageView({ game, learning, compact, locked, checkpoint, onOpe
           <button className="mission-return" onClick={onContinue}><ArrowLeft />{active ? 'Continue mission' : 'Recommended mission'}</button>
           {!active && !learning.initialComplete && <div className="village-mission-choices"><button onClick={onPractice}>Spelling expedition</button><button onClick={onWorkshop}>Sentence workshop</button></div>}
         </>}
-        <p className="mission-tip">Guided work prepares you. Later independent recall earns evidence. A miss removes at most one step from that target; outlines preserve your previous milestones.</p>
+        <p className="mission-tip">Guided work prepares you. Later independent recall earns evidence. A miss removes at most one step from that target; earned architecture stays standing while markers show repairs.</p>
       </div>
     </div>
-    {!compact && <div className="blueprint-queue">{BUILDINGS.map((b) => <div className="blueprint-choice" key={b.id}><VillageBuilding id={b.id} currentLevel={status.levels[b.id]} historicalLevel={status.historicalLevels[b.id]} /><span><strong>{b.label}: {status.levels[b.id]}/5</strong><small>{villageStage(b.id,status.levels[b.id])}</small>{status.historicalLevels[b.id] > status.levels[b.id] && <small>Outline: previously level {status.historicalLevels[b.id]}</small>}</span></div>)}</div>}
+    {!compact && <div className="blueprint-queue">{BUILDINGS.map((b) => <div className="blueprint-choice" key={b.id}><VillageBuilding id={b.id} currentLevel={status.levels[b.id]} historicalLevel={status.historicalLevels[b.id]} /><span><strong>{b.label}: {status.levels[b.id]}/5</strong><small>{villageStage(b.id,status.levels[b.id])}</small>{status.historicalLevels[b.id] > status.levels[b.id] && <small>Earned architecture: previously level {status.historicalLevels[b.id]}</small>}</span></div>)}</div>}
   </section>;
 }
 
