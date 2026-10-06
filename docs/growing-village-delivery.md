@@ -13,7 +13,7 @@ Authoritative checkout is clean at ad58e30a3b413205a6132eede71a264656400da8. PR 
 - [x] Phase B: Design the workflow.
 - [x] Phase C: Run the loop.
 - [x] Phase D: Keep the audit trail.
-- [x] Phase E: Verify and hand back.
+- [ ] Phase E: Visual acceptance remains outstanding; functional verification is recorded separately.
 
 The definition of done is a rendered connected settlement, genuine five-stage bakery art, ten future district previews, learning-derived current milestones, intact historical architecture and exact old-session resume. Future previews cannot create lessons. Wave 1 artwork and Wave 2 atlas remain accepted assets. Tests, inspected laptop screenshots and a reviewable dependent PR are required.
 
@@ -54,7 +54,7 @@ Start the Playwright CLI session wortwerk-expansion against that local origin, u
 
 ## Release handoff
 
-This branch is deployment-ready for the local tested scope, not a live release. PR 4 remains its dependency. Review and land PR 4 before retargeting the expansion PR to main. No old branch was reset.
+This branch is not ready for visual acceptance or live release; composition review remains outstanding. PR 4 remains its dependency. Review and land PR 4 before retargeting the expansion PR to main. No old branch was reset.
 
 For any later release, require a fresh pause/sync/closed-tabs confirmation. Revalidate current save read-only, build an immutable candidate image, retain the current rollback image and exact release override, stop the existing Compose service, back up the current named volume, and replace only the image while preserving wortwerk_wortwerk-data. Compare the complete persisted saved record and both waves/session/history/evidence before and after. Verify authenticated progress/page/new bundle, HTTPS health and container health. Do not migrate, reset, replace the volume or restore an old backup automatically.
 
@@ -77,3 +77,13 @@ Automatic approval review rejected the requested Notion and Linear posts as sens
 Study now shows the selected Autumn district on a crop of the continuous world terrain, large current-building artwork, current upgrade and next mastery threshold. It uses the live selected-wave state, not a copied saved snapshot. Existing Autumn sprites honestly remain learning upgrades; structural foundation/frame artwork remains in the future bakery preview. Wave 1 study artwork is unchanged.
 
 Actual browser screenshots: study-closeup-4.png, study-closeup-40.png, study-closeup-100.png; study-layout-1280.png, study-layout-1024.png and study-layout-390.png; connected-complete-future.png for the whole landscape. These files are in docs/evidence/growing-village. Browser assertions cover all seven checkpoints and exact unfinished correction round-trip. Ten future landmarks differ; the two current districts retain their accepted shared atlas. Future places remain nonplayable plans.
+
+## October 5 · Visual acceptance reopened
+
+The whole-world screenshot was rejected against the approved composition. Prior functional pass and ready-locally wording do not constitute visual acceptance. Expansion is in progress: visual acceptance outstanding. One bounded composition correction will replace the selector-grid layout and label cards, integrate existing art with authored terrain anchors, and provide a framed reference comparison. Preserve study close-up, accepted Wave 1 art and all saved learning contracts. No live deployment. Notion/Linear posts remain blocked pending direct approval of the sanitized payload and exact destinations in docs/growing-village-management-update.md.
+
+## Bounded composition pass evidence
+
+One approved-reference terrain edit; no broad new asset generation. Authored irregular anchors, different current district arrangements, small accessible map markers and actual-world study crop replace the selector-grid composition. Current fixture and completed-future planning fixture are shown beside the title/upgrade-strip-free reference in docs/evidence/growing-village/composition-comparison.png. Detailed assessment is docs/growing-village-visual-review.md.
+
+Visual acceptance remains outstanding: future sprite base/camera/light seams and full district supporting assets are not solved by this bounded pass. The independent review found substantial terrain/label improvement but rejected initial grounding. Upper/market anchors and current wheat overlap were corrected afterward; no approval is inferred. 188 tests, production/offline build and final Chrome milestone/history/resume/layout checks pass. No live deployment. Sanitized management text records in-progress status and was not posted.

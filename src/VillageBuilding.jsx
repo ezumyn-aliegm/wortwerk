@@ -22,13 +22,13 @@ export function villageStage(id, level) {
   return (DESIGNS[id].stages || VILLAGE_STAGES)[level];
 }
 
-export default function VillageBuilding({ id, currentLevel, historicalLevel, className = '' }) {
+export default function VillageBuilding({ id, currentLevel, historicalLevel, className = '', style }) {
   const design = DESIGNS[id];
   const appearance = UPGRADE_APPEARANCE[Math.max(currentLevel, historicalLevel)];
   const stage = villageStage(id, currentLevel);
   const historical = historicalLevel > currentLevel;
   const label = `${design.name}: level ${currentLevel} of 5, ${stage}${historical ? `; earned architecture at previous level ${historicalLevel}, current upgrades need repair` : ''}`;
-  return <svg className={`village-building ${className}`} viewBox="0 0 120 210" role="img" aria-label={label} data-building-id={id} data-level={currentLevel} data-historical-level={historicalLevel}>
+  return <svg className={`village-building ${className}`} style={style} viewBox="0 0 120 210" role="img" aria-label={label} data-building-id={id} data-level={currentLevel} data-historical-level={historicalLevel}>
     <title>{label}</title>
     <svg className="village-upgrade-art" width="120" height="200" viewBox="0 0 120 200" overflow="hidden" style={{ opacity: appearance.opacity, filter: `saturate(${appearance.saturation})` }}>
       <image href={buildings} x={-design.index * 120} y="0" width="600" height="200" preserveAspectRatio="none" />

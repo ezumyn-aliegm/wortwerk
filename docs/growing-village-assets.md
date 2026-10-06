@@ -36,3 +36,11 @@ Edit only two areas of the first terrain. Preserve camera, paths, other clearing
 Future landmarks are reviewed concept destinations. The remaining 49 future buildings still require genuine staged assets before their districts can become playable. Vocabulary, tests and dates are also required before activation. The connected preview never creates those assignments. The existing Wave 2 upgrade art retains its accepted style, rather than claiming to be new foundation/frame art.
 
 At small phone widths, the map uses a contained horizontal scroll to retain readable buildings. Mac laptop layouts fit the map. Large selected previews expose future artwork in detail. No free camera or camera animation is introduced.
+
+## Bounded composition correction · October 5
+
+One built-in reference edit produced settlement-terrain-v3.png. Input: the actual approved-concept-v1.png, inspected before generation. No additional stage or landmark packs were generated. Existing bakery stages and landmark atlas remain reusable, unchanged source images.
+
+Prompt: use the approved illustration as the primary composition reference; extract the village region without title or upgrade strip; match detailed warm-lit voxel terraces, winding streets, autumn fields, market, river bridge and wooden harbor; remove every finished reward house/tower/greenhouse/gateway, preserving irregular ground footprints with low unfinished foundations, paving, stairs and fences. Allow small market canopies, carts, crates and dock equipment as scenery. Use different upper/foreground terraces, forest/stone/garden/riverbank areas, no equal 4x3 grid, tiled islands, floating platforms or labels. Leave tightly woven buildable space for separate earned sprites.
+
+The generated context still has baked construction scaffolding/crane and low walls, not finished future reward buildings. World anchors are authored in src/world-layout.js. Source atlas bases still have visible perspective/lighting/ground seams in some future placements. Those are visual acceptance gaps, not approved finished district packs.

@@ -4,7 +4,8 @@ import { BUILDINGS, gameStatus } from './game.js';
 import { BuildingSprite } from './Outpost.jsx';
 import VillageBuilding from './VillageBuilding.jsx';
 import ConstructionSprite, { CONSTRUCTION_STAGES } from './ConstructionSprite.jsx';
-import terrain from './assets/settlement-terrain-v2.png';
+import terrain from './assets/settlement-terrain-v3.png';
+import { WORLD_LAYOUT } from './world-layout.js';
 import landmarks from './assets/settlement-landmarks-v1.png';
 import './settlement.css';
 
@@ -14,10 +15,10 @@ export function LandmarkSprite({ index, label, className = '' }) {
     style={{backgroundImage:`url(${landmarks})`,backgroundPosition:`${index % 5 * 25}% ${Math.floor(index / 5) * 100}%`}} />;
 }
 
-function ExistingDistrict({ district }) {
+function ExistingDistrict({ district, world = false }) {
   const built = district.legacy ? district.wave.progress.game?.built || [] : BUILDINGS.map(b => b.id);
   return <span className="settlement-cluster" aria-label={district.legacy ? `${built.length} legacy rewards` : `Earned architecture at ${district.historicalPercent}%`}>
-    {built.map(id => {const i=BUILDINGS.findIndex(b=>b.id===id); return district.legacy ? <BuildingSprite key={id} id={id} className={`settlement-old-building home-slot-${i}`} /> : <VillageBuilding key={id} id={id} currentLevel={district.currentLevels[id]} historicalLevel={district.earnedLevels[id]} className={`settlement-old-building home-slot-${i}`} />;})}
+    {built.map(id => {const i=BUILDINGS.findIndex(b=>b.id===id); const anchor=world ? WORLD_LAYOUT[district.id].buildings[i] : null; const style=anchor ? {left:`${anchor.x}%`,top:`${anchor.y}%`,width:`${anchor.width}%`,height:`${anchor.width*3.85}%`,zIndex:Math.round(anchor.y)} : undefined; return district.legacy ? <BuildingSprite key={id} id={id} style={style} className={`settlement-old-building home-slot-${i}`} /> : <VillageBuilding key={id} id={id} currentLevel={district.currentLevels[id]} historicalLevel={district.earnedLevels[id]} style={style} className={`settlement-old-building home-slot-${i}`} />;})}
   </span>;
 }
 
@@ -26,11 +27,13 @@ export function DistrictFocus({ library, waveId }) {
   if (!district || district.legacy) return null;
   const status=gameStatus(district.wave.progress.game);
   const building=status.selectedBuild;
-  const position=district.design.position || {x:50,y:50};
+  const position=WORLD_LAYOUT[district.id] || {x:50,y:50};
   return <div className="district-focus" aria-label={`${district.design.name} study close-up`} data-district-id={district.id}>
     <div className="district-focus-heading"><span className="eyebrow">YOUR DISTRICT · CLOSE-UP</span><strong>{district.design.name}</strong></div>
-    <div className="district-focus-ground" style={{backgroundImage:`url(${terrain})`,backgroundPosition:`${position.x}% ${position.y}%`}}>
-      <ExistingDistrict district={district}/>
+    <div className="district-focus-ground">
+      <div className="district-focus-world" style={{transform:`translate(-${position.x}%, -${position.y}%)`}}>
+        <Scene districts={deriveSettlement(library)} selectedId={district.id} onSelect={()=>{}} previewCount={0} bakeryPreviewLevel={0} interactive={false}/>
+      </div>
     </div>
     <div className="district-focus-building">
       <VillageBuilding id={building.id} currentLevel={district.currentLevels[building.id]} historicalLevel={district.earnedLevels[building.id]}/>
@@ -39,19 +42,22 @@ export function DistrictFocus({ library, waveId }) {
   </div>;
 }
 
-function Scene({ districts, selectedId, onSelect, previewCount, bakeryPreviewLevel }) {
-  const sites=districts.filter(d=>d.design.position !== null);
-  return <div className="settlement-scroll"><div className="settlement-scene" role="group" aria-label="One connected settlement with roads, bridges and future foundation plots">
-    <img src={terrain} alt="Connected forest, autumn farm, stream bridges and harbor terrain" />
+function Scene({ districts, selectedId, onSelect, previewCount, bakeryPreviewLevel, interactive = true }) {
+  const sites=districts.filter(d=>WORLD_LAYOUT[d.id]);
+  return <div className="settlement-scroll"><div className="settlement-scene" role="group" aria-label="One connected settlement with roads, bridges and future foundation plots" data-planning-preview={previewCount>0}>
+    <img src={terrain} alt="Organic village terraces, winding streets, market stalls, fields, river bridge and harbor foundations" />
     {sites.map(d=> {
+      const layout=WORLD_LAYOUT[d.id];
       const index=d.design.waveNumber-3;
       const preview=!d.wave && index>=0 && index<previewCount;
-      return <button key={d.id} className={`settlement-site ${d.wave ? 'owned' : 'planned'} ${selectedId===d.id ? 'selected' : ''}`} style={{left:`${d.design.position.x}%`,top:`${d.design.position.y}%`}}
-        onClick={()=>onSelect(d.id)} aria-pressed={selectedId===d.id} aria-label={`${d.design.name}. ${d.wave ? d.legacy ? 'Legacy rewards' : `${d.currentPercent}% current mastery` : 'Planning preview, no lesson'}`}>
-        {d.wave ? <ExistingDistrict district={d}/> : preview ? index===0 ? <ConstructionSprite level={bakeryPreviewLevel} label="Bakery design preview"/> : <LandmarkSprite index={index} label={d.design.landmark}/> : <ConstructionSprite level={0} label={`${d.design.name} future plot`}/>}
-        <span className="settlement-site-label"><strong>{d.design.waveNumber ? `W${d.design.waveNumber} · ` : ''}{d.design.name}</strong><small>{d.wave ? d.legacy ? 'Legacy rewards' : `${d.currentPercent}% learned` : preview ? 'Concept preview' : 'Future plot'}</small></span>
-        {d.wave && !d.legacy && d.repairs.length>0 && <span className="settlement-repair" aria-label={`${d.repairs.length} repairs queued`}>Repair {d.repairs.length}</span>}
-      </button>;
+      const spriteStyle={left:`${layout.x}%`,top:`${layout.y}%`,width:`${layout.width}%`,zIndex:Math.round(layout.y)};
+      return <div key={d.id} className={`settlement-district ${d.wave ? 'owned' : 'planned'}`} data-district-id={d.id}>
+        {d.wave ? <ExistingDistrict district={d} world/> : preview ? <span className={`world-landmark ${index===0 ? 'world-bakery' : ''}`} style={spriteStyle}>{index===0 ? <ConstructionSprite level={bakeryPreviewLevel} label="Bakery design preview"/> : <LandmarkSprite index={index} label={d.design.landmark}/>}</span> : <span className="world-reserved" style={spriteStyle} aria-label={`${d.design.name}, unfinished reserved ground`}/>}
+        {interactive && <button className={`settlement-site ${d.wave ? 'owned' : 'planned'} ${selectedId===d.id ? 'selected' : ''}`} style={{left:`${layout.markerX ?? layout.x}%`,top:`${layout.markerY ?? layout.y}%`}}
+          onClick={()=>onSelect(d.id)} aria-pressed={selectedId===d.id} aria-label={`${d.design.name}. ${d.wave ? d.legacy ? 'Legacy rewards' : `${d.currentPercent}% current mastery` : 'Planning preview, no lesson'}`}>
+          <span aria-hidden="true">{d.design.waveNumber}</span>
+        </button>}
+      </div>;
     })}
   </div></div>;
 }

@@ -7,15 +7,20 @@
 .world-preview-control select { background: #f5e8c5; color: #173f34; padding: 10px; border-radius: 8px; max-width: 100%; }
 .planning-notice { border-left: 3px solid #d8b469; padding: 10px 14px; background: #264238; }
 .settlement-scroll { overflow-x: auto; border-radius: 14px; margin-top: 18px; }
-.settlement-scene { position: relative; aspect-ratio: 3 / 2; min-width: 760px; isolation: isolate; }
-.settlement-scene > img { display: block; width: 100%; height: 100%; }
-.settlement-site { position: absolute; width: 21%; height: 24%; transform: translate(-50%,-66%); background: transparent; border: 0; padding: 0; color: #fff1c9; cursor: pointer; }
-.settlement-site:hover,.settlement-site:focus-visible { background: transparent; outline: 3px solid #e6bd64; border-radius: 20px; }
-.settlement-site.selected { border-radius: 20px; box-shadow: inset 0 0 0 2px #e6bd64; }
-.settlement-site-label { position: absolute; top: 91%; left: 50%; transform: translateX(-50%); width: max-content; max-width: 116%; background: #112e28ed; padding: 6px 10px; border: 1px solid #9b8859; border-radius: 8px; font-size: clamp(12px,1.2vw,17px); line-height: 1.3; }
-.settlement-site-label strong,.settlement-site-label small { display:block; }
-.settlement-site-label small { color: #ddca9a; font-size: .85em; }
-.settlement-site .construction-sprite,.settlement-site .landmark-sprite { position: absolute; bottom: 0; width: 94%; left: 3%; }
+.settlement-scene { position:relative; aspect-ratio:1860 / 846; min-width:1000px; isolation:isolate; }
+.settlement-scene > img { display:block; width:100%; height:100%; pointer-events:none; }
+.settlement-district { position:absolute; inset:0; pointer-events:none; }
+.settlement-scene .settlement-cluster { position:absolute; inset:0; }
+.settlement-scene .settlement-old-building { position:absolute; transform:translate(-50%,-100%); background-size:500% 100%; pointer-events:none; filter:drop-shadow(3px 5px 3px #18362270); }
+.world-landmark { position:absolute; display:block; transform:translate(-50%,-100%); pointer-events:none; filter:drop-shadow(3px 5px 3px #18362260); }
+.world-landmark > .landmark-sprite { width:100%; }
+.world-landmark > .construction-sprite { width:100%; }
+.world-bakery { margin-top:2%; }
+.world-reserved { position:absolute; height:2%; transform:translate(-50%,-100%); border:1px dashed #d8b46955; border-radius:50%; }
+.settlement-site { position:absolute; width:28px; height:28px; min-height:28px !important; padding:0; transform:translate(-50%,-50%); background:#244a3edb; color:#f5e8c5; border:1px solid #ddca9a; border-radius:50%; font-size:13px; line-height:1; z-index:100; pointer-events:auto; cursor:pointer; }
+.settlement-site.selected { background:#f3d17d; color:#173f34; box-shadow:0 0 0 3px #173f3490; }
+.settlement-site:hover,.settlement-site:focus-visible { outline:3px solid #ffe3a1; outline-offset:3px; }
+.settlement .settlement-site:not(:disabled):active { transform:translate(-50%,-50%); }
 .construction-sprite { display: block; aspect-ratio: 1/2; background-size: 600% 100%; background-repeat: no-repeat; }
 .landmark-sprite { display:block; aspect-ratio: 1/1; background-size: 500% 200%; background-repeat:no-repeat; }
 .settlement-site .construction-sprite { aspect-ratio: 1/2; height: 100%; width: 47%; left: 26.5%; }
@@ -46,17 +51,17 @@
 .home-slot-2 { left: 62%; top: 19%; }
 .home-slot-3 { left: 27%; top: 37%; }
 .home-slot-4 { left: 66%; top: 39%; }
-.settlement-site .landmark-sprite { width: 50%; left: 25%; }
+
 .selected-landmark { width: min(260px,100%); float: right; margin-left: 18px; }
-.settlement-site-label { z-index: 2; }
+
 @media (max-width: 760px) { .selected-landmark { float:none; margin:0 auto; } }
 .settlement-old-building.village-building { height:67%; aspect-ratio:120 / 210; }
 .settlement-cluster .village-upgrade-earned { fill:#ffd06b; stroke:#274737; }
 .settlement-cluster .village-upgrade-previous { fill:none; stroke:#ffd06b; stroke-width:2; }
 .settlement-cluster .village-upgrade-pending { fill:#3a5446; stroke:#869782; }
 .settlement-scene > img { pointer-events:none; position:relative; z-index:0; }
-.settlement-site { z-index:1; }
-.settlement .settlement-site:not(:disabled):active { transform:translate(-50%,-66%); }
+
+
 .settlement-site { transition: none; }
 .construction-stage-buttons button { background:#315848; color:#fff1c9; border:1px solid #ad9b72; border-radius:8px; font-size:18px; padding:8px 12px; }
 .settlement-inspector .primary,.imported-district button { background:#d8b469; color:#112e28; border:1px solid #d8b469; border-radius:10px; padding:10px 18px; font-size:20px; }
@@ -67,8 +72,8 @@
 .district-focus .eyebrow { color:#ddca9a; }
 .district-focus-heading strong { font-size:24px; }
 .district-focus-ground { position:relative; height:300px; overflow:hidden; border-radius:12px; background-size:340% auto; }
-.district-focus-ground .settlement-cluster { inset:20px 12px 15px; }
-.district-focus-ground .settlement-old-building { width:28%; height:67%; }
+
+
 .district-focus-building { display:flex; align-items:center; gap:20px; margin-top:15px; }
 .district-focus-building > .village-building { width:150px; min-width:120px; height:260px; }
 .district-focus-building h3 { margin:8px 0; font-size:25px; }
@@ -80,3 +85,7 @@
 @media (max-width:760px) { .map-scroll-hint { display:block; font-size:16px; } .selected-bakery { float:none; margin:0 auto; } }
 
 @media (max-width:760px) { .district-focus-ground { height:180px; } .district-focus-building > .village-building { width:110px; min-width:100px; height:185px; } }
+
+.district-focus-world { position:absolute; width:340%; left:50%; top:50%; pointer-events:none; }
+.district-focus-world .settlement-scroll { overflow:visible; margin:0; border-radius:0; }
+.district-focus-world .settlement-scene { min-width:0; }

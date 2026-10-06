@@ -6,7 +6,7 @@ import buildings from "./assets/outpost-buildings.png";
 import VillageBuilding, { villageStage } from './VillageBuilding.jsx';
 import "./outpost.css";
 
-export function BuildingSprite({ id, className = "" }) {
+export function BuildingSprite({ id, className = "", style }) {
   const index = BUILDINGS.findIndex((b) => b.id === id);
   return (
     <span
@@ -15,6 +15,7 @@ export function BuildingSprite({ id, className = "" }) {
       style={{
         backgroundImage: `url(${buildings})`,
         backgroundPosition: `${index * 25}% center`,
+        ...style,
       }}
     />
   );

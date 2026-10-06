@@ -6,6 +6,7 @@ const assert = {
 export async function verifySettlement(page) {
   const origin='http://127.0.0.1:4197';
   const output='output/playwright/settlement';
+  const capture=async (locator,path)=>{await locator.scrollIntoViewIfNeeded(); const clip=await locator.boundingBox(); await page.screenshot({path,clip});};
   const errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   await page.setViewportSize({width:1440,height:1000});
@@ -14,8 +15,8 @@ export async function verifySettlement(page) {
   const before=await page.evaluate(()=>JSON.stringify(window.__fixtureLibrary));
   await page.getByLabel('Future world preview').selectOption('10');
   assert.equal(await page.locator('.settlement-site').count(),12);
-  assert.equal(await page.locator('.settlement-site .landmark-sprite').count(),9);
-  await page.locator('.settlement-scene').screenshot({path:`${output}/connected-complete-future.png`});
+  assert.equal(await page.locator('.world-landmark .landmark-sprite').count(),9);
+  await capture(page.locator('.settlement-scene'),`${output}/connected-complete-future.png`);
   await page.getByRole('button',{name:'Harvest farm. Planning preview, no lesson'}).click();
   assert.equal(await page.locator('.settlement-inspector button').count(),0);
   assert.equal(await page.evaluate(()=>JSON.stringify(window.__fixtureLibrary)),before);
@@ -26,19 +27,19 @@ export async function verifySettlement(page) {
     for(let i=0;i<percent/4;i++) await page.locator('.construction-demo input').press('ArrowRight');
     await page.locator(`.construction-demo [data-construction-stage="${level}"]`).waitFor();
     assert.equal(await page.locator('.construction-demo [data-construction-stage]').getAttribute('data-construction-stage'),String(level));
-    await page.locator('.construction-demo').screenshot({path:`${output}/bakery-${percent}.png`});
+    await capture(page.locator('.construction-demo'),`${output}/bakery-${percent}.png`);
     results.push({percent,level});
   }
-  await page.locator('.construction-stage-strip').screenshot({path:`${output}/bakery-stages.png`});
+  await capture(page.locator('.construction-stage-strip'),`${output}/bakery-stages.png`);
   await page.goto(`${origin}/settlement-preview.html?percent=100&high=100&repair`);
   await page.getByRole('heading',{name:'A place that grows with you.'}).waitFor();
-  assert.equal(await page.locator('.settlement-repair').count(),1);
-  assert.equal(await page.locator('.settlement-site.owned .settlement-old-building').count(),10);
-  const repaired=await page.locator('.settlement-site.owned .village-building').evaluateAll(els=>els.map(el=>({current:Number(el.dataset.level),earned:Number(el.dataset.historicalLevel),opacity:el.querySelector('.village-upgrade-art').style.opacity})));
+  assert.equal(await page.getByText('1 target repairs queued in this lesson.',{exact:true}).count(),1);
+  assert.equal(await page.locator('.settlement-district.owned .settlement-old-building').count(),10);
+  const repaired=await page.locator('.settlement-district.owned .village-building').evaluateAll(els=>els.map(el=>({current:Number(el.dataset.level),earned:Number(el.dataset.historicalLevel),opacity:el.querySelector('.village-upgrade-art').style.opacity})));
   assert.deepEqual(repaired.map(b=>b.earned),[5,5,5,5,5]);
   assert.deepEqual(repaired.map(b=>b.opacity),['1','1','1','1','1']);
   assert.equal(repaired[4].current,4);
-  await page.locator('.settlement').screenshot({path:`${output}/historical-repair.png`});
+  await capture(page.locator('.settlement'),`${output}/historical-repair.png`);
   for(const width of [1280,1024,390]) {
     await page.setViewportSize({width,height:900});
     await page.getByLabel('Future world preview').selectOption('10');
@@ -50,7 +51,7 @@ export async function verifySettlement(page) {
   await page.goto(`${origin}/settlement-preview.html?app&correction`);
   await page.getByRole('button',{name:'Waves',exact:true}).waitFor();
   await page.getByLabel('Autumn village study close-up').waitFor();
-  await page.locator('.district-focus').screenshot({path:`${output}/study-closeup-correction.png`});
+  await capture(page.locator('.district-focus'),`${output}/study-closeup-correction.png`);
   const saved=await page.evaluate(()=>structuredClone(window.__fixtureLibrary));
   const waveId=saved.selectedWaveId;
   const snapshot=JSON.stringify(saved.waves.find(w=>w.id===waveId).progress);
@@ -70,20 +71,20 @@ export async function verifySettlement(page) {
     await page.goto(`${origin}/settlement-preview.html?percent=${percent}`);
     await page.getByRole('heading',{name:'A place that grows with you.'}).waitFor();
     const expected=percent===0 ? [0,0,0,0,0] : percent===4 ? [1,0,0,0,0] : Array(5).fill(percent/20);
-    const rendered=await page.locator('.settlement-site.owned .village-building').evaluateAll(els=>els.map(el=>Number(el.dataset.level)));
+    const rendered=await page.locator('.settlement-district.owned .village-building').evaluateAll(els=>els.map(el=>Number(el.dataset.level)));
     assert.deepEqual(rendered,expected);
-    await page.locator('.settlement-scene').screenshot({path:`${output}/connected-current-${percent}.png`});
+    await capture(page.locator('.settlement-scene'),`${output}/connected-current-${percent}.png`);
   }
   for(const percent of [0,4,20,40,60,80,100]) {
     await page.goto(`${origin}/settlement-preview.html?app&session&percent=${percent}`);
     if(percent===100) await page.locator('.settlement-inspector').getByRole('button',{name:'Open this lesson'}).click();
     await page.getByLabel('Autumn village study close-up').waitFor();
     const expected=percent===0 ? [0,0,0,0,0] : percent===4 ? [1,0,0,0,0] : Array(5).fill(percent/20);
-    assert.deepEqual(await page.locator('.district-focus-ground .village-building').evaluateAll(els=>els.map(el=>Number(el.dataset.level))),expected,'Study district matches world');
+    assert.deepEqual(await page.locator('.district-focus-ground .settlement-district[data-district-id=autumn] .village-building').evaluateAll(els=>els.map(el=>Number(el.dataset.level))),expected,'Study district matches world');
     const focus=page.locator('.district-focus-building');
     assert.equal(await focus.locator('.village-building').getAttribute('data-level'),String(percent===100 ? 5 : Math.floor(percent/20)));
     if(percent<100) assert.equal(await focus.getByText(`Next milestone · ${percent+4}% mastery`,{exact:true}).count(),1);
-    await page.locator('.district-focus').screenshot({path:`${output}/study-closeup-${percent}.png`});
+    await capture(page.locator('.district-focus'),`${output}/study-closeup-${percent}.png`);
   }
   for(const width of [1280,1024,390]) {
     await page.setViewportSize({width,height:1000});
@@ -101,9 +102,17 @@ export async function verifySettlement(page) {
       const expected=percent===0 ? [0,0,0,0,0] : percent===4 ? [1,0,0,0,0] : Array(5).fill(percent/20);
       const rendered=await page.locator('.village-world .village-building').evaluateAll(els=>els.map(el=>Number(el.dataset.level)));
       assert.deepEqual(rendered,expected);
-      await page.locator('.village-world').screenshot({path:`${output}/current-${compact ? 'compact' : 'full'}-${percent}.png`});
+      await capture(page.locator('.village-world'),`${output}/current-${compact ? 'compact' : 'full'}-${percent}.png`);
     }
   }
+  await page.goto(`${origin}/settlement-preview.html?percent=40`);
+  await page.getByRole('heading',{name:'A place that grows with you.'}).waitFor();
+  await capture(page.locator('.settlement-scene'),`${output}/composition-current.png`);
+  await page.goto(`${origin}/settlement-preview.html?percent=100`);
+  await page.getByLabel('Future world preview').selectOption('10');
+  await capture(page.locator('.settlement-scene'),`${output}/composition-planning.png`);
+  assert.equal(await page.locator('.settlement-site-label').count(),0,'Village art has no label cards');
+  assert.equal(await page.locator('.world-reserved').count(),0,'Complete planning fixture is explicit');
   assert.deepEqual(errors,[]);
   return {studyCloseupStages:[0,4,20,40,60,80,100],studyCloseupViewports:[1280,1024,390],stages:results,viewports:[1440,1280,1024,390],futurePreviewReadOnly:true,historicalArchitecturePreserved:true,exactCorrectionResume:true,olderUnfinishedLessonUnchanged:true,connectedCurrentStages:[0,4,20,40,60,80,100],historicalLevels:[5,5,5,5,5],historicalSpriteOpacity:[1,1,1,1,1],currentFullAndCompactStages:[0,4,20,40,60,80,100],surface:'isolated Chrome synthetic LibraryApp and preview fixtures',liveDataAccess:false,pageErrors:errors};
 }
